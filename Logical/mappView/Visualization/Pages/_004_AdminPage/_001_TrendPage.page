@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="vkAdminPage" layoutRefId="MainLayout3">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="vkTitle" areaRefId="Title" backColor="rgba(232, 233, 245, 1)" />
+    <Assignment type="Content" baseContentRefId="vkNavigation" areaRefId="NavigationPanel" backColor="rgba(232, 233, 245, 1)" />
+    <Assignment type="Content" baseContentRefId="vkLogo" areaRefId="ImageLogo" />
+    <Assignment type="Content" baseContentRefId="vkTracePanel" areaRefId="TracePanel" />
+  </Assignments>
+</pdef:Page>

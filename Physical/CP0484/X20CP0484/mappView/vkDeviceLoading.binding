@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="vkDeviceLoading_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DeviceLoading.DeviceLoading_Max" attribute="value" />
+			<Target xsi:type="brease" contentRefId="vkDeviceLoading" widgetRefId="ProgressBar1" attribute="maxValue" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DeviceLoading.RackLoading" attribute="value" />
+			<Target xsi:type="brease" contentRefId="vkDeviceLoading" widgetRefId="ProgressBar1" attribute="value" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

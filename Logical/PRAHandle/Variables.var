@@ -1,0 +1,11 @@
+VAR
+	WakeUpSig : BOOL;
+	PRATimerProRlyOff : TON;
+	PRATimerProRlyOn : TON;
+	PRATimerWakeUpOff : TON;
+	PRATimerSeqErr : TON;
+	LoopCount : USINT;
+	RackIndex : USINT;
+	WakeCount : USINT;
+	RackCount : USINT;
+END_VAR

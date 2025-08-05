@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Global data types">MbRTU.typ</Object>
+    <Object Type="File" Description="Global variables">MbRTU.var</Object>
+    <Object Type="Program" Language="IEC" Description="task for the master">MbRtuM</Object>
+    <Object Type="DataObject" Language="Simple">datamod</Object>
+  </Objects>
+  <Dependencies>
+    <Dependency ObjectName="drv_mbus" />
+  </Dependencies>
+</Package>

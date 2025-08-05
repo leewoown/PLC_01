@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="vkDialogCompanyInfo" height="300" width="600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="0" x1="-2" x2="606" y1="60" y2="60" />
+    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="1" x1="0" x2="608" y1="120" y2="120" />
+    <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="2" x1="0" x2="608" y1="181" y2="181" />
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="3" x1="0" x2="608" y1="241" y2="241" />
+    <Widget xsi:type="widgets.brease.Line" id="Line5" zIndex="4" x1="176" x2="176" y1="-8" y2="302" />
+    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="5" x1="0" x2="598" y1="0" y2="-4" />
+    <Widget xsi:type="widgets.brease.Line" id="Line7" zIndex="6" x1="-4" x2="600" y1="302" y2="302" />
+    <Widget xsi:type="widgets.brease.Label" id="lbCompanyName" top="0" left="0" width="174" height="60" zIndex="7" text="회 사 명" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbDeviceName" top="60" left="0" width="174" height="60" zIndex="8" text="제 품 명" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbSetDate" top="122" left="0" width="174" height="60" zIndex="9" text="설 치 일" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbTelephone" top="180" left="0" width="174" height="60" zIndex="10" text="연 락 처" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbShipDevice" top="242" left="0" width="174" height="60" zIndex="11" text="선박제품" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbCompanyName1" top="2" left="178" width="420" height="56" zIndex="12" text="현대인버터솔루션" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbDeviceName1" top="62" left="178" width="420" height="56" zIndex="13" text="친환경 선박 240kWh 배터리 시스템" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbSetDate1" top="122" left="178" width="420" height="56" zIndex="14" text="24.11.12" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbTelephone1" top="182" left="178" width="420" height="56" zIndex="15" text="052-567-3456" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="lbShipDevice1" top="242" left="178" width="420" height="56" zIndex="16" text="-" textAlign="center" fontSize="20px" />
+  </Widgets>
+</Content>

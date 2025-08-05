@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">SubBMS.typ</Object>
+    <Object Type="File">HMI.typ</Object>
+    <Object Type="File">PMS_CAN.typ</Object>
+    <Object Type="File" Private="true">PMS_TCP.typ</Object>
+    <Object Type="File">LAMP.typ</Object>
+  </Objects>
+</Package>

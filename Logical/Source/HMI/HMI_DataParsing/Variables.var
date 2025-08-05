@@ -1,0 +1,11 @@
+VAR
+	strStyleLED_CAN_1 : STRING[40];
+	countTime_0 : USINT;
+END_VAR
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+VAR
+	TON_0 : TON;
+	Timestamp : TimeType;
+	LoopNum : INT;
+END_VAR

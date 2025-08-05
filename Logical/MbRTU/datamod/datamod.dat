@@ -1,0 +1,29 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Data object: NewDataObject
+ * File: datamod.dat
+ * Author: Bernecker + Rainer
+ * Created: February 15, 2010
+ ********************************************************************
+ * Data object file: datamod.dat
+ ********************************************************************)
+ 
+;--------------------
+; Modbus command file
+;--------------------
+"MbMaster.WriteDataTrigger      ", 16, $01, "MbMaster.WriteData             ", 00100, 0010
+"MbMaster.ReadDataTrigger       ", 03, $01, "MbMaster.ReadData              ", 00000, 0010
+"MbMaster.ReadDataTrigger       ", 03, $01, "MbMaster.ReadData              ", 00001, 0002
+
+;"LibDRVmbus.EventPV4            ", 16, $01, "LibDRVmbus.LocalPV4            ", 0000, 0003
+;"LibDRVmbus.EventPV3            ", 03, $01, "LibDRVmbus.LocalPV3            ", 0000, 0003
+; \_____________________________/	|    |    \_____________________________/    |      |
+;			 	 |					|    |				  	 |				     |      |
+;		   31 Characters		    |    |			   31 Characters  		     |      |_Number of coils or registers
+;			 						|    |				   						 |_Offset of the Modbus Variables
+;									|    |
+;									|    |_Target Address of the slave station
+;			 						|
+;			 						|_ Modbus function
+

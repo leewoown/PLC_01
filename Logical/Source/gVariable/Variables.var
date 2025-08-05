@@ -1,0 +1,44 @@
+VAR CONSTANT
+	PASSWORD : STRING[16] := '1234';
+	RACK1 : USINT := 0;
+	RACK2 : USINT := 1;
+	RACK3 : USINT := 2;
+	RACK4 : USINT := 3;
+	RACK_MAXNUM : USINT := 4;
+	RACK_MAXNUM_MINUS_1 : USINT := RACK_MAXNUM-1;
+END_VAR
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+VAR
+	SubBMS : SubBMS_type;
+	SubBMS_Sim : SubBMS_type;
+	SubBMS_Calculator : SubBMS_Calculator_type;
+	Rack_HMI : BSA_typ;
+END_VAR
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+VAR
+	HMI : HMI_typ;
+END_VAR
+VAR RETAIN
+	HMI_Alarm : Alarm_typ;
+	HMI_AlarmName : ARRAY[0..21] OF STRING[30];
+END_VAR
+VAR
+	HMI_Dialog : Dialog_typ;
+END_VAR
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+VAR
+	PMS : PMS_typ;
+	System_HMI : PMS_typ;
+END_VAR
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+(*Insert your comment here.*)
+VAR
+	LAMP : LAMP_typ;
+END_VAR

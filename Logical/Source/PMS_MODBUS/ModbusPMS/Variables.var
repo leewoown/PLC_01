@@ -1,0 +1,25 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: MbApp
+ * File: MbApp.var
+ * Author: Bernecker + Rainer
+ * Created: October 22, 2009
+ ********************************************************************
+ * Local variables of program MbApp
+ ********************************************************************)
+VAR
+	fub_status : UINT; (*status of function blocks*)
+	mb_exception : USINT; (*modbus exception*)
+	check_status : BOOL; (*flag to check status*)
+	instruction_ready : BOOL; (*flag marks instruction "ready"*)
+	ModbusCtrl : ModbusCtrlType;
+	HandlingData1 : ARRAY[0..COILS_NUM_MINUS_1] OF BOOL;
+	HandlingData2 : ARRAY[0..REGITSTER_NUM_MINUS_1] OF INT;
+END_VAR
+VAR CONSTANT
+	REGITSTER_NUM : USINT := 97;
+	COILS_NUM : USINT := 2;
+	REGITSTER_NUM_MINUS_1 : USINT := REGITSTER_NUM-1;
+	COILS_NUM_MINUS_1 : USINT := COILS_NUM-1;
+END_VAR

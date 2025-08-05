@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="MediaPackage" PackageType="MediaPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Logo.jpg</Object>
+    <Object Type="File">Image3d.jpg</Object>
+    <Object Type="File">Image3d1.jpg</Object>
+    <Object Type="File">test3.svg</Object>
+    <Object Type="File">test4.svg</Object>
+    <Object Type="File">ChartIndex.png</Object>
+    <Object Type="File">LoadingImage.png</Object>
+    <Object Type="File">ButtonImage.png</Object>
+    <Object Type="File">BATI.svg</Object>
+    <Object Type="File">BATV.svg</Object>
+    <Object Type="File">SOC.svg</Object>
+    <Object Type="File">SOH.svg</Object>
+    <Object Type="File">Loading.svg</Object>
+    <Object Type="File">BootLogo.jpg</Object>
+  </Objects>
+</Package>

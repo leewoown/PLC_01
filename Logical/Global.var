@@ -1,0 +1,21 @@
+(*CONSTANT*)
+VAR CONSTANT
+	ALARM_NUMBER : USINT := 18;
+	ALARM_NUMBER_MINUS_1 : USINT := ALARM_NUMBER-1;
+END_VAR
+(*GLOVAL VARIABLE*)
+VAR
+	gComm : gComm_typ;
+	gSignalCheck : gSignalCheckType;
+END_VAR
+(*ALARM DATABASE*)
+VAR
+	Sys : SysBMS_Typ;
+END_VAR
+(**)
+(*RACK NUMBER CONSTANT*)
+(**)
+VAR
+	StateMa : StateMa_Enum;
+	RackEnable_Count : USINT;
+END_VAR

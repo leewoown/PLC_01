@@ -1,0 +1,6 @@
+
+TYPE
+	LAMP_typ : 	STRUCT 
+		SW_B : BOOL;
+	END_STRUCT;
+END_TYPE

@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="vkAlarmPanel_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Bindings>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[2].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput3" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[3].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput4" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[4].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput5" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[5].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput6" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[6].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput7" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[7].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput8" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[8].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput9" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[9].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput10" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[10].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput11" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[11].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput12" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[12].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput13" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[13].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput14" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[14].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput15" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[15].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput16" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[16].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput17" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[17].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput18" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[0].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput19" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[1].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput20" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[2].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput21" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[3].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput22" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[4].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput23" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[5].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput24" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[6].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput25" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[7].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput26" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[8].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput27" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[9].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput28" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[10].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput29" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[11].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput30" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[12].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput31" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[13].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput32" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[14].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput33" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[15].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput34" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[16].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput35" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[17].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput36" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[0].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput37" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[1].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput38" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[2].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput39" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[3].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput40" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[4].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput41" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[5].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput42" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[6].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput43" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[7].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput44" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[8].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput45" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[9].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput46" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[10].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput47" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[11].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput48" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[12].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput49" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[13].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput50" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[14].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput51" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[15].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput52" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[16].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput53" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[17].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput54" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[0].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput55" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[1].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput56" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[2].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput57" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[3].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput58" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[4].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput59" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[5].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput60" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[6].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput61" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[7].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput62" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[8].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput63" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[9].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput64" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[10].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput65" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[11].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput66" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[12].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput67" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[13].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput68" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[14].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput69" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[15].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput70" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[16].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput71" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[17].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput72" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[0].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput1" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[1].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput2" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[2].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput3" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[3].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput4" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[4].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput5" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[5].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput6" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[6].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput7" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[7].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput8" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[8].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput9" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[9].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput10" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[10].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput11" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[11].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput12" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[12].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput13" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[13].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput14" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[14].Count" attribute="value" />
+			<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput15" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[15].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput16" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[16].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput17" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[17].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput18" attribute="value" />
+</Binding>
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[1].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput2" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[0].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput1" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[18].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput73" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[19].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput77" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[20].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput81" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[21].Name" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput85" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[19].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput78" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[20].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput83" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[21].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput86" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[18].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput75" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[20].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput84" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[19].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput79" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[18].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput76" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[20].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput82" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[21].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput88" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[21].RecentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput87" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[18].InitialTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput74" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[19].ClearTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="TextOutput80" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[18].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput19" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[19].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput20" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[20].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput21" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.SubBMS_AlarmTable[21].Count" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkAlarmPanel" widgetRefId="NumericOutput22" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

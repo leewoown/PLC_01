@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="vkDeviceLoading" height="768" width="1366" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="620" left="495" width="376" height="72" zIndex="1" image="Media/LoadingImage.png" borderWidth="0px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="0" left="0" width="1366" height="768" zIndex="0" />
+    <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar1" top="340" left="438" width="490" height="38" zIndex="2" maxValue="0" showLabel="false" barCornerRadius="15px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="294" left="438" width="490" height="38" zIndex="3" text="장치 초기화 중..." textAlign="center" fontSize="20px" bold="true" />
+  </Widgets>
+</Content>

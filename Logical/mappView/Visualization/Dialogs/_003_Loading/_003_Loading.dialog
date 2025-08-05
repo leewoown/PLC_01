@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="vkLoading" layoutRefId="vkLoading" headerHeight="0px" backColor="rgba(255, 255, 255, 0)" cornerRadius="8px 8px 8px 8px" headerGradient="" headerBackColor="rgba(255, 255, 255, 1)" headerBorderColor="rgba(255, 255, 255, 1)" headerBorderWidth="0px 0px 0px 0px" borderColor="rgba(255, 255, 255, 0)" borderStyle="none" borderWidth="0px" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="vkLoading" areaRefId="area1" backColor="rgba(255, 255, 255, 0)" />
+  </Assignments>
+</ddef:Dialog>

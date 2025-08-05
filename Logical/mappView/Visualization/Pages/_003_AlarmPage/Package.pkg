@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Page description">_001_AlarmPage.page</Object>
+    <Object Type="File">_001_AlarmLEDPanel.content</Object>
+    <Object Type="File">_002_AlarmNaviPanel.content</Object>
+    <Object Type="File">_004_AlarmPanel.content</Object>
+    <Object Type="File">_005_DummyContent.content</Object>
+  </Objects>
+</Package>

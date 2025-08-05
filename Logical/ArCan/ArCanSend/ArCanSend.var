@@ -1,0 +1,6 @@
+VAR
+	ArCanSender : ArCanSend_typ;
+	step : USINT;
+	successCountOld : UDINT;
+	timerCount : UDINT;
+END_VAR

@@ -1,0 +1,12 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * File: Global.var
+ * Author: Bernecker + Rainer
+ * Created: February 12, 2010
+ ********************************************************************
+ * Global variables of project Modbus
+ ********************************************************************)
+VAR
+	MbMaster : MbMaster_typ; (*Variable with the Master_typ struct*)
+END_VAR

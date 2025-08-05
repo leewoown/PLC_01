@@ -1,0 +1,3 @@
+VAR
+	LoopCount : USINT;
+END_VAR

@@ -1,0 +1,10 @@
+<svg viewBox="-150 -150 300 300" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+
+
+  <!--rect x="0" y="0" width="300" height="300" fill="gray" /-->
+  
+  <g id="gauge1" transform="">
+  <polygon points="-20,0 0,100 20,0 0,-40" style="fill:#ffcc53;stroke:#ffcc53;stroke-width:1" transform="rotate(45)" />
+
+	</g>
+</svg>

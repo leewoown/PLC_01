@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="vkTracePanel" height="648" width="1160" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="228" left="818" width="329" height="411" zIndex="2" borderStyle="solid" borderWidth="1px" borderColor="rgba(0, 0, 0, 1)">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="Operator" cornerRadius="0px 0px 0px 0px">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Button" id="Sys_Mode1" top="5" left="168" width="153" height="54" zIndex="0" text="Sys Wake Up ON" borderStyle="solid" borderWidth="1px" cornerRadius="0px" backColor="rgba(0, 175, 79, 1)" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="13px" bold="false" style="Custom_Button" />
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle45" top="92" left="6" width="316" height="67" zIndex="1" cornerRadius="0px" />
+            <Widget xsi:type="widgets.brease.Label" id="Label39" top="64" left="6" width="177" height="28" zIndex="2" text="System DIO Status" borderWidth="1px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="gbLabel3" top="96" left="12" width="307" height="60" zIndex="3" borderWidth="0px" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse41" top="5" left="16" width="12" height="12" zIndex="0" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb47" top="6" left="36" width="72" height="10" zIndex="1" text="Emg Switch" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse42" top="25" left="16" width="12" height="12" zIndex="2" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse43" top="45" left="16" width="12" height="12" zIndex="3" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse50" top="5" left="172" width="12" height="12" zIndex="4" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse51" top="25" left="172" width="12" height="12" zIndex="5" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse52" top="45" left="172" width="12" height="12" zIndex="6" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb48" top="25" left="36" width="72" height="12" zIndex="7" text="OffGas Detect" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb55" top="46" left="36" width="72" height="10" zIndex="8" text="Water Leak" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb62" top="6" left="196" width="88" height="10" zIndex="9" text="N_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb63" top="25" left="196" width="88" height="10" zIndex="10" text="ProCHA_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb64" top="46" left="196" width="88" height="10" zIndex="11" text="P_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle46" top="181" left="6" width="318" height="188" zIndex="4" cornerRadius="0px" />
+            <Widget xsi:type="widgets.brease.Label" id="Label40" top="162" left="6" width="177" height="28" zIndex="5" text="Rack Status" borderWidth="1px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="gbLabel4" top="191" left="12" width="309" height="175" zIndex="6" borderWidth="0px" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse13" top="21" left="19" width="16" height="16" zIndex="0" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb25" top="15" left="45" width="78" height="28" zIndex="1" text="Rack01 :" textColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse14" top="59" left="19" width="16" height="16" zIndex="2" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse15" top="97" left="19" width="16" height="16" zIndex="3" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse16" top="135" left="19" width="16" height="16" zIndex="4" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb26" top="53" left="45" width="78" height="28" zIndex="5" text="Rack02 :" textColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb27" top="91" left="45" width="78" height="28" zIndex="6" text="Rack03 :" textColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb28" top="129" left="45" width="78" height="28" zIndex="7" text="Rack04 :" textColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="15" left="111" width="176" height="28" zIndex="8" value="" />
+                <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput3" top="53" left="111" width="176" height="28" zIndex="9" value="" />
+                <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput4" top="91" left="111" width="176" height="28" zIndex="10" value="" />
+                <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput5" top="129" left="111" width="176" height="28" zIndex="11" value="" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput11" top="5" left="9" width="153" height="54" zIndex="7" value="" borderWidth="1px" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textAlign="center" fontSize="22px" bold="false" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="Protect" cornerRadius="0px 0px 0px 0px">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Button" id="Sys_Mode2" top="5" left="168" width="153" height="54" zIndex="0" text="Alarm Reset" borderStyle="solid" borderWidth="1px" cornerRadius="0px" backColor="rgba(0, 175, 79, 1)" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="13px" bold="false" style="Custom_Button" />
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle47" top="92" left="6" width="316" height="67" zIndex="1" cornerRadius="0px" />
+            <Widget xsi:type="widgets.brease.Label" id="Label41" top="64" left="6" width="177" height="28" zIndex="2" text="System DIO Status" borderWidth="1px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="gbLabel5" top="96" left="12" width="307" height="60" zIndex="3" borderWidth="0px" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse44" top="5" left="16" width="12" height="12" zIndex="0" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb49" top="6" left="36" width="72" height="10" zIndex="1" text="Emg Switch" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse45" top="25" left="16" width="12" height="12" zIndex="2" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse46" top="45" left="16" width="12" height="12" zIndex="3" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse53" top="5" left="172" width="12" height="12" zIndex="4" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse54" top="25" left="172" width="12" height="12" zIndex="5" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse55" top="45" left="172" width="12" height="12" zIndex="6" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb50" top="25" left="36" width="72" height="12" zIndex="7" text="OffGas Detect" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb56" top="46" left="36" width="72" height="10" zIndex="8" text="Water Leak" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb65" top="6" left="196" width="88" height="10" zIndex="9" text="N_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb66" top="25" left="196" width="88" height="10" zIndex="10" text="ProCHA_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb67" top="46" left="196" width="88" height="10" zIndex="11" text="P_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput22" top="5" left="9" width="153" height="54" zIndex="4" value="" borderWidth="1px" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textAlign="center" fontSize="22px" bold="false" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="gbLabel2" top="191" left="12" width="309" height="184" zIndex="7" borderWidth="0px" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse23" top="5" left="5" width="12" height="12" zIndex="0" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb35" top="6" left="25" width="122" height="10" zIndex="1" text="Sys Over Current" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse24" top="23" left="5" width="12" height="12" zIndex="2" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse25" top="42" left="5" width="12" height="12" zIndex="3" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse26" top="60" left="5" width="12" height="12" zIndex="4" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse27" top="78" left="5" width="12" height="12" zIndex="5" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse28" top="96" left="5" width="12" height="12" zIndex="6" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse29" top="115" left="5" width="12" height="12" zIndex="7" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse30" top="133" left="5" width="12" height="12" zIndex="8" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse31" top="151" left="5" width="12" height="12" zIndex="9" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse32" top="169" left="5" width="12" height="12" zIndex="10" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse33" top="5" left="151" width="12" height="12" zIndex="11" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse34" top="23" left="151" width="12" height="12" zIndex="12" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb36" top="24" left="25" width="122" height="10" zIndex="13" text="Sys Over SOC" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb37" top="43" left="25" width="122" height="10" zIndex="14" text="Sys Under SOC" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb38" top="61" left="25" width="122" height="10" zIndex="15" text="Sys Over Voltage" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb39" top="79" left="25" width="122" height="10" zIndex="16" text="Sys Under Voltage" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb40" top="97" left="25" width="122" height="10" zIndex="17" text="Cell Over Voltage" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb41" top="116" left="25" width="122" height="10" zIndex="18" text="Cell Under Voltage" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb42" top="134" left="25" width="122" height="10" zIndex="19" text="Cell UnBalance Voltage" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb43" top="152" left="24" width="135" height="10" zIndex="20" text="Discharge Cell Over Temp" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb44" top="170" left="24" width="138" height="10" zIndex="21" text="Charge Cell Over Temp" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb45" top="6" left="171" width="138" height="10" zIndex="22" text="Discharge Cell Under Temp" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb46" top="24" left="171" width="138" height="10" zIndex="23" text="Charge Cell Under Temp" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb51" top="61" left="171" width="138" height="10" zIndex="26" text="Internal COM Err" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb52" top="79" left="171" width="138" height="10" zIndex="27" text="External COM Err" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb53" top="97" left="171" width="138" height="10" zIndex="28" text="Relay Welding Err" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb54" top="116" left="171" width="138" height="10" zIndex="29" text="Water Leak Err" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb57" top="134" left="171" width="138" height="10" zIndex="38" text="Insulation Registance Err" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb58" top="152" left="171" width="138" height="10" zIndex="25" text="MDS FUSE OPEN" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse35" top="60" left="152" width="12" height="12" zIndex="30" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse36" top="78" left="152" width="12" height="12" zIndex="31" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse37" top="96" left="152" width="12" height="12" zIndex="32" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse38" top="115" left="152" width="12" height="12" zIndex="33" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse39" top="133" left="152" width="12" height="12" zIndex="34" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse40" top="151" left="152" width="12" height="12" zIndex="35" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse47" top="41" left="151" width="12" height="12" zIndex="36" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb59" top="42" left="171" width="138" height="10" zIndex="37" text="Cell UnBalance Temp" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb60" top="170" left="171" width="138" height="10" zIndex="24" text="CoolingSystem" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse48" top="169" left="152" width="12" height="12" zIndex="39" borderStyle="solid" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle49" top="181" left="6" width="318" height="197" zIndex="5" cornerRadius="0px" />
+            <Widget xsi:type="widgets.brease.Label" id="Label43" top="162" left="6" width="177" height="28" zIndex="6" text="System Protect Status" borderWidth="1px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textColor="rgba(255, 255, 255, 1)" textAlign="center" bold="true" />
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="Button1" top="242" left="750" width="50" height="50" zIndex="3" breakWord="true" text="정지" useSVGStyling="false" textAlign="center" fontSize="17px" padding="0px 0px" />
+    <Widget xsi:type="widgets.brease.Button" id="Button2" top="242" left="750" width="50" height="50" zIndex="4" breakWord="true" text="해제" wordWrap="true" fontSize="17px" padding="0px 0px" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="273" left="102" width="126" height="20" zIndex="5" image="Media/ChartIndex.png" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemDivVoltage" top="76" left="1008" width="109" zIndex="9" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'2Z','imperial':'2Z','imperial-us':'2Z'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemAvgVoltage" top="76" left="860" width="108" zIndex="8" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemMinVoltage" top="46" left="1008" width="109" zIndex="7" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemMaxVoltage" top="46" left="860" width="108" zIndex="6" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle41" top="12" left="814" width="194" height="28" zIndex="10" cornerRadius="10px" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle42" top="25" left="814" width="331" height="87" zIndex="0" cornerRadius="10px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label21" top="12" left="816" width="190" height="28" zIndex="11" text="Cell Voltage State" textColor="rgba(192, 0, 0, 1)" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label22" top="46" left="814" width="56" height="29" zIndex="12" text="MAX :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label23" top="76" left="814" width="56" height="29" zIndex="13" text="AVG :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label24" top="46" left="962" width="56" height="29" zIndex="14" text="MIN :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label25" top="76" left="962" width="56" height="29" zIndex="15" text="DIV :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemDivVoltage1" top="184" left="1010" width="109" zIndex="20" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'2Z','imperial':'2Z','imperial-us':'2Z'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemAvgVoltage1" top="184" left="862" width="108" zIndex="19" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemMinVoltage1" top="154" left="1010" width="109" zIndex="18" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SystemMaxVoltage1" top="154" left="862" width="108" zIndex="17" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle43" top="120" left="816" width="192" height="28" zIndex="21" cornerRadius="10px" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle44" top="133" left="816" width="330" height="87" zIndex="16" cornerRadius="10px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label26" top="120" left="818" width="190" height="28" zIndex="22" text="Cell Temperature State" textColor="rgba(192, 0, 0, 1)" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label27" top="154" left="816" width="56" height="29" zIndex="23" text="MAX :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label28" top="184" left="816" width="56" height="29" zIndex="24" text="AVG :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label29" top="154" left="964" width="56" height="29" zIndex="25" text="MIN :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label30" top="184" left="964" width="56" height="29" zIndex="26" text="DIV :" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="14px" bold="true" />
+    <Widget xsi:type="widgets.brease.Paper" id="Paper1" top="48" left="24" width="174" height="174" zIndex="27" maxZoomLevel="0" minZoomLevel="100" svgFilePath="Media/SOC.svg" borderWidth="0px" borderStyle="none" enable="false" />
+    <Widget xsi:type="widgets.brease.Paper" id="Paper2" top="51" left="220" width="174" height="174" zIndex="28" maxZoomLevel="0" minZoomLevel="100" svgFilePath="Media/SOH.svg" borderWidth="0px" borderStyle="none" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="186" left="33" width="75" zIndex="29" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}" textColor="rgba(255, 0, 0, 1)" textAlign="right" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="186" left="229" width="75" zIndex="30" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}" textColor="rgba(255, 0, 0, 1)" textAlign="right" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label31" top="12" left="24" width="174" height="40" zIndex="32" text="SOC" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label32" top="14" left="220" width="174" height="40" zIndex="31" text="SOH" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Paper" id="Paper3" top="50" left="416" width="174" height="174" zIndex="33" maxZoomLevel="0" minZoomLevel="100" svgFilePath="Media/BATV.svg" borderStyle="none" enable="false" />
+    <Widget xsi:type="widgets.brease.Paper" id="Paper4" top="48" left="612" width="174" height="174" zIndex="34" maxZoomLevel="0" minZoomLevel="100" svgFilePath="Media/BATI.svg" borderStyle="none" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="186" left="425" width="75" zIndex="35" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" textColor="rgba(255, 0, 0, 1)" textAlign="right" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput4" top="186" left="621" width="75" zIndex="36" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" unit="{'metric':'AMP','imperial':'AMP','imperial-us':'AMP'}" textColor="rgba(255, 0, 0, 1)" textAlign="right" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label33" top="14" left="416" width="174" height="40" zIndex="38" text="BAT V" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label34" top="12" left="612" width="174" height="40" zIndex="37" text="BAT I" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label35" top="186" left="114" width="30" zIndex="39" text="%" textColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label36" top="186" left="311" width="30" zIndex="40" text="%" textColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label37" top="186" left="508" width="30" zIndex="41" text="V" textColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label38" top="186" left="705" width="30" zIndex="42" text="A" textColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="253" left="-2" width="800" height="422" zIndex="1" updateChartTime="1000" borderStyle="none">
+      <Properties>
+        <yAxis>
+          <Element id="Voltage" max="700" rangeMode="fromConfiguration" title="VOLTAGE(V)" gridColor="rgba(255, 255, 255, 0)" />
+          <Element id="Current" max="200" min="-200" position="right" rangeMode="fromConfiguration" title="CURRENT(A)" />
+        </yAxis>
+        <xAxis>
+          <Element id="xAxis1" />
+        </xAxis>
+        <graph>
+          <Element id="graph1" yAxisReference="Voltage" lineColor="rgba(255, 0, 0, 1)" lineWidth="1px" type="line" />
+          <Element id="graph2" yAxisReference="Current" lineColor="rgba(0, 0, 255, 1)" lineWidth="1px" type="line" />
+        </graph>
+        <cursor>
+          <Element id="cursor1" />
+        </cursor>
+      </Properties>
+    </Widget>
+  </Widgets>
+</Content>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="vkAlarmPanel" height="660" width="930" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="0" left="15" width="230" zIndex="1" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="30" left="15" width="230" zIndex="2" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput3" top="60" left="15" width="230" zIndex="3" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput4" top="90" left="15" width="230" zIndex="4" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput5" top="120" left="15" width="230" zIndex="5" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput6" top="150" left="15" width="230" zIndex="6" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput7" top="180" left="15" width="230" zIndex="7" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput8" top="210" left="15" width="230" zIndex="8" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput9" top="240" left="15" width="230" zIndex="9" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput10" top="270" left="15" width="230" zIndex="10" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput11" top="300" left="15" width="230" zIndex="11" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput12" top="330" left="15" width="230" zIndex="12" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput13" top="360" left="15" width="230" zIndex="13" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput14" top="390" left="15" width="230" zIndex="14" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput15" top="420" left="15" width="230" zIndex="15" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput16" top="450" left="15" width="230" zIndex="16" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput17" top="480" left="15" width="230" zIndex="17" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput18" top="510" left="15" width="230" zIndex="18" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput19" top="0" left="245" width="160" zIndex="19" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput20" top="30" left="245" width="160" zIndex="20" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput21" top="60" left="245" width="160" zIndex="21" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput22" top="90" left="245" width="160" zIndex="22" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput23" top="120" left="245" width="160" zIndex="23" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput24" top="150" left="245" width="160" zIndex="24" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput25" top="180" left="245" width="160" zIndex="25" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput26" top="210" left="245" width="160" zIndex="26" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput27" top="240" left="245" width="160" zIndex="27" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput28" top="270" left="245" width="160" zIndex="28" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput29" top="300" left="245" width="160" zIndex="29" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput30" top="330" left="245" width="160" zIndex="30" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput31" top="360" left="245" width="160" zIndex="31" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput32" top="390" left="245" width="160" zIndex="32" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput33" top="420" left="245" width="160" zIndex="33" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput34" top="450" left="245" width="160" zIndex="34" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput35" top="480" left="245" width="160" zIndex="35" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput36" top="510" left="245" width="160" zIndex="36" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput37" top="0" left="405" width="160" zIndex="37" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput38" top="30" left="405" width="160" zIndex="38" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput39" top="60" left="405" width="160" zIndex="39" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput40" top="90" left="405" width="160" zIndex="40" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput41" top="120" left="405" width="160" zIndex="41" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput42" top="150" left="405" width="160" zIndex="42" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput43" top="180" left="405" width="160" zIndex="43" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput44" top="210" left="405" width="160" zIndex="44" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput45" top="240" left="405" width="160" zIndex="45" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput46" top="270" left="405" width="160" zIndex="46" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput47" top="300" left="405" width="160" zIndex="47" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput48" top="330" left="405" width="160" zIndex="48" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput49" top="360" left="405" width="160" zIndex="49" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput50" top="390" left="405" width="160" zIndex="50" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput51" top="420" left="405" width="160" zIndex="51" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput52" top="450" left="405" width="160" zIndex="52" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput53" top="480" left="405" width="160" zIndex="53" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput54" top="510" left="405" width="160" zIndex="54" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput55" top="0" left="565" width="160" zIndex="55" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput56" top="30" left="565" width="160" zIndex="56" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput57" top="60" left="565" width="160" zIndex="57" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput58" top="90" left="565" width="160" zIndex="58" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput59" top="120" left="565" width="160" zIndex="59" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput60" top="150" left="565" width="160" zIndex="60" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput61" top="180" left="565" width="160" zIndex="61" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput62" top="210" left="565" width="160" zIndex="62" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput63" top="240" left="565" width="160" zIndex="63" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput64" top="270" left="565" width="160" zIndex="64" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput65" top="300" left="565" width="160" zIndex="65" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput66" top="330" left="565" width="160" zIndex="66" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput67" top="360" left="565" width="160" zIndex="67" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput68" top="390" left="565" width="160" zIndex="68" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput69" top="420" left="565" width="160" zIndex="69" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput70" top="450" left="565" width="160" zIndex="70" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput71" top="480" left="565" width="160" zIndex="71" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput72" top="510" left="565" width="160" zIndex="72" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="0" left="725" width="90" zIndex="73" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="30" left="725" width="90" zIndex="74" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="60" left="725" width="90" zIndex="75" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput4" top="90" left="725" width="90" zIndex="76" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput5" top="120" left="725" width="90" zIndex="77" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput6" top="150" left="725" width="90" zIndex="78" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput7" top="180" left="725" width="90" zIndex="79" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput8" top="210" left="725" width="90" zIndex="80" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput9" top="240" left="725" width="90" zIndex="81" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput10" top="270" left="725" width="90" zIndex="82" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput11" top="300" left="725" width="90" zIndex="83" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput12" top="330" left="725" width="90" zIndex="84" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput13" top="360" left="725" width="90" zIndex="85" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput14" top="390" left="725" width="90" zIndex="86" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput15" top="420" left="725" width="90" zIndex="87" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput16" top="450" left="725" width="90" zIndex="88" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput17" top="480" left="725" width="90" zIndex="89" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput18" top="510" left="725" width="90" zIndex="90" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="91" x1="245" x2="245" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="92" x1="15" x2="15" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="93" x1="405" x2="405" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="94" x1="565" x2="565" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line5" zIndex="95" x1="725" x2="725" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="96" x1="815" x2="815" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line8" zIndex="97" x1="15" x2="930" y1="30" y2="30" />
+    <Widget xsi:type="widgets.brease.Line" id="Line9" zIndex="98" x1="15" x2="930" y1="120" y2="120" />
+    <Widget xsi:type="widgets.brease.Line" id="Line10" zIndex="99" x1="15" x2="930" y1="60" y2="60" />
+    <Widget xsi:type="widgets.brease.Line" id="Line11" zIndex="100" x1="15" x2="930" y1="90" y2="90" />
+    <Widget xsi:type="widgets.brease.Line" id="Line12" zIndex="101" x1="15" x2="930" y1="240" y2="240" />
+    <Widget xsi:type="widgets.brease.Line" id="Line13" zIndex="102" x1="15" x2="930" y1="300" y2="300" />
+    <Widget xsi:type="widgets.brease.Line" id="Line14" zIndex="103" x1="15" x2="930" y1="210" y2="210" />
+    <Widget xsi:type="widgets.brease.Line" id="Line15" zIndex="104" x1="15" x2="930" y1="270" y2="270" />
+    <Widget xsi:type="widgets.brease.Line" id="Line16" zIndex="105" x1="15" x2="930" y1="360" y2="360" />
+    <Widget xsi:type="widgets.brease.Line" id="Line17" zIndex="106" x1="15" x2="930" y1="390" y2="390" />
+    <Widget xsi:type="widgets.brease.Line" id="Line18" zIndex="107" x1="15" x2="930" y1="330" y2="330" />
+    <Widget xsi:type="widgets.brease.Line" id="Line19" zIndex="108" x1="15" x2="930" y1="420" y2="420" />
+    <Widget xsi:type="widgets.brease.Line" id="Line24" zIndex="109" x1="15" x2="930" y1="150" y2="150" />
+    <Widget xsi:type="widgets.brease.Line" id="Line25" zIndex="110" x1="15" x2="930" y1="180" y2="180" />
+    <Widget xsi:type="widgets.brease.Line" id="Line26" zIndex="111" x1="15" x2="930" y1="480" y2="480" />
+    <Widget xsi:type="widgets.brease.Line" id="Line27" zIndex="112" x1="15" x2="930" y1="510" y2="510" />
+    <Widget xsi:type="widgets.brease.Line" id="Line28" zIndex="113" x1="15" x2="930" y1="450" y2="450" />
+    <Widget xsi:type="widgets.brease.Line" id="Line35" zIndex="114" x1="15" x2="930" y1="660" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line20" zIndex="115" x1="930" x2="930" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="0" left="816" width="115" height="680" zIndex="116" visible="false">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="5" left="17" width="80" height="20" zIndex="0" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="36" left="17" width="80" height="20" zIndex="1" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton3" top="65" left="17" width="80" height="20" zIndex="2" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton4" top="95" left="17" width="80" height="20" zIndex="3" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton5" top="125" left="17" width="80" height="20" zIndex="4" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton6" top="155" left="17" width="80" height="20" zIndex="5" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton7" top="185" left="17" width="80" height="20" zIndex="6" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton8" top="215" left="17" width="80" height="20" zIndex="7" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton9" top="245" left="17" width="80" height="20" zIndex="8" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton10" top="275" left="17" width="80" height="20" zIndex="9" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton11" top="305" left="17" width="80" height="20" zIndex="10" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton12" top="335" left="17" width="80" height="20" zIndex="11" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton13" top="365" left="17" width="80" height="20" zIndex="12" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton14" top="395" left="17" width="80" height="20" zIndex="13" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton15" top="425" left="17" width="80" height="20" zIndex="14" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton16" top="455" left="17" width="80" height="20" zIndex="15" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton17" top="485" left="17" width="80" height="20" zIndex="16" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton18" top="515" left="17" width="80" height="20" zIndex="17" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton19" top="545" left="17" width="80" height="20" zIndex="18" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton20" top="575" left="17" width="80" height="20" zIndex="19" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton21" top="605" left="17" width="80" height="20" zIndex="20" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton22" top="635" left="17" width="80" height="20" zIndex="21" text="Del" borderWidth="1px 1px 1px 1px" cornerRadius="5px" borderColor="rgba(0, 0, 0, 1)" disabledBorderColor="rgba(0, 0, 0, 1)" padding="0px 0px" checkedBorderColor="rgba(0, 0, 0, 1)" disabledCheckedBorderColor="rgba(0, 0, 0, 1)" style="Delete" visible="false" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput73" top="540" left="15" width="230" zIndex="117" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput74" top="540" left="245" width="160" zIndex="118" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput75" top="540" left="405" width="160" zIndex="119" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput76" top="540" left="565" width="160" zIndex="120" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput19" top="540" left="725" width="90" zIndex="121" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput77" top="570" left="15" width="230" zIndex="122" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput78" top="570" left="245" width="160" zIndex="123" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput79" top="570" left="405" width="160" zIndex="124" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput80" top="570" left="565" width="160" zIndex="125" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput20" top="570" left="725" width="90" zIndex="126" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput81" top="600" left="15" width="230" zIndex="127" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput82" top="600" left="245" width="160" zIndex="128" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput83" top="600" left="405" width="160" zIndex="129" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput84" top="600" left="565" width="160" zIndex="130" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput21" top="600" left="725" width="90" zIndex="131" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput85" top="630" left="15" width="230" zIndex="132" fontSize="14px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput86" top="630" left="245" width="160" zIndex="133" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput87" top="630" left="405" width="160" zIndex="134" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput88" top="630" left="565" width="160" zIndex="135" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput22" top="630" left="725" width="90" zIndex="136" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" showUnit="false" textAlign="center" padding="0px 0px 0px 0px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line36" zIndex="137" x1="15" x2="930" y1="570" y2="570" />
+    <Widget xsi:type="widgets.brease.Line" id="Line21" zIndex="138" x1="930" x2="930" y1="0" y2="660" />
+    <Widget xsi:type="widgets.brease.Line" id="Line37" zIndex="139" x1="15" x2="930" y1="540" y2="540" />
+    <Widget xsi:type="widgets.brease.Line" id="Line38" zIndex="140" x1="15" x2="930" y1="600" y2="600" />
+    <Widget xsi:type="widgets.brease.Line" id="Line39" zIndex="141" x1="15" x2="930" y1="630" y2="630" />
+  </Widgets>
+</Content>

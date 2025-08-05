@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ldef:Layout id="MainLayout3" height="768" width="1366" xmlns:ldef="http://www.br-automation.com/iat2015/layoutDefinition/v2">
+  <Areas>
+    <Area id="Title" left="206" top="0" width="1160" height="120" zIndex="1" />
+    <Area id="NavigationPanel" left="0" top="120" width="206" height="648" zIndex="2" />
+    <Area id="ImageLogo" left="0" top="0" width="206" height="120" zIndex="3" />
+    <Area id="TracePanel" left="206" top="120" width="1160" height="648" zIndex="4" />
+  </Areas>
+</ldef:Layout>

@@ -1,0 +1,10 @@
+VAR_CONFIG
+	::LAMP.SW_B AT %QX."X20DO9322".DigitalOutput05;
+	::DIOHandle:ProRLY AT %QX."X20DO9322".DigitalOutput06;
+	::DIOHandle:PRLY AT %QX."X20DO9322".DigitalOutput07;
+	::DIOHandle:NRLY AT %QX."X20DO9322".DigitalOutput08;
+	::DIOHandle:EMSRLYAUX AT %IX."X20DI9372".DigitalInput01;
+	::DIOHandle:ProRLYAUX AT %IX."X20DI9372".DigitalInput10;
+	::DIOHandle:PRLYAUX AT %IX."X20DI9372".DigitalInput11;
+	::DIOHandle:NRLYAUX AT %IX."X20DI9372".DigitalInput12;
+END_VAR

@@ -1,0 +1,5 @@
+VAR
+	ArCanReceiver : ArCanReceive_typ;
+	countTime : USINT;
+	countCANSuccessOld : UDINT;
+END_VAR
