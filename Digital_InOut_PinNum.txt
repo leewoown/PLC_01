@@ -1,0 +1,27 @@
+[Digital Input]
+DI01 b접점 ems 외부
+DI02 b접점 가스 디텍션
+DI03 b접점 water cooling bmp쪽 >> protect으로 빠지게 PMS
+DI04 b접점 파이어 디텍션
+DI05 B접점 ems bmp쪽
+DI06 
+DI07 
+DI08 
+DI09 
+DI10 a접점 ProRly
+DI11 a접점 PRly
+DI12 a접점 NRly
+
+[Digital Out]
+DO01 
+DO02 
+DO03 
+DO04 부저
+DO05 외부 Lamp
+DO06 ProRly Aux
+DO07 PRly Aux
+DO08 NRly Aux
+DO09 
+DO10 
+DO11 
+DO12 

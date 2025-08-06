@@ -127,7 +127,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul1_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul1_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul1_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul1_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
@@ -150,7 +150,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul1_Info.Value[1].31;
 	
 	SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul2_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul2_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul2_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul2_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
@@ -173,7 +173,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul2_Info.Value[1].31;
 	
 	SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul3_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul3_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul3_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul3_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
@@ -196,7 +196,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul3_Info.Value[1].31;
 	
 	SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul4_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul4_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul4_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul4_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
@@ -219,7 +219,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul4_Info.Value[1].31;
 	
 	SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul5_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul5_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul5_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul5_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
@@ -242,7 +242,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul5_Info.Value[1].31;
 	
 	SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul6_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul6_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul6_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul6_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
@@ -265,7 +265,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul6_Info.Value[1].31;
 	
 	SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul7_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul7_Info.Value[0], 0) AND 16#FF);
-	SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total * 0.1;
+	SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total								:=	SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul7_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Modul7_Info.Value[0], 16) AND 16#FF);
 	SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Volt									:=	SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Volt * 0.1;
 	SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
@@ -288,7 +288,7 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used7  								:= SubBMS.Rack1.BSA.Modul7_Info.Value[1].31;
 END_ACTION
 ACTION ActRACK2DATARxParshing: 
-	// Dword >> USINT
+		// Dword >> USINT
 	// SubBMS.Rack2.BSA.BSA_Product.Field.BSA_Type 		:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 0) AND 16#FF);
 	// Dword >> UINT
 	//SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Normal_Volt 	:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 16) AND 16#FF);
@@ -296,14 +296,20 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.BSA_Product.Field.BSA_Type 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 0) AND 16#0F);
 	SubBMS.Rack2.BSA.BSA_Product.Field.BSA_SW_Ver 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 8) AND 16#0F);
 	SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Normal_Volt 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[0], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Normal_Volt 		:=	SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Normal_Volt  * 0.1;
 	SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Capacity 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Capacity			:=	SubBMS.Rack2.BSA.BSA_Product.Field.BRA_Capacity	* 0.1;
 	SubBMS.Rack2.BSA.BSA_Product.Field.BSA_Serial 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[1], 16) AND 16#0F);
 	SubBMS.Rack2.BSA.BSA_Product.Field.BSA_Parallel 		:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.BSA_Product.Value[1], 24) AND 16#0F);
 	
 	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Volt_Total 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[0], 0) AND 16#FF);
-	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Curr_Total 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Volt_Total			:= SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Volt_Total *0.1;
+	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Curr_Total 		:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Curr_Total			:= SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_Curr_Total *0.1;
 	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_SOC 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_SOC				:= SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_SOC *0.1;
 	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_SOH 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Calc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_SOH				:= SubBMS.Rack2.BSA.Rack_Calc.Field.BRA_SOH *0.1;
 	
 	SubBMS.Rack2.BSA.Rack_State.Field.BSA_Divice_Status 	:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[0], 0) AND 16#0F);
 	SubBMS.Rack2.BSA.Rack_State.Field.BSA_Protect_Status 	:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[0], 8) AND 16#0F);
@@ -316,7 +322,7 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Rack_State.Field.BSA_Water_leak 		:=	SubBMS.Rack2.BSA.Rack_State.Value[0].22;
 	SubBMS.Rack2.BSA.Rack_State.Field.Not_Used1 			:=	SubBMS.Rack2.BSA.Rack_State.Value[0].23;
 	SubBMS.Rack2.BSA.Rack_State.Field.Not_Used2 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[0], 24) AND 16#0F);
-	SubBMS.Rack2.BSA.Rack_State.Field.BSA_Ah 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_State.Field.BSA_Ah 				:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[1], 0) AND 16#FF);
 	SubBMS.Rack2.BSA.Rack_State.Field.Not_Used3 			:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[1], 24) AND 16#FF), 8) OR DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_State.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack2.BSA.Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC 			:= SubBMS.Rack2.BSA.Rack_AlarmState.Value[0].0;
@@ -378,19 +384,31 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Rack_AlarmState.Field.protect.Not_Used3 					:= DWORD_TO_USINT(SHR(SubBMS.Rack2.BSA.Rack_AlarmState.Value[1], 24) AND 16#0F);
 	
 	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont 							:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont 							:=	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont * 0.1;
 	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont 						:=	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont * 0.1;
 	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak 							:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak 							:=	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak * 0.1;
 	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_PWRCalc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak 						:=	SubBMS.Rack2.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak * 0.1;
 	
 	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV						:=	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV * 0.001;
 	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV						:=	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV * 0.001;
 	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV						:=	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV * 0.001;
 	SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[1], 16) AND 16#FF);
+
 	
-	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
-	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT						:=	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT * 0.1;
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT						:=	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT * 0.1;
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT						:=	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT * 0.1;
 	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT						:=	SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT * 0.1;
 	
 	SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxV_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[0], 0) AND 16#FF);
 	SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinV_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[0], 16) AND 16#FF);
@@ -398,8 +416,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack2.BSA.Modul1_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul1_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul1_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul1_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul1_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul1_Info.Value[1].18;
@@ -418,8 +439,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used7  								:= SubBMS.Rack2.BSA.Modul1_Info.Value[1].31;
 	
 	SubBMS.Rack2.BSA.Modul2_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul2_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul2_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul2_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul2_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul2_Info.Value[1].18;
@@ -438,8 +462,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used7  								:= SubBMS.Rack2.BSA.Modul2_Info.Value[1].31;
 	
 	SubBMS.Rack2.BSA.Modul3_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul3_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul3_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul3_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul3_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul3_Info.Value[1].18;
@@ -458,8 +485,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used7  								:= SubBMS.Rack2.BSA.Modul3_Info.Value[1].31;
 	
 	SubBMS.Rack2.BSA.Modul4_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul4_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul4_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul4_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul4_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul4_Info.Value[1].18;
@@ -478,8 +508,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used7  								:= SubBMS.Rack2.BSA.Modul4_Info.Value[1].31;
 	
 	SubBMS.Rack2.BSA.Modul5_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul5_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul5_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul5_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul5_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul5_Info.Value[1].18;
@@ -498,8 +531,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used7  								:= SubBMS.Rack2.BSA.Modul5_Info.Value[1].31;
 	
 	SubBMS.Rack2.BSA.Modul6_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul6_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul6_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul6_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul6_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul6_Info.Value[1].18;
@@ -518,8 +554,11 @@ ACTION ActRACK2DATARxParshing:
 	SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used7  								:= SubBMS.Rack2.BSA.Modul6_Info.Value[1].31;
 	
 	SubBMS.Rack2.BSA.Modul7_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul7_Info.Field.Volt_Total								:=	SubBMS.Rack2.BSA.Modul7_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Volt									:=	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack2.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp									:=	SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_INITOK 								:= SubBMS.Rack2.BSA.Modul7_Info.Value[1].16;
 	SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_Fault  								:= SubBMS.Rack2.BSA.Modul7_Info.Value[1].17;
 	SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack2.BSA.Modul7_Info.Value[1].18;
@@ -546,14 +585,20 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.BSA_Product.Field.BSA_Type 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[0], 0) AND 16#0F);
 	SubBMS.Rack3.BSA.BSA_Product.Field.BSA_SW_Ver 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[0], 8) AND 16#0F);
 	SubBMS.Rack3.BSA.BSA_Product.Field.BRA_Normal_Volt 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[0], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.BSA_Product.Field.BRA_Normal_Volt 		:=	SubBMS.Rack3.BSA.BSA_Product.Field.BRA_Normal_Volt  * 0.1;
 	SubBMS.Rack3.BSA.BSA_Product.Field.BRA_Capacity 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.BSA_Product.Field.BRA_Capacity			:=	SubBMS.Rack3.BSA.BSA_Product.Field.BRA_Capacity	* 0.1;
 	SubBMS.Rack3.BSA.BSA_Product.Field.BSA_Serial 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[1], 16) AND 16#0F);
 	SubBMS.Rack3.BSA.BSA_Product.Field.BSA_Parallel 		:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.BSA_Product.Value[1], 24) AND 16#0F);
 	
 	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Volt_Total 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[0], 0) AND 16#FF);
-	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Curr_Total 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Volt_Total			:= SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Volt_Total *0.1;
+	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Curr_Total 		:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Curr_Total			:= SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_Curr_Total *0.1;
 	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_SOC 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_SOC				:= SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_SOC *0.1;
 	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_SOH 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Calc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_SOH				:= SubBMS.Rack3.BSA.Rack_Calc.Field.BRA_SOH *0.1;
 	
 	SubBMS.Rack3.BSA.Rack_State.Field.BSA_Divice_Status 	:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[0], 0) AND 16#0F);
 	SubBMS.Rack3.BSA.Rack_State.Field.BSA_Protect_Status 	:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[0], 8) AND 16#0F);
@@ -566,7 +611,7 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Rack_State.Field.BSA_Water_leak 		:=	SubBMS.Rack3.BSA.Rack_State.Value[0].22;
 	SubBMS.Rack3.BSA.Rack_State.Field.Not_Used1 			:=	SubBMS.Rack3.BSA.Rack_State.Value[0].23;
 	SubBMS.Rack3.BSA.Rack_State.Field.Not_Used2 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[0], 24) AND 16#0F);
-	SubBMS.Rack3.BSA.Rack_State.Field.BSA_Ah 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_State.Field.BSA_Ah 				:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[1], 0) AND 16#FF);
 	SubBMS.Rack3.BSA.Rack_State.Field.Not_Used3 			:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[1], 24) AND 16#FF), 8) OR DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_State.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack3.BSA.Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC 			:= SubBMS.Rack3.BSA.Rack_AlarmState.Value[0].0;
@@ -628,19 +673,31 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Rack_AlarmState.Field.protect.Not_Used3 					:= DWORD_TO_USINT(SHR(SubBMS.Rack3.BSA.Rack_AlarmState.Value[1], 24) AND 16#0F);
 	
 	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont 							:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont 							:=	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont * 0.1;
 	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont 						:=	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont * 0.1;
 	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak 							:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak 							:=	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak * 0.1;
 	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_PWRCalc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak 						:=	SubBMS.Rack3.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak * 0.1;
 	
 	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV						:=	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV * 0.001;
 	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV						:=	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV * 0.001;
 	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV						:=	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV * 0.001;
 	SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[1], 16) AND 16#FF);
+
 	
-	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
-	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT						:=	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT * 0.1;
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT						:=	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT * 0.1;
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT						:=	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT * 0.1;
 	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT						:=	SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT * 0.1;
 	
 	SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxV_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[0], 0) AND 16#FF);
 	SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinV_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[0], 16) AND 16#FF);
@@ -648,8 +705,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack3.BSA.Modul1_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul1_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul1_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul1_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul1_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul1_Info.Value[1].18;
@@ -668,8 +728,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used7  								:= SubBMS.Rack3.BSA.Modul1_Info.Value[1].31;
 	
 	SubBMS.Rack3.BSA.Modul2_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul2_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul2_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul2_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul2_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul2_Info.Value[1].18;
@@ -688,8 +751,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used7  								:= SubBMS.Rack3.BSA.Modul2_Info.Value[1].31;
 	
 	SubBMS.Rack3.BSA.Modul3_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul3_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul3_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul3_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul3_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul3_Info.Value[1].18;
@@ -708,8 +774,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used7  								:= SubBMS.Rack3.BSA.Modul3_Info.Value[1].31;
 	
 	SubBMS.Rack3.BSA.Modul4_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul4_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul4_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul4_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul4_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul4_Info.Value[1].18;
@@ -728,8 +797,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used7  								:= SubBMS.Rack3.BSA.Modul4_Info.Value[1].31;
 	
 	SubBMS.Rack3.BSA.Modul5_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul5_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul5_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul5_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul5_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul5_Info.Value[1].18;
@@ -748,8 +820,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used7  								:= SubBMS.Rack3.BSA.Modul5_Info.Value[1].31;
 	
 	SubBMS.Rack3.BSA.Modul6_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul6_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul6_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul6_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul6_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul6_Info.Value[1].18;
@@ -768,8 +843,11 @@ ACTION ActRACK3DATARxParshing:
 	SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used7  								:= SubBMS.Rack3.BSA.Modul6_Info.Value[1].31;
 	
 	SubBMS.Rack3.BSA.Modul7_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul7_Info.Field.Volt_Total								:=	SubBMS.Rack3.BSA.Modul7_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Volt									:=	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack3.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp									:=	SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_INITOK 								:= SubBMS.Rack3.BSA.Modul7_Info.Value[1].16;
 	SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_Fault  								:= SubBMS.Rack3.BSA.Modul7_Info.Value[1].17;
 	SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack3.BSA.Modul7_Info.Value[1].18;
@@ -796,14 +874,20 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.BSA_Product.Field.BSA_Type 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[0], 0) AND 16#0F);
 	SubBMS.Rack4.BSA.BSA_Product.Field.BSA_SW_Ver 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[0], 8) AND 16#0F);
 	SubBMS.Rack4.BSA.BSA_Product.Field.BRA_Normal_Volt 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[0], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.BSA_Product.Field.BRA_Normal_Volt 		:=	SubBMS.Rack4.BSA.BSA_Product.Field.BRA_Normal_Volt  * 0.1;
 	SubBMS.Rack4.BSA.BSA_Product.Field.BRA_Capacity 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.BSA_Product.Field.BRA_Capacity			:=	SubBMS.Rack4.BSA.BSA_Product.Field.BRA_Capacity	* 0.1;
 	SubBMS.Rack4.BSA.BSA_Product.Field.BSA_Serial 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[1], 16) AND 16#0F);
 	SubBMS.Rack4.BSA.BSA_Product.Field.BSA_Parallel 		:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.BSA_Product.Value[1], 24) AND 16#0F);
 	
 	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Volt_Total 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[0], 0) AND 16#FF);
-	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Curr_Total 		:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Volt_Total			:= SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Volt_Total *0.1;
+	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Curr_Total 		:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Curr_Total			:= SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_Curr_Total *0.1;
 	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_SOC 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_SOC				:= SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_SOC *0.1;
 	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_SOH 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Calc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_SOH				:= SubBMS.Rack4.BSA.Rack_Calc.Field.BRA_SOH *0.1;
 	
 	SubBMS.Rack4.BSA.Rack_State.Field.BSA_Divice_Status 	:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[0], 0) AND 16#0F);
 	SubBMS.Rack4.BSA.Rack_State.Field.BSA_Protect_Status 	:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[0], 8) AND 16#0F);
@@ -816,7 +900,7 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Rack_State.Field.BSA_Water_leak 		:=	SubBMS.Rack4.BSA.Rack_State.Value[0].22;
 	SubBMS.Rack4.BSA.Rack_State.Field.Not_Used1 			:=	SubBMS.Rack4.BSA.Rack_State.Value[0].23;
 	SubBMS.Rack4.BSA.Rack_State.Field.Not_Used2 			:=	DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[0], 24) AND 16#0F);
-	SubBMS.Rack4.BSA.Rack_State.Field.BSA_Ah 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_State.Field.BSA_Ah 				:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[1], 0) AND 16#FF);
 	SubBMS.Rack4.BSA.Rack_State.Field.Not_Used3 			:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[1], 24) AND 16#FF), 8) OR DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_State.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack4.BSA.Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC 			:= SubBMS.Rack4.BSA.Rack_AlarmState.Value[0].0;
@@ -878,19 +962,31 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Rack_AlarmState.Field.protect.Not_Used3 					:= DWORD_TO_USINT(SHR(SubBMS.Rack4.BSA.Rack_AlarmState.Value[1], 24) AND 16#0F);
 	
 	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont 							:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont 							:=	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_CHAPWCont * 0.1;
 	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont 						:=	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWCont * 0.1;
 	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak 							:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak 							:=	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_CHAPWPeak * 0.1;
 	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_PWRCalc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak 						:=	SubBMS.Rack4.BSA.Rack_PWRCalc.Field.BSA_DisCHAPWPeak * 0.1;
 	
 	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV						:=	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MaxV * 0.001;
 	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV						:=	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_MinV * 0.001;
 	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV						:=	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV * 0.001;
 	SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[1], 16) AND 16#FF);
+
 	
-	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
-	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT						:=	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT * 0.1;
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT						:=	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT * 0.1;
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT						:=	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_AVGT * 0.1;
 	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[1], 16) AND 16#FF);
+	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT						:=	SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_DeviT * 0.1;
 	
 	SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxV_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[0], 0) AND 16#FF);
 	SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinV_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[0], 16) AND 16#FF);
@@ -898,8 +994,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location 				:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[1], 16) AND 16#FF);
 	
 	SubBMS.Rack4.BSA.Modul1_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul1_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul1_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul1_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul1_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul1_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul1_Info.Value[1].18;
@@ -918,8 +1017,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used7  								:= SubBMS.Rack4.BSA.Modul1_Info.Value[1].31;
 	
 	SubBMS.Rack4.BSA.Modul2_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul2_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul2_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul2_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul2_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul2_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul2_Info.Value[1].18;
@@ -938,8 +1040,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used7  								:= SubBMS.Rack4.BSA.Modul2_Info.Value[1].31;
 	
 	SubBMS.Rack4.BSA.Modul3_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul3_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul3_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul3_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul3_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul3_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul3_Info.Value[1].18;
@@ -958,8 +1063,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used7  								:= SubBMS.Rack4.BSA.Modul3_Info.Value[1].31;
 	
 	SubBMS.Rack4.BSA.Modul4_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul4_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul4_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul4_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul4_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul4_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul4_Info.Value[1].18;
@@ -978,8 +1086,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used7  								:= SubBMS.Rack4.BSA.Modul4_Info.Value[1].31;
 	
 	SubBMS.Rack4.BSA.Modul5_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul5_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul5_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul5_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul5_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul5_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul5_Info.Value[1].18;
@@ -998,8 +1109,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used7  								:= SubBMS.Rack4.BSA.Modul5_Info.Value[1].31;
 	
 	SubBMS.Rack4.BSA.Modul6_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul6_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul6_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul6_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul6_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul6_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul6_Info.Value[1].18;
@@ -1018,8 +1132,11 @@ ACTION ActRACK4DATARxParshing:
 	SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used7  								:= SubBMS.Rack4.BSA.Modul6_Info.Value[1].31;
 	
 	SubBMS.Rack4.BSA.Modul7_Info.Field.Volt_Total 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[0], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul7_Info.Field.Volt_Total								:=	SubBMS.Rack4.BSA.Modul7_Info.Field.Volt_Total * 0.01;
 	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Volt 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[0], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[0], 16) AND 16#FF);
-	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Volt									:=	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Volt * 0.1;
+	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp 								:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack4.BSA.Modul7_Info.Value[1], 0) AND 16#FF);
+	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp									:=	SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp * 0.1;
 	SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_INITOK 								:= SubBMS.Rack4.BSA.Modul7_Info.Value[1].16;
 	SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_Fault  								:= SubBMS.Rack4.BSA.Modul7_Info.Value[1].17;
 	SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_Balan_On_OFF  						:= SubBMS.Rack4.BSA.Modul7_Info.Value[1].18;

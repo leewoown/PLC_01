@@ -6,4 +6,10 @@ VAR
 	PRLYAUX : BOOL;
 	NRLYAUX : BOOL;
 	EMSRLYAUX : BOOL;
+	EMSRLY_BMP : USINT;
+	EMSRLY : USINT;
+	GasDetection : USINT;
+	WaterCooling : USINT;
+	FireDection : USINT;
+	Buzzer : USINT;
 END_VAR
