@@ -44,10 +44,23 @@ TYPE
 		NRlyAux : BOOL;
 		PRlyAux : BOOL;
 		EMSRlyAux : BOOL;
+		EMSRlyAux_BMP : BOOL;
+		GasDetectorAux : BOOL;
+		WaterCoolingAux : BOOL;
+		FireDetectorAux : BOOL;
+		Buzzer : BOOL;
 		PRly : BOOL;
 		NRly : BOOL;
 		ProRly : BOOL;
 		WakeUpSig : BOOL;
+		ResetSig : BOOL;
+		ProtectCheckSig : BOOL;
+		RackInfoCheckSig : BOOL;
+		StopSig : BOOL;
+		AlarmSig : BOOL;
+		FaultSig : BOOL;
+		ProtectSig : BOOL;
+		BuzzerSig : BOOL;
 	END_STRUCT;
 END_TYPE
 
@@ -57,26 +70,40 @@ TYPE
 	StateMa_Enum : 
 		(
 		vkSYSTEM_INITIAL := 0,
-		vkSYSTEM_PROTECT_CHECK := 1,
-		vkSUBBMS_ALLRESET := 2,
-		vkSUBBMS_STATECHECK := 3,
-		vkSUBBMS_TEMPCHECK := 4,
-		vkSUBBMS_WAITCOMMAND := 5,
-		vkSUBBMS_FIRSTWAKEUP := 6,
-		vkSUBBMS_WAKEUPSEQ := 7,
-		vkSYSTEM_NEGRLY_ON := 8,
-		vkSYSTEM_PRORLY_ON := 9,
-		vkSYSTEM_RLYDELAY1 := 10,
-		vkSYSTEM_POSRLY_ON := 11,
-		vkSYSTEM_RLYDELAY2 := 12,
-		vkSYSTEM_PRORLY_OFF := 13,
-		vkSYSTEM_DELAY_RESET1 := 14,
-		vkSYSTEM_RUN := 15,
-		vkSYSTEM_NEGRLY_OFF := 16,
-		vkSYSTEM_RLYDELAY3 := 17,
-		vkSYSTEM_POSRLY_OFF := 18,
-		vkSUBBMS_FIRSTWAKEDOWN := 19,
-		vkSUBBMS_WAKEDOWNSEQ := 20,
-		vkSYSTEM_DELAY_RESET2 := 21
+		vkSYSTEM_READY := 1,
+		vkSYSTEM_STANDBY := 2,
+		vkSYSTEM_RUN := 3,
+		vkSYSTEM_ALARM := 4,
+		vkSYSTEM_FAULT := 5,
+		vkSYSTEM_PROTECT := 6,
+		vkSYSTEM_STOP := 7
+		);
+	WakeUpStepMa_Enum : 
+		(
+		vkWAKEUP_INITIAL,
+		vkWAKEUP_RACK1,
+		vkWAKEUP_RACK2,
+		vkWAKEUP_RACK3,
+		vkWAKEUP_RACK4,
+		vkWAKEUP_NRLY,
+		vkWAKEUP_PRORLY_ON,
+		vkWAKEUP_DELAYTIME1,
+		vkWAKEUP_PRLY,
+		vkWAKEUP_DELAYTIME2,
+		vkWAKEUP_PRORLY_OFF,
+		vkWAKEUP_TIMERESET
+		);
+	StopStepMa_Enum : 
+		(
+		vkSTOP_INITIAL,
+		vkSTOP_NRLY,
+		vkSTOP_DELAYTIME1,
+		vkSTOP_PRLY,
+		vkSTOP_DELAYTIME2,
+		vkSTOP_RACK1,
+		vkSTOP_RACK2,
+		vkSTOP_RACK3,
+		vkSTOP_RACK4,
+		vkSTOP_TIMERESET
 		);
 END_TYPE

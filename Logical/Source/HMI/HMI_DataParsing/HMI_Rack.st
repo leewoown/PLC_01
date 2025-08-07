@@ -198,27 +198,6 @@ ACTION AtRackUI :
 		HMI.Module7Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	IF Rack_HMI.Rack_State.Field.BSA_Water_leak THEN
-		HMI.DIOStatus.BSA_Water_leak			:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_Water_leak			:= 'Solid_Green';
-	END_IF;
-	IF Rack_HMI.Rack_State.Field.BSA_Neg_Rly THEN
-		HMI.DIOStatus.BSA_Neg_Rly		:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_Neg_Rly		:= 'Solid_Green';			
-	END_IF;
-	IF Rack_HMI.Rack_State.Field.BSA_Pos_Rly THEN
-		HMI.DIOStatus.BSA_Pos_Rly		:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_Pos_Rly		:= 'Solid_Green';
-	END_IF;
-	IF Rack_HMI.Rack_State.Field.BSA_PreChar_Rly THEN
-		HMI.DIOStatus.BSA_PreChar_Rly		:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_PreChar_Rly		:= 'Solid_Green';
-	END_IF;
-	
 	(* Over Current *)
 	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC  THEN
 		HMI.ProtectStatus.BSA_Charge_OC		:= 'Solid_Red';
@@ -379,6 +358,11 @@ ACTION AtRackUI :
 		HMI.ProtectStatus.BSA_Charge_Unbal_PWR		:= 'Solid_Green';
 	END_IF;
 	
+	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_EMS_SW_Err THEN
+		HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err		:= 'Solid_Red';
+	ELSE
+		HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err		:= 'Solid_Green';
+	END_IF;
 	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err THEN
 		HMI.ProtectStatus.BSA_Prtct_Rly_Err			:= 'Solid_Red';
 	ELSE
@@ -411,36 +395,7 @@ ACTION AtRackUI :
 	//	END_IF;
 	
 	(* DIO *)
-	//	IF HMI.Rack1[19].0 THEN
-	//		HMIBinding.RackUI.sString20[34] 		:= 'Solid_Red';
-	//	ELSE
-	//		HMIBinding.RackUI.sString20[34]			:= 'Solid_Green';
-	//	END_IF;
-	//	IF HMI.Rack1[19].1 THEN
-	//		HMIBinding.RackUI.sString20[35] 		:= 'Solid_Red';
-	//	ELSE
-	//		HMIBinding.RackUI.sString20[35]			:= 'Solid_Green';
-	//	END_IF;
-	//	IF HMI.Rack1[19].2 THEN
-	//		HMIBinding.RackUI.sString20[36] 		:= 'Solid_Red';
-	//	ELSE
-	//		HMIBinding.RackUI.sString20[36]			:= 'Solid_Green';
-	//	END_IF;
-	//	IF HMI.Rack1[20].2 THEN
-	//		HMIBinding.RackUI.sString20[37] 		:= 'Solid_Red';
-	//	ELSE
-	//		HMIBinding.RackUI.sString20[37]			:= 'Solid_Green';
-	//	END_IF;
-	//	IF HMI.Rack1[20].4 THEN
-	//		HMIBinding.RackUI.sString20[38] 		:= 'Solid_Red';
-	//	ELSE
-	//		HMIBinding.RackUI.sString20[38]			:= 'Solid_Green';
-	//	END_IF;
-	//	IF HMI.Rack1[20].5 THEN
-	//		HMIBinding.RackUI.sString20[39] 		:= 'Solid_Red';
-	//	ELSE
-	//		HMIBinding.RackUI.sString20[39]			:= 'Solid_Green';
-	//	END_IF;
+	
 	
 END_ACTION
 

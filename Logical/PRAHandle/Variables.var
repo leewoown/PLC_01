@@ -1,11 +1,25 @@
+(**)
+(*Don`t Remove Variable *)
+(*For Loop Number Variable*)
 VAR
-	WakeUpSig : BOOL;
-	PRATimerProRlyOff : TON;
+	i : USINT;
+END_VAR
+(**)
+(**)
+VAR
 	PRATimerProRlyOn : TON;
+	PRATimerProRlyOff : TON;
 	PRATimerWakeUpOff : TON;
 	PRATimerSeqErr : TON;
-	LoopCount : USINT;
-	RackIndex : USINT;
-	WakeCount : USINT;
-	RackCount : USINT;
+	PRAProtectCheckDone : BOOL;
+	PRARackResetDone : BOOL;
+	PRARackResetCount : USINT;
+	PRAWakeUpDone : BOOL;
+	PRAStopDone : BOOL;
+END_VAR
+(**)
+(**)
+VAR
+	WakeUpStep : WakeUpStepMa_Enum;
+	StopStep : StopStepMa_Enum;
 END_VAR

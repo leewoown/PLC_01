@@ -5,8 +5,9 @@ ACTION AtSystemUI :
 		1:  HMI.BSA_Divice_Status := 'READY';
 		2:  HMI.BSA_Divice_Status := 'STANDBY';
 		3:  HMI.BSA_Divice_Status := 'RUN';
-		4:  HMI.BSA_Divice_Status := 'PROTECT';
-		5:  HMI.BSA_Divice_Status := 'STOP';
+		4:  HMI.BSA_Divice_Status := 'ALARM';
+		5:  HMI.BSA_Divice_Status := 'FAULT';
+		6:  HMI.BSA_Divice_Status := 'PROTECT';
 	END_CASE;
 	
 	HMI.Gauge.BRA_Volt_Total		:= (System_HMI.SysBatCal.Field.BSA_Volt_Total) ;
@@ -54,27 +55,6 @@ ACTION AtSystemUI :
 	HMI.BatteryInfo.BSA_Cell_MinT_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location,CONCAT('(R), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,'(C)')));
 	
 	
-	IF System_HMI.SysBatProtect.Field.BSA_Prtct_WaterLeak THEN
-		HMI.DIOStatus.BSA_Water_leak	:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_Water_leak	:= 'Solid_Green';
-	END_IF;
-	
-	IF System_HMI.SysBatDIO.Field.BSA_Prelay_DO_Status THEN
-		HMI.DIOStatus.BSA_Neg_Rly		:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_Neg_Rly		:= 'Solid_Green';			
-	END_IF;
-	IF System_HMI.SysBatDIO.Field.BSA_Nrelay_DO_Status THEN
-		HMI.DIOStatus.BSA_Pos_Rly		:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_Pos_Rly		:= 'Solid_Green';
-	END_IF;
-	IF System_HMI.SysBatDIO.Field.BSA_ProRelay_DO_Status THEN
-		HMI.DIOStatus.BSA_PreChar_Rly	:= 'Solid_Red';
-	ELSE
-		HMI.DIOStatus.BSA_PreChar_Rly	:= 'Solid_Green';
-	END_IF;
 	
 	IF System_HMI.SysBatProtect.Field.BSA_Prtct_OC THEN
 		HMI.ProtectStatus.BSA_OC		:= 'Solid_Red';

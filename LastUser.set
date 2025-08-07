@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version="4.12.7.113 SP"?>
 <ProjectSettings xmlns="http://br-automation.co.at/AS/ProjectSettings">
-  <ConfigurationManager ActiveConfigurationName="CP0484" />
+  <ConfigurationManager ActiveConfigurationName="CP0484_Simulation" />
   <Deployment Value="ActiveCpu" />
   <ExportProject ExportFilePath="C:\Users\min\Desktop\ShipBatteryRev21_rev2.zip" />
   <Print Footer="%cPage: %p" Header="%lProject: %n%c%x" />

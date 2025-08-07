@@ -50,7 +50,7 @@ PROGRAM _CYCLIC
 	ActLOGIN;
 	ActSystem_AlarmTab;
 	ActDeviceReset;
-	
+	ActDIOState;
 	
 	CASE HMI.Step OF
 		vkINITIAL:

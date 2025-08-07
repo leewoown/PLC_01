@@ -123,210 +123,253 @@ ACTION PMS_SysBatProtect:
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC OR SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_OC := TRUE;
-			
+			Sys.ProtectSig := TRUE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC OR	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_OC := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC OR	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_OC := TRUE;
+			Sys.AlarmSig := TRUE;
 		END_IF;
 
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_SOC_OV  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_SOC_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_SOC_UN  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_SOC_Un THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_SOC_UN  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_OV  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_OV  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_OV  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_UV  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_UV  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_UV  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Cell_OV  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_OV  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Cell_UV  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UV  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_OT  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_OT  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_OT  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_OT  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_UT  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_UT  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_UT  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_UT  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := TRUE;
+			Sys.ProtectSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := TRUE;
+			Sys.FaultSig := TRUE;
 			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := TRUE;
+			Sys.AlarmSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding  := TRUE;
+			Sys.ProtectSig := TRUE;
 	  		
 		END_IF;
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err  THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM   := TRUE;
+			Sys.ProtectSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM  := TRUE;
+			Sys.ProtectSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak  := TRUE;
+			Sys.ProtectSig := TRUE;
 	  		
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV  := TRUE;
+			Sys.ProtectSig := TRUE;
 	  		
 		END_IF;
 		

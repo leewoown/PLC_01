@@ -22,25 +22,25 @@ END_ACTION
 ACTION ActDeviceReset:
 	IF (HMI.AdminDeviceReset) THEN
 		
-		StateMa := vkSYSTEM_PROTECT_CHECK;
-		FOR LoopNum := 0 TO 18 DO
-			HMI_Alarm.Fault[LoopNum].InitialTime		:=	'';
-			HMI_Alarm.Fault[LoopNum].RecentTime			:=	'';
-			HMI_Alarm.Fault[LoopNum].ClearTime			:=	'';
-			HMI_Alarm.Fault[LoopNum].Count				:=	0;
-			HMI_Alarm.Warning[LoopNum].InitialTime		:=	'';
-			HMI_Alarm.Warning[LoopNum].RecentTime		:=	'';
-			HMI_Alarm.Warning[LoopNum].ClearTime		:=	'';
-			HMI_Alarm.Warning[LoopNum].Count			:=	0;
-			HMI_Alarm.Protect[LoopNum].InitialTime		:=	'';
-			HMI_Alarm.Protect[LoopNum].RecentTime		:=	'';
-			HMI_Alarm.Protect[LoopNum].ClearTime		:=	'';
-			HMI_Alarm.Protect[LoopNum].Count			:=	0;
-			
-		END_FOR;
-		
-		HMI.DialogBox.Protect_Trigger := FALSE;
-		HMI.AdminDeviceReset := FALSE;
+//		StateMa := vkSYSTEM_PROTECT_CHECK;
+//		FOR LoopNum := 0 TO 18 DO
+//			HMI_Alarm.Fault[LoopNum].InitialTime		:=	'';
+//			HMI_Alarm.Fault[LoopNum].RecentTime			:=	'';
+//			HMI_Alarm.Fault[LoopNum].ClearTime			:=	'';
+//			HMI_Alarm.Fault[LoopNum].Count				:=	0;
+//			HMI_Alarm.Warning[LoopNum].InitialTime		:=	'';
+//			HMI_Alarm.Warning[LoopNum].RecentTime		:=	'';
+//			HMI_Alarm.Warning[LoopNum].ClearTime		:=	'';
+//			HMI_Alarm.Warning[LoopNum].Count			:=	0;
+//			HMI_Alarm.Protect[LoopNum].InitialTime		:=	'';
+//			HMI_Alarm.Protect[LoopNum].RecentTime		:=	'';
+//			HMI_Alarm.Protect[LoopNum].ClearTime		:=	'';
+//			HMI_Alarm.Protect[LoopNum].Count			:=	0;
+//			
+//		END_FOR;
+//		
+//		HMI.DialogBox.Protect_Trigger := FALSE;
+//		HMI.AdminDeviceReset := FALSE;
 		
 	END_IF;
 END_ACTION

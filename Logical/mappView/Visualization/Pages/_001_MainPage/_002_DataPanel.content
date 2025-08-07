@@ -51,14 +51,14 @@
         <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="284" left="240" width="114" zIndex="45" value="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" />
         <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput3" top="316" left="240" width="114" zIndex="46" value="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" />
         <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput4" top="348" left="240" width="114" zIndex="47" value="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" />
-        <Widget xsi:type="widgets.brease.Label" id="Label1" top="0" left="340" width="31" zIndex="48" text="[V]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label2" top="32" left="340" width="31" zIndex="49" text="[V]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label3" top="63" left="340" width="31" zIndex="50" text="[V]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label4" top="95" left="340" width="45" zIndex="51" text="[mV]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label5" top="126" left="340" width="47" zIndex="52" text="[CAL]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label6" top="157" left="340" width="49" zIndex="53" text="[CAL]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label7" top="189" left="340" width="49" zIndex="54" text="[CAL]" />
-        <Widget xsi:type="widgets.brease.Label" id="Label8" top="221" left="340" width="49" zIndex="55" text="[CAL]" />
+        <Widget xsi:type="widgets.brease.Label" id="Label1" top="0" left="340" width="31" zIndex="48" text="[V]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label2" top="32" left="340" width="31" zIndex="49" text="[V]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label3" top="63" left="340" width="31" zIndex="50" text="[V]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label4" top="95" left="340" width="45" zIndex="51" text="[mV]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label5" top="126" left="340" width="47" zIndex="52" text="[CAL]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label6" top="157" left="340" width="49" zIndex="53" text="[CAL]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label7" top="189" left="340" width="49" zIndex="54" text="[CAL]" textColor="rgba(0, 0, 0, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label8" top="221" left="340" width="49" zIndex="55" text="[CAL]" textColor="rgba(0, 0, 0, 1)" bold="true" padding="1px 5px" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="1" x1="20" x2="20" y1="-3" y2="378" />

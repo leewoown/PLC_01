@@ -83,9 +83,11 @@ TYPE
 		RACK_BRA_Total : ARRAY[0..3]OF STRING[20];
 	END_STRUCT;
 	DIOStatusPanel_typ : 	STRUCT 
-		BSA_EMS : STRING[20];
-		BSA_OffGas : STRING[20];
-		BSA_Water_leak : STRING[20];
+		BSA_Exteral_EMS : STRING[20];
+		BSA_BMP_EMS : STRING[20];
+		BSA_Watercooling : STRING[20];
+		BSA_GasDetector : STRING[20];
+		BSA_FireDetector : STRING[20];
 		BSA_Neg_Rly : STRING[20];
 		BSA_PreChar_Rly : STRING[20];
 		BSA_Pos_Rly : STRING[20];
@@ -109,6 +111,7 @@ TYPE
 		BSA_Discharge_Unbal_PWR : STRING[20];
 		BSA_Charge_Unbal_PWR : STRING[20];
 		BSA_Prtct_Peak_OP : STRING[20];
+		BSA_Prtct_EMS_SW_Err : STRING[20];
 		BSA_Prtct_Continuously_OP : STRING[20];
 		BSA_Prtct_IN_COM_Err : STRING[20];
 		BSA_Prtct_EX_COM_Err : STRING[20];
