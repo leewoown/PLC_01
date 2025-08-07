@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingDefinition xmlns="http://www.br-automation.com/iat2014/eventbinding/runtime/v2">
+  <Content id="vkAlarmNaviPanel">
+    <EventBinding id="vkAlarmNaviPanel.ToggleButton1.Click">
+      <Source type="widgets.brease.ToggleButton.Event" event="Click" refId="vkAlarmNaviPanel_ToggleButton1" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target type="opcUa.NodeAction" refId="::AsGlobalPV:HMI.AlarmTableIndex">
+                <Method type="opcUa.NodeAction.SetValueNumber"><Parameter name="value" xsi:type="ANY_REAL" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target type="widgets.brease.Label.Action" refId="vkAlarmNaviPanel_Label11">
+                <Method type="widgets.brease.Label.Action.SetText"><Parameter name="text" xsi:type="ANY_STRING" value="비고" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Content id="vkAlarmNaviPanel">
+    <EventBinding id="vkAlarmNaviPanel.ToggleButton2.Click">
+      <Source type="widgets.brease.ToggleButton.Event" event="Click" refId="vkAlarmNaviPanel_ToggleButton2" />
+      <EventHandler>
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target type="opcUa.NodeAction" refId="::AsGlobalPV:HMI.AlarmTableIndex">
+                <Method type="opcUa.NodeAction.SetValueNumber"><Parameter name="value" xsi:type="ANY_REAL" value="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target type="widgets.brease.Label.Action" refId="vkAlarmNaviPanel_Label11">
+                <Method type="widgets.brease.Label.Action.SetText"><Parameter name="text" xsi:type="ANY_STRING" value="비고" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Content id="vkAlarmNaviPanel">
+    <EventBinding id="vkAlarmNaviPanel.ToggleButton3.Click">
+      <Source type="widgets.brease.ToggleButton.Event" event="Click" refId="vkAlarmNaviPanel_ToggleButton3" />
+      <EventHandler>
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target type="opcUa.NodeAction" refId="::AsGlobalPV:HMI.AlarmTableIndex">
+                <Method type="opcUa.NodeAction.SetValueNumber"><Parameter name="value" xsi:type="ANY_REAL" value="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target type="widgets.brease.Label.Action" refId="vkAlarmNaviPanel_Label11">
+                <Method type="widgets.brease.Label.Action.SetText"><Parameter name="text" xsi:type="ANY_STRING" value="횟수 초기화" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Content id="vkAlarmPanel">
+    <EventBinding id="EventBinding_5">
+      <Source type="opcUa.Event" refId="::AsGlobalPV:HMI.AlarmTableIndex" event="ValueChanged" />
+      <Operand datatype="ANY_INT" name="ALARMKEY">
+        <ReadTarget type="opcUa.NodeAction.Read" refId="::AsGlobalPV:HMI.AlarmTableIndex">
+          <Method type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="ALARMKEY = 0 OR ALARMKEY = 1">
+        <Action>
+          <Target type="widgets.brease.ButtonBar.Action" refId="vkAlarmPanel_ButtonBar1">
+            <Method type="widgets.brease.ButtonBar.Action.SetVisible"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="ALARMKEY = 2">
+        <Action>
+          <Target type="widgets.brease.ButtonBar.Action" refId="vkAlarmPanel_ButtonBar1">
+            <Method type="widgets.brease.ButtonBar.Action.SetVisible"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+</EventBindingDefinition>

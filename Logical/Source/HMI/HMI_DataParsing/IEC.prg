@@ -7,8 +7,8 @@
     <File Description="Local data types" Private="true">Types.typ</File>
     <File>HMI_Rack.st</File>
     <File>HMI_System.st</File>
-    <File>HMI_Alarm.st</File>
     <File>HMI_Common.st</File>
+    <File>HMI_Alarm.st</File>
     <File>HMI_Event.st</File>
   </Files>
 </Program>

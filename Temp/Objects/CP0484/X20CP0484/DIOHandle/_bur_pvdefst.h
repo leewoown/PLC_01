@@ -1,0 +1,12 @@
+_BUR_LOCAL plcbit ProRLY;
+_BUR_LOCAL plcbit PRLY;
+_BUR_LOCAL plcbit NRLY;
+_BUR_LOCAL plcbit ProRLYAUX;
+_BUR_LOCAL plcbit PRLYAUX;
+_BUR_LOCAL plcbit NRLYAUX;
+_BUR_LOCAL plcbit EMSRLYAUX;
+_BUR_LOCAL plcbit EMSRLYAUX_BMP;
+_BUR_LOCAL plcbit GasDetectorAUX;
+_BUR_LOCAL plcbit WaterCoolingAUX;
+_BUR_LOCAL plcbit FireDetectorAUX;
+_BUR_LOCAL plcbit Buzzer;

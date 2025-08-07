@@ -10,6 +10,7 @@ VAR
 	PRATimerProRlyOn : TON;
 	PRATimerProRlyOff : TON;
 	PRATimerWakeUpOff : TON;
+	PRATimerPrtErr : TON;
 	PRATimerSeqErr : TON;
 	PRAProtectCheckDone : BOOL;
 	PRARackResetDone : BOOL;

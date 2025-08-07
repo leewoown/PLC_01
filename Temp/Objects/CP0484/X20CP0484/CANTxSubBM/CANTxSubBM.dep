@@ -1,0 +1,10 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/ArCan/ArCan.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/ArCan/ArCan.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/asstring/asstring.fun
+$(AS_PROJECT_PATH)/Logical/Source/SubBMS_CAN/CANTxSubBMS/ArCanSend.var
+$(AS_PROJECT_PATH)/Logical/Source/SubBMS_CAN/CANTxSubBMS/ArCanSend.typ
+$(AS_PROJECT_PATH)/Logical/Global.var
+$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/ArCan/ArCan.var
+$(AS_PROJECT_PATH)/Logical/Source/gVariable/Variables.var
+$(AS_PROJECT_PATH)/Logical/Source/gStruct/SubBMS.typ

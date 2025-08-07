@@ -21,7 +21,8 @@ PROGRAM _INIT
 	PRATimerWakeUpOff.PT 	:= T#100ms;
 	PRATimerSeqErr.IN 		:= FALSE;
 	PRATimerSeqErr.PT 		:= T#15s;
-	
+	PRATimerPrtErr.IN		:= FALSE;
+	PRATimerPrtErr.PT		:= T#500ms;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -44,11 +45,23 @@ PROGRAM _CYCLIC
 			
 		vkSYSTEM_READY:
 			
+			PRATimerPrtErr.IN		:= TRUE;
+			
 			PMS.SysBatCal.Field.BSA_Divice_Status 			:=	UDINT_TO_UINT(vkSYSTEM_READY); //READY
 			
 			Sys.ProtectCheckSig								:= TRUE;
 			
 			ATProtectCheck;
+			
+			IF PRATimerPrtErr.Q THEN
+		
+				PRAProtectCheckDone := TRUE;
+		
+			ELSE
+				IF (HMI.DialogBox.Protect_Trigger) THEN
+	  				StateMa := vkSYSTEM_PROTECT;
+				END_IF;
+			END_IF;
 			
 			IF PRAProtectCheckDone THEN
 				Sys.ResetSig			:= TRUE;
@@ -60,9 +73,9 @@ PROGRAM _CYCLIC
 			
 			
 			IF PRAProtectCheckDone AND PRARackResetDone THEN
-				StateMa		:= vkSYSTEM_STANDBY;
-				PRARackResetCount := 0;
-				
+				StateMa					:= vkSYSTEM_STANDBY;
+				PRARackResetCount 		:= 0;
+				PRATimerPrtErr.IN		:= FALSE;
 			END_IF;
 			
 			IF PMS.PMS.Field.PMS_Po_RelayStatus OR PMS.PMS.Field.PMS_Pro_RelayStatus OR PMS.PMS.Field.PMS_Ne_RelayStatus THEN
@@ -70,6 +83,7 @@ PROGRAM _CYCLIC
 			ELSE
 				PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding := FALSE;
 			END_IF;
+			
 		vkSYSTEM_STANDBY:
 			
 			PMS.SysBatCal.Field.BSA_Divice_Status :=	UDINT_TO_UINT(vkSYSTEM_STANDBY); //STANDBY
@@ -78,6 +92,12 @@ PROGRAM _CYCLIC
 				StateMa := vkSYSTEM_RUN;
 			END_IF;
 		
+			IF Sys.PRly OR Sys.NRly OR Sys.ProRly THEN
+				PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding := TRUE;
+			ELSE
+				PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding := FALSE;
+			END_IF;
+			
 		vkSYSTEM_RUN:
 			
 			ATWakeUpSeq;
@@ -90,10 +110,12 @@ PROGRAM _CYCLIC
 				StateMa := vkSYSTEM_STOP;
 			END_IF;
 			
-			IF Sys.PRly OR Sys.NRly OR Sys.ProRly THEN
-				PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding := TRUE;
-			ELSE
-				PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding := FALSE;
+			IF Sys.ProtectSig THEN
+				StateMa := vkSYSTEM_PROTECT;
+			ELSIF Sys.FaultSig THEN
+				StateMa := vkSYSTEM_FAULT;
+			ELSIF Sys.AlarmSig THEN
+				StateMa := vkSYSTEM_ALARM;
 			END_IF;
 			
 		vkSYSTEM_STOP:
@@ -107,10 +129,23 @@ PROGRAM _CYCLIC
 			
 		vkSYSTEM_ALARM:
 			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_ALARM); //ALARM
+			
+//			IF NOT(PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 THEN
+//			StateMa := vkSYSTEM_STOP;
+//			END_IF;
+			
 		vkSYSTEM_FAULT:
 			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_FAULT); //FAULT
+			
+//			IF NOT(PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 THEN
+//				StateMa := vkSYSTEM_STOP;
+//			END_IF;
+			
 		vkSYSTEM_PROTECT:
 			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_PROTECT); //PROTECT
+			
+			//StateMa := vkSYSTEM_STOP;
+		
 	END_CASE;
 	
 	PRATimerProRlyOn();
@@ -118,14 +153,7 @@ PROGRAM _CYCLIC
 	PRATimerWakeUpOff();
 	PRATimerSeqErr();
 	
-	
-	IF Sys.ProtectSig THEN
-		StateMa := vkSYSTEM_PROTECT;
-	ELSIF Sys.FaultSig THEN
-		StateMa := vkSYSTEM_FAULT;
-	ELSIF Sys.AlarmSig THEN
-		StateMa := vkSYSTEM_ALARM;
-	END_IF;
+
 	
 	IF Sys.FireDetectorAux OR Sys.GasDetectorAux OR Sys.WaterCoolingAux OR Sys.EMSRlyAux_BMP OR Sys.EMSRlyAux THEN
 		Sys.ProtectSig := TRUE;

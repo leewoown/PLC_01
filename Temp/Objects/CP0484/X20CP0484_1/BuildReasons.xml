@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildReasons>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\iat_media.job._markerfile">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\iat_media.job" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\type_sass._markerfile">
+    <BuildReason>Target "type_sass._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\0_visulist.json">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\0_visulist.json" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\validatebindings._markerfile">
+    <BuildReason>Target "validatebindings._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\transformations\eventbinding\parametertypemapping.xml">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\mappview\visualization\pages\_001_mainpage\_003_systempanel.content" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile">
+    <BuildReason>Target "content_trans._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\binding_trans._markerfile">
+    <BuildReason>Target "binding_trans._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\themes\grunt.themescsso._markerfile">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\release\burtheme1.min.css" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\duplicatebindingsfinder._markerfile">
+    <BuildReason>Target "duplicatebindingsfinder._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_000_companyinfo\_000_companyinfo_styles.scss">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_002_loadingerror\_002_loadingerror_styles.scss">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_003_loading\_003_loading_styles.scss">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_001_login\_001_login_styles.scss">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_sass._markerfile">
+    <BuildReason>Target "content_sass._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_005_racknum\r001_setrack_styles.scss">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_004_protect\_001_protect_styles.scss">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\vis_0.json">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\pages\mappview\visualization\dialogs\_000_companyinfo\_000_companyinfo_styles.scss" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\dialog_sass._markerfile">
+    <BuildReason>Target "dialog_sass._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\brease_core.css">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\content_trans._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\grunt.breasecsso._markerfile">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484_1\.mappview\data\wwwroot\brvisu\css\themes\grunt.themescsso._markerfile" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID=".mappView_Build">
+    <BuildReason>Rule contains a phony target. </BuildReason>
+  </Rule>
+  <Rule ID=".mappView_IntegrationBuild">
+    <BuildReason>Rule contains a phony target. </BuildReason>
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <BuildReason>Rule is forced.</BuildReason>
+  </Rule>
+</BuildReasons>

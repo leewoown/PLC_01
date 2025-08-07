@@ -1,0 +1,155 @@
+@import "mixins.scss";
+#vkDialogCompanyInfo_Line1 {	z-index: 0;
+}
+#vkDialogCompanyInfo_Line2 {	z-index: 1;
+}
+#vkDialogCompanyInfo_Line3 {	z-index: 2;
+}
+#vkDialogCompanyInfo_Line4 {	z-index: 3;
+}
+#vkDialogCompanyInfo_Line5 {	z-index: 4;
+}
+#vkDialogCompanyInfo_Line6 {	z-index: 5;
+}
+#vkDialogCompanyInfo_Line7 {	z-index: 6;
+}
+#vkDialogCompanyInfo_lbCompanyName {	@include elemTop(0);
+}
+#vkDialogCompanyInfo_lbCompanyName {	@include elemLeft(0);
+}
+#vkDialogCompanyInfo_lbCompanyName {	@include elemAutoWidth(174);
+}
+#vkDialogCompanyInfo_lbCompanyName {	@include elemAutoHeight(60);
+}
+#vkDialogCompanyInfo_lbCompanyName {	z-index: 7;
+}
+#vkDialogCompanyInfo_lbCompanyName {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbCompanyName {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbDeviceName {	@include elemTop(60);
+}
+#vkDialogCompanyInfo_lbDeviceName {	@include elemLeft(0);
+}
+#vkDialogCompanyInfo_lbDeviceName {	@include elemAutoWidth(174);
+}
+#vkDialogCompanyInfo_lbDeviceName {	@include elemAutoHeight(60);
+}
+#vkDialogCompanyInfo_lbDeviceName {	z-index: 8;
+}
+#vkDialogCompanyInfo_lbDeviceName {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbDeviceName {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbSetDate {	@include elemTop(122);
+}
+#vkDialogCompanyInfo_lbSetDate {	@include elemLeft(0);
+}
+#vkDialogCompanyInfo_lbSetDate {	@include elemAutoWidth(174);
+}
+#vkDialogCompanyInfo_lbSetDate {	@include elemAutoHeight(60);
+}
+#vkDialogCompanyInfo_lbSetDate {	z-index: 9;
+}
+#vkDialogCompanyInfo_lbSetDate {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbSetDate {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbTelephone {	@include elemTop(180);
+}
+#vkDialogCompanyInfo_lbTelephone {	@include elemLeft(0);
+}
+#vkDialogCompanyInfo_lbTelephone {	@include elemAutoWidth(174);
+}
+#vkDialogCompanyInfo_lbTelephone {	@include elemAutoHeight(60);
+}
+#vkDialogCompanyInfo_lbTelephone {	z-index: 10;
+}
+#vkDialogCompanyInfo_lbTelephone {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbTelephone {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbShipDevice {	@include elemTop(242);
+}
+#vkDialogCompanyInfo_lbShipDevice {	@include elemLeft(0);
+}
+#vkDialogCompanyInfo_lbShipDevice {	@include elemAutoWidth(174);
+}
+#vkDialogCompanyInfo_lbShipDevice {	@include elemAutoHeight(60);
+}
+#vkDialogCompanyInfo_lbShipDevice {	z-index: 11;
+}
+#vkDialogCompanyInfo_lbShipDevice {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbShipDevice {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	@include elemTop(2);
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	@include elemLeft(178);
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	@include elemAutoWidth(420);
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	@include elemAutoHeight(56);
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	z-index: 12;
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbCompanyName1 {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	@include elemTop(62);
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	@include elemLeft(178);
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	@include elemAutoWidth(420);
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	@include elemAutoHeight(56);
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	z-index: 13;
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbDeviceName1 {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbSetDate1 {	@include elemTop(122);
+}
+#vkDialogCompanyInfo_lbSetDate1 {	@include elemLeft(178);
+}
+#vkDialogCompanyInfo_lbSetDate1 {	@include elemAutoWidth(420);
+}
+#vkDialogCompanyInfo_lbSetDate1 {	@include elemAutoHeight(56);
+}
+#vkDialogCompanyInfo_lbSetDate1 {	z-index: 14;
+}
+#vkDialogCompanyInfo_lbSetDate1 {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbSetDate1 {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbTelephone1 {	@include elemTop(182);
+}
+#vkDialogCompanyInfo_lbTelephone1 {	@include elemLeft(178);
+}
+#vkDialogCompanyInfo_lbTelephone1 {	@include elemAutoWidth(420);
+}
+#vkDialogCompanyInfo_lbTelephone1 {	@include elemAutoHeight(56);
+}
+#vkDialogCompanyInfo_lbTelephone1 {	z-index: 15;
+}
+#vkDialogCompanyInfo_lbTelephone1 {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbTelephone1 {	font-size: 20px;
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	@include elemTop(242);
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	@include elemLeft(178);
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	@include elemAutoWidth(420);
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	@include elemAutoHeight(56);
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	z-index: 16;
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	@include text-alignment-all('center');
+}
+#vkDialogCompanyInfo_lbShipDevice1 {	font-size: 20px;
+}

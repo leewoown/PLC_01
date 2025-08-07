@@ -1,0 +1,10 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/AsMbTCPS/AsMbTCPS.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/asstring/asstring.fun
+$(AS_PROJECT_PATH)/Logical/Source/PMS_MODBUS/ModbusPMS/Variables.var
+$(AS_PROJECT_PATH)/Logical/Libraries/runtime/runtime.var
+$(AS_PROJECT_PATH)/Logical/Source/PMS_MODBUS/ModbusPMS/Types.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/AsMbTCP/AsMbTCP.var
+$(AS_PROJECT_PATH)/Logical/Global.var
+$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/Source/gVariable/Variables.var
+$(AS_PROJECT_PATH)/Logical/Source/gStruct/PMS_CAN.typ

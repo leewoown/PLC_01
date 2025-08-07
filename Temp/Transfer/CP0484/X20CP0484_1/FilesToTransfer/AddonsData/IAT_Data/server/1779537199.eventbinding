@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingDefinition xmlns="http://www.br-automation.com/iat2014/eventbinding/runtime/v2">
+  <Content id="vkDialogLoadingErr">
+    <EventBinding id="vkDialogLoadingErr.Button2.Click">
+      <Source type="widgets.brease.Button.Event" event="Click" refId="vkDialogLoadingErr_Button2" />
+      <EventHandler>
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.CloseDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="vkDialogLoadingErr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Content id="vkDialogProtect">
+    <EventBinding id="EventBinding_11">
+      <Source type="widgets.brease.Button.Event" event="Click" refId="vkDialogProtect_Button2" />
+      <EventHandler>
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.CloseDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="vkDialogProtect" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Visualization>
+    <EventBinding id="EventBinding_13">
+      <Source type="opcUa.Event" refId="::AsGlobalPV:HMI.DialogBox.LoadingError_Trigger" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.OpenDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="vkDialogLoadingErr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Visualization>
+  <Visualization>
+    <EventBinding id="EventBinding_14">
+      <Source type="opcUa.Event" refId="::AsGlobalPV:HMI.DialogBox.Protect_Trigger" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.OpenDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="vkDialogProtect" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Visualization>
+</EventBindingDefinition>

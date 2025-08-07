@@ -3,6 +3,5 @@
 <Physical xmlns="http://br-automation.co.at/AS/Physical">
   <Objects>
     <Object Type="Configuration">CP0484</Object>
-    <Object Type="Configuration">CP0484_Simulation</Object>
   </Objects>
 </Physical>

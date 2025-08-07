@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingDefinition xmlns="http://www.br-automation.com/iat2014/binding/runtime/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:br="http://www.br-automation.com/iat2015/bindingList/runtime/v2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_CoolingSystem" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse42" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_MDSFuse" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse41" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_InsulationReg" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse40" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Water_Leak_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse39" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Rly_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse38" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_EX_COM_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse37" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_IN_COM_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse36" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_DisCharger_Cell_UT" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse33" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UnbalT" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse35" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Charger_Cell_UT" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse34" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Charger_Cell_OT" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse32" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_DisCharger_Cell_OT" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse31" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UnbalV" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse30" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UV" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse29" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_OV" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse28" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_UV" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse27" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_OV" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse26" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_Un" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse25" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_OV" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse24" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkAlarmLEDPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_OC" attribute="value" />
+<Target xsi:type="brease" refId="vkAlarmLEDPanel_Ellipse23" attribute="style" />
+</Binding></Content>
+
+
+
+
+</BindingDefinition>

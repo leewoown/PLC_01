@@ -1,0 +1,2225 @@
+@import "mixins.scss";
+#vkRackStatusPanel_gbLabel1 {	@include elemTop(0);
+}
+#vkRackStatusPanel_gbLabel1 {	@include elemLeft(27);
+}
+#vkRackStatusPanel_gbLabel1 {	@include elemWidth(292);
+}
+#vkRackStatusPanel_gbLabel1 {	@include elemHeight(379);
+}
+#vkRackStatusPanel_gbLabel1 {	z-index: 2;
+}
+#vkRackStatusPanel_gbLabel1 {	border-style: none;
+}
+#vkRackStatusPanel_gbLabel1 {	> .header {
+		border-bottom-style: none;
+	}
+}
+#vkRackStatusPanel_gbLabel1 {	@include box-shadow(0px 0px rgba(62, 79, 92, 0.75));
+}
+#vkRackStatusPanel_lb25 {	@include elemTop(34);
+}
+#vkRackStatusPanel_lb25 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb25 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb25 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb25 {	z-index: 0;
+}
+#vkRackStatusPanel_lb25 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb25 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb25 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb25 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb25 {	margin: 0px;
+}
+#vkRackStatusPanel_lb26 {	@include elemTop(84);
+}
+#vkRackStatusPanel_lb26 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb26 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb26 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb26 {	z-index: 1;
+}
+#vkRackStatusPanel_lb26 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb26 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb26 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb26 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb26 {	margin: 0px;
+}
+#vkRackStatusPanel_lb27 {	@include elemTop(134);
+}
+#vkRackStatusPanel_lb27 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb27 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb27 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb27 {	z-index: 2;
+}
+#vkRackStatusPanel_lb27 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb27 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb27 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb27 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb27 {	margin: 0px;
+}
+#vkRackStatusPanel_lb28 {	@include elemTop(184);
+}
+#vkRackStatusPanel_lb28 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb28 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb28 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb28 {	z-index: 3;
+}
+#vkRackStatusPanel_lb28 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb28 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb28 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb28 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb28 {	margin: 0px;
+}
+#vkRackStatusPanel_lb29 {	@include elemTop(234);
+}
+#vkRackStatusPanel_lb29 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb29 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb29 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb29 {	z-index: 4;
+}
+#vkRackStatusPanel_lb29 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb29 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb29 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb29 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb29 {	margin: 0px;
+}
+#vkRackStatusPanel_lb30 {	@include elemTop(284);
+}
+#vkRackStatusPanel_lb30 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb30 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb30 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb30 {	z-index: 5;
+}
+#vkRackStatusPanel_lb30 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb30 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb30 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb30 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb30 {	margin: 0px;
+}
+#vkRackStatusPanel_lb31 {	@include elemTop(334);
+}
+#vkRackStatusPanel_lb31 {	@include elemLeft(46);
+}
+#vkRackStatusPanel_lb31 {	@include elemAutoWidth(78);
+}
+#vkRackStatusPanel_lb31 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_lb31 {	z-index: 6;
+}
+#vkRackStatusPanel_lb31 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb31 {	font-size: 15px;
+}
+#vkRackStatusPanel_lb31 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb31 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb31 {	margin: 0px;
+}
+#vkRackStatusPanel_TextOutput2 {	@include elemTop(34);
+}
+#vkRackStatusPanel_TextOutput2 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput2 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput2 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput2 {	z-index: 7;
+}
+#vkRackStatusPanel_TextOutput3 {	@include elemTop(84);
+}
+#vkRackStatusPanel_TextOutput3 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput3 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput3 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput3 {	z-index: 8;
+}
+#vkRackStatusPanel_TextOutput4 {	@include elemTop(134);
+}
+#vkRackStatusPanel_TextOutput4 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput4 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput4 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput4 {	z-index: 9;
+}
+#vkRackStatusPanel_TextOutput5 {	@include elemTop(184);
+}
+#vkRackStatusPanel_TextOutput5 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput5 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput5 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput5 {	z-index: 10;
+}
+#vkRackStatusPanel_TextOutput6 {	@include elemTop(234);
+}
+#vkRackStatusPanel_TextOutput6 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput6 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput6 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput6 {	z-index: 11;
+}
+#vkRackStatusPanel_TextOutput7 {	@include elemTop(284);
+}
+#vkRackStatusPanel_TextOutput7 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput7 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput7 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput7 {	z-index: 12;
+}
+#vkRackStatusPanel_TextOutput8 {	@include elemTop(334);
+}
+#vkRackStatusPanel_TextOutput8 {	@include elemLeft(112);
+}
+#vkRackStatusPanel_TextOutput8 {	@include elemAutoWidth(150);
+}
+#vkRackStatusPanel_TextOutput8 {	@include elemAutoHeight(16);
+}
+#vkRackStatusPanel_TextOutput8 {	z-index: 13;
+}
+#vkRackStatusPanel_Rectangle1 {	@include elemTop(34);
+}
+#vkRackStatusPanel_Rectangle1 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle1 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle1 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle1 {	z-index: 14;
+}
+#vkRackStatusPanel_Rectangle2 {	@include elemTop(84);
+}
+#vkRackStatusPanel_Rectangle2 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle2 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle2 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle2 {	z-index: 15;
+}
+#vkRackStatusPanel_Rectangle3 {	@include elemTop(134);
+}
+#vkRackStatusPanel_Rectangle3 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle3 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle3 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle3 {	z-index: 16;
+}
+#vkRackStatusPanel_Rectangle4 {	@include elemTop(184);
+}
+#vkRackStatusPanel_Rectangle4 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle4 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle4 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle4 {	z-index: 17;
+}
+#vkRackStatusPanel_Rectangle5 {	@include elemTop(234);
+}
+#vkRackStatusPanel_Rectangle5 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle5 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle5 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle5 {	z-index: 18;
+}
+#vkRackStatusPanel_Rectangle6 {	@include elemTop(284);
+}
+#vkRackStatusPanel_Rectangle6 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle6 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle6 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle6 {	z-index: 19;
+}
+#vkRackStatusPanel_Rectangle7 {	@include elemTop(334);
+}
+#vkRackStatusPanel_Rectangle7 {	@include elemLeft(20);
+}
+#vkRackStatusPanel_Rectangle7 {	@include elemWidth(16);
+}
+#vkRackStatusPanel_Rectangle7 {	@include elemHeight(16);
+}
+#vkRackStatusPanel_Rectangle7 {	z-index: 20;
+}
+#vkRackStatusPanel_Label23 {	@include elemTop(20);
+}
+#vkRackStatusPanel_Label23 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label23 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label23 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label23 {	z-index: 21;
+}
+#vkRackStatusPanel_Label23 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label23 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label23 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label23 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label23 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label23 {	border-style: double;
+}
+#vkRackStatusPanel_Label23 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label23 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label23 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label23 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label23 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label23 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label24 {	@include elemTop(20);
+}
+#vkRackStatusPanel_Label24 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label24 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label24 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label24 {	z-index: 22;
+}
+#vkRackStatusPanel_Label24 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label24 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label24 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label24 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label24 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label24 {	border-style: double;
+}
+#vkRackStatusPanel_Label24 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label24 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label24 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label24 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label24 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label24 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label25 {	@include elemTop(70);
+}
+#vkRackStatusPanel_Label25 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label25 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label25 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label25 {	z-index: 23;
+}
+#vkRackStatusPanel_Label25 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label25 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label25 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label25 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label25 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label25 {	border-style: double;
+}
+#vkRackStatusPanel_Label25 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label25 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label25 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label25 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label25 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label25 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label26 {	@include elemTop(70);
+}
+#vkRackStatusPanel_Label26 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label26 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label26 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label26 {	z-index: 24;
+}
+#vkRackStatusPanel_Label26 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label26 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label26 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label26 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label26 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label26 {	border-style: double;
+}
+#vkRackStatusPanel_Label26 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label26 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label26 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label26 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label26 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label26 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label27 {	@include elemTop(120);
+}
+#vkRackStatusPanel_Label27 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label27 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label27 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label27 {	z-index: 25;
+}
+#vkRackStatusPanel_Label27 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label27 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label27 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label27 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label27 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label27 {	border-style: double;
+}
+#vkRackStatusPanel_Label27 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label27 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label27 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label27 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label27 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label27 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label28 {	@include elemTop(120);
+}
+#vkRackStatusPanel_Label28 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label28 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label28 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label28 {	z-index: 26;
+}
+#vkRackStatusPanel_Label28 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label28 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label28 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label28 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label28 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label28 {	border-style: double;
+}
+#vkRackStatusPanel_Label28 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label28 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label28 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label28 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label28 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label28 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label29 {	@include elemTop(170);
+}
+#vkRackStatusPanel_Label29 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label29 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label29 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label29 {	z-index: 27;
+}
+#vkRackStatusPanel_Label29 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label29 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label29 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label29 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label29 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label29 {	border-style: double;
+}
+#vkRackStatusPanel_Label29 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label29 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label29 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label29 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label29 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label29 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label30 {	@include elemTop(170);
+}
+#vkRackStatusPanel_Label30 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label30 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label30 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label30 {	z-index: 28;
+}
+#vkRackStatusPanel_Label30 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label30 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label30 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label30 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label30 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label30 {	border-style: double;
+}
+#vkRackStatusPanel_Label30 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label30 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label30 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label30 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label30 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label30 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label31 {	@include elemTop(220);
+}
+#vkRackStatusPanel_Label31 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label31 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label31 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label31 {	z-index: 29;
+}
+#vkRackStatusPanel_Label31 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label31 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label31 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label31 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label31 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label31 {	border-style: double;
+}
+#vkRackStatusPanel_Label31 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label31 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label31 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label31 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label31 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label31 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label32 {	@include elemTop(220);
+}
+#vkRackStatusPanel_Label32 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label32 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label32 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label32 {	z-index: 30;
+}
+#vkRackStatusPanel_Label32 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label32 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label32 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label32 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label32 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label32 {	border-style: double;
+}
+#vkRackStatusPanel_Label32 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label32 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label32 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label32 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label32 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label32 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label33 {	@include elemTop(270);
+}
+#vkRackStatusPanel_Label33 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label33 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label33 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label33 {	z-index: 31;
+}
+#vkRackStatusPanel_Label33 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label33 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label33 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label33 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label33 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label33 {	border-style: double;
+}
+#vkRackStatusPanel_Label33 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label33 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label33 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label33 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label33 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label33 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label34 {	@include elemTop(270);
+}
+#vkRackStatusPanel_Label34 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label34 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label34 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label34 {	z-index: 32;
+}
+#vkRackStatusPanel_Label34 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label34 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label34 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label34 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label34 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label34 {	border-style: double;
+}
+#vkRackStatusPanel_Label34 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label34 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label34 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label34 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label34 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label34 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label35 {	@include elemTop(320);
+}
+#vkRackStatusPanel_Label35 {	@include elemLeft(48);
+}
+#vkRackStatusPanel_Label35 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label35 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label35 {	z-index: 33;
+}
+#vkRackStatusPanel_Label35 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label35 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label35 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label35 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label35 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label35 {	border-style: double;
+}
+#vkRackStatusPanel_Label35 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label35 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label35 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label35 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label35 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label35 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Label36 {	@include elemTop(320);
+}
+#vkRackStatusPanel_Label36 {	@include elemLeft(68);
+}
+#vkRackStatusPanel_Label36 {	@include elemAutoWidth(12);
+}
+#vkRackStatusPanel_Label36 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_Label36 {	z-index: 34;
+}
+#vkRackStatusPanel_Label36 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label36 {	@include border-radius(55px);
+}
+#vkRackStatusPanel_Label36 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label36 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label36 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label36 {	border-style: double;
+}
+#vkRackStatusPanel_Label36 {	&:before {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label36 {	&:after {
+		border-style: double;
+	}
+}
+#vkRackStatusPanel_Label36 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label36 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label36 {	font-size: 8px;
+}
+#vkRackStatusPanel_Label36 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_TextOutput1 {	@include elemTop(6);
+}
+#vkRackStatusPanel_TextOutput1 {	@include elemLeft(342);
+}
+#vkRackStatusPanel_TextOutput1 {	@include elemAutoWidth(336);
+}
+#vkRackStatusPanel_TextOutput1 {	@include elemAutoHeight(34);
+}
+#vkRackStatusPanel_TextOutput1 {	z-index: 3;
+}
+#vkRackStatusPanel_TextOutput1 {	border-width: 1px;
+}
+#vkRackStatusPanel_TextOutput1 {	border-color: rgba(71, 71, 71, 1);
+}
+#vkRackStatusPanel_TextOutput1 {	&:before {
+		border-color: rgba(71, 71, 71, 1);
+	}
+}
+#vkRackStatusPanel_TextOutput1 {	&:after {
+		border-color: rgba(71, 71, 71, 1);
+	}
+}
+#vkRackStatusPanel_TextOutput1 {	border-style: solid;
+}
+#vkRackStatusPanel_TextOutput1 {	&:before {
+		border-style: solid;
+	}
+}
+#vkRackStatusPanel_TextOutput1 {	&:after {
+		border-style: solid;
+	}
+}
+#vkRackStatusPanel_TextOutput1 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_TextOutput1 {	font-size: 22px;
+}
+#vkRackStatusPanel_TextOutput1 {	@include font-weight-bold(false);
+}
+#vkRackStatusPanel_gbLabel2 {	@include elemTop(162);
+}
+#vkRackStatusPanel_gbLabel2 {	@include elemLeft(348);
+}
+#vkRackStatusPanel_gbLabel2 {	@include elemWidth(326);
+}
+#vkRackStatusPanel_gbLabel2 {	@include elemHeight(216);
+}
+#vkRackStatusPanel_gbLabel2 {	z-index: 4;
+}
+#vkRackStatusPanel_gbLabel2 {	border-width: 0px;
+}
+#vkRackStatusPanel_gbLabel2 {	> .header {
+		border-width: 0px;
+	}
+}
+#vkRackStatusPanel_gbLabel2 {	background-color: rgba(255, 255, 255, 0);
+}
+#vkRackStatusPanel_gbLabel2 {	border-style: none;
+}
+#vkRackStatusPanel_gbLabel2 {	> .header {
+		border-bottom-style: none;
+	}
+}
+#vkRackStatusPanel_gbLabel2 {	@include box-shadow(0px 0px rgba(62, 79, 92, 0.75));
+}
+#vkRackStatusPanel_Ellipse23 {	@include elemTop(23);
+}
+#vkRackStatusPanel_Ellipse23 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse23 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse23 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse23 {	z-index: 0;
+}
+#vkRackStatusPanel_Ellipse23 {	border-style: solid;
+}
+#vkRackStatusPanel_lb35 {	@include elemTop(23);
+}
+#vkRackStatusPanel_lb35 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb35 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb35 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb35 {	z-index: 1;
+}
+#vkRackStatusPanel_lb35 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb35 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb35 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb35 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb35 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse24 {	@include elemTop(43);
+}
+#vkRackStatusPanel_Ellipse24 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse24 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse24 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse24 {	z-index: 2;
+}
+#vkRackStatusPanel_Ellipse24 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse25 {	@include elemTop(62);
+}
+#vkRackStatusPanel_Ellipse25 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse25 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse25 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse25 {	z-index: 3;
+}
+#vkRackStatusPanel_Ellipse25 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse26 {	@include elemTop(82);
+}
+#vkRackStatusPanel_Ellipse26 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse26 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse26 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse26 {	z-index: 4;
+}
+#vkRackStatusPanel_Ellipse26 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse27 {	@include elemTop(101);
+}
+#vkRackStatusPanel_Ellipse27 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse27 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse27 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse27 {	z-index: 5;
+}
+#vkRackStatusPanel_Ellipse27 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse28 {	@include elemTop(120);
+}
+#vkRackStatusPanel_Ellipse28 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse28 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse28 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse28 {	z-index: 6;
+}
+#vkRackStatusPanel_Ellipse28 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse29 {	@include elemTop(140);
+}
+#vkRackStatusPanel_Ellipse29 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse29 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse29 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse29 {	z-index: 7;
+}
+#vkRackStatusPanel_Ellipse29 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse30 {	@include elemTop(159);
+}
+#vkRackStatusPanel_Ellipse30 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse30 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse30 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse30 {	z-index: 8;
+}
+#vkRackStatusPanel_Ellipse30 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse31 {	@include elemTop(4);
+}
+#vkRackStatusPanel_Ellipse31 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse31 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse31 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse31 {	z-index: 9;
+}
+#vkRackStatusPanel_Ellipse31 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse32 {	@include elemTop(23);
+}
+#vkRackStatusPanel_Ellipse32 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse32 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse32 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse32 {	z-index: 10;
+}
+#vkRackStatusPanel_Ellipse32 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse33 {	@include elemTop(43);
+}
+#vkRackStatusPanel_Ellipse33 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse33 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse33 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse33 {	z-index: 11;
+}
+#vkRackStatusPanel_Ellipse33 {	border-style: solid;
+}
+#vkRackStatusPanel_lb36 {	@include elemTop(43);
+}
+#vkRackStatusPanel_lb36 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb36 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb36 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb36 {	z-index: 12;
+}
+#vkRackStatusPanel_lb36 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb36 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb36 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb36 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb36 {	margin: 0px;
+}
+#vkRackStatusPanel_lb37 {	@include elemTop(62);
+}
+#vkRackStatusPanel_lb37 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb37 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb37 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb37 {	z-index: 13;
+}
+#vkRackStatusPanel_lb37 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb37 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb37 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb37 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb37 {	margin: 0px;
+}
+#vkRackStatusPanel_lb38 {	@include elemTop(81);
+}
+#vkRackStatusPanel_lb38 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb38 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb38 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb38 {	z-index: 14;
+}
+#vkRackStatusPanel_lb38 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb38 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb38 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb38 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb38 {	margin: 0px;
+}
+#vkRackStatusPanel_lb39 {	@include elemTop(101);
+}
+#vkRackStatusPanel_lb39 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb39 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb39 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb39 {	z-index: 15;
+}
+#vkRackStatusPanel_lb39 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb39 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb39 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb39 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb39 {	margin: 0px;
+}
+#vkRackStatusPanel_lb40 {	@include elemTop(120);
+}
+#vkRackStatusPanel_lb40 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb40 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb40 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb40 {	z-index: 16;
+}
+#vkRackStatusPanel_lb40 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb40 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb40 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb40 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb40 {	margin: 0px;
+}
+#vkRackStatusPanel_lb41 {	@include elemTop(139);
+}
+#vkRackStatusPanel_lb41 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb41 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb41 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb41 {	z-index: 17;
+}
+#vkRackStatusPanel_lb41 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb41 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb41 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb41 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb41 {	margin: 0px;
+}
+#vkRackStatusPanel_lb42 {	@include elemTop(158);
+}
+#vkRackStatusPanel_lb42 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb42 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb42 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb42 {	z-index: 18;
+}
+#vkRackStatusPanel_lb42 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb42 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb42 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb42 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb42 {	margin: 0px;
+}
+#vkRackStatusPanel_lb43 {	@include elemTop(4);
+}
+#vkRackStatusPanel_lb43 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb43 {	@include elemAutoWidth(135);
+}
+#vkRackStatusPanel_lb43 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb43 {	z-index: 19;
+}
+#vkRackStatusPanel_lb43 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb43 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb43 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb43 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb43 {	margin: 0px;
+}
+#vkRackStatusPanel_lb44 {	@include elemTop(23);
+}
+#vkRackStatusPanel_lb44 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb44 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb44 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb44 {	z-index: 20;
+}
+#vkRackStatusPanel_lb44 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb44 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb44 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb44 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb44 {	margin: 0px;
+}
+#vkRackStatusPanel_lb45 {	@include elemTop(43);
+}
+#vkRackStatusPanel_lb45 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb45 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb45 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb45 {	z-index: 21;
+}
+#vkRackStatusPanel_lb45 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb45 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb45 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb45 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb45 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse48 {	@include elemTop(4);
+}
+#vkRackStatusPanel_Ellipse48 {	@include elemLeft(5);
+}
+#vkRackStatusPanel_Ellipse48 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse48 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse48 {	z-index: 22;
+}
+#vkRackStatusPanel_Ellipse48 {	border-style: solid;
+}
+#vkRackStatusPanel_lb60 {	@include elemTop(4);
+}
+#vkRackStatusPanel_lb60 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb60 {	@include elemAutoWidth(122);
+}
+#vkRackStatusPanel_lb60 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb60 {	z-index: 23;
+}
+#vkRackStatusPanel_lb60 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb60 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb60 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb60 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb60 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse34 {	@include elemTop(62);
+}
+#vkRackStatusPanel_Ellipse34 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse34 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse34 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse34 {	z-index: 24;
+}
+#vkRackStatusPanel_Ellipse34 {	border-style: solid;
+}
+#vkRackStatusPanel_lb46 {	@include elemTop(62);
+}
+#vkRackStatusPanel_lb46 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb46 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb46 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb46 {	z-index: 25;
+}
+#vkRackStatusPanel_lb46 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb46 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb46 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb46 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb46 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse44 {	@include elemTop(81);
+}
+#vkRackStatusPanel_Ellipse44 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse44 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse44 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse44 {	z-index: 26;
+}
+#vkRackStatusPanel_Ellipse44 {	border-style: solid;
+}
+#vkRackStatusPanel_lb56 {	@include elemTop(81);
+}
+#vkRackStatusPanel_lb56 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb56 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb56 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb56 {	z-index: 27;
+}
+#vkRackStatusPanel_lb56 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb56 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb56 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb56 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb56 {	margin: 0px;
+}
+#vkRackStatusPanel_lb58 {	@include elemTop(120);
+}
+#vkRackStatusPanel_lb58 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb58 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb58 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb58 {	z-index: 28;
+}
+#vkRackStatusPanel_lb58 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb58 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb58 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb58 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb58 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse46 {	@include elemTop(101);
+}
+#vkRackStatusPanel_Ellipse46 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse46 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse46 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse46 {	z-index: 29;
+}
+#vkRackStatusPanel_Ellipse46 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse47 {	@include elemTop(120);
+}
+#vkRackStatusPanel_Ellipse47 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse47 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse47 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse47 {	z-index: 30;
+}
+#vkRackStatusPanel_Ellipse47 {	border-style: solid;
+}
+#vkRackStatusPanel_lb59 {	@include elemTop(101);
+}
+#vkRackStatusPanel_lb59 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb59 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb59 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb59 {	z-index: 31;
+}
+#vkRackStatusPanel_lb59 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb59 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb59 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb59 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb59 {	margin: 0px;
+}
+#vkRackStatusPanel_lb49 {	@include elemTop(158);
+}
+#vkRackStatusPanel_lb49 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb49 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb49 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb49 {	z-index: 32;
+}
+#vkRackStatusPanel_lb49 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb49 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb49 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb49 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb49 {	margin: 0px;
+}
+#vkRackStatusPanel_lb50 {	@include elemTop(178);
+}
+#vkRackStatusPanel_lb50 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb50 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb50 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb50 {	z-index: 33;
+}
+#vkRackStatusPanel_lb50 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb50 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb50 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb50 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb50 {	margin: 0px;
+}
+#vkRackStatusPanel_lb51 {	@include elemTop(139);
+}
+#vkRackStatusPanel_lb51 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb51 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb51 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb51 {	z-index: 34;
+}
+#vkRackStatusPanel_lb51 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb51 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb51 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb51 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb51 {	margin: 0px;
+}
+#vkRackStatusPanel_lb52 {	@include elemTop(197);
+}
+#vkRackStatusPanel_lb52 {	@include elemLeft(188);
+}
+#vkRackStatusPanel_lb52 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb52 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb52 {	z-index: 35;
+}
+#vkRackStatusPanel_lb52 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb52 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb52 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb52 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb52 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse35 {	@include elemTop(158);
+}
+#vkRackStatusPanel_Ellipse35 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse35 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse35 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse35 {	z-index: 36;
+}
+#vkRackStatusPanel_Ellipse35 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse36 {	@include elemTop(178);
+}
+#vkRackStatusPanel_Ellipse36 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse36 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse36 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse36 {	z-index: 37;
+}
+#vkRackStatusPanel_Ellipse36 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse37 {	@include elemTop(139);
+}
+#vkRackStatusPanel_Ellipse37 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse37 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse37 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse37 {	z-index: 38;
+}
+#vkRackStatusPanel_Ellipse37 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse38 {	@include elemTop(197);
+}
+#vkRackStatusPanel_Ellipse38 {	@include elemLeft(168);
+}
+#vkRackStatusPanel_Ellipse38 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse38 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse38 {	z-index: 39;
+}
+#vkRackStatusPanel_Ellipse38 {	border-style: solid;
+}
+#vkRackStatusPanel_lb54 {	@include elemTop(178);
+}
+#vkRackStatusPanel_lb54 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb54 {	@include elemAutoWidth(137);
+}
+#vkRackStatusPanel_lb54 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb54 {	z-index: 40;
+}
+#vkRackStatusPanel_lb54 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb54 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb54 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb54 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb54 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse39 {	@include elemTop(178);
+}
+#vkRackStatusPanel_Ellipse39 {	@include elemLeft(4);
+}
+#vkRackStatusPanel_Ellipse39 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse39 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse39 {	z-index: 41;
+}
+#vkRackStatusPanel_Ellipse39 {	border-style: solid;
+}
+#vkRackStatusPanel_lb57 {	@include elemTop(197);
+}
+#vkRackStatusPanel_lb57 {	@include elemLeft(25);
+}
+#vkRackStatusPanel_lb57 {	@include elemAutoWidth(138);
+}
+#vkRackStatusPanel_lb57 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb57 {	z-index: 42;
+}
+#vkRackStatusPanel_lb57 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb57 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb57 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb57 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb57 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse45 {	@include elemTop(197);
+}
+#vkRackStatusPanel_Ellipse45 {	@include elemLeft(4);
+}
+#vkRackStatusPanel_Ellipse45 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse45 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse45 {	z-index: 43;
+}
+#vkRackStatusPanel_Ellipse45 {	border-style: solid;
+}
+#vkRackStatusPanel_Rectangle42 {	@include elemTop(147);
+}
+#vkRackStatusPanel_Rectangle42 {	@include elemLeft(342);
+}
+#vkRackStatusPanel_Rectangle42 {	@include elemWidth(338);
+}
+#vkRackStatusPanel_Rectangle42 {	@include elemHeight(229);
+}
+#vkRackStatusPanel_Rectangle42 {	z-index: 1;
+}
+#vkRackStatusPanel_Rectangle42 {	@include border-radius(15px);
+}
+#vkRackStatusPanel_Label21 {	@include elemTop(133);
+}
+#vkRackStatusPanel_Label21 {	@include elemLeft(342);
+}
+#vkRackStatusPanel_Label21 {	@include elemAutoWidth(177);
+}
+#vkRackStatusPanel_Label21 {	@include elemAutoHeight(28);
+}
+#vkRackStatusPanel_Label21 {	z-index: 6;
+}
+#vkRackStatusPanel_Label21 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label21 {	background-color: rgba(255, 0, 0, 1);
+}
+#vkRackStatusPanel_Label21 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label21 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label21 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label21 {	border-style: solid;
+}
+#vkRackStatusPanel_Label21 {	&:before {
+		border-style: solid;
+	}
+}
+#vkRackStatusPanel_Label21 {	&:after {
+		border-style: solid;
+	}
+}
+#vkRackStatusPanel_Label21 {	& span {
+		color: rgba(255, 255, 255, 1);
+	}
+}
+#vkRackStatusPanel_Label21 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label21 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Rectangle43 {	@include elemTop(59);
+}
+#vkRackStatusPanel_Rectangle43 {	@include elemLeft(342);
+}
+#vkRackStatusPanel_Rectangle43 {	@include elemWidth(338);
+}
+#vkRackStatusPanel_Rectangle43 {	@include elemHeight(68);
+}
+#vkRackStatusPanel_Rectangle43 {	z-index: 0;
+}
+#vkRackStatusPanel_Rectangle43 {	@include border-radius(5px);
+}
+#vkRackStatusPanel_Label22 {	@include elemTop(46);
+}
+#vkRackStatusPanel_Label22 {	@include elemLeft(342);
+}
+#vkRackStatusPanel_Label22 {	@include elemAutoWidth(177);
+}
+#vkRackStatusPanel_Label22 {	@include elemAutoHeight(28);
+}
+#vkRackStatusPanel_Label22 {	z-index: 5;
+}
+#vkRackStatusPanel_Label22 {	border-width: 1px;
+}
+#vkRackStatusPanel_Label22 {	background-color: rgba(192, 255, 255, 1);
+}
+#vkRackStatusPanel_Label22 {	border-color: rgba(0, 0, 0, 1);
+}
+#vkRackStatusPanel_Label22 {	&:before {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label22 {	&:after {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label22 {	border-style: solid;
+}
+#vkRackStatusPanel_Label22 {	&:before {
+		border-style: solid;
+	}
+}
+#vkRackStatusPanel_Label22 {	&:after {
+		border-style: solid;
+	}
+}
+#vkRackStatusPanel_Label22 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_Label22 {	@include text-alignment-all('center');
+}
+#vkRackStatusPanel_Label22 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_Line2 {	z-index: 7;
+}
+#vkRackStatusPanel_Line3 {	z-index: 8;
+}
+#vkRackStatusPanel_gbLabel3 {	@include elemTop(70);
+}
+#vkRackStatusPanel_gbLabel3 {	@include elemLeft(348);
+}
+#vkRackStatusPanel_gbLabel3 {	@include elemWidth(326);
+}
+#vkRackStatusPanel_gbLabel3 {	@include elemHeight(56);
+}
+#vkRackStatusPanel_gbLabel3 {	z-index: 9;
+}
+#vkRackStatusPanel_gbLabel3 {	border-width: 0px;
+}
+#vkRackStatusPanel_gbLabel3 {	> .header {
+		border-width: 0px;
+	}
+}
+#vkRackStatusPanel_gbLabel3 {	background-color: rgba(255, 255, 255, 0);
+}
+#vkRackStatusPanel_gbLabel3 {	border-style: none;
+}
+#vkRackStatusPanel_gbLabel3 {	> .header {
+		border-bottom-style: none;
+	}
+}
+#vkRackStatusPanel_gbLabel3 {	@include box-shadow(0px 0px rgba(62, 79, 92, 0.75));
+}
+#vkRackStatusPanel_Ellipse41 {	@include elemTop(14);
+}
+#vkRackStatusPanel_Ellipse41 {	@include elemLeft(7);
+}
+#vkRackStatusPanel_Ellipse41 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse41 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse41 {	z-index: 0;
+}
+#vkRackStatusPanel_Ellipse41 {	border-style: solid;
+}
+#vkRackStatusPanel_lb47 {	@include elemTop(14);
+}
+#vkRackStatusPanel_lb47 {	@include elemLeft(27);
+}
+#vkRackStatusPanel_lb47 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb47 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb47 {	z-index: 1;
+}
+#vkRackStatusPanel_lb47 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb47 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb47 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb47 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb47 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse42 {	@include elemTop(40);
+}
+#vkRackStatusPanel_Ellipse42 {	@include elemLeft(114);
+}
+#vkRackStatusPanel_Ellipse42 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse42 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse42 {	z-index: 2;
+}
+#vkRackStatusPanel_Ellipse42 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse43 {	@include elemTop(6);
+}
+#vkRackStatusPanel_Ellipse43 {	@include elemLeft(114);
+}
+#vkRackStatusPanel_Ellipse43 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse43 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse43 {	z-index: 3;
+}
+#vkRackStatusPanel_Ellipse43 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse50 {	@include elemTop(6);
+}
+#vkRackStatusPanel_Ellipse50 {	@include elemLeft(227);
+}
+#vkRackStatusPanel_Ellipse50 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse50 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse50 {	z-index: 4;
+}
+#vkRackStatusPanel_Ellipse50 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse51 {	@include elemTop(23);
+}
+#vkRackStatusPanel_Ellipse51 {	@include elemLeft(227);
+}
+#vkRackStatusPanel_Ellipse51 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse51 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse51 {	z-index: 5;
+}
+#vkRackStatusPanel_Ellipse51 {	border-style: solid;
+}
+#vkRackStatusPanel_Ellipse52 {	@include elemTop(40);
+}
+#vkRackStatusPanel_Ellipse52 {	@include elemLeft(227);
+}
+#vkRackStatusPanel_Ellipse52 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse52 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse52 {	z-index: 6;
+}
+#vkRackStatusPanel_Ellipse52 {	border-style: solid;
+}
+#vkRackStatusPanel_lb48 {	@include elemTop(40);
+}
+#vkRackStatusPanel_lb48 {	@include elemLeft(134);
+}
+#vkRackStatusPanel_lb48 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb48 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb48 {	z-index: 7;
+}
+#vkRackStatusPanel_lb48 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb48 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb48 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb48 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb48 {	margin: 0px;
+}
+#vkRackStatusPanel_lb55 {	@include elemTop(6);
+}
+#vkRackStatusPanel_lb55 {	@include elemLeft(134);
+}
+#vkRackStatusPanel_lb55 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb55 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb55 {	z-index: 8;
+}
+#vkRackStatusPanel_lb55 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb55 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb55 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb55 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb55 {	margin: 0px;
+}
+#vkRackStatusPanel_lb62 {	@include elemTop(6);
+}
+#vkRackStatusPanel_lb62 {	@include elemLeft(251);
+}
+#vkRackStatusPanel_lb62 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb62 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb62 {	z-index: 9;
+}
+#vkRackStatusPanel_lb62 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb62 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb62 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb62 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb62 {	margin: 0px;
+}
+#vkRackStatusPanel_lb63 {	@include elemTop(23);
+}
+#vkRackStatusPanel_lb63 {	@include elemLeft(251);
+}
+#vkRackStatusPanel_lb63 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb63 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb63 {	z-index: 10;
+}
+#vkRackStatusPanel_lb63 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb63 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb63 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb63 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb63 {	margin: 0px;
+}
+#vkRackStatusPanel_lb64 {	@include elemTop(40);
+}
+#vkRackStatusPanel_lb64 {	@include elemLeft(251);
+}
+#vkRackStatusPanel_lb64 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb64 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb64 {	z-index: 11;
+}
+#vkRackStatusPanel_lb64 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb64 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb64 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb64 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb64 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse49 {	@include elemTop(34);
+}
+#vkRackStatusPanel_Ellipse49 {	@include elemLeft(7);
+}
+#vkRackStatusPanel_Ellipse49 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse49 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse49 {	z-index: 12;
+}
+#vkRackStatusPanel_Ellipse49 {	border-style: solid;
+}
+#vkRackStatusPanel_lb53 {	@include elemTop(34);
+}
+#vkRackStatusPanel_lb53 {	@include elemLeft(27);
+}
+#vkRackStatusPanel_lb53 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb53 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb53 {	z-index: 13;
+}
+#vkRackStatusPanel_lb53 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb53 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb53 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb53 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb53 {	margin: 0px;
+}
+#vkRackStatusPanel_Ellipse53 {	@include elemTop(23);
+}
+#vkRackStatusPanel_Ellipse53 {	@include elemLeft(114);
+}
+#vkRackStatusPanel_Ellipse53 {	@include elemWidth(12);
+}
+#vkRackStatusPanel_Ellipse53 {	@include elemHeight(12);
+}
+#vkRackStatusPanel_Ellipse53 {	z-index: 14;
+}
+#vkRackStatusPanel_Ellipse53 {	border-style: solid;
+}
+#vkRackStatusPanel_lb61 {	@include elemTop(23);
+}
+#vkRackStatusPanel_lb61 {	@include elemLeft(134);
+}
+#vkRackStatusPanel_lb61 {	@include elemAutoWidth(72);
+}
+#vkRackStatusPanel_lb61 {	@include elemAutoHeight(12);
+}
+#vkRackStatusPanel_lb61 {	z-index: 15;
+}
+#vkRackStatusPanel_lb61 {	& span {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+#vkRackStatusPanel_lb61 {	font-size: 10px;
+}
+#vkRackStatusPanel_lb61 {	@include font-weight-bold(true);
+}
+#vkRackStatusPanel_lb61 {	span {
+		padding: 0px;
+	}
+}
+#vkRackStatusPanel_lb61 {	margin: 0px;
+}

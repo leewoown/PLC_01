@@ -1,0 +1,19 @@
+﻿@import "mixins.scss";
+div[data-brease-dialogId='vkDialogProtect'] {
+@include border-radius(15px 15px 8px 8px);
+}
+div[data-brease-dialogId='vkDialogProtect'] {
+	.breaseDialogWindowContentBox{
+@include border-bottom-right-radius(15px 15px 8px 8px);
+	}
+}
+div[data-brease-dialogId='vkDialogProtect'] {
+	.breaseDialogWindowContentBox{
+@include border-bottom-left-radius(15px 15px 8px 8px);
+	}
+}
+div[data-brease-dialogId='vkDialogProtect'] {
+	.breaseDialogWindowHeader{
+@include border-radius(15px 15px 8px 8px);
+	}
+}

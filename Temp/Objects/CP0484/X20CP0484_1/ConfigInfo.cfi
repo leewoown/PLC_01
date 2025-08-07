@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.12.7.113 SP"?>
+<ConfigInfo xmlns="http://br-automation.co.at/AS/BuildInfo">
+  <TaskClass
+    Name="Cyclic#1">
+    <Task
+      Name="CANRxSubBM"
+      Disable="false"
+      Source="Source.SubBMS_CAN.CANRxSubBMS"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxSubBM\ArCanReceive.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\CANRxSubBMS\ArCanReceive.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\CANRxSubBMS\ArCanReceive.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxSubBM\CanReceiver.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxSubBM\RackDataRxParsing.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxSubBM\Action.st.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#2" />
+  <TaskClass
+    Name="Cyclic#3">
+    <Task
+      Name="CANRxPMS"
+      Disable="false"
+      Source="Source.PMS_CAN.CANRxPMS"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxPMS\ArCanReceive.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\CANRxPMS\ArCanReceive.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\CANRxPMS\ArCanReceive.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxPMS\Action.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxPMS\PMSDataRxParsing.st.var" />
+    </Task>
+    <Task
+      Name="CANTxPMS"
+      Disable="false"
+      Source="Source.PMS_CAN.CANTxPMS"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANTxPMS\ArCanSend.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\CANTxPMS\ArCanSend.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\CANTxPMS\ArCanSend.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANTxPMS\Action.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANTxPMS\PMSDataTxParsing.st.var" />
+    </Task>
+    <Task
+      Name="MbTcpS"
+      Disable="false"
+      Source="MbTCP.MbTcpS"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\MbTcpS\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\MbTCP\MbTcpS\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\MbTCP\MbTcpS\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#4">
+    <Task
+      Name="CANTxSubBM"
+      Disable="false"
+      Source="Source.SubBMS_CAN.CANTxSubBMS"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANTxSubBM\ArCanSend.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\CANTxSubBMS\ArCanSend.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\CANTxSubBMS\ArCanSend.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANTxSubBM\CanSend.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANTxSubBM\RackDataTxParsing.st.var" />
+    </Task>
+    <Task
+      Name="HMI_DataPa"
+      Disable="false"
+      Source="Source.HMI.HMI_DataParsing"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_DataPa\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\Variables.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\Types.typ" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_DataPa\HMI_Rack.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_DataPa\HMI_System.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_DataPa\HMI_Common.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_DataPa\HMI_Alarm.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_DataPa\HMI_Event.st.var" />
+    </Task>
+    <Task
+      Name="CANRxParaH"
+      Disable="false"
+      Source="Source.PMS_CAN.PMS_Calculator"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxParaH\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\Variables.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxParaH\PMS_Calculator.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\CANRxParaH\System_HMI.st.var" />
+    </Task>
+    <Task
+      Name="DIOHandle"
+      Disable="false"
+      Source="DIOHandle"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\DIOHandle\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Variables.var" />
+    </Task>
+    <Task
+      Name="HMI_Device"
+      Disable="false"
+      Source="Source.HMI.HMI_DeviceLoading"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\HMI_Device\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DeviceLoading\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DeviceLoading\Variables.var" />
+    </Task>
+    <Task
+      Name="SubBMS_Mod"
+      Disable="true"
+      Source="Source.SubBMS_CAN.SubBMS_ModeChange"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\SubBMS_Mod\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\SubBMS_ModeChange\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\SubBMS_ModeChange\Variables.var" />
+    </Task>
+    <Task
+      Name="ModbusPMS"
+      Disable="false"
+      Source="Source.PMS_MODBUS.ModbusPMS"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\ModbusPMS\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_MODBUS\ModbusPMS\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_MODBUS\ModbusPMS\Variables.var" />
+    </Task>
+    <Task
+      Name="PMSRxParaH"
+      Disable="false"
+      Source="Source.PMS_CAN.PMSRxHandle"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\PMSRxParaH\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMSRxHandle\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMSRxHandle\Variables.var" />
+    </Task>
+    <Task
+      Name="PRAHandle"
+      Disable="false"
+      Source="PRAHandle"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\PRAHandle\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\PRAHandle\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\PRAHandle\Variables.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\PRAHandle\Action.st.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#5" />
+  <TaskClass
+    Name="Cyclic#6">
+    <Task
+      Name="Lamp_SW_B"
+      Disable="false"
+      Source="Source.LAMPSeq.Lamp_SW_B"
+      Language="IEC">
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484_1\Lamp_SW_B\Main.st.var" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Lamp_SW_B\Types.typ" />
+      <File
+        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Lamp_SW_B\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#7" />
+  <TaskClass
+    Name="Cyclic#8" />
+</ConfigInfo>
