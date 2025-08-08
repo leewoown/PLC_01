@@ -1,5 +1,0 @@
-VAR
-	LoopCount : INT;
-	New_Variable : USINT;
-	TON_0 : TON;
-END_VAR

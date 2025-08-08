@@ -45,37 +45,18 @@ PROGRAM _CYCLIC
 			
 		vkSYSTEM_READY:
 			
-			PRATimerPrtErr.IN		:= TRUE;
-			
 			PMS.SysBatCal.Field.BSA_Divice_Status 			:=	UDINT_TO_UINT(vkSYSTEM_READY); //READY
 			
-			Sys.ProtectCheckSig								:= TRUE;
-			
-			ATProtectCheck;
-			
-			IF PRATimerPrtErr.Q THEN
-		
-				PRAProtectCheckDone := TRUE;
-		
-			ELSE
-				IF (HMI.DialogBox.Protect_Trigger) THEN
-	  				StateMa := vkSYSTEM_PROTECT;
-				END_IF;
-			END_IF;
-			
-			IF PRAProtectCheckDone THEN
-				Sys.ResetSig			:= TRUE;
-			ELSE
-				Sys.ResetSig			:= FALSE;
-			END_IF;
+			Sys.ResetSig			:= TRUE;
 			
 			ATReset;
 			
-			
-			IF PRAProtectCheckDone AND PRARackResetDone THEN
+			IF PRARackResetDone THEN
+				
+				Sys.ResetSig := FALSE;
+				
+				ATRackReadyCheck;
 				StateMa					:= vkSYSTEM_STANDBY;
-				PRARackResetCount 		:= 0;
-				PRATimerPrtErr.IN		:= FALSE;
 			END_IF;
 			
 			IF PMS.PMS.Field.PMS_Po_RelayStatus OR PMS.PMS.Field.PMS_Pro_RelayStatus OR PMS.PMS.Field.PMS_Ne_RelayStatus THEN

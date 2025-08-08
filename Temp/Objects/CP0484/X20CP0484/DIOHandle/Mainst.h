@@ -86,6 +86,11 @@ typedef struct SysBMS_Typ
 	plcbit ProtectCheckSig;
 	plcbit RackInfoCheckSig;
 	plcbit StopSig;
+	plcbit AlarmSig;
+	plcbit FaultSig;
+	plcbit ProtectSig;
+	plcbit BuzzerSig;
+	plcbit DeviceloadingDone;
 } SysBMS_Typ;
 #endif
 
@@ -102,3 +107,4 @@ _BUR_LOCAL plcbit WaterCoolingAUX;
 _BUR_LOCAL plcbit FireDetectorAUX;
 _BUR_LOCAL plcbit Buzzer;
 _GLOBAL SysBMS_Typ Sys;
+_LOCAL plcbit Edge0000100000;

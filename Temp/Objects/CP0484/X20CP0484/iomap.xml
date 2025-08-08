@@ -678,6 +678,111 @@
 <LN ID="%IW.IF6.ST6.FirmwareVersion" Type="UINT">
 <Prod Device="IF6.ST6" DPName="FirmwareVersion" Kind="io"/>
 </LN>
+<LN ID="%IB.IF6.ST6.RXCount" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXCount" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXCountLatch" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXCountLatch" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.TXCountReadBack" Type="USINT">
+<Prod Device="IF6.ST6" DPName="TXCountReadBack" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.TXCountLatchReadBack" Type="USINT">
+<Prod Device="IF6.ST6" DPName="TXCountLatchReadBack" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXDataSize0" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXDataSize0" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST6.RXIdent0" Type="UDINT">
+<Prod Device="IF6.ST6" DPName="RXIdent0" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte0" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte0" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte1" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte1" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte2" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte2" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte3" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte3" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte4" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte4" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte5" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte5" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte6" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte6" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData0Byte7" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData0Byte7" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXDataSize1" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXDataSize1" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST6.RXIdent1" Type="UDINT">
+<Prod Device="IF6.ST6" DPName="RXIdent1" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte0" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte0" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte1" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte1" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte2" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte2" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte3" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte3" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte4" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte4" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte5" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte5" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte6" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte6" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST6.RXData1Byte7" Type="USINT">
+<Prod Device="IF6.ST6" DPName="RXData1Byte7" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXCount" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXCount" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataSize" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataSize" Kind="io"/>
+</LN>
+<LN ID="%QD.IF6.ST6.TXIdent" Type="UDINT">
+<Cons Device="IF6.ST6" DPName="TXIdent" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte0" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte0" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte1" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte1" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte2" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte2" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte3" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte3" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte4" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte4" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte5" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte5" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte6" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte6" Kind="io"/>
+</LN>
+<LN ID="%QB.IF6.ST6.TXDataByte7" Type="USINT">
+<Cons Device="IF6.ST6" DPName="TXDataByte7" Kind="io"/>
+</LN>
 <LN ID="%IW.IF6.ST6.BusModuleId" Type="UINT">
 <Prod Device="IF6.ST6" DPName="BusModuleId" Kind="io"/>
 </LN>

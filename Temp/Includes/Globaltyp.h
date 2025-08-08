@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754548411_1_
-#define _BUR_1754548411_1_
+#ifndef _BUR_1754614240_1_
+#define _BUR_1754614240_1_
 
 #include <bur/plctypes.h>
 
@@ -100,6 +100,7 @@ typedef struct SysBMS_Typ
 	plcbit FaultSig;
 	plcbit ProtectSig;
 	plcbit BuzzerSig;
+	plcbit DeviceloadingDone;
 } SysBMS_Typ;
 
 
@@ -117,5 +118,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1754548411_1_ */
+#endif /* _BUR_1754614240_1_ */
 

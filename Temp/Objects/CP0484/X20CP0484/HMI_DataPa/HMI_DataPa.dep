@@ -7,3 +7,5 @@ $(AS_PROJECT_PATH)/Logical/Source/gStruct/PMS_CAN.typ
 $(AS_PROJECT_PATH)/Logical/Source/gStruct/HMI.typ
 $(AS_PROJECT_PATH)/Logical/Source/HMI/HMI_DataParsing/Types.typ
 $(AS_PROJECT_PATH)/Logical/Source/gStruct/SubBMS.typ
+$(AS_PROJECT_PATH)/Logical/Global.var
+$(AS_PROJECT_PATH)/Logical/Global.typ

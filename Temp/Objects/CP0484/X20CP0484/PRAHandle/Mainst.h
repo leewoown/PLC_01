@@ -86,6 +86,11 @@ typedef struct SysBMS_Typ
 	plcbit ProtectCheckSig;
 	plcbit RackInfoCheckSig;
 	plcbit StopSig;
+	plcbit AlarmSig;
+	plcbit FaultSig;
+	plcbit ProtectSig;
+	plcbit BuzzerSig;
+	plcbit DeviceloadingDone;
 } SysBMS_Typ;
 #endif
 
@@ -555,12 +560,19 @@ typedef struct SystemRackInfoPanel_typ
 #ifndef __AS__TYPE_DIOStatusPanel_typ
 #define __AS__TYPE_DIOStatusPanel_typ
 typedef struct DIOStatusPanel_typ
-{	plcstring BSA_EMS[21];
-	plcstring BSA_OffGas[21];
-	plcstring BSA_Water_leak[21];
+{	plcstring BSA_Exteral_EMS[21];
+	plcstring BSA_BMP_EMS[21];
+	plcstring BSA_Watercooling[21];
+	plcstring BSA_GasDetector[21];
+	plcstring BSA_FireDetector[21];
 	plcstring BSA_Neg_Rly[21];
 	plcstring BSA_PreChar_Rly[21];
 	plcstring BSA_Pos_Rly[21];
+	plcstring BSA_Protect_Status[21];
+	plcstring BSA_EMG_SW[21];
+	plcstring BSA_WaterLeak[21];
+	plcstring BSA_Balance[21];
+	plcstring BSA_MSD_AUX[21];
 } DIOStatusPanel_typ;
 #endif
 
@@ -585,9 +597,11 @@ typedef struct ProtectStatusPanel_typ
 	plcstring BSA_Discharge_Unbal_PWR[21];
 	plcstring BSA_Charge_Unbal_PWR[21];
 	plcstring BSA_Prtct_Peak_OP[21];
+	plcstring BSA_Prtct_EMS_SW_Err[21];
 	plcstring BSA_Prtct_Continuously_OP[21];
 	plcstring BSA_Prtct_IN_COM_Err[21];
 	plcstring BSA_Prtct_EX_COM_Err[21];
+	plcstring BSA_Prtct_CT_COM_Err[21];
 	plcstring BSA_Prtct_Rly_Err[21];
 	plcstring BSA_Prtct_Water_Leak_Err[21];
 	plcstring BRA_Prtct_InsulationReg[21];
@@ -1198,6 +1212,7 @@ _BUR_LOCAL unsigned char i;
 _BUR_LOCAL struct TON PRATimerProRlyOn;
 _BUR_LOCAL struct TON PRATimerProRlyOff;
 _BUR_LOCAL struct TON PRATimerWakeUpOff;
+_BUR_LOCAL struct TON PRATimerPrtErr;
 _BUR_LOCAL struct TON PRATimerSeqErr;
 _BUR_LOCAL plcbit PRAProtectCheckDone;
 _BUR_LOCAL plcbit PRARackResetDone;
@@ -1206,6 +1221,7 @@ _BUR_LOCAL plcbit PRAWakeUpDone;
 _BUR_LOCAL plcbit PRAStopDone;
 _BUR_LOCAL WakeUpStepMa_Enum WakeUpStep;
 _BUR_LOCAL StopStepMa_Enum StopStep;
+_BUR_LOCAL plcbit ATRackReadyCheck;
 _GLOBAL SysBMS_Typ Sys;
 _GLOBAL StateMa_Enum StateMa;
 _GLOBAL unsigned char RACK_MAXNUM;
@@ -1213,7 +1229,6 @@ _GLOBAL unsigned char RACK_MAXNUM_MINUS_1;
 _GLOBAL SubBMS_Calculator_type SubBMS_Calculator;
 _GLOBAL HMI_typ HMI;
 _GLOBAL PMS_typ PMS;
-static void __AS__Action__ATProtectCheck(void);
 static void __AS__Action__ATReset(void);
 static void __AS__Action__ATWakeUpSeq(void);
 static void __AS__Action__ATStopSeq(void);

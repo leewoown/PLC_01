@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754553363_1_
-#define _BUR_1754553363_1_
+#ifndef _BUR_1754614241_15_
+#define _BUR_1754614241_15_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,8 @@
 
 
 /* Variables */
+_BUR_LOCAL plcbit ATRackReadyCheck;
+_BUR_LOCAL plcbit PRAReadyReadSig;
 _BUR_LOCAL enum StopStepMa_Enum StopStep;
 _BUR_LOCAL enum WakeUpStepMa_Enum WakeUpStep;
 _BUR_LOCAL plcbit PRAStopDone;
@@ -42,5 +44,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1754553363_1_ */
+#endif /* _BUR_1754614241_15_ */
 

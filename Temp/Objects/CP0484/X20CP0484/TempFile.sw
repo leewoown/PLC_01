@@ -17,7 +17,6 @@
     <Task Name="HMI_DataPa" Source="Source.HMI.HMI_DataParsing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="CANRxParaH" Source="Source.PMS_CAN.PMS_Calculator.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="DIOHandle" Source="DIOHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="HMI_Device" Source="Source.HMI.HMI_DeviceLoading.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="SubBMS_Mod" Source="Source.SubBMS_CAN.SubBMS_ModeChange.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
     <Task Name="ModbusPMS" Source="Source.PMS_MODBUS.ModbusPMS.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="PMSRxParaH" Source="Source.PMS_CAN.PMSRxHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />

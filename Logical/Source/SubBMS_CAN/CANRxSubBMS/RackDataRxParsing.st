@@ -110,7 +110,6 @@ ACTION ActRACK1DATARxParshing:
 	SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Value[1], 8) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Value[1], 0) AND 16#FF);
 	SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV						:=	SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV * 0.001;
 	SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV 						:=	SHL(DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Value[1], 24) AND 16#FF), 8) OR	DWORD_TO_UINT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Vcalc.Value[1], 16) AND 16#FF);
-
 	
 	SubBMS.Rack1.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT 						:=	SHL(DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Tcalc.Value[0], 8) AND 16#FF), 8) OR	DWORD_TO_INT(SHR(SubBMS.Rack1.BSA.Rack_Cell_Tcalc.Value[0], 0) AND 16#FF);
 	SubBMS.Rack1.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT						:=	SubBMS.Rack1.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT * 0.1;

@@ -3,6 +3,5 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Program" Language="IEC">HMI_DataParsing</Object>
-    <Object Type="Program" Language="IEC">HMI_DeviceLoading</Object>
   </Objects>
 </Package>

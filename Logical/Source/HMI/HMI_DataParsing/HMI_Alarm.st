@@ -444,18 +444,6 @@ ACTION ActSystem_Protect:
 //		HMI_Alarm.Protect[18].Count 	:= HMI_Alarm.Protect[18].Count + 1;		
 //	END_IF;
 	
-	IF NOT(HMI.DialogBox.Protect_Trigger) THEN
-		FOR LoopNum := 0 TO 18 DO
-			IF HMI_Alarm.Protect[LoopNum].Count > 0 THEN
-				HMI.DialogBox.Protect_Trigger 	:= TRUE;
-				HMI.DialogBox.ProtectName		:=	HMI_Alarm.Protect[LoopNum].Name;
-				EXIT;
-			END_IF;
-		END_FOR;
-	END_IF;
-	
-	
-	
 END_ACTION
 
 ACTION ActSystem_AlarmTab: 

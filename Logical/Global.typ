@@ -61,6 +61,7 @@ TYPE
 		FaultSig : BOOL;
 		ProtectSig : BOOL;
 		BuzzerSig : BOOL;
+		DeviceloadingDone : BOOL;
 	END_STRUCT;
 END_TYPE
 

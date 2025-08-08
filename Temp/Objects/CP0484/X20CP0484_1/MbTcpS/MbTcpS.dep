@@ -1,7 +1,0 @@
-$(AS_PROJECT_PATH)/Logical/MbTCP/MbTcpS/Variables.var
-$(AS_PROJECT_PATH)/Logical/Libraries/runtime/runtime.var
-$(AS_PROJECT_PATH)/Logical/MbTCP/MbTcpS/Types.typ
-$(AS_PROJECT_PATH)/Logical/Libraries/AsMbTCPS/AsMbTCPS.fun
-$(AS_PROJECT_PATH)/Logical/Global.var
-$(AS_PROJECT_PATH)/Logical/Global.typ
-$(AS_PROJECT_PATH)/Logical/Libraries/AsMbTCP/AsMbTCP.var

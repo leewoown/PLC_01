@@ -105,11 +105,13 @@
       <InternalFile
         Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_DataPa\HMI_System.st.var" />
       <InternalFile
-        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_DataPa\HMI_Alarm.st.var" />
-      <InternalFile
         Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_DataPa\HMI_Common.st.var" />
       <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_DataPa\HMI_Alarm.st.var" />
+      <InternalFile
         Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_DataPa\HMI_Event.st.var" />
+      <InternalFile
+        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_DataPa\HMI_DeviceLoading.st.var" />
     </Task>
     <Task
       Name="CANRxParaH"
@@ -138,18 +140,6 @@
         Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Types.typ" />
       <File
         Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Variables.var" />
-    </Task>
-    <Task
-      Name="HMI_Device"
-      Disable="false"
-      Source="Source.HMI.HMI_DeviceLoading"
-      Language="IEC">
-      <InternalFile
-        Path="E:\Project\HIS\ShipBatterySystm\Temp\Objects\CP0484\X20CP0484\HMI_Device\Main.st.var" />
-      <File
-        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DeviceLoading\Types.typ" />
-      <File
-        Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DeviceLoading\Variables.var" />
     </Task>
     <Task
       Name="SubBMS_Mod"

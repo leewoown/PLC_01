@@ -178,210 +178,253 @@ static void __AS__Action__PMS_SysBatProtect(void){
 if((SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC|SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC)){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_OC=1);
-
+(Sys.ProtectSig=1);
 }else if((SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC|SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC)){
 
 (PMS.SysBatProtect.Field.BSA_Fault_OC=1);
+(Sys.FaultSig=1);
 
 }else if((SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC|SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC)){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_OC=1);
+(Sys.AlarmSig=1);
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV){
 
 (PMS.SysBatProtect.Field.BSA_Fault_SOC_OV=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_SOC_OV){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un){
 
 (PMS.SysBatProtect.Field.BSA_Fault_SOC_UN=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_SOC_Un){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_SOC_UN=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_OV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_OV=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_OV){
 
 (PMS.SysBatProtect.Field.BSA_Fault_OV=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_OV){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_OV=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_UV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_UV=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_UV){
 
 (PMS.SysBatProtect.Field.BSA_Fault_UV=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_UV){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_UV=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV){
 
 (PMS.SysBatProtect.Field.BSA_Fault_Cell_OV=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_OV){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Cell_OV=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV){
 
 (PMS.SysBatProtect.Field.BSA_Fault_Cell_UV=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UV){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Cell_UV=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalV){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT){
 
 (PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_OT=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_OT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_OT=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_OT){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_OT){
 
 (PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_OT=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_OT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_OT=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT){
 
 (PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_UT=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_UT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_UT=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT){
 
 (PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_UT=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_UT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_UT=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT=1);
+(Sys.ProtectSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT=1);
+(Sys.FaultSig=1);
 
 }else if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalT){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT=1);
+(Sys.AlarmSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding=1);
+(Sys.ProtectSig=1);
 
 }
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM=1);
+(Sys.ProtectSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM=1);
+(Sys.ProtectSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err){
 
 (PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak=1);
+(Sys.ProtectSig=1);
 
 }
 
 if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV){
 
 (PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV=1);
+(Sys.ProtectSig=1);
 
 }
 
@@ -391,7 +434,7 @@ if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 339 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 382 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_SysBatDIO(void){
 {
 
@@ -429,7 +472,7 @@ if((((unsigned long)(unsigned char)HMI.DeviceLoading.SetRackNum!=(unsigned long)
 
 }imp16396_else1_0:imp16396_end1_0:;}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 377 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 420 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACal(void){
 {
 (PMS.BRACal.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -441,7 +484,7 @@ static void __AS__Action__PMS_BRACal(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 387 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 430 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRAPWR_A(void){
 {
 (PMS.BRAPWR_A.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -451,7 +494,7 @@ static void __AS__Action__PMS_BRAPWR_A(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 395 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 438 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRAPWR_B(void){
 {
 (PMS.BRAPWR_B.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -460,7 +503,7 @@ static void __AS__Action__PMS_BRAPWR_B(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 402 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 445 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACellV(void){
 {
 (PMS.BRACellV.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -472,7 +515,7 @@ static void __AS__Action__PMS_BRACellV(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 412 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 455 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACellT(void){
 {
 (PMS.BRACellT.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -484,7 +527,7 @@ static void __AS__Action__PMS_BRACellT(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 422 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 465 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACellDiv(void){
 {
 (PMS.BRACellDiv.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -495,7 +538,7 @@ static void __AS__Action__PMS_BRACellDiv(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 431 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 474 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRA_VTPos(void){
 {
 (PMS.BRA_VTPos.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -508,7 +551,7 @@ static void __AS__Action__PMS_BRA_VTPos(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 442 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 485 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BAR_Alarm(void){
 {
 (PMS.BAR_Alarm.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -543,7 +586,7 @@ static void __AS__Action__PMS_BAR_Alarm(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 475 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 518 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BAR_Protect(void){
 {
 (PMS.BAR_Protect.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -571,7 +614,7 @@ static void __AS__Action__PMS_BAR_Protect(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 501 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 544 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BAR_DIO(void){
 {
 (PMS.BAR_DIO.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));

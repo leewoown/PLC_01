@@ -43,8 +43,11 @@ if((((unsigned long)(unsigned char)Sys.NRly==(unsigned long)(unsigned char)1))){
 (NRLY=0);
 }
 
-if((((unsigned long)(unsigned char)Sys.Buzzer==(unsigned long)(unsigned char)1))){
+if((Sys.Buzzer&~Edge0000100000&1?((Edge0000100000=Sys.Buzzer&1),1):((Edge0000100000=Sys.Buzzer&1),0))){
 (Buzzer=1);
+(Sys.BuzzerSig=1);
+
+}else if(Sys.Buzzer){
 }else{
 (Buzzer=0);
 }
@@ -76,7 +79,7 @@ if((((unsigned long)(unsigned char)EMSRLYAUX==(unsigned long)(unsigned char)1)))
 if(EMSRLYAUX_BMP){
 (Sys.EMSRlyAux_BMP=1);
 }else{
-(Sys.EMSRlyAux=0);
+(Sys.EMSRlyAux_BMP=0);
 }
 if(GasDetectorAUX){
 (Sys.GasDetectorAux=1);
@@ -97,13 +100,13 @@ if(FireDetectorAUX){
 
 }
 }imp1_end11_0:;}
-#line 94 "E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.nodebug"
-#line 96 "E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.st"
+#line 97 "E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.nodebug"
+#line 99 "E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 99 "E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.nodebug"
+#line 102 "E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -173,4 +176,5 @@ __asm__(".ascii \"iecfile \\\"Logical/DIOHandle/Types.typ\\\" scope \\\"local\\\
 __asm__(".ascii \"iecfile \\\"Logical/DIOHandle/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"E:/Project/HIS/ShipBatterySystm/Temp/Objects/CP0484/X20CP0484/DIOHandle/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"plcreplace \\\"E:/Project/HIS/ShipBatterySystm/Temp/Objects/CP0484/X20CP0484/DIOHandle/Main.st.c\\\" \\\"E:/Project/HIS/ShipBatterySystm/Logical/DIOHandle/Main.st\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Temp/Objects/CP0484/X20CP0484/DIOHandle/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".previous");

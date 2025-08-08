@@ -78,26 +78,8 @@
 			
 			
 		
-		<Content id="vkStatusPanel"><Binding mode="oneWay">
-			<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_EMS" attribute="value" />
-			<Target xsi:type="brease" refId="vkStatusPanel_Ellipse41" attribute="style" />
-		</Binding></Content>
-			
-			
 		
-		<Content id="vkStatusPanel"><Binding mode="oneWay">
-			<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_OffGas" attribute="value" />
-			<Target xsi:type="brease" refId="vkStatusPanel_Ellipse42" attribute="style" />
-		</Binding></Content>
-			
-			
 		
-		<Content id="vkStatusPanel"><Binding mode="oneWay">
-			<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Water_leak" attribute="value" />
-			<Target xsi:type="brease" refId="vkStatusPanel_Ellipse43" attribute="style" />
-		</Binding></Content>
-			
-			
 		
 		<Content id="vkStatusPanel"><Binding mode="oneWay">
 			<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Neg_Rly" attribute="value" />
@@ -253,16 +235,52 @@
 
 
 
+
 <Content id="vkStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_MDSFuse" attribute="value" />
-<Target xsi:type="brease" refId="vkStatusPanel_Ellipse39" attribute="style" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_InsulationReg" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse30" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_BMP_EMS" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse49" attribute="style" />
 </Binding></Content>
 
 
 
 <Content id="vkStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_InsulationReg" attribute="value" />
-<Target xsi:type="brease" refId="vkStatusPanel_Ellipse30" attribute="style" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Exteral_EMS" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse41" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Watercooling" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse43" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_FireDetector" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse53" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_GasDetector" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse42" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkStatusPanel_Ellipse39" attribute="style" />
 </Binding></Content>
 
 

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754546807_1_
-#define _BUR_1754546807_1_
+#ifndef _BUR_1754615992_1_
+#define _BUR_1754615992_1_
 
 #include <bur/plctypes.h>
 
@@ -111,6 +111,11 @@ typedef struct DIOStatusPanel_typ
 	plcstring BSA_Neg_Rly[21];
 	plcstring BSA_PreChar_Rly[21];
 	plcstring BSA_Pos_Rly[21];
+	plcstring BSA_Protect_Status[21];
+	plcstring BSA_EMG_SW[21];
+	plcstring BSA_WaterLeak[21];
+	plcstring BSA_Balance[21];
+	plcstring BSA_MSD_AUX[21];
 } DIOStatusPanel_typ;
 
 typedef struct ProtectStatusPanel_typ
@@ -136,6 +141,7 @@ typedef struct ProtectStatusPanel_typ
 	plcstring BSA_Prtct_Continuously_OP[21];
 	plcstring BSA_Prtct_IN_COM_Err[21];
 	plcstring BSA_Prtct_EX_COM_Err[21];
+	plcstring BSA_Prtct_CT_COM_Err[21];
 	plcstring BSA_Prtct_Rly_Err[21];
 	plcstring BSA_Prtct_Water_Leak_Err[21];
 	plcstring BRA_Prtct_InsulationReg[21];
@@ -225,5 +231,5 @@ __asm__(".ascii \"iecdep \\\"Logical/Source/gVariable/Variables.var\\\" scope \\
 __asm__(".previous");
 
 
-#endif /* _BUR_1754546807_1_ */
+#endif /* _BUR_1754615992_1_ */
 

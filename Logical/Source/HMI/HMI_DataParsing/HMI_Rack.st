@@ -378,24 +378,61 @@ ACTION AtRackUI :
 	ELSE
 		HMI.ProtectStatus.BSA_Prtct_EX_COM_Err		:= 'Solid_Green';
 	END_IF;
-	//	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_CT_COM_Err THEN
-	//		HMI.ProtectStatus.BSA_Prtct_InsulationRegister		:= 'Solid_Red';
-	//	ELSE
-	//		HMI.ProtectStatus.BSA_Prtct_InsulationRegister		:= 'Solid_Green';
-	//	END_IF;
+	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_CT_COM_Err THEN
+		HMI.ProtectStatus.BSA_Prtct_CT_COM_Err		:= 'Solid_Red';
+	ELSE
+		HMI.ProtectStatus.BSA_Prtct_CT_COM_Err		:= 'Solid_Green';
+	END_IF;
 	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err THEN
 		HMI.ProtectStatus.BSA_Prtct_Water_Leak_Err	:= 'Solid_Red';
 	ELSE
 		HMI.ProtectStatus.BSA_Prtct_Water_Leak_Err	:= 'Solid_Green';
 	END_IF;
-	//	IF Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_EMS_SW_Err THEN
-	//		HMI.ProtectStatus.BSA_Prtct_MDS		:= 'Solid_Red';
-	//	ELSE
-	//		HMI.ProtectStatus.BSA_Prtct_MDS		:= 'Solid_Green';
-	//	END_IF;
+
 	
 	(* DIO *)
+	CASE Rack_HMI.Rack_State.Field.BSA_Protect_Status OF
+		0:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Green';
+		1:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Yellow';
+		2:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Orange';
+		3:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Red';
+	END_CASE;
 	
+	IF Rack_HMI.Rack_State.Field.BSA_EMG_SW  THEN
+		HMI.DIOStatus.BSA_EMG_SW	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_EMG_SW	:= 'Solid_Green';			
+	END_IF;
+	IF Rack_HMI.Rack_State.Field.BSA_Water_leak  THEN
+		HMI.DIOStatus.BSA_WaterLeak	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_WaterLeak	:= 'Solid_Green';
+	END_IF;
+	IF Rack_HMI.Rack_State.Field.BSA_Balance  THEN
+		HMI.DIOStatus.BSA_Balance	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_Balance	:= 'Solid_Green';
+	END_IF;
+	IF Rack_HMI.Rack_State.Field.BSA_MSD_AUX  THEN
+		HMI.DIOStatus.BSA_MSD_AUX	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_MSD_AUX	:= 'Solid_Green';
+	END_IF;
+	IF Rack_HMI.Rack_State.Field.BSA_Neg_Rly  THEN
+		HMI.DIOStatus.BSA_Neg_Rly	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_Neg_Rly	:= 'Solid_Green';
+	END_IF;
+	IF Rack_HMI.Rack_State.Field.BSA_Pos_Rly  THEN
+		HMI.DIOStatus.BSA_Pos_Rly	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_Pos_Rly	:= 'Solid_Green';
+	END_IF;
+	IF Rack_HMI.Rack_State.Field.BSA_PreChar_Rly  THEN
+		HMI.DIOStatus.BSA_PreChar_Rly	:= 'Solid_Red';
+	ELSE
+		HMI.DIOStatus.BSA_PreChar_Rly	:= 'Solid_Green';
+	END_IF;
 	
 END_ACTION
 

@@ -339,25 +339,18 @@
   <Module ID="IF6.ST6" Hardware="X20CS1070">
     <Parameter ID="HardwareModuleName" Value="X20CS1070" />
   </Module>
-  <Module ID="IF6.ST6.CC" Hardware="Stream1xCan" />
-  <Module ID="IF6.ST6.IF1" Hardware="X20CS1070">
-    <Parameter ID="Baudrate" Value="500000" Type="UDINT" />
-    <Parameter ID="IdentifierLength" Value="0" Type="UDINT" />
-  </Module>
-  <Module ID="IF6.ST6.IF1.CANIO" Hardware="CANIO">
-    <Parameter ID="Timeout" Value="1000" Type="UDINT" />
-    <Parameter ID="Retries" Value="3" Type="UDINT" />
-    <Parameter ID="Mode" Value="CANIO" />
-  </Module>
   <Module ID="IF6.ST6.IO" Hardware="X20CS1070">
-    <Parameter ID="FunctionModel" Value="Stream1xCan" />
-    <Parameter ID="FunctionModelNumber" Value="2" Type="USINT" />
+    <Parameter ID="FunctionModel" Value="Standard" />
+    <Parameter ID="FunctionModelNumber" Value="0" Type="USINT" />
     <Parameter ID="Supervision" Value="on" />
-    <Parameter ID="ExtErrStatusInfo" Value="off" />
-    <Parameter ID="AsynSize" Value="24" Type="USINT" />
-    <Parameter ID="AsynForward" Value="6" Type="USINT" />
-    <Parameter ID="InhibitActive" Value="0" Type="USINT" />
-    <Parameter ID="InhibitPassive" Value="0" Type="USINT" />
+    <Parameter ID="Baudrate" Value="500000" />
+    <Parameter ID="SJWsetting" Value="3" Type="USINT" />
+    <Parameter ID="SPOsetting" Value="0" Type="USINT" />
+    <Parameter ID="TXobjects" Value="1" Type="UINT" />
+    <Parameter ID="FIFOTXlimit" Value="1" Type="USINT" />
+    <Parameter ID="TxFifoInfo" Value="off" />
+    <Parameter ID="RxFifoInfo" Value="off" />
+    <Parameter ID="CANdataFormat" Value="USINT" />
     <Parameter ID="RX_Fifo_01_enable" Value="off" />
   </Module>
   <Module ID="IF7.CANIO" Hardware="CANIO">

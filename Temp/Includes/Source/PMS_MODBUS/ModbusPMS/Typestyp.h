@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_30_
-#define _BUR_1754540187_30_
+#ifndef _BUR_1754614241_30_
+#define _BUR_1754614241_30_
 
 #include <bur/plctypes.h>
 
@@ -48,5 +48,5 @@ __asm__(".ascii \"iecdep \\\"Logical/Source/PMS_MODBUS/ModbusPMS/Variables.var\\
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_30_ */
+#endif /* _BUR_1754614241_30_ */
 

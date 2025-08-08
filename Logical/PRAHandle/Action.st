@@ -1,62 +1,43 @@
 
-ACTION ATProtectCheck: // 수정해 과거 이력 검색
-	IF Sys.ProtectCheckSig THEN
-	  PRATimerPrtErr.IN		:= TRUE;
-	END_IF;
-	
-	IF PRATimerPrtErr.Q THEN
-		
-		PRAProtectCheckDone := TRUE;
-		
-	ELSE
-		IF NOT(HMI.DialogBox.Protect_Trigger) THEN
-	  		
-		END_IF;
-	END_IF;
-	
-	IF Sys.ProtectSig THEN
-	ELSIF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Protect_Status <> 0 THEN
-	ELSIF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Protect_Status <> 0 THEN
-	ELSIF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Protect_Status <> 0 THEN
-	ELSIF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Protect_Status <> 0 THEN
-	ELSE
-		PRAProtectCheckDone := TRUE;
-		Sys.ProtectCheckSig	:= FALSE;
-	END_IF;
-	
-END_ACTION
-
 ACTION ATReset: 
 	IF Sys.ResetSig THEN
-		
-		IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 1 OR SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
-		ELSE
-			SubBMS_Calculator.BMA[0].Field.BSA_Reset := TRUE;
-		END_IF;
-		IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 1 OR SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
-		ELSE
-			SubBMS_Calculator.BMA[1].Field.BSA_Reset := TRUE;
-		END_IF;
-		IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 1 OR SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
-		ELSE
-			SubBMS_Calculator.BMA[2].Field.BSA_Reset := TRUE;
-		END_IF;
-		IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 1 OR SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
-		ELSE
-			SubBMS_Calculator.BMA[3].Field.BSA_Reset := TRUE;
-		END_IF;
-	
 		
 		FOR i := 0 TO 3 DO
 			IF SubBMS_Calculator.BMA[i].Field.BSA_Reset = TRUE THEN
 				PRARackResetCount := PRARackResetCount + 1 ;
 			END_IF;
 		END_FOR;
+		
+		IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 1 OR 
+			SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 0 OR
+			SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Protect_Status <> 0 THEN
+			SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
+		ELSE
+			SubBMS_Calculator.BMA[0].Field.BSA_Reset := TRUE;
+		END_IF;
+		IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 1 OR 
+			SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 0 OR
+			SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Protect_Status <> 0 THEN
+			SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
+		ELSE
+			SubBMS_Calculator.BMA[1].Field.BSA_Reset := TRUE;
+		END_IF;
+		IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 1 OR 
+			SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 0 OR
+			SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Protect_Status <> 0 THEN
+			SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
+		ELSE
+			SubBMS_Calculator.BMA[2].Field.BSA_Reset := TRUE;
+		END_IF;
+		IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 1 OR 
+			SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 0 OR
+			SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Protect_Status <> 0 THEN
+			SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
+		ELSE
+			SubBMS_Calculator.BMA[3].Field.BSA_Reset := TRUE;
+		END_IF;
 	
+		
 		IF PRARackResetCount = HMI.DeviceLoading.SetRackNum THEN
 			PRARackResetDone := TRUE;
 		ELSE

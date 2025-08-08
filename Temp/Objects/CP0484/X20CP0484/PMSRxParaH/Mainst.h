@@ -86,6 +86,11 @@ typedef struct SysBMS_Typ
 	plcbit ProtectCheckSig;
 	plcbit RackInfoCheckSig;
 	plcbit StopSig;
+	plcbit AlarmSig;
+	plcbit FaultSig;
+	plcbit ProtectSig;
+	plcbit BuzzerSig;
+	plcbit DeviceloadingDone;
 } SysBMS_Typ;
 #endif
 

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_33_
-#define _BUR_1754540187_33_
+#ifndef _BUR_1754614241_33_
+#define _BUR_1754614241_33_
 
 #include <bur/plctypes.h>
 
@@ -34,5 +34,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/HMI/HMI_DataParsing/Types.typ\\\" s
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_33_ */
+#endif /* _BUR_1754614241_33_ */
 

@@ -91,6 +91,11 @@ TYPE
 		BSA_Neg_Rly : STRING[20];
 		BSA_PreChar_Rly : STRING[20];
 		BSA_Pos_Rly : STRING[20];
+		BSA_Protect_Status : STRING[20];
+		BSA_EMG_SW : STRING[20];
+		BSA_WaterLeak : STRING[20];
+		BSA_Balance : STRING[20];
+		BSA_MSD_AUX : STRING[20];
 	END_STRUCT;
 	ProtectStatusPanel_typ : 	STRUCT 
 		BSA_Charge_OC : STRING[20];
@@ -115,6 +120,7 @@ TYPE
 		BSA_Prtct_Continuously_OP : STRING[20];
 		BSA_Prtct_IN_COM_Err : STRING[20];
 		BSA_Prtct_EX_COM_Err : STRING[20];
+		BSA_Prtct_CT_COM_Err : STRING[20];
 		BSA_Prtct_Rly_Err : STRING[20];
 		BSA_Prtct_Water_Leak_Err : STRING[20];
 		BRA_Prtct_InsulationReg : STRING[20];

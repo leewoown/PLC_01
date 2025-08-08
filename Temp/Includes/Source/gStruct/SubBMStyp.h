@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_5_
-#define _BUR_1754540187_5_
+#ifndef _BUR_1754614240_5_
+#define _BUR_1754614240_5_
 
 #include <bur/plctypes.h>
 
@@ -276,5 +276,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/gStruct/SubBMS.typ\\\" scope \\\"gl
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_5_ */
+#endif /* _BUR_1754614240_5_ */
 

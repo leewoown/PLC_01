@@ -23,4 +23,6 @@ END_VAR
 VAR
 	WakeUpStep : WakeUpStepMa_Enum;
 	StopStep : StopStepMa_Enum;
+	PRAReadyReadSig : BOOL;
+	ATRackReadyCheck : BOOL;
 END_VAR

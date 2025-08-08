@@ -10,5 +10,6 @@
     <File>HMI_Common.st</File>
     <File>HMI_Alarm.st</File>
     <File>HMI_Event.st</File>
+    <File>HMI_DeviceLoading.st</File>
   </Files>
 </Program>

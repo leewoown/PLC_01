@@ -7,7 +7,6 @@
   <Operation Delete="PRAHandle.br"/>
   <Operation Delete="PMSRxParaH.br"/>
   <Operation Delete="ModbusPMS.br"/>
-  <Operation Delete="HMI_Device.br"/>
   <Operation Delete="DIOHandle.br"/>
   <Operation Delete="CANRxParaH.br"/>
   <Operation Delete="HMI_DataPa.br"/>
@@ -76,7 +75,6 @@
   <Operation Download="HMI_DataPa.br" Memory="UserROM"/>
   <Operation Download="CANRxParaH.br" Memory="UserROM"/>
   <Operation Download="DIOHandle.br" Memory="UserROM"/>
-  <Operation Download="HMI_Device.br" Memory="UserROM"/>
   <Operation Download="ModbusPMS.br" Memory="UserROM"/>
   <Operation Download="PMSRxParaH.br" Memory="UserROM"/>
   <Operation Download="PRAHandle.br" Memory="UserROM"/>

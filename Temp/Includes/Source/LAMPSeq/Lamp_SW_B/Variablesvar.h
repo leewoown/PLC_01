@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_17_
-#define _BUR_1754540187_17_
+#ifndef _BUR_1754614241_17_
+#define _BUR_1754614241_17_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/LAMPSeq/Lamp_SW_B/Variables.var\\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_17_ */
+#endif /* _BUR_1754614241_17_ */
 

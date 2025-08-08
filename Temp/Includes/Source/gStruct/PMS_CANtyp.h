@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_7_
-#define _BUR_1754540187_7_
+#ifndef _BUR_1754614240_7_
+#define _BUR_1754614240_7_
 
 #include <bur/plctypes.h>
 
@@ -407,5 +407,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/gStruct/PMS_CAN.typ\\\" scope \\\"g
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_7_ */
+#endif /* _BUR_1754614240_7_ */
 

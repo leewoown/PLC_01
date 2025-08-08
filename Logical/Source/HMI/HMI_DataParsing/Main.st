@@ -39,6 +39,12 @@ PROGRAM _INIT
 		HMI_Alarm.Protect[LoopNum].Name 	:=	HMI_AlarmName[LoopNum];
 
 	END_FOR;
+	
+	HMI.DeviceLoading.DeviceLoadingStep := 0;
+	HMI.DeviceLoading.SetRackNum		:= 0;
+	HMI.DeviceLoading.RackLoading		:= 0;
+	
+	TON_0.PT := T#30s;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -50,12 +56,13 @@ PROGRAM _CYCLIC
 	ActLOGIN;
 	ActSystem_AlarmTab;
 	ActDeviceReset;
-	ActDIOState;
 	
 	CASE HMI.Step OF
 		vkINITIAL:
 			HMI.Step := vkBOOTING;	
 		vkBOOTING:
+			TON_0();
+			ActDeviceloading;
 		vkSYSTEM: 
 			memcpy(ADR(System_HMI),ADR(PMS),SIZEOF(PMS));
 			HMI.RackIndex := vkRACKNUM1;

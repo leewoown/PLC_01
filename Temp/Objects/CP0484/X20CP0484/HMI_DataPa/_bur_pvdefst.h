@@ -37,3 +37,4 @@ _BUR_LOCAL unsigned char countTime_0;
 _BUR_LOCAL struct TON TON_0;
 _BUR_LOCAL TimeType Timestamp;
 _BUR_LOCAL signed short LoopNum;
+_BUR_LOCAL signed short LoopCount;

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_29_
-#define _BUR_1754540187_29_
+#ifndef _BUR_1754614241_29_
+#define _BUR_1754614241_29_
 
 #include <bur/plctypes.h>
 
@@ -29,5 +29,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/PMS_CAN/PMS_Calculator/Variables.va
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_29_ */
+#endif /* _BUR_1754614241_29_ */
 

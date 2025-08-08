@@ -8,4 +8,5 @@ VAR
 	TON_0 : TON;
 	Timestamp : TimeType;
 	LoopNum : INT;
+	LoopCount : INT;
 END_VAR

@@ -4,18 +4,6 @@
 
 
 
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMIBinding.RackUI.sString20[35]" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse42" attribute="style" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMIBinding.RackUI.sString20[34]" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse41" attribute="style" />
-</Binding></Content>
-
 
 
 
@@ -106,32 +94,8 @@
 
 
 
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Water_leak" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse43" attribute="style" />
-</Binding></Content>
 
 
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_CoolingSystem" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse45" attribute="style" />
-</Binding></Content>
-
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_InsulationReg" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse39" attribute="style" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Water_Leak_Err" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse38" attribute="style" />
-</Binding></Content>
 
 
 
@@ -461,6 +425,67 @@
 <Content id="vkRackStatusPanel"><Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Charge_OC" attribute="value" />
 <Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse48" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse39" attribute="style" />
+</Binding></Content>
+
+
+
+
+
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Protect_Status" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse41" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_EMG_SW" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse49" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_WaterLeak" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse43" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Balance" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse53" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_MSD_AUX" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse42" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_CT_COM_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse38" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Water_Leak_Err" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse45" attribute="style" />
 </Binding></Content>
 
 

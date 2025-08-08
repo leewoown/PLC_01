@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754540187_18_
-#define _BUR_1754540187_18_
+#ifndef _BUR_1754614241_18_
+#define _BUR_1754614241_18_
 
 #include <bur/plctypes.h>
 
@@ -49,5 +49,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive
 __asm__(".previous");
 
 
-#endif /* _BUR_1754540187_18_ */
+#endif /* _BUR_1754614241_18_ */
 

@@ -92,6 +92,34 @@ typedef struct TimeType
 } TimeType;
 #endif
 
+#ifndef __AS__TYPE_SysBMS_Typ
+#define __AS__TYPE_SysBMS_Typ
+typedef struct SysBMS_Typ
+{	plcbit ProRlyAux;
+	plcbit NRlyAux;
+	plcbit PRlyAux;
+	plcbit EMSRlyAux;
+	plcbit EMSRlyAux_BMP;
+	plcbit GasDetectorAux;
+	plcbit WaterCoolingAux;
+	plcbit FireDetectorAux;
+	plcbit Buzzer;
+	plcbit PRly;
+	plcbit NRly;
+	plcbit ProRly;
+	plcbit WakeUpSig;
+	plcbit ResetSig;
+	plcbit ProtectCheckSig;
+	plcbit RackInfoCheckSig;
+	plcbit StopSig;
+	plcbit AlarmSig;
+	plcbit FaultSig;
+	plcbit ProtectSig;
+	plcbit BuzzerSig;
+	plcbit DeviceloadingDone;
+} SysBMS_Typ;
+#endif
+
 #ifndef __AS__TYPE_BMAN_Field_typ
 #define __AS__TYPE_BMAN_Field_typ
 typedef struct BMAN_Field_typ
@@ -394,6 +422,14 @@ typedef struct BSA_typ
 } BSA_typ;
 #endif
 
+#ifndef __AS__TYPE_SubBMS_Calculator_type
+#define __AS__TYPE_SubBMS_Calculator_type
+typedef struct SubBMS_Calculator_type
+{	struct BMAN_typ BMA[4];
+	struct BSA_typ BSA[4];
+} SubBMS_Calculator_type;
+#endif
+
 #ifndef __AS__TYPE_SubBMS_Rack_type
 #define __AS__TYPE_SubBMS_Rack_type
 typedef struct SubBMS_Rack_type
@@ -520,12 +556,19 @@ typedef struct SystemRackInfoPanel_typ
 #ifndef __AS__TYPE_DIOStatusPanel_typ
 #define __AS__TYPE_DIOStatusPanel_typ
 typedef struct DIOStatusPanel_typ
-{	plcstring BSA_EMS[21];
-	plcstring BSA_OffGas[21];
-	plcstring BSA_Water_leak[21];
+{	plcstring BSA_Exteral_EMS[21];
+	plcstring BSA_BMP_EMS[21];
+	plcstring BSA_Watercooling[21];
+	plcstring BSA_GasDetector[21];
+	plcstring BSA_FireDetector[21];
 	plcstring BSA_Neg_Rly[21];
 	plcstring BSA_PreChar_Rly[21];
 	plcstring BSA_Pos_Rly[21];
+	plcstring BSA_Protect_Status[21];
+	plcstring BSA_EMG_SW[21];
+	plcstring BSA_WaterLeak[21];
+	plcstring BSA_Balance[21];
+	plcstring BSA_MSD_AUX[21];
 } DIOStatusPanel_typ;
 #endif
 
@@ -550,9 +593,11 @@ typedef struct ProtectStatusPanel_typ
 	plcstring BSA_Discharge_Unbal_PWR[21];
 	plcstring BSA_Charge_Unbal_PWR[21];
 	plcstring BSA_Prtct_Peak_OP[21];
+	plcstring BSA_Prtct_EMS_SW_Err[21];
 	plcstring BSA_Prtct_Continuously_OP[21];
 	plcstring BSA_Prtct_IN_COM_Err[21];
 	plcstring BSA_Prtct_EX_COM_Err[21];
+	plcstring BSA_Prtct_CT_COM_Err[21];
 	plcstring BSA_Prtct_Rly_Err[21];
 	plcstring BSA_Prtct_Water_Leak_Err[21];
 	plcstring BRA_Prtct_InsulationReg[21];
@@ -1162,48 +1207,49 @@ _BUR_PUBLIC plcstring* uint2str(unsigned short IN, plcstring pStr[81], unsigned 
 _BUR_PUBLIC plcstring* dt2str(plcdt IN, plcstring pStr[81], unsigned long len);
 _BUR_PUBLIC plcstring* real2str(float IN, plcstring pStr[81], unsigned long len);
 _BUR_PUBLIC unsigned long memcpy(unsigned long pDest, unsigned long pSrc, unsigned long length);
+struct TON
+{	plctime PT;
+	plctime ET;
+	plctime StartTime;
+	unsigned long Restart;
+	plcbit IN;
+	plcbit Q;
+	plcbit M;
+};
+_BUR_PUBLIC void TON(struct TON* inst);
 _BUR_PUBLIC signed short LEN(plcstring IN[32768]);
 _BUR_PUBLIC plcstring* LEFT(plcstring IN[32768], signed short L);
 _BUR_PUBLIC plcstring* MID(plcstring IN[32768], signed short L, signed short P);
 _BUR_PUBLIC plcstring* CONCAT(plcstring IN1[32768], plcstring IN2[32768]);
+_BUR_LOCAL struct TON TON_0;
 _BUR_LOCAL TimeType Timestamp;
 _BUR_LOCAL signed short LoopNum;
+_BUR_LOCAL signed short LoopCount;
+_GLOBAL SysBMS_Typ Sys;
 _GLOBAL plcstring PASSWORD[17];
 _GLOBAL unsigned char RACK_MAXNUM;
 _GLOBAL unsigned char RACK_MAXNUM_MINUS_1;
 _GLOBAL SubBMS_type SubBMS;
+_GLOBAL SubBMS_Calculator_type SubBMS_Calculator;
 _GLOBAL BSA_typ Rack_HMI;
 _GLOBAL HMI_typ HMI;
 _GLOBAL_RETAIN Alarm_typ HMI_Alarm;
 _GLOBAL_RETAIN plcstring HMI_AlarmName[22][31];
 _GLOBAL PMS_typ PMS;
 _GLOBAL PMS_typ System_HMI;
-_LOCAL plcbit Edge1639000000;
-_LOCAL plcbit Edge1639000001;
-_LOCAL plcbit Edge1639000002;
-_LOCAL plcbit Edge1639000003;
-_LOCAL plcbit Edge1639000004;
-_LOCAL plcbit Edge1639000005;
-_LOCAL plcbit Edge1639000006;
-_LOCAL plcbit Edge1639000007;
-_LOCAL plcbit Edge1639000008;
-_LOCAL plcbit Edge1639000009;
-_LOCAL plcbit Edge1639000010;
-_LOCAL plcbit Edge1639000011;
-_LOCAL plcbit Edge1639000012;
-_LOCAL plcbit Edge1638800000;
-_LOCAL plcbit Edge1638800001;
-_LOCAL plcbit Edge1638800002;
-_LOCAL plcbit Edge1638800003;
-_LOCAL plcbit Edge1638800004;
-_LOCAL plcbit Edge1638800005;
-_LOCAL plcbit Edge1638800006;
-_LOCAL plcbit Edge1638800007;
-_LOCAL plcbit Edge1638800008;
-_LOCAL plcbit Edge1638800009;
-_LOCAL plcbit Edge1638800010;
-_LOCAL plcbit Edge1638800011;
-_LOCAL plcbit Edge1638800012;
+_LOCAL plcbit Edge1639100000;
+_LOCAL plcbit Edge1639100001;
+_LOCAL plcbit Edge1639100002;
+_LOCAL plcbit Edge1639100003;
+_LOCAL plcbit Edge1639100004;
+_LOCAL plcbit Edge1639100005;
+_LOCAL plcbit Edge1639100006;
+_LOCAL plcbit Edge1639100007;
+_LOCAL plcbit Edge1639100008;
+_LOCAL plcbit Edge1639100009;
+_LOCAL plcbit Edge1639100010;
+_LOCAL plcbit Edge1639100011;
+_LOCAL plcbit Edge1639100012;
 _LOCAL plcbit Edge1638900000;
 _LOCAL plcbit Edge1638900001;
 _LOCAL plcbit Edge1638900002;
@@ -1217,10 +1263,23 @@ _LOCAL plcbit Edge1638900009;
 _LOCAL plcbit Edge1638900010;
 _LOCAL plcbit Edge1638900011;
 _LOCAL plcbit Edge1638900012;
-_LOCAL plcbit Edge1638900013;
-_LOCAL plcbit Edge1638900014;
-_LOCAL plcbit Edge1638900015;
-_LOCAL plcbit Edge1638900016;
+_LOCAL plcbit Edge1639000000;
+_LOCAL plcbit Edge1639000001;
+_LOCAL plcbit Edge1639000002;
+_LOCAL plcbit Edge1639000003;
+_LOCAL plcbit Edge1639000004;
+_LOCAL plcbit Edge1639000005;
+_LOCAL plcbit Edge1639000006;
+_LOCAL plcbit Edge1639000007;
+_LOCAL plcbit Edge1639000008;
+_LOCAL plcbit Edge1639000009;
+_LOCAL plcbit Edge1639000010;
+_LOCAL plcbit Edge1639000011;
+_LOCAL plcbit Edge1639000012;
+_LOCAL plcbit Edge1639000013;
+_LOCAL plcbit Edge1639000014;
+_LOCAL plcbit Edge1639000015;
+_LOCAL plcbit Edge1639000016;
 static void __AS__Action__AtRackUI(void);
 static void __AS__Action__AtSystemUI(void);
 static void __AS__Action__ActTimeSplit(void);
@@ -1230,3 +1289,4 @@ static void __AS__Action__ActSystem_Protect(void);
 static void __AS__Action__ActSystem_AlarmTab(void);
 static void __AS__Action__ActLOGIN(void);
 static void __AS__Action__ActDeviceReset(void);
+static void __AS__Action__ActDeviceloading(void);

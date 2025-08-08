@@ -25,10 +25,11 @@ void __BUR__ENTRY_INIT_FUNCT__(void){{
 (PRATimerWakeUpOff.PT=(100));
 (PRATimerSeqErr.IN=0);
 (PRATimerSeqErr.PT=(15000));
-
+(PRATimerPrtErr.IN=0);
+(PRATimerPrtErr.PT=(500));
 }}
-#line 25 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
-#line 27 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st"
+#line 26 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 28 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st"
 void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 
 switch(StateMa){
@@ -51,19 +52,15 @@ if((PMS.PMS.Field.PMS_Po_RelayStatus|PMS.PMS.Field.PMS_Pro_RelayStatus|PMS.PMS.F
 
 (PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)1);
 
-(Sys.ProtectCheckSig=1);
-
-if(PRAProtectCheckDone){
 (Sys.ResetSig=1);
-}else{
-(Sys.ResetSig=0);
-}
 
-__AS__Action__ATProtectCheck();
 __AS__Action__ATReset();
 
+if(PRARackResetDone){
 
-if((PRAProtectCheckDone&PRARackResetDone)){
+(Sys.ResetSig=0);
+
+*((char volatile*)&(ATRackReadyCheck)) = *((char*)&(ATRackReadyCheck));
 (StateMa=2);
 }
 
@@ -72,12 +69,19 @@ if((PMS.PMS.Field.PMS_Po_RelayStatus|PMS.PMS.Field.PMS_Pro_RelayStatus|PMS.PMS.F
 }else{
 (PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding=0);
 }
+
 }break;case 2:{
 
 (PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)2);
 
 if((PMS.PMS.Field.PMS_WakeUp_CMD&(PMS.PMS.Field.PMS_FaultReset^1)&(PMS.PMS.Field.PMS_Po_RelayStatus^1)&(PMS.PMS.Field.PMS_Pro_RelayStatus^1)&(PMS.PMS.Field.PMS_Ne_RelayStatus^1)&((RealAbs(PMS.SysBatCal.Field.BSA_Curr_Total)<=50)))){
 (StateMa=3);
+}
+
+if((Sys.PRly|Sys.NRly|Sys.ProRly)){
+(PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding=1);
+}else{
+(PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding=0);
 }
 
 }break;case 3:{
@@ -92,10 +96,12 @@ if(((PMS.PMS.Field.PMS_WakeUp_CMD^1)&(PMS.PMS.Field.PMS_FaultReset^1)&(PMS.PMS.F
 (StateMa=7);
 }
 
-if((Sys.PRly|Sys.NRly|Sys.ProRly)){
-(PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding=1);
-}else{
-(PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding=0);
+if(Sys.ProtectSig){
+(StateMa=6);
+}else if(Sys.FaultSig){
+(StateMa=5);
+}else if(Sys.AlarmSig){
+(StateMa=4);
 }
 
 }break;case 7:{
@@ -108,10 +114,21 @@ if(PRAStopDone){
 }
 
 }break;case 4:{
+(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)4);
+
+
+
+
 
 }break;case 5:{
+(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)5);
+
+
+
+
 
 }break;case 6:{
+(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)6);
 
 
 
@@ -124,64 +141,71 @@ TON(&PRATimerSeqErr);
 
 
 
+if((Sys.FireDetectorAux|Sys.GasDetectorAux|Sys.WaterCoolingAux|Sys.EMSRlyAux_BMP|Sys.EMSRlyAux)){
+(Sys.ProtectSig=1);
+(Sys.Buzzer=1);
+}else{
+(Sys.Buzzer=0);
+}
 
 
-
-}}
-#line 125 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
-#line 127 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st"
+}imp4_end11_0:;}
+#line 147 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 149 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 130 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 152 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
 #line 2 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
-static void __AS__Action__ATProtectCheck(void){
-{
-
-
-}}
-#line 132 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
-#line 8 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
 static void __AS__Action__ATReset(void){
-{
-if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0)))){
+{if(Sys.ResetSig){
+
+for((i=0);i<=3;i+=1){
+if((((unsigned long)(unsigned char)SubBMS_Calculator.BMA[i].Field.BSA_Reset==(unsigned long)(unsigned char)1))){
+(PRARackResetCount=(PRARackResetCount+1));
+}
+}imp16385_endfor1_0:;
+
+
+
+if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Protect_Status!=(unsigned long)(unsigned char)0)))){
 (SubBMS_Calculator.BMA[0].Field.BSA_Reset=0);
 }else{
 (SubBMS_Calculator.BMA[0].Field.BSA_Reset=1);
 }
-if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0)))){
+
+
+if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Protect_Status!=(unsigned long)(unsigned char)0)))){
 (SubBMS_Calculator.BMA[1].Field.BSA_Reset=0);
 }else{
 (SubBMS_Calculator.BMA[1].Field.BSA_Reset=1);
 }
-if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0)))){
+
+
+if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Protect_Status!=(unsigned long)(unsigned char)0)))){
 (SubBMS_Calculator.BMA[2].Field.BSA_Reset=0);
 }else{
 (SubBMS_Calculator.BMA[2].Field.BSA_Reset=1);
 }
-if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0)))){
+
+
+if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)1))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status==(unsigned long)(unsigned char)0))|(((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Protect_Status!=(unsigned long)(unsigned char)0)))){
 (SubBMS_Calculator.BMA[3].Field.BSA_Reset=0);
 }else{
 (SubBMS_Calculator.BMA[3].Field.BSA_Reset=1);
 }
 
 
-for((i=0);i<=3;i+=1){
-if((((unsigned long)(unsigned char)SubBMS_Calculator.BMA[i].Field.BSA_Reset==(unsigned long)(unsigned char)1))){
-(PRARackResetCount=(PRARackResetCount+1));
-}
-}imp16386_endfor4_0:;
-
 if((((unsigned long)(unsigned char)PRARackResetCount==(unsigned long)(unsigned char)HMI.DeviceLoading.SetRackNum))){
 (PRARackResetDone=1);
 }else{
 (PRARackResetDone=0);
 }
-
-}imp16386_end6_0:;}
-#line 132 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
-#line 46 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
+}
+}imp16385_end7_0:imp16385_else0_0:imp16385_end0_0:;}
+#line 154 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 49 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
 static void __AS__Action__ATWakeUpSeq(void){
 {
 switch(WakeUpStep){
@@ -305,14 +329,14 @@ if((((unsigned long)(unsigned char)Sys.ProRlyAux==(unsigned long)(unsigned char)
 
 (Sys.WakeUpSig=0);
 (PRAWakeUpDone=1);
-
+(WakeUpStep=0);
 
 
 }break;}
 
-}imp16388_case0_11:imp16388_endcase0_0:;}
-#line 132 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
-#line 175 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
+}imp16387_case0_11:imp16387_endcase0_0:;}
+#line 154 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 178 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
 static void __AS__Action__ATStopSeq(void){
 {
 switch(StopStep){
@@ -406,13 +430,14 @@ if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BS
 (PRATimerSeqErr.IN=0);
 
 (PRAStopDone=1);
+(StopStep=9);
 
 
 
 }break;}
 
-}imp16387_case0_9:imp16387_endcase0_0:;}
-#line 132 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+}imp16386_case0_9:imp16386_endcase0_0:;}
+#line 154 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -485,6 +510,7 @@ __asm__(".ascii \"plcreplace \\\"E:/Project/HIS/ShipBatterySystm/Temp/Objects/CP
 __asm__(".previous");
 
 __asm__(".section \".plciec\"");
+__asm__(".ascii \"plcdata_const 'ATRackReadyCheck'\\n\"");
 __asm__(".ascii \"plcdata_const 'RACK_MAXNUM'\\n\"");
 __asm__(".ascii \"plcdata_const 'RACK_MAXNUM_MINUS_1'\\n\"");
 __asm__(".previous");
