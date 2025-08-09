@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614241_13_
-#define _BUR_1754614241_13_
+#ifndef _BUR_1754628171_3_
+#define _BUR_1754628171_3_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,8 @@
 
 
 /* Variables */
+_BUR_LOCAL struct TON TON_0;
+_BUR_LOCAL plcbit PowerLamp;
 _BUR_LOCAL plcbit Buzzer;
 _BUR_LOCAL plcbit FireDetectorAUX;
 _BUR_LOCAL plcbit WaterCoolingAUX;
@@ -34,11 +36,12 @@ __asm__(".section \".plc\"");
 
 /* Used IEC files */
 __asm__(".ascii \"iecfile \\\"Logical/DIOHandle/Variables.var\\\" scope \\\"local\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.fun\\\" scope \\\"global\\\"\\n\"");
 
 /* Exported library functions and function blocks */
 
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614241_13_ */
+#endif /* _BUR_1754628171_3_ */
 

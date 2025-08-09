@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754615992_1_
-#define _BUR_1754615992_1_
+#ifndef _BUR_1754730104_1_
+#define _BUR_1754730104_1_
 
 #include <bur/plctypes.h>
 
@@ -88,8 +88,7 @@ typedef struct BATInfoPanel_typ
 } BATInfoPanel_typ;
 
 typedef struct ModuleInfoPanel_typ
-{	plcstring Volt_Total_A[21];
-	plcstring Volt_Total_B[21];
+{	float Volt_Total;
 	plcstring OPS_Fault[21];
 	plcstring CTCOM_Err[21];
 	plcstring OPS_MBCOM_Err[21];
@@ -154,6 +153,8 @@ typedef struct ALARM_Info_typ
 	plcstring InitialTime[16];
 	plcstring RecentTime[16];
 	plcstring ClearTime[16];
+	plcstring Location[16];
+	unsigned char Internal_Count;
 	unsigned char Count;
 } ALARM_Info_typ;
 
@@ -174,6 +175,7 @@ typedef struct DialogBox_typ
 	plcbit BuzzerOFF_Trigger;
 	plcbit Protect_Trigger;
 	plcstring ProtectName[31];
+	plcstring ProtectNum[11];
 } DialogBox_typ;
 
 typedef struct HMI_typ
@@ -194,7 +196,7 @@ typedef struct HMI_typ
 	plcstring BSA_Divice_Status[21];
 	struct DIOStatusPanel_typ DIOStatus;
 	struct ProtectStatusPanel_typ ProtectStatus;
-	struct ALARM_Info_typ SubBMS_AlarmTable[22];
+	struct ALARM_Info_typ SubBMS_AlarmTable[28];
 	enum AlarmTableIndex_enum AlarmTableIndex;
 	struct AdminLogin_typ AdminLogin;
 	plcbit AdminDeviceReset;
@@ -203,9 +205,9 @@ typedef struct HMI_typ
 } HMI_typ;
 
 typedef struct Alarm_typ
-{	struct ALARM_Info_typ Warning[22];
-	struct ALARM_Info_typ Fault[22];
-	struct ALARM_Info_typ Protect[22];
+{	struct ALARM_Info_typ Warning[28];
+	struct ALARM_Info_typ Fault[28];
+	struct ALARM_Info_typ Protect[28];
 } Alarm_typ;
 
 typedef struct Dialog_typ
@@ -231,5 +233,5 @@ __asm__(".ascii \"iecdep \\\"Logical/Source/gVariable/Variables.var\\\" scope \\
 __asm__(".previous");
 
 
-#endif /* _BUR_1754615992_1_ */
+#endif /* _BUR_1754730104_1_ */
 

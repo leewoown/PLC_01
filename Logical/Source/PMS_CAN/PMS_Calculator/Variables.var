@@ -1,3 +1,7 @@
 VAR
 	LoopCount : USINT;
 END_VAR
+VAR RETAIN
+	SysBATProtectSave : SysBatProtect_Field_typ;
+	SysBatDIOSave : SysBatDIO_Field_typ;
+END_VAR

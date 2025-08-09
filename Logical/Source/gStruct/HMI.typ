@@ -18,7 +18,7 @@ TYPE
 		BSA_Divice_Status : STRING[20];
 		DIOStatus : DIOStatusPanel_typ;
 		ProtectStatus : ProtectStatusPanel_typ;
-		SubBMS_AlarmTable : ARRAY[0..21]OF ALARM_Info_typ;
+		SubBMS_AlarmTable : ARRAY[0..27]OF ALARM_Info_typ;
 		AlarmTableIndex : AlarmTableIndex_enum;
 		AdminLogin : AdminLogin_typ;
 		AdminDeviceReset : BOOL;
@@ -70,8 +70,7 @@ TYPE
 		BSA_Cell_MinT_Location : STRING[20];
 	END_STRUCT;
 	ModuleInfoPanel_typ : 	STRUCT 
-		Volt_Total_A : STRING[20];
-		Volt_Total_B : STRING[20];
+		Volt_Total : REAL;
 		OPS_Fault : STRING[20];
 		CTCOM_Err : STRING[20];
 		OPS_MBCOM_Err : STRING[20];
@@ -128,15 +127,17 @@ TYPE
 		BSA_Prtct_CoolingSystem : STRING[20];
 	END_STRUCT;
 	Alarm_typ : 	STRUCT 
-		Warning : ARRAY[0..21]OF ALARM_Info_typ;
-		Fault : ARRAY[0..21]OF ALARM_Info_typ;
-		Protect : ARRAY[0..21]OF ALARM_Info_typ;
+		Warning : ARRAY[0..27]OF ALARM_Info_typ;
+		Fault : ARRAY[0..27]OF ALARM_Info_typ;
+		Protect : ARRAY[0..27]OF ALARM_Info_typ;
 	END_STRUCT;
 	ALARM_Info_typ : 	STRUCT 
 		Name : STRING[30];
 		InitialTime : STRING[15];
 		RecentTime : STRING[15];
 		ClearTime : STRING[15];
+		Location : STRING[15];
+		Internal_Count : USINT;
 		Count : USINT;
 	END_STRUCT;
 	Dialog_typ : 	STRUCT 
@@ -158,6 +159,7 @@ TYPE
 		BuzzerOFF_Trigger : BOOL;
 		Protect_Trigger : BOOL;
 		ProtectName : STRING[30];
+		ProtectNum : STRING[10];
 	END_STRUCT;
 	STEP_Enum : 
 		(

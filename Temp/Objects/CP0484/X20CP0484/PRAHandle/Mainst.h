@@ -539,8 +539,7 @@ typedef struct BATInfoPanel_typ
 #ifndef __AS__TYPE_ModuleInfoPanel_typ
 #define __AS__TYPE_ModuleInfoPanel_typ
 typedef struct ModuleInfoPanel_typ
-{	plcstring Volt_Total_A[21];
-	plcstring Volt_Total_B[21];
+{	float Volt_Total;
 	plcstring OPS_Fault[21];
 	plcstring CTCOM_Err[21];
 	plcstring OPS_MBCOM_Err[21];
@@ -1221,7 +1220,6 @@ _BUR_LOCAL plcbit PRAWakeUpDone;
 _BUR_LOCAL plcbit PRAStopDone;
 _BUR_LOCAL WakeUpStepMa_Enum WakeUpStep;
 _BUR_LOCAL StopStepMa_Enum StopStep;
-_BUR_LOCAL plcbit ATRackReadyCheck;
 _GLOBAL SysBMS_Typ Sys;
 _GLOBAL StateMa_Enum StateMa;
 _GLOBAL unsigned char RACK_MAXNUM;
@@ -1229,6 +1227,7 @@ _GLOBAL unsigned char RACK_MAXNUM_MINUS_1;
 _GLOBAL SubBMS_Calculator_type SubBMS_Calculator;
 _GLOBAL HMI_typ HMI;
 _GLOBAL PMS_typ PMS;
+_LOCAL plcbit Edge1638500000;
 static void __AS__Action__ATReset(void);
 static void __AS__Action__ATWakeUpSeq(void);
 static void __AS__Action__ATStopSeq(void);

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vdef:Visualization id="vis_0" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="vkDeviceLoading" />
+  <Pages>
+    <Page refId="vkSystemPage" />
+    <Page refId="vkDeviceLoading" />
+    <Page refId="vkAlarmPage" />
+    <Page refId="vkAdminPage" />
+    <Page refId="vkRackPage" />
+  </Pages>
+  <Navigations />
+  <BindingsSets>
+    <BindingsSet refId="vkDeviceLoading_binding" />
+    <BindingsSet refId="vkGaugePanel_binding" />
+    <BindingsSet refId="vkNavigation_binding" />
+    <BindingsSet refId="vkDataPanel_binding" />
+    <BindingsSet refId="vkStatusPanel_binding" />
+    <BindingsSet refId="vkRackStatusPanel_binding" />
+    <BindingsSet refId="vkTracePanel_binding" />
+    <BindingsSet refId="vkDialogLogin_binding" />
+    <BindingsSet refId="vkAlarmPanel_binding" />
+    <BindingsSet refId="vkAlarmLEDPanel_binding" />
+    <BindingsSet refId="vkDialogProtect_binding" />
+    <BindingsSet refId="r001_SetRack_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="vkSubEvent_eventbinding" />
+    <EventBindingsSet refId="MainEvent_eventbinding" />
+    <EventBindingsSet refId="vkDialogLogin_eventbinding" />
+    <EventBindingsSet refId="vkAlarmNaviPanel_eventbinding" />
+    <EventBindingsSet refId="vkAlarmPanel_eventbinding" />
+    <EventBindingsSet refId="vkDialogEvent_eventbinding" />
+    <EventBindingsSet refId="r001_SetRack_eventbinding" />
+    <EventBindingsSet refId="vkTracePanel_eventbinding" />
+    <EventBindingsSet refId="vkDialogProtect_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="vkDialogCompanyInfo" />
+    <Dialog refId="vkDialogLogin" />
+    <Dialog refId="vkDialogLoadingErr" />
+    <Dialog refId="vkLoading" />
+    <Dialog refId="vkDialogProtect" />
+    <Dialog refId="dialog_0" />
+  </Dialogs>
+  <Contents>
+    <Content refId="vkDeviceLoading" />
+    <Content refId="vkStatusPanel" />
+    <Content refId="vkRackStatusPanel" />
+    <Content refId="vkTracePanel" />
+    <Content refId="vkDialogCompanyInfo" />
+    <Content refId="vkDialogLogin" />
+    <Content refId="vkDataPanel" />
+    <Content refId="vkGaugePanel" />
+    <Content refId="vkDialogLoadingErr" />
+    <Content refId="vkLogo" />
+    <Content refId="vkNavigation" />
+    <Content refId="vkTitle" />
+    <Content refId="vkLoading" />
+    <Content refId="vkDialogProtect" />
+    <Content refId="vkAlarmLEDPanel" />
+    <Content refId="vkAlarmNaviPanel" />
+    <Content refId="vkAlarmPanel" />
+    <Content refId="vkDummyContent" />
+    <Content refId="r001_SetRack" />
+  </Contents>
+  <SnippetsSets />
+  <VariablesSets />
+  <ExpressionsSets />
+  <StartTheme themeRefId="BuRTheme1" />
+  <Themes>
+    <Theme refId="BuRTheme1" />
+  </Themes>
+  <Configurations>
+    <Configuration key="zoom" value="true" />
+    <Configuration key="bootLogo" value="Media/BootLogo.jpg" />
+    <Configuration key="bootColor" value="#ffffff" />
+    <Gestures></Gestures>
+    <VirtualKeyboards></VirtualKeyboards>
+  </Configurations>
+</vdef:Visualization>

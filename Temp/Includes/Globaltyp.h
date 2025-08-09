@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614240_1_
-#define _BUR_1754614240_1_
+#ifndef _BUR_1754633354_1_
+#define _BUR_1754633354_1_
 
 #include <bur/plctypes.h>
 
@@ -15,7 +15,8 @@ typedef enum StateMa_Enum
 	vkSYSTEM_ALARM = 4,
 	vkSYSTEM_FAULT = 5,
 	vkSYSTEM_PROTECT = 6,
-	vkSYSTEM_STOP = 7
+	vkSYSTEM_STOP = 7,
+	vkSYSTEM_RESET = 8
 } StateMa_Enum;
 
 typedef enum WakeUpStepMa_Enum
@@ -87,6 +88,7 @@ typedef struct SysBMS_Typ
 	plcbit GasDetectorAux;
 	plcbit WaterCoolingAux;
 	plcbit FireDetectorAux;
+	plcbit PowerLamp;
 	plcbit Buzzer;
 	plcbit PRly;
 	plcbit NRly;
@@ -118,5 +120,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614240_1_ */
+#endif /* _BUR_1754633354_1_ */
 

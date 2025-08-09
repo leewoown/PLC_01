@@ -1,0 +1,718 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=HMI_DataPa 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index=361 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                                     HMI                                  HMI_typ    0 "                                                               *"    0   24    1    0    0    1         
+                               DialogBox                            DialogBox_typ    0 "                                                               *"    1   24    1    0    0    1         
+                             ProtectName                               STRING[30]    0 "                                          'Cooling System Error'"    2    9   31    1    0    0         
+                               HMI_Alarm                                Alarm_typ    0 "                                                               *"    0   24    1    0    0    1         
+                                 Warning                    ALARM_Info_typ[0..21]    0 "                                                               *"    1   24   22    0    0    0         
+                              Warning[0]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[1]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[2]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[3]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[4]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[5]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[6]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[7]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[8]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Warning[9]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[10]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[11]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[12]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[13]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[14]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[15]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[16]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[17]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[18]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[19]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[20]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Warning[21]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                   Fault                    ALARM_Info_typ[0..21]    0 "                                                               *"    1   24   22    0    0    0         
+                                Fault[0]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[1]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[2]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[3]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[4]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[5]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[6]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[7]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[8]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                Fault[9]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[10]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[11]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[12]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[13]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[14]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[15]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[16]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[17]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[18]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[19]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[20]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               Fault[21]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                 Protect                    ALARM_Info_typ[0..21]    0 "                                                               *"    1   24   22    0    0    1         
+                              Protect[0]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[1]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[2]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[3]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[4]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[5]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[6]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[7]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[8]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                              Protect[9]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[10]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[11]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[12]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[13]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[14]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[15]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    0         
+                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                             Protect[16]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
+                                    Name                               STRING[30]    0 "                                 'Current Transformer COM Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               0"    3    5    1   10    0    0         
+                             Protect[17]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
+                                    Name                               STRING[30]    0 "                                              'Water Leak Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                               '25-08-08, 17:13'"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                               '25-08-08, 17:13'"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               1"    3    5    1   10    0    0         
+                             Protect[18]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
+                                    Name                               STRING[30]    0 "                                        'Emergency Switch Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                               '25-08-08, 17:20'"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                               '25-08-08, 18:30'"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                              34"    3    5    1   10    0    0         
+                             Protect[19]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
+                                    Name                               STRING[30]    0 "                                          'Cooling System Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                               '25-08-08, 17:20'"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                               '25-08-08, 18:30'"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                              22"    3    5    1   10    0    0         
+                             Protect[20]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
+                                    Name                               STRING[30]    0 "                                          'Negative Relay Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               0"    3    5    1   10    0    0         
+                             Protect[21]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
+                                    Name                               STRING[30]    0 "                                          'Positive Relay Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               0"    3    5    1   10    0    0         
+                                     PMS                                  PMS_typ    0 "                                                               *"    0   24    1    0    0    1         
+                                     PMS                                 PMS_type    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                            PMS_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                          PMS_WakeUp_CMD                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                           PMS_POWER_CMD                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          PMS_FaultReset                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                      PMS_Po_RelayStatus                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                     PMS_Pro_RelayStatus                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                      PMS_Ne_RelayStatus                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                           SysBatProduct                        SysBatProduct_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                  SysBatProduct_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                     BSA_Production_Year                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                     BSA_Production_Type                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                      BSA_Production_Num                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                      BSA_Production_VER                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+               BSA_Production_BSA_Serial                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+             BSA_Production_BSA_Parallel                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               SysBatCal                            SysBatCal_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                      SysBatCal_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                          BSA_Volt_Total                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                          BSA_Curr_Total                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                 BSA_SOC                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                       BSA_Divice_Status                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                               SysBatPWR                            SysBatPWR_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                      SysBatPWR_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+             BSA_Cont_Charge_Power_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+             BSA_Peak_Charge_Power_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+          BSA_Cont_Discharge_Power_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+          BSA_Peak_Discharge_Power_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             SysCellVolt                          SysCellVolt_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                    SysCellVolt_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                           BSA_Cell_MaxV                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                           BSA_Cell_MinV                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                           BSA_Cell_AVGV                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                          BSA_Cell_DeviV                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                            SysCellTemps                         SysCellTemps_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                   SysCellTemps_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                           BSA_Cell_MaxT                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                           BSA_Cell_MinT                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                           BSA_Cell_AVGT                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                          BSA_Cell_DeviT                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                           SysCellV_TPos                        SysCellV_TPos_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                  SysCellV_TPos_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                  BSA_Rack_MaxV_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Cell_MaxV_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Rack_MinV_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Cell_MinV_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Rack_MaxT_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Cell_MaxT_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Rack_MinT_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                  BSA_Cell_MinT_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                           SysBatProtect                        SysBatProtect_typ    0 "                                                               *"    1   24    1    0    0    1         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    1        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                  SysBatProtect_Field_typ    0 "                                                               *"    2   24    1    0    0    1         
+                            BSA_Alarm_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BSA_Alarm_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BSA_Alarm_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Alarm_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Alarm_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Alarm_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Alarm_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Alarm_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BSA_Alarm_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Alarm_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BSA_Alarm_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Alarm_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Alarm_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Alarm_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Alarm_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Fault_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BSA_Fault_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BSA_Fault_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Fault_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Fault_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Fault_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Fault_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Fault_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BSA_Fault_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Fault_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BSA_Fault_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Fault_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Fault_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Fault_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Fault_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Prtct_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BSA_Prtct_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BSA_Prtct_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Prtct_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BSA_Prtct_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Prtct_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Prtct_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Prtct_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BSA_Prtct_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Prtct_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BSA_Prtct_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Prtct_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Prtct_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BSA_Prtct_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Prtct_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                   BSA_Prtct_InternalCOM                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                   BSA_Prtct_ExternalCOM                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_Prtct_RelayWelding                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                     BSA_Prtct_WaterLeak                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BSA_Prtct_InsulationReg                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Prtct_MDSFuse                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                BSA_Prtct_Cooling_System                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        PMS_PAR_RelayErr                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          PMS_PAR_SEQErr                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BPU_PAR_RelayErr                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_PAR_RelayErr                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                               SysBatDIO                            SysBatDIO_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                      SysBatDIO_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                    BSA_Prelay_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                    BSA_Nrelay_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BSA_ProRelay_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                    BSA_Buzzer_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BSA_PowerLamp_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare06                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare07                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare08                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare09                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare10                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare11                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DO_Spare12                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BSA_PRelayAUX_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BSA_NRelayAUX_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BSA_EMGSwitch_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+             BSA_CoolingSystem_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_MDS_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare06                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare07                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare08                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare09                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare10                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare11                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                          BSA_DI_Spare12                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                                 BSA_SOH                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                  BRACal                               BRACal_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                         BRACal_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                          BRA_Volt_Total                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                          BRA_Curr_Total                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                 BRA_SOC                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                BRAPWR_A                             BRAPWR_A_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                       BRAPWR_A_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                                 BRA_SOH                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                  BRA_CONT_CHA_PWR_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                  BRA_Peak_CHA_PWR_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                BRAPWR_B                             BRAPWR_B_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                       BRAPWR_B_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+               BRA_CONT_DisCHA_PWR_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+               BRA_Peak_DisCHA_PWR_Limit                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                BRACellV                             BRACellV_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                       BRACellV_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                    BRA_Cell_Max_Voltage                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                    BRA_Cell_Min_Voltage                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                    BRA_Cell_AGV_Voltage                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                BRACellT                             BRACellT_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                       BRACellT_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                BRA_Cell_Max_Temperature                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                BRA_Cell_Min_Temperature                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                BRA_Cell_AGV_Temperature                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                              BRACellDiv                           BRACellDiv_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                     BRACellDiv_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                    BRA_Cell_DIV_Voltage                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                BRA_Cell_DIV_Temperature                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                               BRA_VTPos                            BRA_VTPos_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                      BRA_VTPos_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                 BRA_Max_Cell_V_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                 BRA_Min_Cell_V_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                 BRA_Max_Cell_T_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                 BRA_Min_Cell_T_Location                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                               BAR_Alarm                            BAR_Alarm_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                      BAR_Alarm_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                            BRA_Alarm_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_Alarm_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_Alarm_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Alarm_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Alarm_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Alarm_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Alarm_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Alarm_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BRA_Alarm_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Alarm_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BRA_Alarm_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Alarm_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Alarm_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Alarm_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Alarm_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Fault_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_Fault_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_Fault_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Fault_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Fault_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Fault_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Fault_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Fault_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BRA_Fault_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Fault_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BRA_Fault_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Fault_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Fault_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Fault_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Fault_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                             BAR_Protect                          BAR_Protect_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                    BAR_Protect_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                            BRA_Prtct_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_Prtct_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                        BRA_Prtct_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Prtct_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                            BRA_Prtct_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Prtct_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Prtct_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Prtct_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BRA_Prtct_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Prtct_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+            BRA_Prtct_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Prtct_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Prtct_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+               BRA_Prtct_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Prtct_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                   BRA_Prtct_InternalCOM                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                   BRA_Prtct_ExternalCOM                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Prtct_RelayWelding                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                     BRA_Prtct_WaterLeak                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BRA_Prtct_InsulationReg                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_Prtct_MDSFuse                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BRA_Prtct_CoolingSystem                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                                 BAR_DIO                              BAR_DIO_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                   Value                              DWORD[0..1]    0 "                                                               *"    2   19    2    0    0    0        b
+                                Value[0]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                Value[1]                                    DWORD    0 "                                                               *"    3   19    1   10    0    0        b
+                                   Field                        BAR_DIO_Field_typ    0 "                                                               *"    2   24    1    0    0    0         
+                            BRA_Rack_Num                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                    BRA_Prelay_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                    BRA_Nrelay_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_ProRelay_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BRA_PowerLamp_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                    BRA_Buzzer_DO_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BRA_PRelayAUX_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BRA_NRelayAUX_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                 BRA_EMGSwitch_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BRA_MDS_DI_Status                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD1                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD2                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD3                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD4                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD5                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD6                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                  BRA_Waterleak_Dete_MD7                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                                     pos                                      INT    0 "                                                               *"    0    3    1   10    1    0         

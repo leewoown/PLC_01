@@ -7,12 +7,12 @@
   SaveSourceOnTarget="false"
   ActivateSdm="true"
   WebServer="true"
-  ARMSimulation="False"
+  ARMSimulation="True"
   ArVersion="M4.93">
   <ModuleMemoryData>
     <Module
       Name=""
-      Memory="16384" />
+      Memory="25000" />
   </ModuleMemoryData>
   <Memories
     PermanentAnalogMemory="0"

@@ -1,0 +1,59 @@
+﻿@import "mixins.scss";
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader{
+	height: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader .breaseWindowClose{
+	height: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader .breaseWindowClose{
+	line-height: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader .imageDiv{
+	min-width: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader div.innerHeader{
+	line-height: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader div.textDiv{
+	line-height: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader div.innerHeader{
+	height: 0px;
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader div.imageDiv{
+@include factor('max-width',0px, 2);
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+@include border-radius(8px 8px 8px 8px);
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowContentBox{
+@include border-bottom-right-radius(8px 8px 8px 8px);
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowContentBox{
+@include border-bottom-left-radius(8px 8px 8px 8px);
+	}
+}
+div[data-brease-dialogId='vkDialogLogin'] {
+	.breaseDialogWindowHeader{
+@include border-radius(8px 8px 8px 8px);
+	}
+}

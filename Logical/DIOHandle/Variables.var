@@ -11,4 +11,6 @@ VAR
 	WaterCoolingAUX : BOOL;
 	FireDetectorAUX : BOOL;
 	Buzzer : BOOL;
+	PowerLamp : BOOL;
+	TON_0 : TON;
 END_VAR

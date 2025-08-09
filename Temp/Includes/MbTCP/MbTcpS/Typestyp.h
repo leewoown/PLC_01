@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614241_10_
-#define _BUR_1754614241_10_
+#ifndef _BUR_1754623143_10_
+#define _BUR_1754623143_10_
 
 #include <bur/plctypes.h>
 
@@ -48,5 +48,5 @@ __asm__(".ascii \"iecdep \\\"Logical/MbTCP/MbTcpS/Variables.var\\\" scope \\\"lo
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614241_10_ */
+#endif /* _BUR_1754623143_10_ */
 

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614240_9_
-#define _BUR_1754614240_9_
+#ifndef _BUR_1754723354_2_
+#define _BUR_1754723354_2_
 
 #include <bur/plctypes.h>
 
@@ -31,7 +31,7 @@ _GLOBAL struct LAMP_typ LAMP;
 _GLOBAL struct PMS_typ System_HMI;
 _GLOBAL struct PMS_typ PMS;
 _GLOBAL struct Dialog_typ HMI_Dialog;
-_GLOBAL_RETAIN plcstring HMI_AlarmName[22][31];
+_GLOBAL_RETAIN plcstring HMI_AlarmName[30][31];
 _GLOBAL_RETAIN struct Alarm_typ HMI_Alarm;
 _GLOBAL struct HMI_typ HMI;
 _GLOBAL struct BSA_typ Rack_HMI;
@@ -53,5 +53,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/gVariable/Variables.var\\\" scope \
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614240_9_ */
+#endif /* _BUR_1754723354_2_ */
 

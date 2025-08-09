@@ -24,7 +24,7 @@ VAR
 END_VAR
 VAR RETAIN
 	HMI_Alarm : Alarm_typ;
-	HMI_AlarmName : ARRAY[0..21] OF STRING[30];
+	HMI_AlarmName : ARRAY[0..29] OF STRING[30];
 END_VAR
 VAR
 	HMI_Dialog : Dialog_typ;

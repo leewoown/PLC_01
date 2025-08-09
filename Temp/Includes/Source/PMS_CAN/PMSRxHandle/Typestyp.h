@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614241_26_
-#define _BUR_1754614241_26_
+#ifndef _BUR_1754623143_26_
+#define _BUR_1754623143_26_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/PMS_CAN/PMSRxHandle/Types.typ\\\" s
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614241_26_ */
+#endif /* _BUR_1754623143_26_ */
 

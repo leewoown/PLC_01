@@ -509,8 +509,7 @@ typedef struct BATInfoPanel_typ
 #ifndef __AS__TYPE_ModuleInfoPanel_typ
 #define __AS__TYPE_ModuleInfoPanel_typ
 typedef struct ModuleInfoPanel_typ
-{	plcstring Volt_Total_A[21];
-	plcstring Volt_Total_B[21];
+{	float Volt_Total;
 	plcstring OPS_Fault[21];
 	plcstring CTCOM_Err[21];
 	plcstring OPS_MBCOM_Err[21];

@@ -200,6 +200,10 @@ TYPE
 		BSA_Prtct_InsulationReg : BOOL;
 		BSA_Prtct_MDSFuse : BOOL;
 		BSA_Prtct_Cooling_System : BOOL;
+		PMS_PAR_RelayErr : BOOL;
+		PMS_PAR_SEQErr : BOOL;
+		BPU_PAR_RelayErr : BOOL;
+		BRA_PAR_RelayErr : BOOL;
 	END_STRUCT;
 	SysBatDIO_Field_typ : 	STRUCT 
 		BSA_Prelay_DO_Status : BOOL;

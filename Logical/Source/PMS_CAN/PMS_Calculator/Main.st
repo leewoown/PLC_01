@@ -1,7 +1,12 @@
 
 PROGRAM _INIT
 	(* Insert code here *)
-	 
+	PMS.SysBatProtect.Field := SysBATProtectSave;
+	PMS.SysBatDIO.Field := SysBatDIOSave;
+	
+	PMS.SysBatDIO.Field.BSA_SOH := 0;
+	
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC

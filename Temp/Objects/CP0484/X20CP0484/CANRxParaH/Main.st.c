@@ -437,30 +437,6 @@ if(SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_
 #line 382 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_SysBatDIO(void){
 {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (PMS.SysBatDIO.Field.BSA_SOH=0);
 
 for((LoopCount=0);LoopCount<=RACK_MAXNUM_MINUS_1;LoopCount+=1){
@@ -472,7 +448,7 @@ if((((unsigned long)(unsigned char)HMI.DeviceLoading.SetRackNum!=(unsigned long)
 
 }imp16396_else1_0:imp16396_end1_0:;}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 420 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 396 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACal(void){
 {
 (PMS.BRACal.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -484,7 +460,7 @@ static void __AS__Action__PMS_BRACal(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 430 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 406 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRAPWR_A(void){
 {
 (PMS.BRAPWR_A.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -494,7 +470,7 @@ static void __AS__Action__PMS_BRAPWR_A(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 438 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 414 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRAPWR_B(void){
 {
 (PMS.BRAPWR_B.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -503,7 +479,7 @@ static void __AS__Action__PMS_BRAPWR_B(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 445 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 421 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACellV(void){
 {
 (PMS.BRACellV.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -515,7 +491,7 @@ static void __AS__Action__PMS_BRACellV(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 455 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 431 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACellT(void){
 {
 (PMS.BRACellT.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -527,7 +503,7 @@ static void __AS__Action__PMS_BRACellT(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 465 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 441 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRACellDiv(void){
 {
 (PMS.BRACellDiv.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -538,7 +514,7 @@ static void __AS__Action__PMS_BRACellDiv(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 474 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 450 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BRA_VTPos(void){
 {
 (PMS.BRA_VTPos.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -551,7 +527,7 @@ static void __AS__Action__PMS_BRA_VTPos(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 485 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 461 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BAR_Alarm(void){
 {
 (PMS.BAR_Alarm.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -586,7 +562,7 @@ static void __AS__Action__PMS_BAR_Alarm(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 518 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 494 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BAR_Protect(void){
 {
 (PMS.BAR_Protect.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));
@@ -614,7 +590,7 @@ static void __AS__Action__PMS_BAR_Protect(void){
 
 }}
 #line 48 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/Main.nodebug"
-#line 544 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
+#line 520 "E:/Project/HIS/ShipBatterySystm/Logical/Source/PMS_CAN/PMS_Calculator/PMS_Calculator.st"
 static void __AS__Action__PMS_BAR_DIO(void){
 {
 (PMS.BAR_DIO.Field.BRA_Rack_Num=((unsigned short)HMI.RackIndex+1));

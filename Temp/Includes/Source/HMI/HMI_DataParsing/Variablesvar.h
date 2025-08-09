@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614241_32_
-#define _BUR_1754614241_32_
+#ifndef _BUR_1754633354_2_
+#define _BUR_1754633354_2_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,8 @@
 
 
 /* Variables */
+_BUR_LOCAL signed short pos;
+_BUR_LOCAL signed short i;
 _BUR_LOCAL signed short LoopCount;
 _BUR_LOCAL signed short LoopNum;
 _BUR_LOCAL struct TimeType Timestamp;
@@ -35,5 +37,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614241_32_ */
+#endif /* _BUR_1754633354_2_ */
 

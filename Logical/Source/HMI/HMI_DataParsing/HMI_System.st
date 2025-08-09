@@ -233,6 +233,25 @@ ACTION AtSystemUI :
 		HMI.ProtectStatus.BSA_Prtct_CoolingSystem		:= 'Solid_Green';
 	END_IF;
 	
+	IF System_HMI.SysBatProtect.Field.BSA_Fault_Continuously_OP THEN
+		HMI.ProtectStatus.BSA_Prtct_Continuously_OP		:= 'Solid_Red';
+	ELSE
+		HMI.ProtectStatus.BSA_Prtct_Continuously_OP		:= 'Solid_Green';
+	END_IF;
+	
+	IF System_HMI.SysBatProtect.Field.BSA_Fault_Peak_OP THEN
+		HMI.ProtectStatus.BSA_Prtct_Peak_OP		:= 'Solid_Red';
+	ELSE
+		HMI.ProtectStatus.BSA_Prtct_Peak_OP		:= 'Solid_Green';
+	END_IF;
+	
+	
+	IF System_HMI.SysBatDIO.Field.BSA_EMGSwitch_DI_Status THEN
+		HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err		:= 'Solid_Red';
+	ELSE
+		HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err		:= 'Solid_Green';
+	END_IF;
+	
 	IF Sys.EMSRlyAux THEN
 		HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Red';
 	ELSE

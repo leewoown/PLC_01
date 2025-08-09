@@ -1,39 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BindingDefinition xmlns="http://www.br-automation.com/iat2014/binding/runtime/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:br="http://www.br-automation.com/iat2015/bindingList/runtime/v2">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <Content id="vkRackStatusPanel"><Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.BSA_Divice_Status" attribute="value" />
 <Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput1" attribute="value" />
@@ -45,31 +12,6 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.BSA_Divice_Status" attribute="value" />
 <Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput1" attribute="style" />
 </Binding></Content>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -91,11 +33,6 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_Neg_Rly" attribute="value" />
 <Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse50" attribute="style" />
 </Binding></Content>
-
-
-
-
-
 
 
 
@@ -200,56 +137,6 @@
 <Content id="vkRackStatusPanel"><Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_OV" attribute="value" />
 <Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse24" attribute="style" />
-</Binding></Content>
-
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module3Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput4" attribute="value" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module7Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput8" attribute="value" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module2Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput3" attribute="value" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module6Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput7" attribute="value" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module1Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput2" attribute="value" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module5Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput6" attribute="value" />
-</Binding></Content>
-
-
-
-<Content id="vkRackStatusPanel"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module4Info.Volt_Total_B" attribute="value" />
-<Target xsi:type="brease" refId="vkRackStatusPanel_TextOutput5" attribute="value" />
 </Binding></Content>
 
 
@@ -486,6 +373,55 @@
 <Content id="vkRackStatusPanel"><Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Water_Leak_Err" attribute="value" />
 <Target xsi:type="brease" refId="vkRackStatusPanel_Ellipse45" attribute="style" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module1Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput1" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module2Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput2" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module3Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput3" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module4Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput4" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module5Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput5" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module6Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput6" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="vkRackStatusPanel"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.Module7Info.Volt_Total" attribute="value" />
+<Target xsi:type="brease" refId="vkRackStatusPanel_NumericOutput7" attribute="value" />
 </Binding></Content>
 
 

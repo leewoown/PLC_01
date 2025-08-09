@@ -10,7 +10,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Global.typ"
     LogicalPath="Global.typ"
     Type="File"
-    LastWriteTime="133990878138942189"
+    LastWriteTime="133991065418453393"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Global.var"
@@ -768,7 +768,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Pages\_002_RackPage\_001_RackPanel.content"
     LogicalPath="mappView.Visualization.Pages._002_RackPage._001_RackPanel.content"
     Type="File"
-    LastWriteTime="133990887796901466"
+    LastWriteTime="133990935386501822"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Pages\_003_AlarmPage\Package.pkg"
@@ -797,7 +797,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Pages\_003_AlarmPage\_004_AlarmPanel.content"
     LogicalPath="mappView.Visualization.Pages._003_AlarmPage._004_AlarmPanel.content"
     Type="File"
-    LastWriteTime="133988528709597353"
+    LastWriteTime="133992020075043876"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Pages\_003_AlarmPage\_005_DummyContent.content"
@@ -820,7 +820,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Pages\_004_AdminPage\_001_TrendPanel.content"
     LogicalPath="mappView.Visualization.Pages._004_AdminPage._001_TrendPanel.content"
     Type="File"
-    LastWriteTime="133988528709597353"
+    LastWriteTime="133991184670281989"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Variables\Package.pkg"
@@ -960,7 +960,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Dialogs\_004_Protect\_001_Protect.content"
     LogicalPath="mappView.Visualization.Dialogs._004_Protect._001_Protect.content"
     Type="File"
-    LastWriteTime="133988528709524047"
+    LastWriteTime="133992027444236540"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\mappView\Visualization\Dialogs\_005_RackNum\Package.pkg"
@@ -1208,7 +1208,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Main.st"
     LogicalPath="DIOHandle.Main.st"
     Type="File"
-    LastWriteTime="133990220075414942"
+    LastWriteTime="133991979098984200"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Types.typ"
@@ -1220,7 +1220,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\DIOHandle\Variables.var"
     LogicalPath="DIOHandle.Variables.var"
     Type="File"
-    LastWriteTime="133990001435712971"
+    LastWriteTime="133991007329109817"
     Private="true" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\PRAHandle\IEC.prg"
@@ -1231,7 +1231,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\PRAHandle\Main.st"
     LogicalPath="PRAHandle.Main.st"
     Type="File"
-    LastWriteTime="133990878137089231"
+    LastWriteTime="133991129675991573"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\PRAHandle\Types.typ"
@@ -1249,13 +1249,13 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\PRAHandle\Action.st"
     LogicalPath="PRAHandle.Action.st"
     Type="File"
-    LastWriteTime="133990878137577396"
+    LastWriteTime="133991074928296336"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\Package.pkg"
     LogicalPath="Source"
     Type="Package"
-    LastWriteTime="133988528709212758" />
+    LastWriteTime="133991056705694822" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\gStruct\Package.pkg"
     LogicalPath="Source.gStruct"
@@ -1271,13 +1271,13 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\gStruct\HMI.typ"
     LogicalPath="Source.gStruct.HMI.typ"
     Type="File"
-    LastWriteTime="133990887336738940"
+    LastWriteTime="133992034866523016"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\gStruct\PMS_CAN.typ"
     LogicalPath="Source.gStruct.PMS_CAN.typ"
     Type="File"
-    LastWriteTime="133988528709212758"
+    LastWriteTime="133990981419133265"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\gStruct\PMS_TCP.typ"
@@ -1300,36 +1300,8 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\gVariable\Variables.var"
     LogicalPath="Source.gVariable.Variables.var"
     Type="File"
-    LastWriteTime="133988528709212758"
+    LastWriteTime="133991957513253314"
     Private="false" />
-  <Object
-    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Package.pkg"
-    LogicalPath="Source.LAMPSeq"
-    Type="Package"
-    LastWriteTime="133988528709212758" />
-  <Object
-    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Lamp_SW_B\IEC.prg"
-    LogicalPath="Source.LAMPSeq.Lamp_SW_B"
-    Type="Program"
-    LastWriteTime="133988528709212758" />
-  <Object
-    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Lamp_SW_B\Main.st"
-    LogicalPath="Source.LAMPSeq.Lamp_SW_B.Main.st"
-    Type="File"
-    LastWriteTime="133988528709212758"
-    Private="false" />
-  <Object
-    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Lamp_SW_B\Types.typ"
-    LogicalPath="Source.LAMPSeq.Lamp_SW_B.Types.typ"
-    Type="File"
-    LastWriteTime="133988528709212758"
-    Private="true" />
-  <Object
-    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\LAMPSeq\Lamp_SW_B\Variables.var"
-    LogicalPath="Source.LAMPSeq.Lamp_SW_B.Variables.var"
-    Type="File"
-    LastWriteTime="133988528709212758"
-    Private="true" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\Package.pkg"
     LogicalPath="Source.SubBMS_CAN"
@@ -1344,7 +1316,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\CANRxSubBMS\ArCanReceive.st"
     LogicalPath="Source.SubBMS_CAN.CANRxSubBMS.ArCanReceive.st"
     Type="File"
-    LastWriteTime="133988528709212758"
+    LastWriteTime="133991936992076085"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\SubBMS_CAN\CANRxSubBMS\ArCanReceive.typ"
@@ -1541,7 +1513,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\Main.st"
     LogicalPath="Source.PMS_CAN.PMS_Calculator.Main.st"
     Type="File"
-    LastWriteTime="133988528709212758"
+    LastWriteTime="133991187756549531"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\Types.typ"
@@ -1553,13 +1525,13 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\Variables.var"
     LogicalPath="Source.PMS_CAN.PMS_Calculator.Variables.var"
     Type="File"
-    LastWriteTime="133988528709212758"
+    LastWriteTime="133991186941799007"
     Private="true" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\PMS_Calculator.st"
     LogicalPath="Source.PMS_CAN.PMS_Calculator.PMS_Calculator.st"
     Type="File"
-    LastWriteTime="133990193446858239"
+    LastWriteTime="133992024531033706"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\PMS_CAN\PMS_Calculator\System_HMI.st"
@@ -1604,60 +1576,60 @@
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\IEC.prg"
     LogicalPath="Source.HMI.HMI_DataParsing"
     Type="Program"
-    LastWriteTime="133990875537302624" />
+    LastWriteTime="133991144841746704" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\Main.st"
     LogicalPath="Source.HMI.HMI_DataParsing.Main.st"
     Type="File"
-    LastWriteTime="133990896080011806"
+    LastWriteTime="133991984075324911"
     Private="false" />
-  <Object
-    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\Variables.var"
-    LogicalPath="Source.HMI.HMI_DataParsing.Variables.var"
-    Type="File"
-    LastWriteTime="133990878138307716"
-    Private="true" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\Types.typ"
     LogicalPath="Source.HMI.HMI_DataParsing.Types.typ"
     Type="File"
-    LastWriteTime="133988528709212758"
+    LastWriteTime="133991144841746704"
+    Private="true" />
+  <Object
+    Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\Variables.var"
+    LogicalPath="Source.HMI.HMI_DataParsing.Variables.var"
+    Type="File"
+    LastWriteTime="133991069497764601"
     Private="true" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\HMI_Rack.st"
     LogicalPath="Source.HMI.HMI_DataParsing.HMI_Rack.st"
     Type="File"
-    LastWriteTime="133990896373014403"
+    LastWriteTime="133990941053581562"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\HMI_System.st"
     LogicalPath="Source.HMI.HMI_DataParsing.HMI_System.st"
     Type="File"
-    LastWriteTime="133990895882135374"
+    LastWriteTime="133992031776187804"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\HMI_Common.st"
     LogicalPath="Source.HMI.HMI_DataParsing.HMI_Common.st"
     Type="File"
-    LastWriteTime="133990879238996426"
+    LastWriteTime="133991977593087790"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\HMI_Alarm.st"
     LogicalPath="Source.HMI.HMI_DataParsing.HMI_Alarm.st"
     Type="File"
-    LastWriteTime="133990854195657353"
+    LastWriteTime="133992037468546344"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\HMI_Event.st"
     LogicalPath="Source.HMI.HMI_DataParsing.HMI_Event.st"
     Type="File"
-    LastWriteTime="133990083886810541"
+    LastWriteTime="133992036856123096"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\Source\HMI\HMI_DataParsing\HMI_DeviceLoading.st"
     LogicalPath="Source.HMI.HMI_DataParsing.HMI_DeviceLoading.st"
     Type="File"
-    LastWriteTime="133990877442015081"
+    LastWriteTime="133992036980686362"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Logical\PLC_Image.jpg"
@@ -1674,7 +1646,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\Hardware.hw"
     LogicalPath="CP0484.Hardware.hw"
     Type="File"
-    LastWriteTime="133990307681972035"
+    LastWriteTime="133992037693631534"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\Hardware.hwl"
@@ -1686,12 +1658,12 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\Cpu.pkg"
     LogicalPath="CP0484.X20CP0484"
     Type="Cpu"
-    LastWriteTime="133990307604343422" />
+    LastWriteTime="133992038139585152" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\Cpu.sw"
     LogicalPath="CP0484.X20CP0484.Cpu.sw"
     Type="File"
-    LastWriteTime="133990876744326649"
+    LastWriteTime="133991056707660433"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\Cpu.per"
@@ -1703,7 +1675,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\IoMap.iom"
     LogicalPath="CP0484.X20CP0484.IoMap.iom"
     Type="File"
-    LastWriteTime="133990083845511729"
+    LastWriteTime="133992038688534235"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\PvMap.vvm"
@@ -1829,12 +1801,12 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\Package.pkg"
     LogicalPath="CP0484.X20CP0484.mappView"
     Type="Package"
-    LastWriteTime="133988528709682834" />
+    LastWriteTime="133991132424415063" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\Visualizat.vis"
     LogicalPath="CP0484.X20CP0484.mappView.Visualizat.vis"
     Type="File"
-    LastWriteTime="133988528709682834"
+    LastWriteTime="133991132424823674"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\Config.mappviewcfg"
@@ -1894,13 +1866,13 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkRackStatusPanel.binding"
     LogicalPath="CP0484.X20CP0484.mappView.vkRackStatusPanel.binding"
     Type="File"
-    LastWriteTime="133990887797216847"
+    LastWriteTime="133990939634474264"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkTracePanel.binding"
     LogicalPath="CP0484.X20CP0484.mappView.vkTracePanel.binding"
     Type="File"
-    LastWriteTime="133988528709731676"
+    LastWriteTime="133991185034432677"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkDialogLogin.eventbinding"
@@ -1918,7 +1890,7 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkAlarmPanel.binding"
     LogicalPath="CP0484.X20CP0484.mappView.vkAlarmPanel.binding"
     Type="File"
-    LastWriteTime="133988528709682834"
+    LastWriteTime="133991969073763303"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkAlarmNaviPanel.eventbinding"
@@ -1936,13 +1908,13 @@
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkDialogProtect.binding"
     LogicalPath="CP0484.X20CP0484.mappView.vkDialogProtect.binding"
     Type="File"
-    LastWriteTime="133988528709731676"
+    LastWriteTime="133991175440750793"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkDialogEvent.eventbinding"
     LogicalPath="CP0484.X20CP0484.mappView.vkDialogEvent.eventbinding"
     Type="File"
-    LastWriteTime="133988528709731676"
+    LastWriteTime="133991132943986546"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\r001_SetRack.binding"
@@ -1961,6 +1933,12 @@
     LogicalPath="CP0484.X20CP0484.mappView.vkTracePanel.eventbinding"
     Type="File"
     LastWriteTime="133988528709731676"
+    Private="false" />
+  <Object
+    Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\X20CP0484\mappView\vkDialogProtect.eventbinding"
+    LogicalPath="CP0484.X20CP0484.mappView.vkDialogProtect.eventbinding"
+    Type="File"
+    LastWriteTime="133991132718066498"
     Private="false" />
   <Object
     Path="E:\Project\HIS\ShipBatterySystm\Physical\CP0484\Hardware.jpg"

@@ -82,7 +82,7 @@
     </Connector>
     <Parameter ID="ConfigurationID" Value="ShipBattery" />
     <Parameter ID="ConfigVersion" Value="1.0.3" />
-    <Parameter ID="RemanentGlobalPvSize" Value="16384" />
+    <Parameter ID="RemanentGlobalPvSize" Value="25000" />
     <Parameter ID="TimerDeviceType" Value="SWIOTIMER" />
     <Parameter ID="Cyclic1Duration" Value="1000" />
     <Parameter ID="Cyclic1Tolerance" Value="1000" />

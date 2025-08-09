@@ -1,0 +1,73 @@
+@import "mixins.scss";
+#vkTitle_ButtonBar1 {	@include elemTop(0);
+}
+#vkTitle_ButtonBar1 {	@include elemLeft(0);
+}
+#vkTitle_ButtonBar1 {	@include elemWidth(1160);
+}
+#vkTitle_ButtonBar1 {	@include elemHeight(120);
+}
+#vkTitle_ButtonBar1 {	z-index: 0;
+}
+#vkTitle_ToggleButton1 {	@include elemTop(0);
+}
+#vkTitle_ToggleButton1 {	@include elemLeft(0);
+}
+#vkTitle_ToggleButton1 {	@include elemAutoWidth(1160);
+}
+#vkTitle_ToggleButton1 {	@include elemAutoHeight(120);
+}
+#vkTitle_ToggleButton1 {	z-index: 0;
+}
+#vkTitle_ToggleButton1 {	@include border-radius(0px);
+}
+#vkTitle_ToggleButton1 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.disabled:not(.checked) {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&:not(.disabled):not(.active):not(.checked) {
+		@include backGroundGradient('');
+	}
+}
+#vkTitle_ToggleButton1 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.disabled:not(.checked) span {
+		color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.disabled:not(.checked).active span {
+		color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.active:not(.disabled):not(.editMode) {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	span {
+		font-size: 50px;
+	}
+}
+#vkTitle_ToggleButton1 {	padding: 0px 0px;
+}
+#vkTitle_ToggleButton1 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.disabled.checked {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.disabled.checked {
+		border-color: rgba(255, 255, 255, 0);
+	}
+}
+#vkTitle_ToggleButton1 {	&.checked:not(.disabled):not(.active) {
+		@include backGroundGradient('');
+	}
+}

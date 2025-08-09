@@ -60,7 +60,11 @@ if(PRARackResetDone){
 
 (Sys.ResetSig=0);
 
-*((char volatile*)&(ATRackReadyCheck)) = *((char*)&(ATRackReadyCheck));
+(SubBMS_Calculator.BMA[0].Field.BSA_Reset=0);
+(SubBMS_Calculator.BMA[1].Field.BSA_Reset=0);
+(SubBMS_Calculator.BMA[2].Field.BSA_Reset=0);
+(SubBMS_Calculator.BMA[3].Field.BSA_Reset=0);
+
 (StateMa=2);
 }
 
@@ -76,6 +80,17 @@ if((PMS.PMS.Field.PMS_Po_RelayStatus|PMS.PMS.Field.PMS_Pro_RelayStatus|PMS.PMS.F
 
 if((PMS.PMS.Field.PMS_WakeUp_CMD&(PMS.PMS.Field.PMS_FaultReset^1)&(PMS.PMS.Field.PMS_Po_RelayStatus^1)&(PMS.PMS.Field.PMS_Pro_RelayStatus^1)&(PMS.PMS.Field.PMS_Ne_RelayStatus^1)&((RealAbs(PMS.SysBatCal.Field.BSA_Curr_Total)<=50)))){
 (StateMa=3);
+}
+
+if(Sys.AlarmSig){
+(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)4);
+}
+if(Sys.FaultSig){
+(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)5);
+}
+if(Sys.ProtectSig){
+(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)6);
+
 }
 
 if((Sys.PRly|Sys.NRly|Sys.ProRly)){
@@ -111,26 +126,8 @@ __AS__Action__ATStopSeq();
 
 if(PRAStopDone){
 (StateMa=2);
+(Sys.StopSig=0);
 }
-
-}break;case 4:{
-(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)4);
-
-
-
-
-
-}break;case 5:{
-(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)5);
-
-
-
-
-
-}break;case 6:{
-(PMS.SysBatCal.Field.BSA_Divice_Status=(unsigned short)6);
-
-
 
 }break;}
 
@@ -149,20 +146,20 @@ if((Sys.FireDetectorAux|Sys.GasDetectorAux|Sys.WaterCoolingAux|Sys.EMSRlyAux_BMP
 }
 
 
-}imp4_end11_0:;}
-#line 147 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
-#line 149 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st"
+}imp4_end14_0:;}
+#line 144 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 146 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 152 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 149 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
 #line 2 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
 static void __AS__Action__ATReset(void){
 {if(Sys.ResetSig){
 
 for((i=0);i<=3;i+=1){
-if((((unsigned long)(unsigned char)SubBMS_Calculator.BMA[i].Field.BSA_Reset==(unsigned long)(unsigned char)1))){
+if((SubBMS_Calculator.BMA[i].Field.BSA_Reset&~Edge1638500000&1?((Edge1638500000=SubBMS_Calculator.BMA[i].Field.BSA_Reset&1),1):((Edge1638500000=SubBMS_Calculator.BMA[i].Field.BSA_Reset&1),0))){
 (PRARackResetCount=(PRARackResetCount+1));
 }
 }imp16385_endfor1_0:;
@@ -204,7 +201,7 @@ if((((unsigned long)(unsigned char)PRARackResetCount==(unsigned long)(unsigned c
 }
 }
 }imp16385_end7_0:imp16385_else0_0:imp16385_end0_0:;}
-#line 154 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 151 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
 #line 49 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
 static void __AS__Action__ATWakeUpSeq(void){
 {
@@ -335,7 +332,7 @@ if((((unsigned long)(unsigned char)Sys.ProRlyAux==(unsigned long)(unsigned char)
 }break;}
 
 }imp16387_case0_11:imp16387_endcase0_0:;}
-#line 154 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 151 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
 #line 178 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Action.st"
 static void __AS__Action__ATStopSeq(void){
 {
@@ -437,7 +434,7 @@ if(((((unsigned long)(unsigned char)SubBMS_Calculator.BSA[3].Rack_State.Field.BS
 }break;}
 
 }imp16386_case0_9:imp16386_endcase0_0:;}
-#line 154 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
+#line 151 "E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -507,10 +504,10 @@ __asm__(".ascii \"iecfile \\\"Logical/PRAHandle/Types.typ\\\" scope \\\"local\\\
 __asm__(".ascii \"iecfile \\\"Logical/PRAHandle/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"E:/Project/HIS/ShipBatterySystm/Temp/Objects/CP0484/X20CP0484/PRAHandle/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"plcreplace \\\"E:/Project/HIS/ShipBatterySystm/Temp/Objects/CP0484/X20CP0484/PRAHandle/Main.st.c\\\" \\\"E:/Project/HIS/ShipBatterySystm/Logical/PRAHandle/Main.st\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Temp/Objects/CP0484/X20CP0484/PRAHandle/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".previous");
 
 __asm__(".section \".plciec\"");
-__asm__(".ascii \"plcdata_const 'ATRackReadyCheck'\\n\"");
 __asm__(".ascii \"plcdata_const 'RACK_MAXNUM'\\n\"");
 __asm__(".ascii \"plcdata_const 'RACK_MAXNUM_MINUS_1'\\n\"");
 __asm__(".previous");

@@ -9,4 +9,6 @@ VAR
 	Timestamp : TimeType;
 	LoopNum : INT;
 	LoopCount : INT;
+	i : INT;
+	pos : INT;
 END_VAR

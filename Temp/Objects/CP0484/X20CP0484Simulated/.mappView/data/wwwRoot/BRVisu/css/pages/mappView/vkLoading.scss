@@ -1,0 +1,15 @@
+@import "mixins.scss";
+#vkLoading_Paper1 {	@include elemTop(0);
+}
+#vkLoading_Paper1 {	@include elemLeft(0);
+}
+#vkLoading_Paper1 {	@include elemWidth(100);
+}
+#vkLoading_Paper1 {	@include elemHeight(100);
+}
+#vkLoading_Paper1 {	z-index: 0;
+}
+#vkLoading_Paper1 {	border-style: none;
+}
+#vkLoading_Paper1 {	border-color: rgba(255, 255, 255, 0);
+}

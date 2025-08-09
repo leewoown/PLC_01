@@ -261,7 +261,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[0].RecentTime 	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[0].Count  := HMI_Alarm.Protect[0].Count + 1;		
+		HMI_Alarm.Protect[0].Count  := HMI_Alarm.Protect[0].Count + 1;
+		HMI_Alarm.Protect[0].Internal_Count  := HMI_Alarm.Protect[0].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[0].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[0].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV) THEN
 	
@@ -271,7 +276,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[1].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[1].Count  := HMI_Alarm.Protect[1].Count + 1;		
+		HMI_Alarm.Protect[1].Count  := HMI_Alarm.Protect[1].Count + 1;	
+		HMI_Alarm.Protect[1].Internal_Count  := HMI_Alarm.Protect[1].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[1].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[1].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN) THEN
 	
@@ -281,7 +291,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[2].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[2].Count  := HMI_Alarm.Protect[2].Count + 1;		
+		HMI_Alarm.Protect[2].Count  := HMI_Alarm.Protect[2].Count + 1;	
+		HMI_Alarm.Protect[2].Internal_Count  := HMI_Alarm.Protect[2].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[2].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[2].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_OV) THEN
 	
@@ -291,7 +306,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[3].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[3].Count  := HMI_Alarm.Protect[3].Count + 1;		
+		HMI_Alarm.Protect[3].Count  := HMI_Alarm.Protect[3].Count + 1;	
+		HMI_Alarm.Protect[3].Internal_Count  := HMI_Alarm.Protect[3].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[3].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[3].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_UV) THEN
 	
@@ -301,7 +321,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[4].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[4].Count  := HMI_Alarm.Protect[4].Count + 1;		
+		HMI_Alarm.Protect[4].Count  := HMI_Alarm.Protect[4].Count + 1;
+		HMI_Alarm.Protect[4].Internal_Count  := HMI_Alarm.Protect[4].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[4].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[4].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;			
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV) THEN
 	
@@ -311,7 +336,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[5].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[5].Count  := HMI_Alarm.Protect[5].Count + 1;		
+		HMI_Alarm.Protect[5].Count  := HMI_Alarm.Protect[5].Count + 1;	
+		HMI_Alarm.Protect[5].Internal_Count  := HMI_Alarm.Protect[5].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[5].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[5].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV) THEN
 	
@@ -321,7 +351,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[6].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[6].Count  := HMI_Alarm.Protect[6].Count + 1;		
+		HMI_Alarm.Protect[6].Count  := HMI_Alarm.Protect[6].Count + 1;	
+		HMI_Alarm.Protect[6].Internal_Count  := HMI_Alarm.Protect[6].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[6].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[6].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV) THEN
 	
@@ -331,7 +366,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[7].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[7].Count  := HMI_Alarm.Protect[7].Count + 1;		
+		HMI_Alarm.Protect[7].Count  := HMI_Alarm.Protect[7].Count + 1;	
+		HMI_Alarm.Protect[7].Internal_Count  := HMI_Alarm.Protect[7].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[7].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[7].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT) THEN
 	
@@ -341,7 +381,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[8].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[8].Count  := HMI_Alarm.Protect[8].Count + 1;		
+		HMI_Alarm.Protect[8].Count  := HMI_Alarm.Protect[8].Count + 1;	
+		HMI_Alarm.Protect[8].Internal_Count  := HMI_Alarm.Protect[8].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[8].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[8].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT) THEN
 	
@@ -351,7 +396,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[9].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[9].Count  := HMI_Alarm.Protect[9].Count + 1;		
+		HMI_Alarm.Protect[9].Count  := HMI_Alarm.Protect[9].Count + 1;	
+		HMI_Alarm.Protect[9].Internal_Count  := HMI_Alarm.Protect[9].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[9].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[9].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;	
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT) THEN
 	
@@ -361,7 +411,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[10].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[10].Count 	:= HMI_Alarm.Protect[10].Count + 1;		
+		HMI_Alarm.Protect[10].Count 	:= HMI_Alarm.Protect[10].Count + 1;	
+		HMI_Alarm.Protect[10].Internal_Count  := HMI_Alarm.Protect[10].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[10].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[10].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT) THEN
 		
@@ -371,7 +426,12 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[11].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[11].Count 	:= HMI_Alarm.Protect[11].Count + 1;		
+		HMI_Alarm.Protect[11].Count 	:= HMI_Alarm.Protect[11].Count + 1;	
+		HMI_Alarm.Protect[11].Internal_Count  := HMI_Alarm.Protect[11].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[11].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[11].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaT) THEN
 	
@@ -381,9 +441,14 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[12].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[12].Count 	:= HMI_Alarm.Protect[12].Count + 1;		
+		HMI_Alarm.Protect[12].Count 	:= HMI_Alarm.Protect[12].Count + 1;	
+		HMI_Alarm.Protect[12].Internal_Count  := HMI_Alarm.Protect[12].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[12].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[12].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
 	END_IF;
-	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding) THEN
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Continuously_OP) THEN
 	
 		IF HMI_Alarm.Protect[13].Count = 0 THEN
 			HMI_Alarm.Protect[13].InitialTime  	:= Timestamp.Total;
@@ -391,9 +456,14 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[13].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[13].Count 	:= HMI_Alarm.Protect[13].Count + 1;		
+		HMI_Alarm.Protect[13].Count 	:= HMI_Alarm.Protect[13].Count + 1;	
+		HMI_Alarm.Protect[13].Internal_Count  := HMI_Alarm.Protect[13].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[13].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[13].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
-	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM) THEN
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Peak_OP) THEN
 	
 		IF HMI_Alarm.Protect[14].Count = 0 THEN
 			HMI_Alarm.Protect[14].InitialTime  	:= Timestamp.Total;
@@ -401,9 +471,14 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[14].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[14].Count 	:= HMI_Alarm.Protect[14].Count + 1;		
+		HMI_Alarm.Protect[14].Count 	:= HMI_Alarm.Protect[14].Count + 1;	
+		HMI_Alarm.Protect[14].Internal_Count  := HMI_Alarm.Protect[14].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[14].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[14].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
 	END_IF;
-	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM) THEN
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM) THEN
 	
 		IF HMI_Alarm.Protect[15].Count = 0 THEN
 			HMI_Alarm.Protect[15].InitialTime  	:= Timestamp.Total;
@@ -411,19 +486,29 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[15].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[15].Count 	:= HMI_Alarm.Protect[15].Count + 1;		
+		HMI_Alarm.Protect[15].Count 	:= HMI_Alarm.Protect[15].Count + 1;	
+		HMI_Alarm.Protect[15].Internal_Count  := HMI_Alarm.Protect[15].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[15].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[15].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
-//	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_CT_COM_Err) THEN
-//	
-//		IF HMI_Alarm.Protect[16].Count = 0 THEN
-//			HMI_Alarm.Protect[16].InitialTime  	:= Timestamp.Total;
-//			HMI_Alarm.Protect[16].RecentTime 	:= Timestamp.Total;
-//		ELSE
-//			HMI_Alarm.Protect[16].InitialTime  	:= Timestamp.Total;
-//		END_IF;
-//		HMI_Alarm.Protect[16].Count 	:= HMI_Alarm.Protect[16].Count + 1;		
-//	END_IF;
-	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak) THEN
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM) THEN
+	
+		IF HMI_Alarm.Protect[16].Count = 0 THEN
+			HMI_Alarm.Protect[16].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[16].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[16].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[16].Count 	:= HMI_Alarm.Protect[16].Count + 1;	
+		HMI_Alarm.Protect[16].Internal_Count  := HMI_Alarm.Protect[16].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[16].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[16].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding) THEN
 	
 		IF HMI_Alarm.Protect[17].Count = 0 THEN
 			HMI_Alarm.Protect[17].InitialTime  	:= Timestamp.Total;
@@ -431,18 +516,163 @@ ACTION ActSystem_Protect:
 		ELSE
 			HMI_Alarm.Protect[17].RecentTime  	:= Timestamp.Total;
 		END_IF;
-		HMI_Alarm.Protect[17].Count 	:= HMI_Alarm.Protect[17].Count + 1;		
+		HMI_Alarm.Protect[17].Count 	:= HMI_Alarm.Protect[17].Count + 1;	
+		HMI_Alarm.Protect[17].Internal_Count  := HMI_Alarm.Protect[17].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[17].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[17].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
 	END_IF;
-//	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_EMS_SW_Err) THEN
-//	
-//		IF HMI_Alarm.Protect[18].Count = 0 THEN
-//			HMI_Alarm.Protect[18].InitialTime  	:= Timestamp.Total;
-//			HMI_Alarm.Protect[18].RecentTime 	:= Timestamp.Total;
-//		ELSE
-//			HMI_Alarm.Protect[18].InitialTime  	:= Timestamp.Total;
-//		END_IF;
-//		HMI_Alarm.Protect[18].Count 	:= HMI_Alarm.Protect[18].Count + 1;		
-//	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak) THEN
+	
+		IF HMI_Alarm.Protect[18].Count = 0 THEN
+			HMI_Alarm.Protect[18].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[18].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[18].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[18].Count 	:= HMI_Alarm.Protect[18].Count + 1;	
+		HMI_Alarm.Protect[18].Internal_Count  := HMI_Alarm.Protect[18].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[18].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[18].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_InsulationReg) THEN
+	
+		IF HMI_Alarm.Protect[19].Count = 0 THEN
+			HMI_Alarm.Protect[19].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[19].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[19].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[19].Count 	:= HMI_Alarm.Protect[19].Count + 1;	
+		HMI_Alarm.Protect[19].Internal_Count  := HMI_Alarm.Protect[19].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[19].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[19].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse) THEN
+	
+		IF HMI_Alarm.Protect[20].Count = 0 THEN
+			HMI_Alarm.Protect[20].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[20].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[20].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[20].Count 	:= HMI_Alarm.Protect[20].Count + 1;	
+		HMI_Alarm.Protect[20].Internal_Count  := HMI_Alarm.Protect[20].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[20].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[20].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System) THEN
+	
+		IF HMI_Alarm.Protect[21].Count = 0 THEN
+			HMI_Alarm.Protect[21].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[21].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[21].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[21].Count 	:= HMI_Alarm.Protect[21].Count + 1;	
+		HMI_Alarm.Protect[21].Internal_Count  := HMI_Alarm.Protect[21].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[21].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[21].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.PMS_PAR_RelayErr) THEN
+	
+		IF HMI_Alarm.Protect[22].Count = 0 THEN
+			HMI_Alarm.Protect[22].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[22].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[22].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[22].Count 	:= HMI_Alarm.Protect[22].Count + 1;	
+		HMI_Alarm.Protect[22].Internal_Count  := HMI_Alarm.Protect[22].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[22].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[22].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.PMS_PAR_SEQErr) THEN
+	
+		IF HMI_Alarm.Protect[23].Count = 0 THEN
+			HMI_Alarm.Protect[23].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[23].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[23].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[23].Count 	:= HMI_Alarm.Protect[23].Count + 1;	
+		HMI_Alarm.Protect[23].Internal_Count  := HMI_Alarm.Protect[23].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[23].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[23].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
+	END_IF;	
+	IF EDGEPOS(PMS.SysBatProtect.Field.BPU_PAR_RelayErr) THEN
+	
+		IF HMI_Alarm.Protect[24].Count = 0 THEN
+			HMI_Alarm.Protect[24].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[24].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[24].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[24].Count 	:= HMI_Alarm.Protect[24].Count + 1;	
+		HMI_Alarm.Protect[24].Internal_Count  := HMI_Alarm.Protect[24].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[24].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[24].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;			
+	END_IF;
+	IF EDGEPOS(PMS.SysBatProtect.Field.BRA_PAR_RelayErr) THEN
+	
+		IF HMI_Alarm.Protect[25].Count = 0 THEN
+			HMI_Alarm.Protect[25].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[25].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[25].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[25].Count 	:= HMI_Alarm.Protect[25].Count + 1;	
+		HMI_Alarm.Protect[25].Internal_Count  := HMI_Alarm.Protect[25].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[25].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[25].Location;			
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status) THEN
+	
+		IF HMI_Alarm.Protect[26].Count = 0 THEN
+			HMI_Alarm.Protect[26].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[26].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[26].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[26].Count 	:= HMI_Alarm.Protect[26].Count + 1;	
+		HMI_Alarm.Protect[26].Internal_Count  := HMI_Alarm.Protect[26].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[26].Name;
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[26].Location;		
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
+	END_IF;
+	IF EDGEPOS(PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status) THEN
+	
+		IF HMI_Alarm.Protect[27].Count = 0 THEN
+			HMI_Alarm.Protect[27].InitialTime  	:= Timestamp.Total;
+			HMI_Alarm.Protect[27].RecentTime 	:= Timestamp.Total;
+		ELSE
+			HMI_Alarm.Protect[27].RecentTime  	:= Timestamp.Total;
+		END_IF;
+		HMI_Alarm.Protect[27].Count 	:= HMI_Alarm.Protect[27].Count + 1;	
+		HMI_Alarm.Protect[27].Internal_Count  := HMI_Alarm.Protect[27].Internal_Count + 1;
+		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[27].Name;	
+		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[27].Location;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		Sys.Buzzer := TRUE;		
+	END_IF;
 	
 END_ACTION
 

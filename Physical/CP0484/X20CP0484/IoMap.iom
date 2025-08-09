@@ -1,0 +1,15 @@
+VAR_CONFIG
+	::DIOHandle:EMSRLYAUX AT %IX."X20DI9372".DigitalInput01 INVERSE;
+	::DIOHandle:GasDetectorAUX AT %IX."X20DI9372".DigitalInput02 INVERSE;
+	::DIOHandle:WaterCoolingAUX AT %IX."X20DI9372".DigitalInput03 INVERSE;
+	::DIOHandle:FireDetectorAUX AT %IX."X20DI9372".DigitalInput04 INVERSE;
+	::DIOHandle:EMSRLYAUX_BMP AT %IX."X20DI9372".DigitalInput05 INVERSE;
+	::DIOHandle:ProRLYAUX AT %IX."X20DI9372".DigitalInput10;
+	::DIOHandle:PRLYAUX AT %IX."X20DI9372".DigitalInput11;
+	::DIOHandle:NRLYAUX AT %IX."X20DI9372".DigitalInput12;
+	::DIOHandle:Buzzer AT %QX."X20DO9322".DigitalOutput04;
+	::DIOHandle:PowerLamp AT %QX."X20DO9322".DigitalOutput05;
+	::DIOHandle:ProRLY AT %QX."X20DO9322".DigitalOutput06;
+	::DIOHandle:PRLY AT %QX."X20DO9322".DigitalOutput07;
+	::DIOHandle:NRLY AT %QX."X20DO9322".DigitalOutput08;
+END_VAR

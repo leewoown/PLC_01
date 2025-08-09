@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614240_7_
-#define _BUR_1754614240_7_
+#ifndef _BUR_1754628171_2_
+#define _BUR_1754628171_2_
 
 #include <bur/plctypes.h>
 
@@ -152,6 +152,10 @@ typedef struct SysBatProtect_Field_typ
 	plcbit BSA_Prtct_InsulationReg;
 	plcbit BSA_Prtct_MDSFuse;
 	plcbit BSA_Prtct_Cooling_System;
+	plcbit PMS_PAR_RelayErr;
+	plcbit PMS_PAR_SEQErr;
+	plcbit BPU_PAR_RelayErr;
+	plcbit BRA_PAR_RelayErr;
 } SysBatProtect_Field_typ;
 
 typedef struct SysBatProtect_typ
@@ -407,5 +411,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/gStruct/PMS_CAN.typ\\\" scope \\\"g
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614240_7_ */
+#endif /* _BUR_1754628171_2_ */
 

@@ -48,6 +48,7 @@ TYPE
 		GasDetectorAux : BOOL;
 		WaterCoolingAux : BOOL;
 		FireDetectorAux : BOOL;
+		PowerLamp : BOOL;
 		Buzzer : BOOL;
 		PRly : BOOL;
 		NRly : BOOL;
@@ -77,7 +78,8 @@ TYPE
 		vkSYSTEM_ALARM := 4,
 		vkSYSTEM_FAULT := 5,
 		vkSYSTEM_PROTECT := 6,
-		vkSYSTEM_STOP := 7
+		vkSYSTEM_STOP := 7,
+		vkSYSTEM_RESET := 8
 		);
 	WakeUpStepMa_Enum : 
 		(

@@ -4,7 +4,6 @@
   <Objects>
     <Object Type="Package">gStruct</Object>
     <Object Type="Package">gVariable</Object>
-    <Object Type="Package">LAMPSeq</Object>
     <Object Type="Package">SubBMS_CAN</Object>
     <Object Type="Package">PMS_CAN</Object>
     <Object Type="Package">PMS_MODBUS</Object>

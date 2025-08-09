@@ -46,17 +46,24 @@ PROGRAM _CYCLIC
 		vkSYSTEM_READY:
 			
 			PMS.SysBatCal.Field.BSA_Divice_Status 			:=	UDINT_TO_UINT(vkSYSTEM_READY); //READY
+			IF Sys.ProtectSig THEN
+	  			StateMa					:= vkSYSTEM_STANDBY;
+			ELSE
+				Sys.ResetSig			:= TRUE;
+					
+				ATReset;
 			
-			Sys.ResetSig			:= TRUE;
-			
-			ATReset;
-			
-			IF PRARackResetDone THEN
+				IF PRARackResetDone THEN
 				
-				Sys.ResetSig := FALSE;
+					Sys.ResetSig := FALSE;
 				
-				ATRackReadyCheck;
-				StateMa					:= vkSYSTEM_STANDBY;
+					SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
+					SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
+					SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
+					SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
+				
+					StateMa					:= vkSYSTEM_STANDBY;
+				END_IF;
 			END_IF;
 			
 			IF PMS.PMS.Field.PMS_Po_RelayStatus OR PMS.PMS.Field.PMS_Pro_RelayStatus OR PMS.PMS.Field.PMS_Ne_RelayStatus THEN
@@ -69,10 +76,25 @@ PROGRAM _CYCLIC
 			
 			PMS.SysBatCal.Field.BSA_Divice_Status :=	UDINT_TO_UINT(vkSYSTEM_STANDBY); //STANDBY
 			
-			IF (PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 THEN
+			IF (PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 AND
+				NOT(Sys.ProtectSig)	 THEN
 				StateMa := vkSYSTEM_RUN;
 			END_IF;
-		
+			
+			IF Sys.AlarmSig THEN
+				PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_ALARM); //ALARM
+			END_IF;
+			IF Sys.FaultSig THEN
+	  			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_FAULT); //FAULT
+			END_IF;
+			IF Sys.ProtectSig THEN
+				PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_PROTECT); //PROTECT
+				
+				Sys.BuzzerSig := TRUE;
+				
+				StateMa := vkSYSTEM_STOP;
+			END_IF;
+			
 			IF Sys.PRly OR Sys.NRly OR Sys.ProRly THEN
 				PMS.BAR_Protect.Field.BRA_Prtct_RelayWelding := TRUE;
 			ELSE
@@ -91,12 +113,16 @@ PROGRAM _CYCLIC
 				StateMa := vkSYSTEM_STOP;
 			END_IF;
 			
+			IF Sys.AlarmSig THEN
+				PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_ALARM); //ALARM
+			END_IF;
+			IF Sys.FaultSig THEN
+				PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_FAULT); //FAULT
+			END_IF;
 			IF Sys.ProtectSig THEN
-				StateMa := vkSYSTEM_PROTECT;
-			ELSIF Sys.FaultSig THEN
-				StateMa := vkSYSTEM_FAULT;
-			ELSIF Sys.AlarmSig THEN
-				StateMa := vkSYSTEM_ALARM;
+				PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_PROTECT); //PROTECT
+				Sys.BuzzerSig := TRUE;
+				StateMa := vkSYSTEM_STOP;
 			END_IF;
 			
 		vkSYSTEM_STOP:
@@ -105,44 +131,69 @@ PROGRAM _CYCLIC
 			ATStopSeq;
 			
 			IF PRAStopDone THEN
+				
 				StateMa := vkSYSTEM_STANDBY;
+				
+				Sys.StopSig := FALSE;
+				
+				IF Sys.AlarmSig THEN
+					PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_ALARM); //ALARM
+				END_IF;
+				IF Sys.FaultSig THEN
+					PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_FAULT); //FAULT
+				END_IF;
+				IF Sys.ProtectSig THEN
+					PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_PROTECT); //PROTECT
+					Sys.BuzzerSig := TRUE;
+					StateMa := vkSYSTEM_STOP;
+				END_IF;
+				
+			END_IF;
+		vkSYSTEM_RESET:
+		
+			SubBMS_Calculator.BMA[0].Field.BSA_Reset := TRUE;
+			SubBMS_Calculator.BMA[1].Field.BSA_Reset := TRUE;
+			SubBMS_Calculator.BMA[2].Field.BSA_Reset := TRUE;
+			SubBMS_Calculator.BMA[3].Field.BSA_Reset := TRUE;
+		
+			IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
+			END_IF;
+			IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
+			END_IF;
+			IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
+			END_IF;
+			IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
 			END_IF;
 			
-		vkSYSTEM_ALARM:
-			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_ALARM); //ALARM
+			PRARackResetCount := 0;
 			
-//			IF NOT(PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 THEN
-//			StateMa := vkSYSTEM_STOP;
-//			END_IF;
+			FOR i := 0 TO 3 DO
+				IF SubBMS_Calculator.BSA[i].Rack_State.Field.BSA_Divice_Status = 1 THEN
+					SubBMS_Calculator.BMA[i].Field.BSA_Reset := FALSE;
+					PRARackResetCount := PRARackResetCount + 1 ;
+				END_IF;
+			END_FOR;
 			
-		vkSYSTEM_FAULT:
-			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_FAULT); //FAULT
-			
-//			IF NOT(PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 THEN
-//				StateMa := vkSYSTEM_STOP;
-//			END_IF;
-			
-		vkSYSTEM_PROTECT:
-			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_PROTECT); //PROTECT
-			
-			//StateMa := vkSYSTEM_STOP;
+			IF PRARackResetCount = HMI.DeviceLoading.SetRackNum THEN
+				PRARackResetDone := TRUE;
+			ELSE
+				PRARackResetDone := FALSE;
+			END_IF;
 		
+			IF PRARackResetDone THEN
+				StateMa					:= vkSYSTEM_STANDBY;
+				PRARackResetDone 		:= FALSE;
+			END_IF;
 	END_CASE;
 	
 	PRATimerProRlyOn();
 	PRATimerProRlyOff();
 	PRATimerWakeUpOff();
 	PRATimerSeqErr();
-	
-
-	
-	IF Sys.FireDetectorAux OR Sys.GasDetectorAux OR Sys.WaterCoolingAux OR Sys.EMSRlyAux_BMP OR Sys.EMSRlyAux THEN
-		Sys.ProtectSig := TRUE;
-		Sys.Buzzer := TRUE;
-	ELSE
-		Sys.Buzzer := FALSE;
-	END_IF;
-	
 	
 END_PROGRAM
 

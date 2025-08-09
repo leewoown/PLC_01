@@ -10,18 +10,22 @@
             <Widget xsi:type="widgets.brease.Label" id="Label39" top="64" left="6" width="177" height="28" zIndex="2" text="System DIO Status" borderWidth="1px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" />
             <Widget xsi:type="widgets.brease.GroupBox" id="gbLabel3" top="96" left="12" width="307" height="60" zIndex="3" borderWidth="0px" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
               <Widgets>
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse41" top="5" left="16" width="12" height="12" zIndex="0" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Label" id="lb47" top="6" left="36" width="72" height="10" zIndex="1" text="Emg Switch" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse42" top="25" left="16" width="12" height="12" zIndex="2" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse43" top="45" left="16" width="12" height="12" zIndex="3" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse50" top="5" left="172" width="12" height="12" zIndex="4" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse51" top="25" left="172" width="12" height="12" zIndex="5" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse52" top="45" left="172" width="12" height="12" zIndex="6" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Label" id="lb48" top="25" left="36" width="72" height="12" zIndex="7" text="OffGas Detect" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb55" top="46" left="36" width="72" height="10" zIndex="8" text="Water Leak" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb62" top="6" left="196" width="88" height="10" zIndex="9" text="N_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb63" top="25" left="196" width="88" height="10" zIndex="10" text="ProCHA_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb64" top="46" left="196" width="88" height="10" zIndex="11" text="P_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse50" top="18" left="9" width="12" height="12" zIndex="0" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb55" top="18" left="29" width="72" height="12" zIndex="1" text="Exteral EMS" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse51" top="44" left="100" width="12" height="12" zIndex="2" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse52" top="10" left="100" width="12" height="12" zIndex="3" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse57" top="10" left="202" width="12" height="12" zIndex="14" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse58" top="27" left="202" width="12" height="12" zIndex="5" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse59" top="44" left="202" width="12" height="12" zIndex="6" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb62" top="44" left="120" width="72" height="12" zIndex="7" text="Gas Detector" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb63" top="10" left="120" width="72" height="12" zIndex="8" text="Water Cooling" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb69" top="10" left="226" width="72" height="12" zIndex="9" text="N_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb70" top="27" left="226" width="72" height="12" zIndex="10" text="ProCHA_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb71" top="44" left="226" width="72" height="12" zIndex="11" text="P_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse60" top="38" left="9" width="12" height="12" zIndex="12" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb64" top="38" left="29" width="72" height="12" zIndex="15" text="BMP EMS" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse61" top="27" left="100" width="12" height="12" zIndex="4" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb72" top="27" left="120" width="72" height="12" zIndex="13" text="Fire Detector" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
               </Widgets>
             </Widget>
             <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle46" top="181" left="6" width="318" height="188" zIndex="4" cornerRadius="0px" />
@@ -52,18 +56,22 @@
             <Widget xsi:type="widgets.brease.Label" id="Label41" top="64" left="6" width="177" height="28" zIndex="2" text="System DIO Status" borderWidth="1px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" />
             <Widget xsi:type="widgets.brease.GroupBox" id="gbLabel5" top="96" left="12" width="307" height="60" zIndex="3" borderWidth="0px" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
               <Widgets>
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse44" top="5" left="16" width="12" height="12" zIndex="0" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Label" id="lb49" top="6" left="36" width="72" height="10" zIndex="1" text="Emg Switch" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse45" top="25" left="16" width="12" height="12" zIndex="2" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse46" top="45" left="16" width="12" height="12" zIndex="3" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse53" top="5" left="172" width="12" height="12" zIndex="4" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse54" top="25" left="172" width="12" height="12" zIndex="5" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse55" top="45" left="172" width="12" height="12" zIndex="6" borderStyle="solid" />
-                <Widget xsi:type="widgets.brease.Label" id="lb50" top="25" left="36" width="72" height="12" zIndex="7" text="OffGas Detect" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb56" top="46" left="36" width="72" height="10" zIndex="8" text="Water Leak" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb65" top="6" left="196" width="88" height="10" zIndex="9" text="N_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb66" top="25" left="196" width="88" height="10" zIndex="10" text="ProCHA_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
-                <Widget xsi:type="widgets.brease.Label" id="lb67" top="46" left="196" width="88" height="10" zIndex="11" text="P_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse44" top="18" left="9" width="12" height="12" zIndex="0" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb49" top="18" left="29" width="72" height="12" zIndex="1" text="Exteral EMS" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse45" top="44" left="100" width="12" height="12" zIndex="2" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse46" top="10" left="100" width="12" height="12" zIndex="3" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse53" top="10" left="202" width="12" height="12" zIndex="14" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse54" top="27" left="202" width="12" height="12" zIndex="5" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse55" top="44" left="202" width="12" height="12" zIndex="6" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb50" top="44" left="120" width="72" height="12" zIndex="7" text="Gas Detector" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb56" top="10" left="120" width="72" height="12" zIndex="8" text="Water Cooling" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb65" top="10" left="226" width="72" height="12" zIndex="9" text="N_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb66" top="27" left="226" width="72" height="12" zIndex="10" text="ProCHA_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Label" id="lb67" top="44" left="226" width="72" height="12" zIndex="11" text="P_Relay" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse49" top="38" left="9" width="12" height="12" zIndex="12" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb61" top="38" left="29" width="72" height="12" zIndex="15" text="BMP EMS" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse56" top="27" left="100" width="12" height="12" zIndex="4" borderStyle="solid" />
+                <Widget xsi:type="widgets.brease.Label" id="lb68" top="27" left="120" width="72" height="12" zIndex="13" text="Fire Detector" textColor="rgba(0, 0, 0, 1)" fontSize="10px" bold="true" padding="0px" margin="0px" />
               </Widgets>
             </Widget>
             <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput22" top="5" left="9" width="153" height="54" zIndex="4" value="" borderWidth="1px" borderColor="rgba(0, 0, 0, 1)" borderStyle="solid" textAlign="center" fontSize="22px" bold="false" />

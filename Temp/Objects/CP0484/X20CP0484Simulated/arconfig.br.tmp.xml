@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<?AutomationRuntimeIOSystem Version = 1.0?>
+<IOCFG xmlns="http://www.br-automation.com/AR/IO" Version="2.0">
+  <Module ID="$root" Hardware="X20BB57">
+    <Parameter ID="HardwareModuleName" Value="X20CP0484" />
+    <Parameter ID="SimulationIPAddress" Value="127.0.0.1" />
+    <Parameter ID="SimulationInaPort" Value="11160" Type="UDINT" />
+    <Parameter ID="SimulationInaNodeNumber" Value="1" Type="UDINT" />
+    <Parameter ID="SimulationModeOpcUa" Value="on" />
+    <Parameter ID="ActivateDtmServer" Value="0" Type="UDINT" />
+    <Parameter ID="X2XCycleTimeMin" Value="400" Type="UDINT" />
+    <Parameter ID="X2XCycleTimeMax" Value="32000" Type="UDINT" />
+  </Module>
+  <Module ID="CPU" Hardware="X20CP0484" />
+  <Module ID="IF2" Hardware="X20BB57">
+    <Parameter ID="ActivateOSAFT" Value="0" />
+  </Module>
+  <Module ID="IF2.MODBUSSLAVE_1" Hardware="MODBUSSLAVE">
+    <Parameter ID="PortNumber" Value="502" Type="UDINT" />
+    <Parameter ID="Timeout" Value="0" Type="UDINT" />
+    <Parameter ID="AddressType" Value="FixedSize" />
+    <Parameter ID="NrOfCoils" Value="0" Type="UDINT" />
+    <Parameter ID="NrOfDiscInputs" Value="0" Type="UDINT" />
+    <Parameter ID="NrOfInputReg" Value="0" Type="UDINT" />
+    <Parameter ID="NrOfHoldingReg" Value="89" Type="UDINT" />
+    <Channel ID="ActualNumberOfClients_1">
+      <Parameter ID="Ext" Value="/DYNAMIC" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="PacketCount_1">
+      <Parameter ID="Ext" Value="/DYNAMIC" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="DINT" />
+    </Channel>
+    <Channel ID="ErrorCount_1">
+      <Parameter ID="Ext" Value="/DYNAMIC" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="DINT" />
+    </Channel>
+    <Channel ID="TimeSinceLastRequest_1">
+      <Parameter ID="Ext" Value="/DYNAMIC" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="DINT" />
+    </Channel>
+  </Module>
+  <Module ID="IF2.OPCUA" Hardware="OPCUA">
+    <Parameter ID="ActivateOpcUa" Value="1" Type="INT" />
+  </Module>
+  <Module ID="IF2.SITEMAN" Hardware="SITEMAN">
+    <Parameter ID="ActivateSiteMan" Value="1" Type="INT" />
+  </Module>
+  <Module ID="IF2.ST1" Hardware="ModbusTcp_any">
+    <Parameter ID="HardwareModuleName" Value="ModbusTcp_any" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="IpAddress" Value="192.168.11.12" />
+    <Parameter ID="UnitId" Value="1" Type="INT" />
+    <Parameter ID="TcpPort" Value="502" Type="UINT" />
+    <Parameter ID="NumPendReq" Value="1" Type="INT" />
+    <Parameter ID="Response" Value="1500" Type="INT" />
+    <Parameter ID="PnpTimer" Value="10" Type="INT" />
+    <Parameter ID="ResetOutputs" Value="off" />
+    <Parameter ID="NumBlocks" Value="-1" Type="INT" />
+    <Channel ID="ModuleOk">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ActInternalError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ActConfError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ActOverloadError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ActModbusError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ActSlvConError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ActRefreshError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ModSlaveState">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="ModbusErrorLast">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="LastErrBlockNr">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="ModbusSlaveDiag">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="OUT" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="HistInternalError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="HistConfError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="HistOverloadError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="HistModbusError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="HistSlvConError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="HistRefreshError">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="BOOL" />
+    </Channel>
+    <Channel ID="ModbusErrorCnt">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="ModbusConErrorCnt">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="ModbusPktRefreshTimeoutCnt">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="ModbusPktPendPerSec">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+    <Channel ID="ModbusMeanResponseTime">
+      <Parameter ID="Ext" Value="/HW" />
+      <Parameter ID="Direction" Value="IN" />
+      <Parameter ID="Type" Value="UINT" />
+    </Channel>
+  </Module>
+  <Module ID="IF2.ST2" Hardware="6PPT50.156B-10B">
+    <Parameter ID="HardwareModuleName" Value="6PPT50.156B-10B" />
+    <Parameter ID="OS" Value="PPT" />
+    <Parameter ID="Startmode" Value="2" />
+    <Parameter ID="ShowBootlogoWeb" Value="0" />
+    <Parameter ID="Mode" Value="Manual" />
+    <Parameter ID="InternetAddress" Value="192.168.11.11" />
+    <Parameter ID="Subnetmask" Value="255.255.255.0" />
+    <Parameter ID="ActivateDns" Value="1" />
+    <Parameter ID="DnsDefaultDomain" Value="DnsSuffix" />
+    <Parameter ID="DnsFromDhcp" Value="1" />
+    <Parameter ID="ActivateNtpClient" Value="1" />
+    <Parameter ID="NtpServer1" Value="192.168.11.10" />
+    <Parameter ID="ActivateDaylightSavingTime" Value="0" />
+    <Parameter ID="TimeZone" Value="325" Type="UDINT" />
+    <Parameter ID="Displaybrightness" Value="50" Type="UINT" />
+    <Parameter ID="Screensaver" Value="0" />
+    <Parameter ID="ScreenRotation" Value="0" />
+    <Parameter ID="GifOffsetX" Value="0" Type="UDINT" />
+    <Parameter ID="GifOffsetY" Value="0" Type="UDINT" />
+    <Parameter ID="GifDelayMs" Value="0" Type="UDINT" />
+    <Parameter ID="ActivateBuzzer" Value="0" />
+    <Parameter ID="ActivateOpenService" Value="1" />
+    <Parameter ID="PasswordVNCEncrypt" Value="0" />
+    <Parameter ID="ActivateRFBext" Value="0" />
+    <Parameter ID="ConnMonVNC" Value="0" />
+    <Parameter ID="LocalScaling" Value="0" />
+    <Parameter ID="SelectedFavoriteWeb" Value="192.168.11.10/index.html?visuId=vis_0" />
+    <Parameter ID="BrowserVKeyboard" Value="0" />
+    <Parameter ID="DisablePinchZoom" Value="0" />
+    <Parameter ID="EnableViewportOvrd" Value="0" />
+    <Parameter ID="USBmemshare" Value="0" />
+    <Parameter ID="Usermemshare" Value="0" />
+    <Parameter ID="PasswordCIFSEncrypt" Value="0" />
+    <Parameter ID="UpdateServerType" Value="1" />
+    <Parameter ID="UpdateServerFromDhcp" Value="1" />
+    <Parameter ID="PasswordServiceEncrypt" Value="0" />
+    <Parameter ID="ActivateRemoteAccess" Value="0" />
+    <Parameter ID="ActivateOpcUaServer" Value="0" />
+    <Parameter ID="PPTLogo" Value="none" />
+    <Parameter ID="AnimatedBootLogo" Value="none" />
+    <Parameter ID="PPTImage" Value="none" />
+    <Parameter ID="VncAuthentication" Value="0" />
+    <Parameter ID="VncPortNumber" Value="5900" Type="UDINT" />
+    <Parameter ID="VncMaxConnections" Value="1" Type="UINT" />
+    <Parameter ID="VncRefreshRate" Value="1000" Type="UDINT" />
+    <Parameter ID="VncConnectionTimeout" Value="4" Type="UDINT" />
+    <Parameter ID="ANSLConnectionTypeForTerminals" Value="non-secure" />
+    <Parameter ID="ConfigFileName" Value="PPT50Config" />
+  </Module>
+  <Module ID="IF3" Hardware="X20BB57">
+    <Parameter ID="Operation" Value="EPL-V2" />
+    <Parameter ID="MtuSize" Value="300" Type="UDINT" />
+  </Module>
+  <Module ID="IF3.PLK" Hardware="EPL-V2">
+    <Parameter ID="CycleTime" Value="2000" Type="UDINT" />
+    <Parameter ID="Synchron" Value="on" />
+    <Parameter ID="MuxPrescaler" Value="8" Type="UDINT" />
+    <Parameter ID="Mode" Value="MN" />
+    <Parameter ID="NodeID" Value="240" Type="DINT" />
+    <Parameter ID="AsyncTimeout" Value="25" Type="UDINT" />
+    <Parameter ID="TransferOnlyActive" Value="off" />
+    <Parameter ID="OutputJustInTime" Value="off" />
+    <Parameter ID="BasicEthernetInServiceMode" Value="off" />
+    <Parameter ID="EplNatSubnet" Value="192.168.101.0" />
+    <Parameter ID="EPL_LossFrameTolerance" Value="-1" Type="DINT" />
+    <Parameter ID="ApplSwDate" Value="0" Type="UDINT" />
+    <Parameter ID="ApplSwTime" Value="0" Type="UDINT" />
+    <Parameter ID="BusCycleTrigger" Value="auto" />
+    <Parameter ID="OutputCycleTrigger" Value="auto" />
+  </Module>
+  <Module ID="IF6.X2X" Hardware="X2X">
+    <Parameter ID="CycleTimeMin" Value="400" Type="UDINT" />
+    <Parameter ID="CycleTimeMax" Value="32000" Type="UDINT" />
+    <Parameter ID="CycleTime" Value="4000" Type="UDINT" />
+    <Parameter ID="Synchron" Value="on" />
+    <Parameter ID="BusLength" Value="1000" Type="UDINT" />
+    <Parameter ID="Stations" Value="64" Type="UDINT" />
+    <Parameter ID="AsyncPayload" Value="80" Type="UDINT" />
+    <Parameter ID="Asymmetric" Value="off" />
+    <Parameter ID="OutputJustInTime" Value="on" />
+    <Parameter ID="BusCycleTrigger" Value="auto" />
+    <Parameter ID="OutputCycleTrigger" Value="auto" />
+  </Module>
+  <Module ID="IF6.ST1" Hardware="X20AO4622">
+    <Parameter ID="HardwareModuleName" Value="X20AO4622" />
+  </Module>
+  <Module ID="IF6.ST1.IO" Hardware="X20AO4622">
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+    <Parameter ID="FunctionModelNumber" Value="1" Type="USINT" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="ChannelType01" Value="-10V to +10V" />
+    <Parameter ID="ChannelType02" Value="-10V to +10V" />
+    <Parameter ID="ChannelType03" Value="-10V to +10V" />
+    <Parameter ID="ChannelType04" Value="-10V to +10V" />
+  </Module>
+  <Module ID="IF6.ST2" Hardware="X20AI4622">
+    <Parameter ID="HardwareModuleName" Value="X20AI4622" />
+  </Module>
+  <Module ID="IF6.ST2.IO" Hardware="X20AI4622">
+    <Parameter ID="FunctionModel" Value="Standard" />
+    <Parameter ID="FunctionModelNumber" Value="0" Type="USINT" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="InputFilter" Value="off" />
+    <Parameter ID="UpperLimit" Value="32767" Type="INT" />
+    <Parameter ID="LowerLimit" Value="-32767" Type="INT" />
+    <Parameter ID="ChannelType01" Value="-10V to +10V" />
+    <Parameter ID="ChannelType02" Value="-10V to +10V" />
+    <Parameter ID="ChannelType03" Value="-10V to +10V" />
+    <Parameter ID="ChannelType04" Value="-10V to +10V" />
+  </Module>
+  <Module ID="IF6.ST3" Hardware="X20DI9372">
+    <Parameter ID="HardwareModuleName" Value="X20DI9372" />
+  </Module>
+  <Module ID="IF6.ST3.IO" Hardware="X20DI9372">
+    <Parameter ID="FunctionModel" Value="Standard" />
+    <Parameter ID="FunctionModelNumber" Value="0" Type="USINT" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="InputFilter" Value="10" Type="USINT" />
+    <Parameter ID="DigitalInputsPacked" Value="off" />
+  </Module>
+  <Module ID="IF6.ST4" Hardware="X20DO9322">
+    <Parameter ID="HardwareModuleName" Value="X20DO9322" />
+  </Module>
+  <Module ID="IF6.ST4.IO" Hardware="X20DO9322">
+    <Parameter ID="FunctionModel" Value="Standard" />
+    <Parameter ID="FunctionModelNumber" Value="0" Type="USINT" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="StatusInfo" Value="on" />
+    <Parameter ID="DigitalOutputsPacked" Value="off" />
+  </Module>
+  <Module ID="IF6.ST5" Hardware="X20CS1030">
+    <Parameter ID="HardwareModuleName" Value="X20CS1030" />
+  </Module>
+  <Module ID="IF6.ST5.CC" Hardware="Stream1xRS4xx" />
+  <Module ID="IF6.ST5.IF1" Hardware="X20CS1030">
+    <Parameter ID="ActivateDevice" Value="on" />
+    <Parameter ID="Baudrate" Value="57600" Type="UDINT" />
+    <Parameter ID="Parity" Value="E" />
+    <Parameter ID="DataBits" Value="8" Type="UDINT" />
+    <Parameter ID="StopBits" Value="1" Type="UDINT" />
+    <Parameter ID="DeviceType" Value="RS422" />
+    <Parameter ID="SwHandshakeActivate" Value="off" />
+    <Parameter ID="LowerThreshold" Value="512" Type="UINT" />
+    <Parameter ID="UpperThreshold" Value="1024" Type="UINT" />
+    <Parameter ID="ReceiveIdleTime" Value="4" Type="UDINT" />
+    <Parameter ID="TransmitIdleTime" Value="5" Type="UINT" />
+    <Parameter ID="FrameLengthMax" Value="256" Type="UINT" />
+    <Parameter ID="FrameTerminationChar1" Value="-1" Type="INT" />
+    <Parameter ID="FrameTerminationChar2" Value="-1" Type="INT" />
+    <Parameter ID="FrameTerminationChar3" Value="-1" Type="INT" />
+    <Parameter ID="FrameTerminationChar4" Value="-1" Type="INT" />
+    <Parameter ID="ActivateModem" Value="0" />
+  </Module>
+  <Module ID="IF6.ST5.IO" Hardware="X20CS1030">
+    <Parameter ID="FunctionModel" Value="Stream1xRS4xx" />
+    <Parameter ID="FunctionModelNumber" Value="2" Type="USINT" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="AsynSize" Value="24" Type="USINT" />
+    <Parameter ID="AsynForward" Value="6" Type="USINT" />
+    <Parameter ID="InhibitActive" Value="0" Type="USINT" />
+    <Parameter ID="InhibitPassive" Value="0" Type="USINT" />
+    <Parameter ID="ExtErrStatusInfo" Value="off" />
+  </Module>
+  <Module ID="IF6.ST6" Hardware="X20CS1070">
+    <Parameter ID="HardwareModuleName" Value="X20CS1070" />
+  </Module>
+  <Module ID="IF6.ST6.IO" Hardware="X20CS1070">
+    <Parameter ID="FunctionModel" Value="Standard" />
+    <Parameter ID="FunctionModelNumber" Value="0" Type="USINT" />
+    <Parameter ID="Supervision" Value="on" />
+    <Parameter ID="Baudrate" Value="500000" />
+    <Parameter ID="SJWsetting" Value="3" Type="USINT" />
+    <Parameter ID="SPOsetting" Value="0" Type="USINT" />
+    <Parameter ID="TXobjects" Value="1" Type="UINT" />
+    <Parameter ID="FIFOTXlimit" Value="1" Type="USINT" />
+    <Parameter ID="TxFifoInfo" Value="off" />
+    <Parameter ID="RxFifoInfo" Value="off" />
+    <Parameter ID="CANdataFormat" Value="USINT" />
+    <Parameter ID="RX_Fifo_01_enable" Value="off" />
+  </Module>
+  <Module ID="IF7.CANIO" Hardware="CANIO">
+    <Parameter ID="Timeout" Value="1000" Type="UDINT" />
+    <Parameter ID="Retries" Value="3" Type="UDINT" />
+    <Parameter ID="Mode" Value="CANIO" />
+  </Module>
+  <Module ID="PS1" Hardware="X20PS9600">
+    <Parameter ID="HardwareModuleName" Value="X20PS9600" />
+  </Module>
+  <Module ID="PS1.IO" Hardware="X20PS9600">
+    <Parameter ID="FunctionModel" Value="Standard" />
+    <Parameter ID="FunctionModelNumber" Value="0" Type="USINT" />
+    <Parameter ID="Supervision" Value="on" />
+    <Parameter ID="StatusInfo" Value="on" />
+    <Parameter ID="PowerInfo" Value="off" />
+  </Module>
+</IOCFG>

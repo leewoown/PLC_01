@@ -82,7 +82,6 @@ ACTION PMS_SysCell_Volt_Location:
 		
 END_ACTION
 
-
 ACTION PMS_SysCell_Temps_Location: 
 	
 		
@@ -117,29 +116,66 @@ ACTION PMS_SysCell_Temps_Location:
 	
 END_ACTION
 
-
 ACTION PMS_SysBatProtect:
 	FOR LoopCount := 0 TO RACK_MAXNUM_MINUS_1 DO
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC OR SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_OC := TRUE;
 			Sys.ProtectSig := TRUE;
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[0].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[0].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[0].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[0].Location := 'RACK4';
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC OR	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_OC := TRUE;
 			Sys.FaultSig := TRUE;
-			
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC OR	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_OC := TRUE;
 			Sys.AlarmSig := TRUE;
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_OC  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Chager_OC) THEN
+				PMS.SysBatProtect.Field.BSA_Fault_OC  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Dischager_OC) AND NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Chager_OC) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_OC  := FALSE;
+			END_IF;
 		END_IF;
 
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[1].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[1].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[1].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[1].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_SOC_OV  := TRUE;
@@ -149,14 +185,42 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV  := TRUE;
 			Sys.AlarmSig := TRUE;
-	  		
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_SOC_OV)  THEN
+				PMS.SysBatProtect.Field.BSA_Fault_SOC_OV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_SOC_OV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_SOC_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_SOC_OV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_SOC_OV) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[2].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[2].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[2].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[2].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_SOC_UN  := TRUE;
@@ -166,14 +230,43 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_SOC_UN  := TRUE;
 			Sys.AlarmSig := TRUE;
-	  		
+		ELSE
+			
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_Un) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_SOC_Un)  THEN
+				PMS.SysBatProtect.Field.BSA_Fault_SOC_UN  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_SOC_Un) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_SOC_Un) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_SOC_Un) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_SOC_Un) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_SOC_UN  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_OV  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[3].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[3].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[3].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[3].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_OV  := TRUE;
@@ -184,13 +277,43 @@ ACTION PMS_SysBatProtect:
 			PMS.SysBatProtect.Field.BSA_Alarm_OV  := TRUE;
 			Sys.AlarmSig := TRUE;
 	  		
+		ELSE
+			
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_OV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_OV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_OV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_OV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_OV) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_OV) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_OV)  THEN
+				PMS.SysBatProtect.Field.BSA_Fault_OV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_OV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_OV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_OV) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_OV  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_UV  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[4].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[4].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[4].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[4].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_UV  := TRUE;
@@ -201,13 +324,43 @@ ACTION PMS_SysBatProtect:
 			PMS.SysBatProtect.Field.BSA_Alarm_UV  := TRUE;
 			Sys.AlarmSig := TRUE;
 	  		
+		ELSE
+			
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_UV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_UV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_UV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_UV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_UV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_UV) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_UV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_UV) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_UV)  THEN
+				PMS.SysBatProtect.Field.BSA_Fault_UV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_UV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_UV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_UV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_UV) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_UV  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[5].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[5].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[5].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[5].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Cell_OV  := TRUE;
@@ -217,6 +370,26 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_OV  := TRUE;
 			Sys.AlarmSig := TRUE;
+		ELSE
+			
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_OV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Cell_OV)  THEN
+				PMS.SysBatProtect.Field.BSA_Fault_Cell_OV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Cell_OV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Cell_OV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Cell_OV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Cell_OV) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Cell_OV  := FALSE;
+			END_IF;
 	  		
 		END_IF;
 		
@@ -224,7 +397,17 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[6].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[6].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[6].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[6].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Cell_UV  := TRUE;
@@ -235,13 +418,43 @@ ACTION PMS_SysBatProtect:
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UV  := TRUE;
 			Sys.AlarmSig := TRUE;
 	  		
+		ELSE
+			
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UV)  THEN
+				PMS.SysBatProtect.Field.BSA_Fault_Cell_UV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UV) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Cell_UV  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[7].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[7].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[7].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[7].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := TRUE;
@@ -251,14 +464,44 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := TRUE;
 			Sys.AlarmSig := TRUE;
-	  		
+	  			
+		ELSE
+			
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV) AND
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalV)  THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := FALSE;
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalV) AND
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalV) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalV) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalV) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[8].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[8].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[8].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[8].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_OT  := TRUE;
@@ -268,14 +511,44 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_OT  := TRUE;
 			Sys.AlarmSig := TRUE;
-	  		
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT)THEN
+				PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_OT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_OT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_OT  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[9].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[9].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[9].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[9].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_OT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_OT  := TRUE;
@@ -286,13 +559,44 @@ ACTION PMS_SysBatProtect:
 			PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_OT  := TRUE;
 			Sys.AlarmSig := TRUE;
 	  		
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_OT) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_OT) THEN
+				PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_OT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_OT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_OT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_OT  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[10].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[10].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[10].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[10].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_UT  := TRUE;
@@ -302,14 +606,45 @@ ACTION PMS_SysBatProtect:
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_UT  := TRUE;
 			Sys.AlarmSig := TRUE;
-	  		
+	  			
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_DisCharger_Cell_UT) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_DisCharger_Cell_UT) THEN
+				PMS.SysBatProtect.Field.BSA_Fault_Discharger_Cell_UT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_DisCharger_Cell_UT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Discharger_Cell_UT  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[11].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[11].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[11].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[11].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_UT  := TRUE;
@@ -320,13 +655,44 @@ ACTION PMS_SysBatProtect:
 			PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_UT  := TRUE;
 			Sys.AlarmSig := TRUE;
 	  		
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Charger_Cell_UT) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Charger_Cell_UT) THEN
+				PMS.SysBatProtect.Field.BSA_Fault_Charger_Cell_UT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_UT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Charger_Cell_UT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Charger_Cell_UT  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := TRUE;
 			Sys.ProtectSig := TRUE;
-			
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[12].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[12].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[12].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[12].Location := 'RACK4';
+
+			END_CASE;
 		ELSIF SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT THEN
 			
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := TRUE;
@@ -337,73 +703,253 @@ ACTION PMS_SysBatProtect:
 			PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := TRUE;
 			Sys.AlarmSig := TRUE;
 	  		
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Cell_UnbalT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.fault.BSA_FLT_Cell_UnbalT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := FALSE;
+			
+			END_IF;
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalT) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.warning.BSA_Wn_Cell_UnbalT) THEN
+				PMS.SysBatProtect.Field.BSA_Alarm_Cell_UnBalaT  := FALSE;
+			END_IF;
 		END_IF;
 		
-		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err THEN
-			
-			PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding  := TRUE;
-			Sys.ProtectSig := TRUE;
-	  		
-		END_IF;
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err  THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM   := TRUE;
 			Sys.ProtectSig := TRUE;
-	  		
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[15].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[15].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[15].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[15].Location := 'RACK4';
+
+			END_CASE;
+			
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_IN_COM_Err) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM  := FALSE;
+			END_IF;
 		END_IF;
 		
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM  := TRUE;
 			Sys.ProtectSig := TRUE;
-	  		
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[16].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[16].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[16].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[16].Location := 'RACK4';
+
+			END_CASE;
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_EX_COM_Err) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM  := FALSE;
+			END_IF;
 		END_IF;
 		
+		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err THEN
+			
+			PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding  := TRUE;
+			Sys.ProtectSig := TRUE;
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[17].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[17].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[17].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[17].Location := 'RACK4';
+
+			END_CASE;
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Rly_Err) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding  := FALSE;
+			END_IF;
+		END_IF;
 		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err THEN
 			
 			PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak  := TRUE;
 			Sys.ProtectSig := TRUE;
-	  		
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[18].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[18].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[18].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[18].Location := 'RACK4';
+
+			END_CASE;
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_AlarmState.Field.protect.BSA_Prtct_Water_Leak_Err) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak  := FALSE;
+			END_IF;
 		END_IF;
-		
-		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_AlarmState.Field.protect.BSA_Prtct_SOC_OV THEN
+		IF 	SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_MSD_AUX THEN
 			
-			PMS.SysBatProtect.Field.BSA_Alarm_SOC_OV  := TRUE;
+			PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse  := TRUE;
 			Sys.ProtectSig := TRUE;
-	  		
+			CASE LoopCount OF
+				0:
+					HMI_Alarm.Protect[20].Location := 'RACK1';
+					HMI_Alarm.Protect[20].Location := 'RACK1';
+				1:
+					HMI_Alarm.Protect[20].Location := 'RACK2';
+				2:
+					HMI_Alarm.Protect[20].Location := 'RACK3';
+				3:
+					HMI_Alarm.Protect[20].Location := 'RACK4';
+
+			END_CASE;
+		ELSE
+			IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_MSD_AUX) AND 
+				NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_MSD_AUX) AND 
+				NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_MSD_AUX) AND 
+				NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_MSD_AUX) THEN
+				PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse  := FALSE;
+			END_IF;
 		END_IF;
 		
+		IF 	Sys.WaterCoolingAux THEN
+			
+			PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System  := TRUE;
+			Sys.ProtectSig := TRUE;
+			HMI_Alarm.Protect[21].Location := 'SYSTEM';
+		ELSE
+			PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System  := FALSE;
+		END_IF;
 		
+		IF StateMa = vkSYSTEM_INITIAL  THEN
+			IF SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Neg_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Pos_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_PreChar_Rly OR Sys.ProRlyAux OR Sys.PRlyAux OR Sys.NRlyAux THEN
+				PMS.SysBatProtect.Field.PMS_PAR_RelayErr := TRUE;
+				Sys.ProtectSig := TRUE;
+				
+				CASE LoopCount OF
+					0:
+						HMI_Alarm.Protect[22].Location := 'RACK1';
+					1:
+						HMI_Alarm.Protect[22].Location := 'RACK2';
+					2:
+						HMI_Alarm.Protect[22].Location := 'RACK3';
+					3:
+						HMI_Alarm.Protect[22].Location := 'RACK4';
+				END_CASE;
+			ELSE
+				IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_PreChar_Rly) AND
+					NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_PreChar_Rly) AND
+					NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_PreChar_Rly) AND
+					NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_PreChar_Rly) AND
+					NOT(Sys.ProRlyAux) AND NOT(Sys.PRlyAux) AND NOT(Sys.NRlyAux) THEN
+					PMS.SysBatProtect.Field.PMS_PAR_RelayErr  := FALSE;
+				END_IF;
+			END_IF;
+
+		END_IF;
+		
+		IF StateMa = vkSYSTEM_READY  THEN
+			IF  Sys.ProRlyAux OR Sys.PRlyAux OR Sys.NRlyAux THEN
+				PMS.SysBatProtect.Field.BPU_PAR_RelayErr := TRUE;
+				Sys.ProtectSig := TRUE;
+				HMI_Alarm.Protect[24].Location := 'SYSTEM';
+							
+			ELSE
+				IF NOT(Sys.ProRlyAux) AND NOT(Sys.PRlyAux) AND NOT(Sys.NRlyAux) THEN
+					PMS.SysBatProtect.Field.BPU_PAR_RelayErr  := FALSE;
+				END_IF;
+			END_IF;
+		END_IF;
+		
+		IF StateMa = vkSYSTEM_STANDBY THEN
+			IF SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Neg_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Pos_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_PreChar_Rly THEN
+				PMS.SysBatProtect.Field.BRA_PAR_RelayErr := TRUE;
+				Sys.ProtectSig := TRUE;
+				CASE LoopCount OF
+					0:
+						HMI_Alarm.Protect[25].Location := 'RACK1';
+					1:
+						HMI_Alarm.Protect[25].Location := 'RACK2';
+					2:
+						HMI_Alarm.Protect[25].Location := 'RACK3';
+					3:
+						HMI_Alarm.Protect[25].Location := 'RACK4';
+
+				END_CASE;
+			ELSE
+				IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_PreChar_Rly) AND 
+					NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_PreChar_Rly) AND
+					NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_PreChar_Rly) AND
+					NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_PreChar_Rly) THEN
+					PMS.SysBatProtect.Field.BRA_PAR_RelayErr := FALSE;
+				END_IF;
+			END_IF;
+		END_IF;
 	END_FOR;
-	
-	
 END_ACTION
 
 ACTION PMS_SysBatDIO:
 	
-//	PMS.SysBatDIO.Field.BSA_Prelay_DO_Status
-//	PMS.SysBatDIO.Field.BSA_Nrelay_DO_Status
-//	PMS.SysBatDIO.Field.BSA_ProRelay_DO_Status
-//	PMS.SysBatDIO.Field.BSA_PowerLamp_DO_Status
-//	PMS.SysBatDIO.Field.BSA_DO_Spare06
-//	PMS.SysBatDIO.Field.BSA_DO_Spare07
-//	PMS.SysBatDIO.Field.BSA_DO_Spare08
-//	PMS.SysBatDIO.Field.BSA_DO_Spare09
-//	PMS.SysBatDIO.Field.BSA_DO_Spare10
-//	PMS.SysBatDIO.Field.BSA_DO_Spare11
-//	PMS.SysBatDIO.Field.BSA_DO_Spare12
-//	PMS.SysBatDIO.Field.BSA_PRelayAUX_DI_Status
-//	PMS.SysBatDIO.Field.BSA_NRelayAUX_DI_Status
-//	PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status 
-//	PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status 
-//	PMS.SysBatDIO.Field.BSA_MDS_DI_Status
-//	PMS.SysBatDIO.Field.BSA_DI_Spare06
-//	PMS.SysBatDIO.Field.BSA_DI_Spare07
-//	PMS.SysBatDIO.Field.BSA_DI_Spare08
-//	PMS.SysBatDIO.Field.BSA_DI_Spare09
-//	PMS.SysBatDIO.Field.BSA_DI_Spare10
-//	PMS.SysBatDIO.Field.BSA_DI_Spare11
-//	PMS.SysBatDIO.Field.BSA_DI_Spare12
+		PMS.SysBatDIO.Field.BSA_Prelay_DO_Status := Sys.PRlyAux;
+		PMS.SysBatDIO.Field.BSA_Nrelay_DO_Status :=  Sys.NRlyAux;
+		PMS.SysBatDIO.Field.BSA_ProRelay_DO_Status := Sys.ProRlyAux;
+		PMS.SysBatDIO.Field.BSA_Buzzer_DO_Status := Sys.Buzzer;
+		PMS.SysBatDIO.Field.BSA_PowerLamp_DO_Status := Sys.PowerLamp;
+	
+	IF Sys.EMSRlyAux_BMP OR Sys.EMSRlyAux THEN
+		PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status	:= TRUE;
+		HMI_Alarm.Protect[26].Location := 'SYSTEM';
+	ELSE
+		IF NOT(Sys.EMSRlyAux_BMP) AND NOT(Sys.EMSRlyAux) THEN
+			PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status	:= FALSE;
+		END_IF;
+	END_IF;
+	
+	IF Sys.WaterCoolingAux THEN
+		PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status	:= TRUE;
+		HMI_Alarm.Protect[27].Location := 'SYSTEM';
+		Sys.ProtectSig := TRUE;
+	ELSE
+		IF NOT(Sys.WaterCoolingAux) THEN
+			PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status	:= FALSE;
+		END_IF;
+	END_IF;
+	
+	SysBATProtectSave := PMS.SysBatProtect.Field;
 	
 	PMS.SysBatDIO.Field.BSA_SOH := 0;
 	

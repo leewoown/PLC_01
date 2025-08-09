@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754614241_24_
-#define _BUR_1754614241_24_
+#ifndef _BUR_1754623143_24_
+#define _BUR_1754623143_24_
 
 #include <bur/plctypes.h>
 
@@ -49,5 +49,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/PMS_CAN/CANRxPMS/ArCanReceive.typ\\
 __asm__(".previous");
 
 
-#endif /* _BUR_1754614241_24_ */
+#endif /* _BUR_1754623143_24_ */
 

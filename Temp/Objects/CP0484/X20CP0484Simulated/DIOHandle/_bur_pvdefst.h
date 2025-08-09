@@ -1,0 +1,24 @@
+struct TON
+{	plctime PT;
+	plctime ET;
+	plctime StartTime;
+	unsigned long Restart;
+	plcbit IN;
+	plcbit Q;
+	plcbit M;
+};
+_BUR_PUBLIC void TON(struct TON* inst);
+_BUR_LOCAL plcbit ProRLY;
+_BUR_LOCAL plcbit PRLY;
+_BUR_LOCAL plcbit NRLY;
+_BUR_LOCAL plcbit ProRLYAUX;
+_BUR_LOCAL plcbit PRLYAUX;
+_BUR_LOCAL plcbit NRLYAUX;
+_BUR_LOCAL plcbit EMSRLYAUX;
+_BUR_LOCAL plcbit EMSRLYAUX_BMP;
+_BUR_LOCAL plcbit GasDetectorAUX;
+_BUR_LOCAL plcbit WaterCoolingAUX;
+_BUR_LOCAL plcbit FireDetectorAUX;
+_BUR_LOCAL plcbit Buzzer;
+_BUR_LOCAL plcbit PowerLamp;
+_BUR_LOCAL struct TON TON_0;

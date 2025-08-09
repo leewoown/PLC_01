@@ -51,8 +51,7 @@ ACTION AtRackUI :
 	
 	HMI.BatteryInfo.BSA_Cell_MinT_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,'(C)');
 	
-	HMI.Module1Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul1_Info.Field.Volt_Total) ; 
-	HMI.Module1Info.Volt_Total_B		:= CONCAT(HMI.Module1Info.Volt_Total_A,'(V)');
+	HMI.Module1Info.Volt_Total 	:= (Rack_HMI.Modul1_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul1_Info.Field.OPS_Fault) THEN
 		HMI.Module1Info.OPS_Fault := 'Solid_Red';
@@ -72,8 +71,7 @@ ACTION AtRackUI :
 		HMI.Module1Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	HMI.Module2Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul2_Info.Field.Volt_Total) ; 
-	HMI.Module2Info.Volt_Total_B		:= CONCAT(HMI.Module2Info.Volt_Total_A,'(V)');
+	HMI.Module2Info.Volt_Total 	:= (Rack_HMI.Modul2_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul2_Info.Field.OPS_Fault) THEN
 		HMI.Module2Info.OPS_Fault := 'Solid_Red';
@@ -93,8 +91,7 @@ ACTION AtRackUI :
 		HMI.Module2Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	HMI.Module3Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul3_Info.Field.Volt_Total) ; 
-	HMI.Module3Info.Volt_Total_B		:= CONCAT(HMI.Module3Info.Volt_Total_A,'(V)');
+	HMI.Module3Info.Volt_Total 	:= (Rack_HMI.Modul3_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul3_Info.Field.OPS_Fault) THEN
 		HMI.Module3Info.OPS_Fault := 'Solid_Red';
@@ -114,8 +111,7 @@ ACTION AtRackUI :
 		HMI.Module3Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	HMI.Module4Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul4_Info.Field.Volt_Total) ; 
-	HMI.Module4Info.Volt_Total_B		:= CONCAT(HMI.Module4Info.Volt_Total_A,'(V)');
+	HMI.Module4Info.Volt_Total 	:= (Rack_HMI.Modul4_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul4_Info.Field.OPS_Fault) THEN
 		HMI.Module4Info.OPS_Fault := 'Solid_Red';
@@ -135,8 +131,7 @@ ACTION AtRackUI :
 		HMI.Module4Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	HMI.Module5Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul5_Info.Field.Volt_Total) ; 
-	HMI.Module5Info.Volt_Total_B		:= CONCAT(HMI.Module5Info.Volt_Total_A,'(V)');
+	HMI.Module5Info.Volt_Total 	:= (Rack_HMI.Modul5_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul5_Info.Field.OPS_Fault) THEN
 		HMI.Module5Info.OPS_Fault := 'Solid_Red';
@@ -156,8 +151,7 @@ ACTION AtRackUI :
 		HMI.Module5Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	HMI.Module6Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul6_Info.Field.Volt_Total) ; 
-	HMI.Module6Info.Volt_Total_B		:= CONCAT(HMI.Module6Info.Volt_Total_A,'(V)');
+	HMI.Module6Info.Volt_Total 	:= (Rack_HMI.Modul6_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul6_Info.Field.OPS_Fault) THEN
 		HMI.Module6Info.OPS_Fault := 'Solid_Red';
@@ -177,8 +171,7 @@ ACTION AtRackUI :
 		HMI.Module6Info.CTCOM_Err := 'Solid_Green';
 	END_IF;
 	
-	HMI.Module7Info.Volt_Total_A 	:= REAL_TO_STRING(Rack_HMI.Modul7_Info.Field.Volt_Total) ; 
-	HMI.Module7Info.Volt_Total_B		:= CONCAT(HMI.Module7Info.Volt_Total_A,'(V)');
+	HMI.Module7Info.Volt_Total 	:= (Rack_HMI.Modul7_Info.Field.Volt_Total) ; 
 	
 	IF (Rack_HMI.Modul7_Info.Field.OPS_Fault) THEN
 		HMI.Module7Info.OPS_Fault := 'Solid_Red';
@@ -392,10 +385,10 @@ ACTION AtRackUI :
 	
 	(* DIO *)
 	CASE Rack_HMI.Rack_State.Field.BSA_Protect_Status OF
-		0:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Green';
-		1:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Yellow';
-		2:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Orange';
-		3:HMI.DIOStatus.BSA_Exteral_EMS	:= 'Solid_Red';
+		0:HMI.DIOStatus.BSA_Protect_Status	:= 'Solid_Green';
+		1:HMI.DIOStatus.BSA_Protect_Status	:= 'Solid_Yellow';
+		2:HMI.DIOStatus.BSA_Protect_Status	:= 'Solid_Orange';
+		3:HMI.DIOStatus.BSA_Protect_Status	:= 'Solid_Red';
 	END_CASE;
 	
 	IF Rack_HMI.Rack_State.Field.BSA_EMG_SW  THEN
