@@ -400,19 +400,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index
                             BSA_Fault_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
                             BSA_Fault_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
                        BSA_Fault_Cell_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                       BSA_Fault_Cell_UV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                  BSA_Fault_Cell_UnBalaV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-            BSA_Fault_Discharger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-               BSA_Fault_Charger_Cell_OT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-            BSA_Fault_Discharger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-               BSA_Fault_Charger_Cell_UT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                  BSA_Fault_Cell_UnBalaT                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-               BSA_Fault_Continuously_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                       BSA_Fault_Peak_OP                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                            BSA_Prtct_OC                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                        BSA_Prtct_SOC_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                        BSA_Prtct_SOC_UN                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
-                            BSA_Prtct_OV                                     BOOL    0 "                                                               *"    3    1    1    2    0    0         
+                       BSA_Fault_Cell_UV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                  BSA_Fault_Cell_UnBalaV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+            BSA_Fault_Discharger_Cell_OT                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+               BSA_Fault_Charger_Cell_OT                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+            BSA_Fault_Discharger_Cell_UT                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+               BSA_Fault_Charger_Cell_UT                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                  BSA_Fault_Cell_UnBalaT                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+               BSA_Fault_Continuously_OP                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                       BSA_Fault_Peak_OP                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                            BSA_Prtct_OC                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                        BSA_Prtct_SOC_OV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                        BSA_Prtct_SOC_UN                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                            BSA_Prtct_OV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
                             BSA_Prtct_UV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
                        BSA_Prtct_Cell_OV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
                        BSA_Prtct_Cell_UV                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         

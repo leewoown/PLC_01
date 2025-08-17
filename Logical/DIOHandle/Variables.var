@@ -12,5 +12,6 @@ VAR
 	FireDetectorAUX : BOOL;
 	Buzzer : BOOL;
 	PowerLamp : BOOL;
+	BuzzerLamp : BOOL;
 	TON_0 : TON;
 END_VAR

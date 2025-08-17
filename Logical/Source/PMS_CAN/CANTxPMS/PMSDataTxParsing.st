@@ -4,20 +4,20 @@ ACTION ActPMSDATATxParshing:
 	PMS.SysBatProduct.Value[1]		:= SHL(USINT_TO_DWORD(PMS.SysBatProduct.Field.BSA_Production_BSA_Parallel), 16) OR SHL(USINT_TO_DWORD(PMS.SysBatProduct.Field.BSA_Production_BSA_Serial), 8) OR USINT_TO_DWORD(PMS.SysBatProduct.Field.BSA_Production_VER);
 	
 		
-	PMS.SysBatCal.Value[0]			:= SHL(REAL_TO_DWORD(PMS.SysBatCal.Field.BSA_Curr_Total), 16) OR REAL_TO_DWORD(PMS.SysBatCal.Field.BSA_Volt_Total);
-	PMS.SysBatCal.Value[1] 			:= SHL(UINT_TO_DWORD(PMS.SysBatCal.Field.BSA_Divice_Status), 16) OR REAL_TO_DWORD(PMS.SysBatCal.Field.BSA_SOC);
+	PMS.SysBatCal.Value[0]			:= SHL(REAL_TO_DWORD(PMS.SysBatCal.Field.BSA_Curr_Total*10), 16) OR REAL_TO_DWORD(PMS.SysBatCal.Field.BSA_Volt_Total*10);
+	PMS.SysBatCal.Value[1] 			:= SHL(UINT_TO_DWORD(PMS.SysBatCal.Field.BSA_Divice_Status), 16) OR REAL_TO_DWORD(PMS.SysBatCal.Field.BSA_SOC*10);
 	
 	
-	PMS.SysBatPWR.Value[0]			:= SHL(REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit), 16) OR REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit);
-	PMS.SysBatPWR.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit), 16) OR REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit);
+	PMS.SysBatPWR.Value[0]			:= SHL(REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit*10), 16) OR REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit*10);
+	PMS.SysBatPWR.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit*10), 16) OR REAL_TO_DWORD(PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit*10);
 	
 	
-	PMS.SysCellVolt.Value[0]		:= SHL(REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_MinV), 16) OR REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_MaxV);
-	PMS.SysCellVolt.Value[1] 		:= SHL(REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_DeviV), 16) OR REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_AVGV);
+	PMS.SysCellVolt.Value[0]		:= SHL(REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_MinV*1000), 16) OR REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_MaxV*1000);
+	PMS.SysCellVolt.Value[1] 		:= SHL(REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_DeviV), 16) OR REAL_TO_DWORD(PMS.SysCellVolt.Field.BSA_Cell_AVGV*1000);
 	
 	
-	PMS.SysCellTemps.Value[0]		:= SHL(REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_MinT), 16) OR REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_MaxT);
-	PMS.SysCellTemps.Value[1] 		:= SHL(REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_DeviT), 16) OR REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_AVGT);
+	PMS.SysCellTemps.Value[0]		:= SHL(REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_MinT*10), 16) OR REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_MaxT*10);
+	PMS.SysCellTemps.Value[1] 		:= SHL(REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_DeviT*10), 16) OR REAL_TO_DWORD(PMS.SysCellTemps.Field.BSA_Cell_AVGT*10);
 	
 	
 	PMS.SysCellV_TPos.Value[0]		:= SHL(UINT_TO_DWORD(PMS.SysCellV_TPos.Field.BSA_Cell_MinV_Location), 24) OR SHL(UINT_TO_DWORD(PMS.SysCellV_TPos.Field.BSA_Rack_MinV_Location), 16) OR SHL(USINT_TO_DWORD(PMS.SysCellV_TPos.Field.BSA_Cell_MinV_Location), 8) OR UINT_TO_DWORD(PMS.SysCellV_TPos.Field.BSA_Rack_MaxV_Location);
@@ -103,35 +103,35 @@ ACTION ActPMSDATATxParshing:
 	PMS.SysBatDIO.Value[0].21		:=	PMS.SysBatDIO.Field.BSA_DI_Spare10	;
 	PMS.SysBatDIO.Value[0].22		:=	PMS.SysBatDIO.Field.BSA_DI_Spare11	;
 	PMS.SysBatDIO.Value[0].23		:=	PMS.SysBatDIO.Field.BSA_DI_Spare12	;
-	PMS.SysBatDIO.Value[1]			:= SHL(REAL_TO_DWORD(PMS.SysBatDIO.Field.BSA_SOH), 16);
+	PMS.SysBatDIO.Value[1]			:= SHL(REAL_TO_DWORD(PMS.SysBatDIO.Field.BSA_SOH*10), 16);
 	
 	
-	PMS.BRACal.Value[0]				:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_Volt_Total), 16) OR UINT_TO_DWORD(PMS.BRACal.Field.BRA_Rack_Num);
-	PMS.BRACal.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_SOC), 16) OR REAL_TO_DWORD(PMS.BRACal.Field.BRA_Curr_Total);
+	PMS.BRACal.Value[0]				:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_Volt_Total*10), 16) OR UINT_TO_DWORD(PMS.BRACal.Field.BRA_Rack_Num);
+	PMS.BRACal.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_SOC*10), 16) OR REAL_TO_DWORD(PMS.BRACal.Field.BRA_Curr_Total*10);
 	
 	
-	PMS.BRAPWR_A.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRAPWR_A.Field.BRA_SOH), 16) OR UINT_TO_DWORD(PMS.BRAPWR_A.Field.BRA_Rack_Num);
-	PMS.BRAPWR_A.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit), 16) OR REAL_TO_DWORD(PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit);
+	PMS.BRAPWR_A.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRAPWR_A.Field.BRA_SOH*10), 16) OR UINT_TO_DWORD(PMS.BRAPWR_A.Field.BRA_Rack_Num);
+	PMS.BRAPWR_A.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit*10), 16) OR REAL_TO_DWORD(PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit*10);
 	
 	
-	PMS.BRAPWR_B.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit), 16) OR UINT_TO_DWORD(PMS.BRACal.Field.BRA_Rack_Num);
-	PMS.BRAPWR_B.Value[1] 			:= REAL_TO_DWORD(PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit);
+	PMS.BRAPWR_B.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit*10), 16) OR UINT_TO_DWORD(PMS.BRACal.Field.BRA_Rack_Num);
+	PMS.BRAPWR_B.Value[1] 			:= REAL_TO_DWORD(PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit*10);
 	
 	
-	PMS.BRACal.Value[0]				:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_Volt_Total), 16) OR UINT_TO_DWORD(PMS.BRACal.Field.BRA_Rack_Num);
-	PMS.BRACal.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_SOC), 16) OR REAL_TO_DWORD(PMS.BRACal.Field.BRA_Curr_Total);
+	PMS.BRACal.Value[0]				:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_Volt_Total*10), 16) OR UINT_TO_DWORD(PMS.BRACal.Field.BRA_Rack_Num);
+	PMS.BRACal.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACal.Field.BRA_SOC*10), 16) OR REAL_TO_DWORD(PMS.BRACal.Field.BRA_Curr_Total*10);
 	
 	
-	PMS.BRACellV.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRACellV.Field.BRA_Cell_Max_Voltage), 16) OR UINT_TO_DWORD(PMS.BRACellV.Field.BRA_Rack_Num);
-	PMS.BRACellV.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACellV.Field.BRA_Cell_AGV_Voltage), 16) OR REAL_TO_DWORD(PMS.BRACellV.Field.BRA_Cell_Min_Voltage);
+	PMS.BRACellV.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRACellV.Field.BRA_Cell_Max_Voltage*1000), 16) OR UINT_TO_DWORD(PMS.BRACellV.Field.BRA_Rack_Num);
+	PMS.BRACellV.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACellV.Field.BRA_Cell_AGV_Voltage*1000), 16) OR REAL_TO_DWORD(PMS.BRACellV.Field.BRA_Cell_Min_Voltage*1000);
 	
 	
-	PMS.BRACellT.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Cell_Max_Temperature), 16) OR REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Rack_Num);
-	PMS.BRACellT.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Cell_AGV_Temperature), 16) OR REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Cell_Min_Temperature);
+	PMS.BRACellT.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Cell_Max_Temperature*10), 16) OR REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Rack_Num);
+	PMS.BRACellT.Value[1] 			:= SHL(REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Cell_AGV_Temperature*10), 16) OR REAL_TO_DWORD(PMS.BRACellT.Field.BRA_Cell_Min_Temperature*10);
 	
 	
 	PMS.BRACellDiv.Value[0]			:= SHL(REAL_TO_DWORD(PMS.BRACellDiv.Field.BRA_Cell_DIV_Voltage), 16) OR UINT_TO_DWORD(PMS.BRACellDiv.Field.BRA_Rack_Num);
-	PMS.BRACellDiv.Value[1] 		:= REAL_TO_DWORD(PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature);
+	PMS.BRACellDiv.Value[1] 		:= REAL_TO_DWORD(PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature*10);
 	
 	
 	PMS.BRA_VTPos.Value[0]			:= SHL(USINT_TO_DWORD(PMS.BRA_VTPos.Field.BRA_Min_Cell_V_Location), 24) OR SHL(USINT_TO_DWORD(PMS.BRA_VTPos.Field.BRA_Max_Cell_V_Location), 16) OR UINT_TO_DWORD(PMS.BRA_VTPos.Field.BRA_Rack_Num);

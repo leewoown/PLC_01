@@ -8,7 +8,7 @@ void __BUR__ENTRY_INIT_FUNCT__(void){int __AS__Local0_00000;plcstring* __AS__Loc
 (ArCanSender.enable=1);
 
 
-__AS__Local3_00000=(plcstring*)ArCanSender.senderDeviceName; __AS__Local4_00000=(plcstring*)"IF6.ST5.IF1"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)ArCanSender.senderDeviceName; __AS__Local4_00000=(plcstring*)"IF6.ST6.IF1"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 (ArCanSender.Baudrate=500000);
 
@@ -250,20 +250,20 @@ static void __AS__Action__ActPMSDATATxParshing(void){
 (PMS.SysBatProduct.Value[1]=(((plcdword)((plcdword)PMS.SysBatProduct.Field.BSA_Production_BSA_Parallel<<16))|((plcdword)((plcdword)PMS.SysBatProduct.Field.BSA_Production_BSA_Serial<<8))|(plcdword)PMS.SysBatProduct.Field.BSA_Production_VER));
 
 
-(PMS.SysBatCal.Value[0]=(((plcdword)((plcdword)(PMS.SysBatCal.Field.BSA_Curr_Total>=0.0?PMS.SysBatCal.Field.BSA_Curr_Total+0.5:PMS.SysBatCal.Field.BSA_Curr_Total-0.5)<<16))|(plcdword)(PMS.SysBatCal.Field.BSA_Volt_Total>=0.0?PMS.SysBatCal.Field.BSA_Volt_Total+0.5:PMS.SysBatCal.Field.BSA_Volt_Total-0.5)));
-(PMS.SysBatCal.Value[1]=(((plcdword)((plcdword)PMS.SysBatCal.Field.BSA_Divice_Status<<16))|(plcdword)(PMS.SysBatCal.Field.BSA_SOC>=0.0?PMS.SysBatCal.Field.BSA_SOC+0.5:PMS.SysBatCal.Field.BSA_SOC-0.5)));
+(PMS.SysBatCal.Value[0]=(((plcdword)((plcdword)((PMS.SysBatCal.Field.BSA_Curr_Total*10)>=0.0?(PMS.SysBatCal.Field.BSA_Curr_Total*10)+0.5:(PMS.SysBatCal.Field.BSA_Curr_Total*10)-0.5)<<16))|(plcdword)((PMS.SysBatCal.Field.BSA_Volt_Total*10)>=0.0?(PMS.SysBatCal.Field.BSA_Volt_Total*10)+0.5:(PMS.SysBatCal.Field.BSA_Volt_Total*10)-0.5)));
+(PMS.SysBatCal.Value[1]=(((plcdword)((plcdword)PMS.SysBatCal.Field.BSA_Divice_Status<<16))|(plcdword)((PMS.SysBatCal.Field.BSA_SOC*10)>=0.0?(PMS.SysBatCal.Field.BSA_SOC*10)+0.5:(PMS.SysBatCal.Field.BSA_SOC*10)-0.5)));
 
 
-(PMS.SysBatPWR.Value[0]=(((plcdword)((plcdword)(PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit>=0.0?PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit+0.5:PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit-0.5)<<16))|(plcdword)(PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit>=0.0?PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit+0.5:PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit-0.5)));
-(PMS.SysBatPWR.Value[1]=(((plcdword)((plcdword)(PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit>=0.0?PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit+0.5:PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit-0.5)<<16))|(plcdword)(PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit>=0.0?PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit+0.5:PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit-0.5)));
+(PMS.SysBatPWR.Value[0]=(((plcdword)((plcdword)((PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit*10)>=0.0?(PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit*10)+0.5:(PMS.SysBatPWR.Field.BSA_Peak_Charge_Power_Limit*10)-0.5)<<16))|(plcdword)((PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit*10)>=0.0?(PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit*10)+0.5:(PMS.SysBatPWR.Field.BSA_Cont_Charge_Power_Limit*10)-0.5)));
+(PMS.SysBatPWR.Value[1]=(((plcdword)((plcdword)((PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit*10)>=0.0?(PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit*10)+0.5:(PMS.SysBatPWR.Field.BSA_Peak_Discharge_Power_Limit*10)-0.5)<<16))|(plcdword)((PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit*10)>=0.0?(PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit*10)+0.5:(PMS.SysBatPWR.Field.BSA_Cont_Discharge_Power_Limit*10)-0.5)));
 
 
-(PMS.SysCellVolt.Value[0]=(((plcdword)((plcdword)(PMS.SysCellVolt.Field.BSA_Cell_MinV>=0.0?PMS.SysCellVolt.Field.BSA_Cell_MinV+0.5:PMS.SysCellVolt.Field.BSA_Cell_MinV-0.5)<<16))|(plcdword)(PMS.SysCellVolt.Field.BSA_Cell_MaxV>=0.0?PMS.SysCellVolt.Field.BSA_Cell_MaxV+0.5:PMS.SysCellVolt.Field.BSA_Cell_MaxV-0.5)));
-(PMS.SysCellVolt.Value[1]=(((plcdword)((plcdword)(PMS.SysCellVolt.Field.BSA_Cell_DeviV>=0.0?PMS.SysCellVolt.Field.BSA_Cell_DeviV+0.5:PMS.SysCellVolt.Field.BSA_Cell_DeviV-0.5)<<16))|(plcdword)(PMS.SysCellVolt.Field.BSA_Cell_AVGV>=0.0?PMS.SysCellVolt.Field.BSA_Cell_AVGV+0.5:PMS.SysCellVolt.Field.BSA_Cell_AVGV-0.5)));
+(PMS.SysCellVolt.Value[0]=(((plcdword)((plcdword)((PMS.SysCellVolt.Field.BSA_Cell_MinV*1000)>=0.0?(PMS.SysCellVolt.Field.BSA_Cell_MinV*1000)+0.5:(PMS.SysCellVolt.Field.BSA_Cell_MinV*1000)-0.5)<<16))|(plcdword)((PMS.SysCellVolt.Field.BSA_Cell_MaxV*1000)>=0.0?(PMS.SysCellVolt.Field.BSA_Cell_MaxV*1000)+0.5:(PMS.SysCellVolt.Field.BSA_Cell_MaxV*1000)-0.5)));
+(PMS.SysCellVolt.Value[1]=(((plcdword)((plcdword)(PMS.SysCellVolt.Field.BSA_Cell_DeviV>=0.0?PMS.SysCellVolt.Field.BSA_Cell_DeviV+0.5:PMS.SysCellVolt.Field.BSA_Cell_DeviV-0.5)<<16))|(plcdword)((PMS.SysCellVolt.Field.BSA_Cell_AVGV*1000)>=0.0?(PMS.SysCellVolt.Field.BSA_Cell_AVGV*1000)+0.5:(PMS.SysCellVolt.Field.BSA_Cell_AVGV*1000)-0.5)));
 
 
-(PMS.SysCellTemps.Value[0]=(((plcdword)((plcdword)(PMS.SysCellTemps.Field.BSA_Cell_MinT>=0.0?PMS.SysCellTemps.Field.BSA_Cell_MinT+0.5:PMS.SysCellTemps.Field.BSA_Cell_MinT-0.5)<<16))|(plcdword)(PMS.SysCellTemps.Field.BSA_Cell_MaxT>=0.0?PMS.SysCellTemps.Field.BSA_Cell_MaxT+0.5:PMS.SysCellTemps.Field.BSA_Cell_MaxT-0.5)));
-(PMS.SysCellTemps.Value[1]=(((plcdword)((plcdword)(PMS.SysCellTemps.Field.BSA_Cell_DeviT>=0.0?PMS.SysCellTemps.Field.BSA_Cell_DeviT+0.5:PMS.SysCellTemps.Field.BSA_Cell_DeviT-0.5)<<16))|(plcdword)(PMS.SysCellTemps.Field.BSA_Cell_AVGT>=0.0?PMS.SysCellTemps.Field.BSA_Cell_AVGT+0.5:PMS.SysCellTemps.Field.BSA_Cell_AVGT-0.5)));
+(PMS.SysCellTemps.Value[0]=(((plcdword)((plcdword)((PMS.SysCellTemps.Field.BSA_Cell_MinT*10)>=0.0?(PMS.SysCellTemps.Field.BSA_Cell_MinT*10)+0.5:(PMS.SysCellTemps.Field.BSA_Cell_MinT*10)-0.5)<<16))|(plcdword)((PMS.SysCellTemps.Field.BSA_Cell_MaxT*10)>=0.0?(PMS.SysCellTemps.Field.BSA_Cell_MaxT*10)+0.5:(PMS.SysCellTemps.Field.BSA_Cell_MaxT*10)-0.5)));
+(PMS.SysCellTemps.Value[1]=(((plcdword)((plcdword)((PMS.SysCellTemps.Field.BSA_Cell_DeviT*10)>=0.0?(PMS.SysCellTemps.Field.BSA_Cell_DeviT*10)+0.5:(PMS.SysCellTemps.Field.BSA_Cell_DeviT*10)-0.5)<<16))|(plcdword)((PMS.SysCellTemps.Field.BSA_Cell_AVGT*10)>=0.0?(PMS.SysCellTemps.Field.BSA_Cell_AVGT*10)+0.5:(PMS.SysCellTemps.Field.BSA_Cell_AVGT*10)-0.5)));
 
 
 (PMS.SysCellV_TPos.Value[0]=(((plcdword)((plcdword)PMS.SysCellV_TPos.Field.BSA_Cell_MinV_Location<<24))|((plcdword)((plcdword)PMS.SysCellV_TPos.Field.BSA_Rack_MinV_Location<<16))|((plcdword)((plcdword)PMS.SysCellV_TPos.Field.BSA_Cell_MinV_Location<<8))|(plcdword)PMS.SysCellV_TPos.Field.BSA_Rack_MaxV_Location));
@@ -349,35 +349,35 @@ static void __AS__Action__ActPMSDATATxParshing(void){
 (((_4byte_bit_field_*)(&PMS.SysBatDIO.Value[0]))->bit21=PMS.SysBatDIO.Field.BSA_DI_Spare10);
 (((_4byte_bit_field_*)(&PMS.SysBatDIO.Value[0]))->bit22=PMS.SysBatDIO.Field.BSA_DI_Spare11);
 (((_4byte_bit_field_*)(&PMS.SysBatDIO.Value[0]))->bit23=PMS.SysBatDIO.Field.BSA_DI_Spare12);
-(PMS.SysBatDIO.Value[1]=((plcdword)((plcdword)(PMS.SysBatDIO.Field.BSA_SOH>=0.0?PMS.SysBatDIO.Field.BSA_SOH+0.5:PMS.SysBatDIO.Field.BSA_SOH-0.5)<<16)));
+(PMS.SysBatDIO.Value[1]=((plcdword)((plcdword)((PMS.SysBatDIO.Field.BSA_SOH*10)>=0.0?(PMS.SysBatDIO.Field.BSA_SOH*10)+0.5:(PMS.SysBatDIO.Field.BSA_SOH*10)-0.5)<<16)));
 
 
-(PMS.BRACal.Value[0]=(((plcdword)((plcdword)(PMS.BRACal.Field.BRA_Volt_Total>=0.0?PMS.BRACal.Field.BRA_Volt_Total+0.5:PMS.BRACal.Field.BRA_Volt_Total-0.5)<<16))|(plcdword)PMS.BRACal.Field.BRA_Rack_Num));
-(PMS.BRACal.Value[1]=(((plcdword)((plcdword)(PMS.BRACal.Field.BRA_SOC>=0.0?PMS.BRACal.Field.BRA_SOC+0.5:PMS.BRACal.Field.BRA_SOC-0.5)<<16))|(plcdword)(PMS.BRACal.Field.BRA_Curr_Total>=0.0?PMS.BRACal.Field.BRA_Curr_Total+0.5:PMS.BRACal.Field.BRA_Curr_Total-0.5)));
+(PMS.BRACal.Value[0]=(((plcdword)((plcdword)((PMS.BRACal.Field.BRA_Volt_Total*10)>=0.0?(PMS.BRACal.Field.BRA_Volt_Total*10)+0.5:(PMS.BRACal.Field.BRA_Volt_Total*10)-0.5)<<16))|(plcdword)PMS.BRACal.Field.BRA_Rack_Num));
+(PMS.BRACal.Value[1]=(((plcdword)((plcdword)((PMS.BRACal.Field.BRA_SOC*10)>=0.0?(PMS.BRACal.Field.BRA_SOC*10)+0.5:(PMS.BRACal.Field.BRA_SOC*10)-0.5)<<16))|(plcdword)((PMS.BRACal.Field.BRA_Curr_Total*10)>=0.0?(PMS.BRACal.Field.BRA_Curr_Total*10)+0.5:(PMS.BRACal.Field.BRA_Curr_Total*10)-0.5)));
 
 
-(PMS.BRAPWR_A.Value[0]=(((plcdword)((plcdword)(PMS.BRAPWR_A.Field.BRA_SOH>=0.0?PMS.BRAPWR_A.Field.BRA_SOH+0.5:PMS.BRAPWR_A.Field.BRA_SOH-0.5)<<16))|(plcdword)PMS.BRAPWR_A.Field.BRA_Rack_Num));
-(PMS.BRAPWR_A.Value[1]=(((plcdword)((plcdword)(PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit>=0.0?PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit+0.5:PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit-0.5)<<16))|(plcdword)(PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit>=0.0?PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit+0.5:PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit-0.5)));
+(PMS.BRAPWR_A.Value[0]=(((plcdword)((plcdword)((PMS.BRAPWR_A.Field.BRA_SOH*10)>=0.0?(PMS.BRAPWR_A.Field.BRA_SOH*10)+0.5:(PMS.BRAPWR_A.Field.BRA_SOH*10)-0.5)<<16))|(plcdword)PMS.BRAPWR_A.Field.BRA_Rack_Num));
+(PMS.BRAPWR_A.Value[1]=(((plcdword)((plcdword)((PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit*10)>=0.0?(PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit*10)+0.5:(PMS.BRAPWR_A.Field.BRA_Peak_CHA_PWR_Limit*10)-0.5)<<16))|(plcdword)((PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit*10)>=0.0?(PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit*10)+0.5:(PMS.BRAPWR_A.Field.BRA_CONT_CHA_PWR_Limit*10)-0.5)));
 
 
-(PMS.BRAPWR_B.Value[0]=(((plcdword)((plcdword)(PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit>=0.0?PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit+0.5:PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit-0.5)<<16))|(plcdword)PMS.BRACal.Field.BRA_Rack_Num));
-(PMS.BRAPWR_B.Value[1]=(plcdword)(PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit>=0.0?PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit+0.5:PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit-0.5));
+(PMS.BRAPWR_B.Value[0]=(((plcdword)((plcdword)((PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit*10)>=0.0?(PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit*10)+0.5:(PMS.BRAPWR_B.Field.BRA_CONT_DisCHA_PWR_Limit*10)-0.5)<<16))|(plcdword)PMS.BRACal.Field.BRA_Rack_Num));
+(PMS.BRAPWR_B.Value[1]=(plcdword)((PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit*10)>=0.0?(PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit*10)+0.5:(PMS.BRAPWR_B.Field.BRA_Peak_DisCHA_PWR_Limit*10)-0.5));
 
 
-(PMS.BRACal.Value[0]=(((plcdword)((plcdword)(PMS.BRACal.Field.BRA_Volt_Total>=0.0?PMS.BRACal.Field.BRA_Volt_Total+0.5:PMS.BRACal.Field.BRA_Volt_Total-0.5)<<16))|(plcdword)PMS.BRACal.Field.BRA_Rack_Num));
-(PMS.BRACal.Value[1]=(((plcdword)((plcdword)(PMS.BRACal.Field.BRA_SOC>=0.0?PMS.BRACal.Field.BRA_SOC+0.5:PMS.BRACal.Field.BRA_SOC-0.5)<<16))|(plcdword)(PMS.BRACal.Field.BRA_Curr_Total>=0.0?PMS.BRACal.Field.BRA_Curr_Total+0.5:PMS.BRACal.Field.BRA_Curr_Total-0.5)));
+(PMS.BRACal.Value[0]=(((plcdword)((plcdword)((PMS.BRACal.Field.BRA_Volt_Total*10)>=0.0?(PMS.BRACal.Field.BRA_Volt_Total*10)+0.5:(PMS.BRACal.Field.BRA_Volt_Total*10)-0.5)<<16))|(plcdword)PMS.BRACal.Field.BRA_Rack_Num));
+(PMS.BRACal.Value[1]=(((plcdword)((plcdword)((PMS.BRACal.Field.BRA_SOC*10)>=0.0?(PMS.BRACal.Field.BRA_SOC*10)+0.5:(PMS.BRACal.Field.BRA_SOC*10)-0.5)<<16))|(plcdword)((PMS.BRACal.Field.BRA_Curr_Total*10)>=0.0?(PMS.BRACal.Field.BRA_Curr_Total*10)+0.5:(PMS.BRACal.Field.BRA_Curr_Total*10)-0.5)));
 
 
-(PMS.BRACellV.Value[0]=(((plcdword)((plcdword)(PMS.BRACellV.Field.BRA_Cell_Max_Voltage>=0.0?PMS.BRACellV.Field.BRA_Cell_Max_Voltage+0.5:PMS.BRACellV.Field.BRA_Cell_Max_Voltage-0.5)<<16))|(plcdword)PMS.BRACellV.Field.BRA_Rack_Num));
-(PMS.BRACellV.Value[1]=(((plcdword)((plcdword)(PMS.BRACellV.Field.BRA_Cell_AGV_Voltage>=0.0?PMS.BRACellV.Field.BRA_Cell_AGV_Voltage+0.5:PMS.BRACellV.Field.BRA_Cell_AGV_Voltage-0.5)<<16))|(plcdword)(PMS.BRACellV.Field.BRA_Cell_Min_Voltage>=0.0?PMS.BRACellV.Field.BRA_Cell_Min_Voltage+0.5:PMS.BRACellV.Field.BRA_Cell_Min_Voltage-0.5)));
+(PMS.BRACellV.Value[0]=(((plcdword)((plcdword)((PMS.BRACellV.Field.BRA_Cell_Max_Voltage*1000)>=0.0?(PMS.BRACellV.Field.BRA_Cell_Max_Voltage*1000)+0.5:(PMS.BRACellV.Field.BRA_Cell_Max_Voltage*1000)-0.5)<<16))|(plcdword)PMS.BRACellV.Field.BRA_Rack_Num));
+(PMS.BRACellV.Value[1]=(((plcdword)((plcdword)((PMS.BRACellV.Field.BRA_Cell_AGV_Voltage*1000)>=0.0?(PMS.BRACellV.Field.BRA_Cell_AGV_Voltage*1000)+0.5:(PMS.BRACellV.Field.BRA_Cell_AGV_Voltage*1000)-0.5)<<16))|(plcdword)((PMS.BRACellV.Field.BRA_Cell_Min_Voltage*1000)>=0.0?(PMS.BRACellV.Field.BRA_Cell_Min_Voltage*1000)+0.5:(PMS.BRACellV.Field.BRA_Cell_Min_Voltage*1000)-0.5)));
 
 
-(PMS.BRACellT.Value[0]=(((plcdword)((plcdword)(PMS.BRACellT.Field.BRA_Cell_Max_Temperature>=0.0?PMS.BRACellT.Field.BRA_Cell_Max_Temperature+0.5:PMS.BRACellT.Field.BRA_Cell_Max_Temperature-0.5)<<16))|(plcdword)PMS.BRACellT.Field.BRA_Rack_Num));
-(PMS.BRACellT.Value[1]=(((plcdword)((plcdword)(PMS.BRACellT.Field.BRA_Cell_AGV_Temperature>=0.0?PMS.BRACellT.Field.BRA_Cell_AGV_Temperature+0.5:PMS.BRACellT.Field.BRA_Cell_AGV_Temperature-0.5)<<16))|(plcdword)(PMS.BRACellT.Field.BRA_Cell_Min_Temperature>=0.0?PMS.BRACellT.Field.BRA_Cell_Min_Temperature+0.5:PMS.BRACellT.Field.BRA_Cell_Min_Temperature-0.5)));
+(PMS.BRACellT.Value[0]=(((plcdword)((plcdword)((PMS.BRACellT.Field.BRA_Cell_Max_Temperature*10)>=0.0?(PMS.BRACellT.Field.BRA_Cell_Max_Temperature*10)+0.5:(PMS.BRACellT.Field.BRA_Cell_Max_Temperature*10)-0.5)<<16))|(plcdword)PMS.BRACellT.Field.BRA_Rack_Num));
+(PMS.BRACellT.Value[1]=(((plcdword)((plcdword)((PMS.BRACellT.Field.BRA_Cell_AGV_Temperature*10)>=0.0?(PMS.BRACellT.Field.BRA_Cell_AGV_Temperature*10)+0.5:(PMS.BRACellT.Field.BRA_Cell_AGV_Temperature*10)-0.5)<<16))|(plcdword)((PMS.BRACellT.Field.BRA_Cell_Min_Temperature*10)>=0.0?(PMS.BRACellT.Field.BRA_Cell_Min_Temperature*10)+0.5:(PMS.BRACellT.Field.BRA_Cell_Min_Temperature*10)-0.5)));
 
 
 (PMS.BRACellDiv.Value[0]=(((plcdword)((plcdword)(PMS.BRACellDiv.Field.BRA_Cell_DIV_Voltage>=0.0?PMS.BRACellDiv.Field.BRA_Cell_DIV_Voltage+0.5:PMS.BRACellDiv.Field.BRA_Cell_DIV_Voltage-0.5)<<16))|(plcdword)PMS.BRACellDiv.Field.BRA_Rack_Num));
-(PMS.BRACellDiv.Value[1]=(plcdword)(PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature>=0.0?PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature+0.5:PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature-0.5));
+(PMS.BRACellDiv.Value[1]=(plcdword)((PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature*10)>=0.0?(PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature*10)+0.5:(PMS.BRACellDiv.Field.BRA_Cell_DIV_Temperature*10)-0.5));
 
 
 (PMS.BRA_VTPos.Value[0]=(((plcdword)((plcdword)PMS.BRA_VTPos.Field.BRA_Min_Cell_V_Location<<24))|((plcdword)((plcdword)PMS.BRA_VTPos.Field.BRA_Max_Cell_V_Location<<16))|(plcdword)PMS.BRA_VTPos.Field.BRA_Rack_Num));

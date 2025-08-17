@@ -4,7 +4,7 @@ PROGRAM _INIT
 	ArCanSender.enable				:= TRUE;
 	
 	(* CAN parameter configuration *)
-	ArCanSender.senderDeviceName 	:= 'IF6.ST5.IF1';       (* for X20CS1070 *)
+	ArCanSender.senderDeviceName 	:= 'IF6.ST6.IF1';       (* for X20CS1070 *)
 //	ArCanSender.senderDeviceName 	:= 'IF1.ST2.IF1.ST2.IF1';		(* for C50 Touch Panel + X20CS2770 *)
 	ArCanSender.Baudrate			:= 500000;		(* Set to 500 000 bit/s *)		
 	

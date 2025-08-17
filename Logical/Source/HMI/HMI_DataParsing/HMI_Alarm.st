@@ -266,6 +266,8 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[0].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[0].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
+		
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV) THEN
@@ -281,6 +283,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[1].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[1].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN) THEN
@@ -296,6 +299,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[2].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[2].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_OV) THEN
@@ -310,7 +314,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[3].Internal_Count  := HMI_Alarm.Protect[3].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[3].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[3].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_UV) THEN
@@ -325,7 +330,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[4].Internal_Count  := HMI_Alarm.Protect[4].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[4].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[4].Location;		
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;			
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV) THEN
@@ -341,6 +347,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[5].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[5].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV) THEN
@@ -355,7 +362,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[6].Internal_Count  := HMI_Alarm.Protect[6].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[6].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[6].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV) THEN
@@ -370,7 +378,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[7].Internal_Count  := HMI_Alarm.Protect[7].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[7].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[7].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT) THEN
@@ -385,7 +394,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[8].Internal_Count  := HMI_Alarm.Protect[8].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[8].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[8].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT) THEN
@@ -401,6 +411,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[9].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[9].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;	
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT) THEN
@@ -416,6 +427,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[10].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[10].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT) THEN
@@ -431,6 +443,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[11].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[11].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaT) THEN
@@ -446,6 +459,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[12].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[12].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Continuously_OP) THEN
@@ -461,6 +475,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[13].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[13].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Peak_OP) THEN
@@ -476,6 +491,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[14].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[14].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM) THEN
@@ -491,6 +507,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[15].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[15].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM) THEN
@@ -506,6 +523,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[16].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[16].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding) THEN
@@ -520,7 +538,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[17].Internal_Count  := HMI_Alarm.Protect[17].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[17].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[17].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak) THEN
@@ -536,6 +555,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[18].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[18].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_InsulationReg) THEN
@@ -551,6 +571,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[19].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[19].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse) THEN
@@ -566,6 +587,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[20].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[20].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System) THEN
@@ -581,6 +603,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[21].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[21].Location;		
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.PMS_PAR_RelayErr) THEN
@@ -595,7 +618,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[22].Internal_Count  := HMI_Alarm.Protect[22].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[22].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[22].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.PMS_PAR_SEQErr) THEN
@@ -610,7 +634,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[23].Internal_Count  := HMI_Alarm.Protect[23].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[23].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[23].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;	
 	IF EDGEPOS(PMS.SysBatProtect.Field.BPU_PAR_RelayErr) THEN
@@ -626,6 +651,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[24].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[24].Location;	
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;			
 	END_IF;
 	IF EDGEPOS(PMS.SysBatProtect.Field.BRA_PAR_RelayErr) THEN
@@ -641,6 +667,7 @@ ACTION ActSystem_Protect:
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[25].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[25].Location;			
 		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status) THEN
@@ -655,7 +682,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[26].Internal_Count  := HMI_Alarm.Protect[26].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[26].Name;
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[26].Location;		
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	IF EDGEPOS(PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status) THEN
@@ -670,7 +698,8 @@ ACTION ActSystem_Protect:
 		HMI_Alarm.Protect[27].Internal_Count  := HMI_Alarm.Protect[27].Internal_Count + 1;
 		HMI.DialogBox.ProtectName		:= HMI_Alarm.Protect[27].Name;	
 		HMI.DialogBox.ProtectNum		:= HMI_Alarm.Protect[27].Location;	
-		HMI.DialogBox.Protect_Trigger	:= TRUE;	
+		HMI.DialogBox.Protect_Trigger	:= TRUE;
+		HMI.DialogBox.BuzzerOFF_Trigger	:= FALSE;	
 		Sys.Buzzer := TRUE;		
 	END_IF;
 	

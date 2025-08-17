@@ -60,6 +60,12 @@ PROGRAM _CYCLIC
 
 	
 	(* DI Check *)
+	IF Sys.BuzzerLamp THEN
+		BuzzerLamp := TRUE;
+	ELSE
+		BuzzerLamp := FALSE;
+		
+	END_IF;
 	IF ProRLYAUX = 1 THEN
 		Sys.ProRlyAux :=1;
 	ELSE
@@ -85,8 +91,10 @@ PROGRAM _CYCLIC
 	END_IF;
 	IF EMSRLYAUX_BMP THEN
 		Sys.EMSRlyAux_BMP := 1;
+		Sys.BuzzerLamp := 1;
 	ELSE
 		Sys.EMSRlyAux_BMP :=0;
+		Sys.BuzzerLamp := 0;
 	END_IF;
 	IF GasDetectorAUX THEN
 		Sys.GasDetectorAux := 1;

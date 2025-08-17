@@ -7,7 +7,7 @@ void __BUR__ENTRY_INIT_FUNCT__(void){int __AS__Local0_00000;plcstring* __AS__Loc
 
 __AS__Action__ActArCanReceiver();
 (ArCanReceiver.enable=1);
-__AS__Local3_00000=(plcstring*)ArCanReceiver.receiverDeviceName; __AS__Local4_00000=(plcstring*)"IF6.ST5.IF1"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)ArCanReceiver.receiverDeviceName; __AS__Local4_00000=(plcstring*)"IF6.ST6.IF1"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (ArCanReceiver.id=0);
 (ArCanReceiver.idMask=arCAN_RECEIVE_ALL);
 (ArCanReceiver.format=arCAN_11BIT);

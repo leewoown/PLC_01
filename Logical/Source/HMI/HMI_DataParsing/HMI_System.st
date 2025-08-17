@@ -40,19 +40,19 @@ ACTION AtSystemUI :
 	
 	HMI.BatteryInfo.BSA_Cell_MaxV_Rack_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Rack_MaxV_Location) ;
 	HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Cell_MaxV_Location) ;
-	HMI.BatteryInfo.BSA_Cell_MaxV_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Rack_Location,CONCAT('(R), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,'(C)')));
+	HMI.BatteryInfo.BSA_Cell_MaxV_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Rack_Location,CONCAT('(Rack), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,'(Cell)')));
 	
 	HMI.BatteryInfo.BSA_Cell_MinV_Rack_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Rack_MinV_Location) ;
 	HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Cell_MinV_Location) ;
-	HMI.BatteryInfo.BSA_Cell_MinV_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Rack_Location,CONCAT('(R), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,'(C)')));
+	HMI.BatteryInfo.BSA_Cell_MinV_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Rack_Location,CONCAT('(Rack), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,'(Cell)')));
 	
 	HMI.BatteryInfo.BSA_Cell_MaxT_Rack_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Rack_MaxT_Location) ;
 	HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Cell_MaxT_Location) ;
-	HMI.BatteryInfo.BSA_Cell_MaxT_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Rack_Location,CONCAT('(R), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,'(C)')));
+	HMI.BatteryInfo.BSA_Cell_MaxT_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Rack_Location,CONCAT('(Rack), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,'(Cell)')));
 	
 	HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Rack_MinT_Location) ;
 	HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location		:= UINT_TO_STRING(System_HMI.SysCellV_TPos.Field.BSA_Cell_MinT_Location) ;
-	HMI.BatteryInfo.BSA_Cell_MinT_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location,CONCAT('(R), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,'(C)')));
+	HMI.BatteryInfo.BSA_Cell_MinT_Location		:= CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location,CONCAT('(Rack), ',CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,'(Cell)')));
 	
 	
 	

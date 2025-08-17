@@ -49,6 +49,7 @@ TYPE
 		WaterCoolingAux : BOOL;
 		FireDetectorAux : BOOL;
 		PowerLamp : BOOL;
+		BuzzerLamp : BOOL;
 		Buzzer : BOOL;
 		PRly : BOOL;
 		NRly : BOOL;

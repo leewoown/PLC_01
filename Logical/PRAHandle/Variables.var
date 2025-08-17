@@ -12,6 +12,7 @@ VAR
 	PRATimerWakeUpOff : TON;
 	PRATimerPrtErr : TON;
 	PRATimerSeqErr : TON;
+	PRATimerReset : TON;
 	PRAProtectCheckDone : BOOL;
 	PRARackResetDone : BOOL;
 	PRARackResetCount : USINT;
@@ -25,4 +26,6 @@ VAR
 	StopStep : StopStepMa_Enum;
 	PRAReadyReadSig : BOOL;
 	ATRackReadyCheck : BOOL;
+	PRARackReadyDone : BOOL;
+	PRARackEnableCount : INT;
 END_VAR

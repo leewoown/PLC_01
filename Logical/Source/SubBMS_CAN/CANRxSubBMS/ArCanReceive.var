@@ -3,4 +3,8 @@ VAR
 	countTime : USINT;
 	countCANSuccessOld : UDINT;
 	CmdSim : BOOL;
+	ModuleIndex : UINT;
+	ByteTest : ARRAY[0..5] OF BYTE;
+	DWORDTEST : ARRAY[0..1] OF DWORD;
+	RealTest : REAL;
 END_VAR

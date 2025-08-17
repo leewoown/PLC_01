@@ -79,6 +79,7 @@ ACTION PMS_SysCell_Volt_Location:
 		
 	PMS.SysCellVolt.Field.BSA_Cell_AVGV 					:= (PMS.SysCellVolt.Field.BSA_Cell_MaxV + PMS.SysCellVolt.Field.BSA_Cell_MinV) / 2;
 	PMS.SysCellVolt.Field.BSA_Cell_DeviV 					:= PMS.SysCellVolt.Field.BSA_Cell_MaxV - PMS.SysCellVolt.Field.BSA_Cell_MinV;
+	PMS.SysCellVolt.Field.BSA_Cell_DeviV					:= PMS.SysCellVolt.Field.BSA_Cell_DeviV * 1000;
 		
 END_ACTION
 
@@ -854,71 +855,72 @@ ACTION PMS_SysBatProtect:
 		ELSE
 			PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System  := FALSE;
 		END_IF;
+//		
+//		IF StateMa = vkSYSTEM_INITIAL  THEN
+//			IF SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Neg_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Pos_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_PreChar_Rly OR Sys.ProRlyAux OR Sys.PRlyAux OR Sys.NRlyAux THEN
+//				PMS.SysBatProtect.Field.PMS_PAR_RelayErr := TRUE;
+//				Sys.ProtectSig := TRUE;
+//				
+//				CASE LoopCount OF
+//					0:
+//						HMI_Alarm.Protect[22].Location := 'RACK1';
+//					1:
+//						HMI_Alarm.Protect[22].Location := 'RACK2';
+//					2:
+//						HMI_Alarm.Protect[22].Location := 'RACK3';
+//					3:
+//						HMI_Alarm.Protect[22].Location := 'RACK4';
+//				END_CASE;
+//			ELSE
+//				IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_PreChar_Rly) AND
+//					NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_PreChar_Rly) AND
+//					NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_PreChar_Rly) AND
+//					NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_PreChar_Rly) AND
+//					NOT(Sys.ProRlyAux) AND NOT(Sys.PRlyAux) AND NOT(Sys.NRlyAux) THEN
+//					PMS.SysBatProtect.Field.PMS_PAR_RelayErr  := FALSE;
+//				END_IF;
+//			END_IF;
+//
+//		END_IF;
+//		
+//		IF StateMa = vkSYSTEM_READY  THEN
+//			IF  Sys.ProRlyAux OR Sys.PRlyAux OR Sys.NRlyAux THEN
+//				PMS.SysBatProtect.Field.BPU_PAR_RelayErr := TRUE;
+//				Sys.ProtectSig := TRUE;
+//				HMI_Alarm.Protect[24].Location := 'SYSTEM';
+//							
+//			ELSE
+//				IF NOT(Sys.ProRlyAux) AND NOT(Sys.PRlyAux) AND NOT(Sys.NRlyAux) THEN
+//					PMS.SysBatProtect.Field.BPU_PAR_RelayErr  := FALSE;
+//				END_IF;
+//			END_IF;
+//		END_IF;
+//		
+//		IF StateMa = vkSYSTEM_STANDBY THEN
+//			IF SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Neg_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Pos_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_PreChar_Rly THEN
+//				PMS.SysBatProtect.Field.BRA_PAR_RelayErr := TRUE;
+//				Sys.ProtectSig := TRUE;
+//				CASE LoopCount OF
+//					0:
+//						HMI_Alarm.Protect[25].Location := 'RACK1';
+//					1:
+//						HMI_Alarm.Protect[25].Location := 'RACK2';
+//					2:
+//						HMI_Alarm.Protect[25].Location := 'RACK3';
+//					3:
+//						HMI_Alarm.Protect[25].Location := 'RACK4';
+//
+//				END_CASE;
+//			ELSE
+//				IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_PreChar_Rly) AND 
+//					NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_PreChar_Rly) AND
+//					NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_PreChar_Rly) AND
+//					NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_PreChar_Rly) THEN
+//					PMS.SysBatProtect.Field.BRA_PAR_RelayErr := FALSE;
+//				END_IF;
+//			END_IF;
+//		END_IF;
 		
-		IF StateMa = vkSYSTEM_INITIAL  THEN
-			IF SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Neg_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Pos_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_PreChar_Rly OR Sys.ProRlyAux OR Sys.PRlyAux OR Sys.NRlyAux THEN
-				PMS.SysBatProtect.Field.PMS_PAR_RelayErr := TRUE;
-				Sys.ProtectSig := TRUE;
-				
-				CASE LoopCount OF
-					0:
-						HMI_Alarm.Protect[22].Location := 'RACK1';
-					1:
-						HMI_Alarm.Protect[22].Location := 'RACK2';
-					2:
-						HMI_Alarm.Protect[22].Location := 'RACK3';
-					3:
-						HMI_Alarm.Protect[22].Location := 'RACK4';
-				END_CASE;
-			ELSE
-				IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_PreChar_Rly) AND
-					NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_PreChar_Rly) AND
-					NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_PreChar_Rly) AND
-					NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_PreChar_Rly) AND
-					NOT(Sys.ProRlyAux) AND NOT(Sys.PRlyAux) AND NOT(Sys.NRlyAux) THEN
-					PMS.SysBatProtect.Field.PMS_PAR_RelayErr  := FALSE;
-				END_IF;
-			END_IF;
-
-		END_IF;
-		
-		IF StateMa = vkSYSTEM_READY  THEN
-			IF  Sys.ProRlyAux OR Sys.PRlyAux OR Sys.NRlyAux THEN
-				PMS.SysBatProtect.Field.BPU_PAR_RelayErr := TRUE;
-				Sys.ProtectSig := TRUE;
-				HMI_Alarm.Protect[24].Location := 'SYSTEM';
-							
-			ELSE
-				IF NOT(Sys.ProRlyAux) AND NOT(Sys.PRlyAux) AND NOT(Sys.NRlyAux) THEN
-					PMS.SysBatProtect.Field.BPU_PAR_RelayErr  := FALSE;
-				END_IF;
-			END_IF;
-		END_IF;
-		
-		IF StateMa = vkSYSTEM_STANDBY THEN
-			IF SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Neg_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_Pos_Rly OR SubBMS_Calculator.BSA[LoopCount].Rack_State.Field.BSA_PreChar_Rly THEN
-				PMS.SysBatProtect.Field.BRA_PAR_RelayErr := TRUE;
-				Sys.ProtectSig := TRUE;
-				CASE LoopCount OF
-					0:
-						HMI_Alarm.Protect[25].Location := 'RACK1';
-					1:
-						HMI_Alarm.Protect[25].Location := 'RACK2';
-					2:
-						HMI_Alarm.Protect[25].Location := 'RACK3';
-					3:
-						HMI_Alarm.Protect[25].Location := 'RACK4';
-
-				END_CASE;
-			ELSE
-				IF NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_PreChar_Rly) AND 
-					NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_PreChar_Rly) AND
-					NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_PreChar_Rly) AND
-					NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Neg_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Pos_Rly) AND NOT(SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_PreChar_Rly) THEN
-					PMS.SysBatProtect.Field.BRA_PAR_RelayErr := FALSE;
-				END_IF;
-			END_IF;
-		END_IF;
 	END_FOR;
 END_ACTION
 
@@ -933,6 +935,7 @@ ACTION PMS_SysBatDIO:
 	IF Sys.EMSRlyAux_BMP OR Sys.EMSRlyAux THEN
 		PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status	:= TRUE;
 		HMI_Alarm.Protect[26].Location := 'SYSTEM';
+		Sys.ProtectSig := TRUE;
 	ELSE
 		IF NOT(Sys.EMSRlyAux_BMP) AND NOT(Sys.EMSRlyAux) THEN
 			PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status	:= FALSE;
@@ -1101,12 +1104,12 @@ ACTION PMS_BAR_DIO:
 	//	PMS.BAR_DIO.Field.BRA_NRelayAUX_DI_Status 			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Rack_Calc.Field.BRA_Volt_Total 
 	//	PMS.BAR_DIO.Field.BRA_EMGSwitch_DI_Status 			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Rack_Calc.Field.BRA_Volt_Total 
 	//	PMS.BAR_DIO.Field.BRA_MDS_DI_Status					:=	SubBMS_Calculator.BSA[HMI.RackIndex].Rack_Calc.Field.BRA_Volt_Total 
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD1			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul1_Info.Field.OPS_Waterleak_Err ;
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD2			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul2_Info.Field.OPS_Waterleak_Err ;
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD3			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul3_Info.Field.OPS_Waterleak_Err ;
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD4			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul4_Info.Field.OPS_Waterleak_Err ;
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD5			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul5_Info.Field.OPS_Waterleak_Err ;
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD6			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul6_Info.Field.OPS_Waterleak_Err ;
-	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD7			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul7_Info.Field.OPS_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD1			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul1_Info.INFO_1.Field.M_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD2			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul2_Info.INFO_1.Field.M_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD3			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul3_Info.INFO_1.Field.M_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD4			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul4_Info.INFO_1.Field.M_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD5			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul5_Info.INFO_1.Field.M_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD6			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul6_Info.INFO_1.Field.M_Waterleak_Err ;
+	PMS.BAR_DIO.Field.BRA_Waterleak_Dete_MD7			:=	SubBMS_Calculator.BSA[HMI.RackIndex].Modul7_Info.INFO_1.Field.M_Waterleak_Err ;
 
 END_ACTION

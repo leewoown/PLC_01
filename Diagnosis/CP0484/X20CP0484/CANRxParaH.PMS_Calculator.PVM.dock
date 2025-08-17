@@ -1616,5 +1616,5 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index
                     LoadingError_Trigger                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                        BuzzerOFF_Trigger                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                          Protect_Trigger                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
-                             ProtectName                               STRING[30]    0 "                                               'EMGSwitch Error'"    2    9   31    1    0    0         
-                              ProtectNum                               STRING[10]    0 "                                                        'SYSTEM'"    2    9   11    1    0    0         
+                             ProtectName                               STRING[30]    0 "                                                              ''"    2    9   31    1    0    0         
+                              ProtectNum                               STRING[10]    0 "                                                              ''"    2    9   11    1    0    0         

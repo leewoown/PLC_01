@@ -12,4 +12,5 @@ VAR_CONFIG
 	::DIOHandle:ProRLY AT %QX."X20DO9322".DigitalOutput06;
 	::DIOHandle:PRLY AT %QX."X20DO9322".DigitalOutput07;
 	::DIOHandle:NRLY AT %QX."X20DO9322".DigitalOutput08;
+	::DIOHandle:BuzzerLamp AT %QX."X20DO9322".DigitalOutput03;
 END_VAR

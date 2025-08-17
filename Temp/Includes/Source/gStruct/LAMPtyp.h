@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754623143_8_
-#define _BUR_1754623143_8_
+#ifndef _BUR_1755400020_8_
+#define _BUR_1755400020_8_
 
 #include <bur/plctypes.h>
 
@@ -26,5 +26,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/gStruct/LAMP.typ\\\" scope \\\"glob
 __asm__(".previous");
 
 
-#endif /* _BUR_1754623143_8_ */
+#endif /* _BUR_1755400020_8_ */
 

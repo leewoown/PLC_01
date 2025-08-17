@@ -2,7 +2,7 @@ WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=HMI_DataPa
 Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index=332 ASCIIString=0
                                     name                                     type force                                                            value level type len format place expand specs
                                      HMI                                  HMI_typ    0 "                                                               *"    0   24    1    0    0    1         
-                                    Step                                     DINT    0 "                                                               *"    1    4    1   10    0    0 e,0,vkIN
+                                    Step                                     DINT    0 "                                                               2"    1    4    1   10    0    0 e,0,vkIN
 
                            DeviceLoading                   DeviceLoadingPanel_typ    0 "                                                               *"    1   24    1    0    0    0         
                                  Trigger                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
@@ -16,7 +16,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index
                            RackEnable[1]                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
                            RackEnable[2]                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
                            RackEnable[3]                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                               RackIndex                                     DINT    0 "                                                               *"    1    4    1   10    0    0 e,0,vkRA
+                               RackIndex                                     DINT    0 "                                                               0"    1    4    1   10    0    0 e,0,vkRA
 
                                    Gauge                           GaugePanel_typ    0 "                                                               *"    1   24    1    0    0    0         
                                  BRA_SOC                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
@@ -108,7 +108,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index
                        RACK_BRA_Total[1]                               STRING[20]    0 "                                                               *"    3    9   21    1    0    0         
                        RACK_BRA_Total[2]                               STRING[20]    0 "                                                               *"    3    9   21    1    0    0         
                        RACK_BRA_Total[3]                               STRING[20]    0 "                                                               *"    3    9   21    1    0    0         
-                       BSA_Divice_Status                               STRING[20]    0 "                                                         'READY'"    1    9   21    1    0    0         
+                       BSA_Divice_Status                               STRING[20]    0 "                                                       'STANDBY'"    1    9   21    1    0    0         
                                DIOStatus                       DIOStatusPanel_typ    0 "                                                               *"    1   24    1    0    0    0         
                          BSA_Exteral_EMS                               STRING[20]    0 "                                                               *"    2    9   21    1    0    0         
                              BSA_BMP_EMS                               STRING[20]    0 "                                                               *"    2    9   21    1    0    0         
@@ -336,20 +336,20 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index
                                 Location                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
                                    Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
                    SubBMS_AlarmTable[26]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
-                                    Name                               STRING[30]    0 "                                                              ''"    3    9   31    1    0    0         
-                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                                Location                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
+                                    Name                               STRING[30]    0 "                                               'EMGSwitch Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                               '25-08-09, 18:03'"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                               '25-08-11, 16:26'"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                Location                               STRING[15]    0 "                                                        'SYSTEM'"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               2"    3    5    1   10    0    0         
                    SubBMS_AlarmTable[27]                           ALARM_Info_typ    0 "                                                               *"    2   24    1    0    0    1         
-                                    Name                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
-                             InitialTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                              RecentTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                               ClearTime                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                                Location                               STRING[15]    0 "                                                               *"    3    9   16    1    0    0         
-                                   Count                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
-                         AlarmTableIndex                                     DINT    0 "                                                               *"    1    4    1   10    0    0 e,0,vkWa
+                                    Name                               STRING[30]    0 "                                      'BRA Cooling System Error'"    3    9   31    1    0    0         
+                             InitialTime                               STRING[15]    0 "                                               '25-08-09, 18:03'"    3    9   16    1    0    0         
+                              RecentTime                               STRING[15]    0 "                                               '25-08-11, 16:26'"    3    9   16    1    0    0         
+                               ClearTime                               STRING[15]    0 "                                                              ''"    3    9   16    1    0    0         
+                                Location                               STRING[15]    0 "                                                        'SYSTEM'"    3    9   16    1    0    0         
+                                   Count                                    USINT    0 "                                                               2"    3    5    1   10    0    0         
+                         AlarmTableIndex                                     DINT    0 "                                                               2"    1    4    1   10    0    0 e,0,vkWa
 
                               AdminLogin                           AdminLogin_typ    0 "                                                               *"    1   24    1    0    0    0         
                                Authority                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,USER

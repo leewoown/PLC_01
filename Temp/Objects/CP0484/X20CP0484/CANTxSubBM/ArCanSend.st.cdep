@@ -1,5 +1,0 @@
-$(AS_CPU_PATH)/cantxsubbm/arcansend.st.o:
-$(AS_CPU_PATH)/cantxsubbm/arcansend.st.c
-$(AS_GNU_INST_PATH)/4.9/arm-elf/include/bur/plctypes.h
-$(AS_GNU_INST_PATH)/4.9/arm-elf/include/bur/plc.h
-$(AS_CPU_PATH)/cantxsubbm/arcansendst.h

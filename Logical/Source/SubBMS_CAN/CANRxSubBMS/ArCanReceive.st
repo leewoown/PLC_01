@@ -26,19 +26,21 @@ PROGRAM _INIT
 	(* 		010 000 bit/s    >>		Register0 = 16#31	||		Register1 = 16#1C	*)
 	(********************************************************************************)
 	(********************************************************************************)
-
-	CmdSim	:= 1;
-	
-	SubBMS_Sim.Rack1.BSA.Rack_State.Field.BSA_Divice_Status := 3;
-	
+//	
+//	CmdSim := 1;
+//	SubBMS_Sim.Rack1.BSA.Rack_State.Field.BSA_Divice_Status := 3;
+//	
+//	
 END_PROGRAM
 
 PROGRAM _CYCLIC	
 	IF CmdSim THEN
-
+		//ActSimulation;
+		
 		(*ActSimulation;*)
 		memcpy(ADR(SubBMS), ADR(SubBMS_Sim), SIZEOF(SubBMS));
 
+		
 	ELSE
 		ActArCanReceiver;
 		(***********************************************************)
@@ -48,7 +50,7 @@ PROGRAM _CYCLIC
 
 			CASE ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID OF
 
-				16#600..16#60E: // RACK 1
+				16#600..16#60E: // RACK1
 
 				//0 : BMS
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#600 THEN
@@ -92,43 +94,110 @@ PROGRAM _CYCLIC
 
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#608 THEN
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul1_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul1_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#609 THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul2_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul2_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#60A THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul3_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul3_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#60B THEN
+					ModuleIndex	:= 0;
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul4_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul4_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#60C THEN
+				
+				16#610..16#61E: // RACK2
 
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul5_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul5_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#60D THEN
-
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul6_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul6_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#60E THEN
-
-					memcpy(ADR(SubBMS.Rack1.BSA.Modul7_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack1.BSA.Modul7_Info.Value));
-
-				END_IF;
-
-				16#610..16#61E: // RACK 2
-
+				//0 : BMS
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#610 THEN
 
 					memcpy(ADR(SubBMS.Rack2.BSA.BSA_Product.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.BSA_Product.Value));
@@ -170,43 +239,110 @@ PROGRAM _CYCLIC
 
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#618 THEN
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul1_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul1_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#619 THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul2_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul2_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#61A THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul3_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul3_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#61B THEN
+					ModuleIndex	:= 0;
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul4_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul4_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#61C THEN
+				
+				16#620..16#62E: // RACK3
 
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul5_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul5_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#61D THEN
-
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul6_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul6_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#61E THEN
-
-					memcpy(ADR(SubBMS.Rack2.BSA.Modul7_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack2.BSA.Modul7_Info.Value));
-
-				END_IF;
-
-				16#620..16#62E: // RACK 2
-
+				//0 : BMS
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#620 THEN
 
 					memcpy(ADR(SubBMS.Rack3.BSA.BSA_Product.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.BSA_Product.Value));
@@ -248,42 +384,110 @@ PROGRAM _CYCLIC
 
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#628 THEN
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul1_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul1_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#629 THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul2_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul2_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#62A THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul3_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul3_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#62B THEN
+					ModuleIndex	:= 0;
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul4_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul4_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#62C THEN
+				
+				16#630..16#63E: // RACK4
 
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul5_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul5_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#62D THEN
-
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul6_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul6_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#62E THEN
-
-					memcpy(ADR(SubBMS.Rack3.BSA.Modul7_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack3.BSA.Modul7_Info.Value));
-
-				END_IF;
-				16#630..16#63E: // RACK 2
-
+				//0 : BMS
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#630 THEN
 
 					memcpy(ADR(SubBMS.Rack4.BSA.BSA_Product.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.BSA_Product.Value));
@@ -325,39 +529,105 @@ PROGRAM _CYCLIC
 
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#638 THEN
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul1_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul1_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#639 THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul2_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul2_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#63A THEN
+					
+					ModuleIndex	:= 0;
+					
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul3_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul3_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#63B THEN
+					ModuleIndex	:= 0;
+					memcpy(ADR(ModuleIndex), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(ModuleIndex));
+					
+					CASE ModuleIndex OF
+						0:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value));
+						1:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value));
+						2:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value));
+						3:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value));
+						4:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value));
+						5:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value));
+						6:
+							memcpy(ADR(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value));
+		  
 
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul4_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul4_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#63C THEN
-
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul5_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul5_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#63D THEN
-
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul6_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul6_Info.Value));
-
-				END_IF;
-				IF ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID = 16#63E THEN
-
-					memcpy(ADR(SubBMS.Rack4.BSA.Modul7_Info.Value), ADR(ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data), SIZEOF(SubBMS.Rack4.BSA.Modul7_Info.Value));
-
+					END_CASE;
+				
 				END_IF;
 
 			END_CASE;

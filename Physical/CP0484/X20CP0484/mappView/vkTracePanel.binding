@@ -110,15 +110,11 @@
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse53" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_CoolingSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_OC" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse48" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_MDSFuse" attribute="value" />
-<Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse40" attribute="style" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_InsulationReg" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_EMS_SW_Err" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse39" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
@@ -158,35 +154,35 @@
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse31" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UnbalV" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BRA_Prtct_InsulationReg" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse30" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UV" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UnbalV" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse29" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_OV" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_UV" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse28" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_UV" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Cell_OV" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse27" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_OV" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_UV" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse26" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_Un" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_OV" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse25" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_OV" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_Un" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse24" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_OC" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_SOC_OV" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse23" attribute="style" />
 </Binding>
 <Binding mode="twoWay">
@@ -264,6 +260,18 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.DIOStatus.BSA_FireDetector" attribute="value" />
 <Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse56" attribute="style" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_CoolingSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse64" attribute="style" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Continuously_OP" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse62" attribute="style" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:HMI.ProtectStatus.BSA_Prtct_Peak_OP" attribute="value" />
+<Target xsi:type="brease" contentRefId="vkTracePanel" widgetRefId="Ellipse63" attribute="style" />
 </Binding>
 </Bindings>
 </BindingsSet>

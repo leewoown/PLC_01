@@ -40,13 +40,13 @@ TYPE
 		Rack_Cell_Vcalc : Rack_Cell_Vcalc_typ;
 		Rack_Cell_Tcalc : Rack_Cell_Tcalc_typ;
 		Rack_Cell_Pcalc : Rack_Cell_Pcalc_typ;
-		Modul1_Info : ModulN_Info_typ;
-		Modul2_Info : ModulN_Info_typ;
-		Modul3_Info : ModulN_Info_typ;
-		Modul4_Info : ModulN_Info_typ;
-		Modul5_Info : ModulN_Info_typ;
-		Modul6_Info : ModulN_Info_typ;
-		Modul7_Info : ModulN_Info_typ;
+		Modul1_Info : ModuleN_Info_Type;
+		Modul2_Info : ModuleN_Info_Type;
+		Modul3_Info : ModuleN_Info_Type;
+		Modul4_Info : ModuleN_Info_Type;
+		Modul5_Info : ModuleN_Info_Type;
+		Modul6_Info : ModuleN_Info_Type;
+		Modul7_Info : ModuleN_Info_Type;
 	END_STRUCT;
 	BSA_Product_typ : 	STRUCT 
 		Value : ARRAY[0..1]OF DWORD;
@@ -80,9 +80,27 @@ TYPE
 		Value : ARRAY[0..1]OF DWORD;
 		Field : Rack_Cell_Pcalc_Field_typ;
 	END_STRUCT;
-	ModulN_Info_typ : 	STRUCT 
+	ModuleN_Info_Type : 	STRUCT 
+		INFO_1 : ModulN_Info1_typ;
+		INFO_2 : ModulN_Info2_typ;
+		INFO_3 : ModulN_Info3_typ;
+		INFO_4 : ModulN_Info4_typ;
+	END_STRUCT;
+	ModulN_Info1_typ : 	STRUCT 
 		Value : ARRAY[0..1]OF DWORD;
-		Field : ModulN_Info_Field_typ;
+		Field : ModulN_Info1_Field_typ;
+	END_STRUCT;
+	ModulN_Info2_typ : 	STRUCT 
+		Value : ARRAY[0..1]OF DWORD;
+		Field : ModulN_Info2_Field_typ;
+	END_STRUCT;
+	ModulN_Info3_typ : 	STRUCT 
+		Value : ARRAY[0..1]OF DWORD;
+		Field : ModulN_Info3_Field_typ;
+	END_STRUCT;
+	ModulN_Info4_typ : 	STRUCT 
+		Value : ARRAY[0..1]OF DWORD;
+		Field : ModulN_Info4_Field_typ;
 	END_STRUCT;
 	BSA_Product_Field_typ : 	STRUCT 
 		BSA_Type : USINT;
@@ -205,25 +223,37 @@ TYPE
 		BSA_Cell_MaxT_Location : UINT;
 		BSA_Cell_MinT_Location : UINT;
 	END_STRUCT;
-	ModulN_Info_Field_typ : 	STRUCT 
-		Volt_Total : REAL;
-		Agv_Volt : REAL;
-		Agv_Temp : REAL;
-		OPS_INITOK : BOOL;
-		OPS_Fault : BOOL;
-		OPS_Balan_On_OFF : BOOL;
-		OPS_Waterleak_Err : BOOL;
-		OPS_CellVolt_Err : BOOL;
-		OPS_CellTemps_Err : BOOL;
-		BATIC_Err : BOOL;
-		CTCOM_Err : BOOL;
-		OPS_MBCOM_Err : BOOL;
-		Not_Used1 : BOOL;
-		Not_Used2 : BOOL;
-		Not_Used3 : BOOL;
-		Not_Used4 : BOOL;
-		Not_Used5 : BOOL;
-		Not_Used6 : BOOL;
-		Not_Used7 : BOOL;
+	ModulN_Info1_Field_typ : 	STRUCT 
+		M_Number : UINT;
+		M_Total_Volt : REAL;
+		M_INITOK : BOOL;
+		M_Fault : BOOL;
+		M_BalanEN : BOOL;
+		M_Waterleak_Err : BOOL;
+		M_CellVolt_Err : BOOL;
+		M_CellTemp_Err : BOOL;
+		M_BATIC_Err : BOOL;
+		M_CTCOM_Err : BOOL;
+		M_MBCOM_Err : BOOL;
+		M_HMIErrFault : BOOL;
+		M_BalanceEnabel : BOOL;
+	END_STRUCT;
+	ModulN_Info2_Field_typ : 	STRUCT 
+		M_Number : UINT;
+		M_CellMaxVolt : REAL;
+		M_CellMinVolt : REAL;
+		M_CellAvgVolt : REAL;
+	END_STRUCT;
+	ModulN_Info3_Field_typ : 	STRUCT 
+		M_Number : UINT;
+		M_CellMaxTemp : REAL;
+		M_CellMinTemp : REAL;
+		M_CellAvgTemp : REAL;
+	END_STRUCT;
+	ModulN_Info4_Field_typ : 	STRUCT 
+		M_Number : UINT;
+		M_CellDivVolt : UINT;
+		M_CellDivTemp : REAL;
+		M_MDInResis : UINT;
 	END_STRUCT;
 END_TYPE

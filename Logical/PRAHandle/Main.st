@@ -23,6 +23,9 @@ PROGRAM _INIT
 	PRATimerSeqErr.PT 		:= T#15s;
 	PRATimerPrtErr.IN		:= FALSE;
 	PRATimerPrtErr.PT		:= T#500ms;
+	PRATimerReset.IN		:= FALSE;
+	PRATimerReset.PT		:= T#1s;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -31,7 +34,7 @@ PROGRAM _CYCLIC
 		
 		vkSYSTEM_INITIAL:
 			
-			PMS.SysBatCal.Field.BSA_Divice_Status := 	UDINT_TO_UINT(vkSYSTEM_INITIAL); //INIT
+			PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_INITIAL); //INIT
 			
 			IF HMI.DeviceLoading.SetRackNum <> 0 THEN
 				StateMa		:= vkSYSTEM_READY;
@@ -49,18 +52,10 @@ PROGRAM _CYCLIC
 			IF Sys.ProtectSig THEN
 	  			StateMa					:= vkSYSTEM_STANDBY;
 			ELSE
-				Sys.ResetSig			:= TRUE;
-					
-				ATReset;
+				
+				ATSystemReady;
 			
-				IF PRARackResetDone THEN
-				
-					Sys.ResetSig := FALSE;
-				
-					SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
-					SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
-					SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
-					SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
+				IF PRARackReadyDone THEN
 				
 					StateMa					:= vkSYSTEM_STANDBY;
 				END_IF;
@@ -107,10 +102,16 @@ PROGRAM _CYCLIC
 			
 			IF PRAWakeUpDone THEN
 				PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_RUN); //RUN
+				
 			END_IF;
 			
 			IF NOT(PMS.PMS.Field.PMS_WakeUp_CMD) AND NOT(PMS.PMS.Field.PMS_FaultReset) AND NOT(PMS.PMS.Field.PMS_Po_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Pro_RelayStatus) AND NOT(PMS.PMS.Field.PMS_Ne_RelayStatus) AND ABS(PMS.SysBatCal.Field.BSA_Curr_Total) <= 50 THEN
+				
+				WakeUpStep 		:= vkWAKEUP_INITIAL;
+				StopStep		:= vkSTOP_INITIAL;
+				
 				StateMa := vkSYSTEM_STOP;
+				
 			END_IF;
 			
 			IF Sys.AlarmSig THEN
@@ -132,6 +133,9 @@ PROGRAM _CYCLIC
 			
 			IF PRAStopDone THEN
 				
+				WakeUpStep 		:= vkWAKEUP_INITIAL;
+				StopStep 		:= vkSTOP_INITIAL;
+				
 				StateMa := vkSYSTEM_STANDBY;
 				
 				Sys.StopSig := FALSE;
@@ -146,47 +150,32 @@ PROGRAM _CYCLIC
 					PMS.SysBatCal.Field.BSA_Divice_Status := UDINT_TO_UINT(vkSYSTEM_PROTECT); //PROTECT
 					Sys.BuzzerSig := TRUE;
 					StateMa := vkSYSTEM_STOP;
+					
 				END_IF;
 				
 			END_IF;
 		vkSYSTEM_RESET:
-		
-			SubBMS_Calculator.BMA[0].Field.BSA_Reset := TRUE;
-			SubBMS_Calculator.BMA[1].Field.BSA_Reset := TRUE;
-			SubBMS_Calculator.BMA[2].Field.BSA_Reset := TRUE;
-			SubBMS_Calculator.BMA[3].Field.BSA_Reset := TRUE;
-		
-			IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 0 THEN
-				SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
-			END_IF;
-			IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 0 THEN
-				SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
-			END_IF;
-			IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 0 THEN
-				SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
-			END_IF;
-			IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 0 THEN
-				SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
-			END_IF;
 			
-			PRARackResetCount := 0;
+			PRARackResetDone	:=FALSE;
+			PRARackResetCount 	:= 0;
 			
-			FOR i := 0 TO 3 DO
-				IF SubBMS_Calculator.BSA[i].Rack_State.Field.BSA_Divice_Status = 1 THEN
-					SubBMS_Calculator.BMA[i].Field.BSA_Reset := FALSE;
-					PRARackResetCount := PRARackResetCount + 1 ;
-				END_IF;
-			END_FOR;
+			Sys.ResetSig		:= TRUE;
+					
+			ATReset;
 			
-			IF PRARackResetCount = HMI.DeviceLoading.SetRackNum THEN
-				PRARackResetDone := TRUE;
-			ELSE
-				PRARackResetDone := FALSE;
-			END_IF;
-		
 			IF PRARackResetDone THEN
+				
+				Sys.ProtectSig := FALSE;
+				Sys.AlarmSig 	:= FALSE;
+				Sys.FaultSig 	:= FALSE;
+				
+				Sys.Buzzer 		:= FALSE;
+				Sys.ResetSig 	:= FALSE;
+				
+				WakeUpStep 		:= vkWAKEUP_INITIAL;
+				StopStep 		:= vkSTOP_INITIAL;
+				
 				StateMa					:= vkSYSTEM_STANDBY;
-				PRARackResetDone 		:= FALSE;
 			END_IF;
 	END_CASE;
 	
@@ -194,6 +183,9 @@ PROGRAM _CYCLIC
 	PRATimerProRlyOff();
 	PRATimerWakeUpOff();
 	PRATimerSeqErr();
+	PRATimerReset();
+	
+	
 	
 END_PROGRAM
 

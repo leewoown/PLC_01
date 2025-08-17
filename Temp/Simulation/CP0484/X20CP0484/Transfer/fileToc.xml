@@ -54,7 +54,7 @@
 					<File Name="1711585527.eventbinding" Size="8236" HashValue="D04F8E3B58235240207E029974F57F41" ProjectDependent="1"/>
 					<File Name="1779537199.eventbinding" Size="2977" HashValue="4AC1B3D6607CA65A009FC752360777E2" ProjectDependent="1"/>
 					<File Name="1861029089.binding" Size="3428" HashValue="A88D341BDF5AA061F72EDAA62FA05C4D" ProjectDependent="1"/>
-					<File Name="20042854.binding" Size="17750" HashValue="45EBA46B3F5906EC095A3343FBD1CBCA" ProjectDependent="1"/>
+					<File Name="20042854.binding" Size="18287" HashValue="C591A9988ACA39F520A29E4B52461883" ProjectDependent="1"/>
 					<File Name="2106928190.binding" Size="804" HashValue="CD15396E53071E21A18F3FA5ED29427F" ProjectDependent="1"/>
 					<File Name="324097480.eventbinding" Size="1545" HashValue="E2C35B41E56804E3CE3D1E29D31F8B03" ProjectDependent="1"/>
 					<File Name="774669465.binding" Size="856" HashValue="DF5AB9395BE480E99004968CAA65469E" ProjectDependent="1"/>
@@ -572,8 +572,8 @@
 						</Folder>
 						<Folder Name="release" ProjectDependent="1">
 							<File Name="brease.js" Size="1124456" HashValue="7A36719C7D60DDCC9E555CAC1644CB69" ProjectDependent="1"/>
-							<File Name="brease_core.min.css" Size="582514" HashValue="156A0B935E1E72AE52D4B1991043D74F" ProjectDependent="1"/>
-							<File Name="BuRTheme1.min.css" Size="224952" HashValue="C9A2C872BDC36E5593394CB0849395C3" ProjectDependent="1"/>
+							<File Name="brease_core.min.css" Size="583453" HashValue="1AA539EB44DF46201579167EF54D09A4" ProjectDependent="1"/>
+							<File Name="BuRTheme1.min.css" Size="224988" HashValue="1E0CD7D579947CD31A4AB91EA23A5EBB" ProjectDependent="1"/>
 						</Folder>
 						<Folder Name="system" ProjectDependent="1">
 							<Folder Name="brease" ProjectDependent="1">
@@ -1785,7 +1785,7 @@
 							<File Name="vkAlarmLEDPanel.html" Size="14371" HashValue="5E05DB064A09B3648A676FD23DFB9BE2" ProjectDependent="1"/>
 							<File Name="vkAlarmNaviPanel.html" Size="4732" HashValue="67CE8C2ADDD641EEB8E8F385C6B5D213" ProjectDependent="1"/>
 							<File Name="vkAlarmPanel.html" Size="74227" HashValue="EA9516761AB9A2D44D33311C59CDBE0B" ProjectDependent="1"/>
-							<File Name="vkDataPanel.html" Size="18082" HashValue="D2BC469CB906E75A85C8E776519AE678" ProjectDependent="1"/>
+							<File Name="vkDataPanel.html" Size="18210" HashValue="C0048C0D01D41F07334E42CD52048252" ProjectDependent="1"/>
 							<File Name="vkDeviceLoading.html" Size="1301" HashValue="35AF266A0B14AB1BC84AAA456540B719" ProjectDependent="1"/>
 							<File Name="vkDialogCompanyInfo.html" Size="5347" HashValue="E6527B8214241B798D7CCE8FC1820BA7" ProjectDependent="1"/>
 							<File Name="vkDialogLoadingErr.html" Size="2910" HashValue="7FFD4C42B7AAA7F41FDF6A2DF459CAB5" ProjectDependent="1"/>
@@ -1799,7 +1799,7 @@
 							<File Name="vkRackStatusPanel.html" Size="38091" HashValue="913B8353EBB3C2FE6253AAF9FCF29BB1" ProjectDependent="1"/>
 							<File Name="vkStatusPanel.html" Size="27151" HashValue="BA8F1A6501E93804EE4950AE70C3A642" ProjectDependent="1"/>
 							<File Name="vkTitle.html" Size="1041" HashValue="7FCBF424FF002719E1AA1F1EBC316839" ProjectDependent="1"/>
-							<File Name="vkTracePanel.html" Size="52939" HashValue="6A374790EBE5EA1998D06F19662C52F4" ProjectDependent="1"/>
+							<File Name="vkTracePanel.html" Size="54170" HashValue="D5F132E9D3D0FFE4EA99B91BD165C9E9" ProjectDependent="1"/>
 						</Folder>
 					</Folder>
 					<Folder Name="server" ProjectDependent="1">
@@ -1876,7 +1876,7 @@
 			<Folder Name="OPCUA" ProjectDependent="1" IsGroup="1">
 				<Folder Name="NodeSet" ProjectDependent="1">
 					<Folder Name="Generated" ProjectDependent="1">
-						<File Name="OpcUaMap.uar.gz" Size="1633" HashValue="9997E6368B7A162922680B8B7739024A" ProjectDependent="1"/>
+						<File Name="OpcUaMap.uar.gz" Size="1632" HashValue="75F823D979BD6F2A1E67355C3BB10F3B" ProjectDependent="1"/>
 					</Folder>
 					<Folder Name="Vendor" ProjectDependent="1">
 						<File Name="plc.aprol.uanodeset" Size="6712" HashValue="08ADF5B15D3AF0566E164F0E4D4FB418" ProjectDependent="1"/>

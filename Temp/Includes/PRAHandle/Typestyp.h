@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754623143_14_
-#define _BUR_1754623143_14_
+#ifndef _BUR_1755400020_14_
+#define _BUR_1755400020_14_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/PRAHandle/Types.typ\\\" scope \\\"local\\\
 __asm__(".previous");
 
 
-#endif /* _BUR_1754623143_14_ */
+#endif /* _BUR_1755400020_14_ */
 

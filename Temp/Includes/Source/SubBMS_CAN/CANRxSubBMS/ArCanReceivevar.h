@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754623143_19_
-#define _BUR_1754623143_19_
+#ifndef _BUR_1755401061_2_
+#define _BUR_1755401061_2_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,10 @@
 
 
 /* Variables */
+_BUR_LOCAL float RealTest;
+_BUR_LOCAL plcdword DWORDTEST[2];
+_BUR_LOCAL plcbyte ByteTest[6];
+_BUR_LOCAL unsigned short ModuleIndex;
 _BUR_LOCAL plcbit CmdSim;
 _BUR_LOCAL unsigned long countCANSuccessOld;
 _BUR_LOCAL unsigned char countTime;
@@ -32,5 +36,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive
 __asm__(".previous");
 
 
-#endif /* _BUR_1754623143_19_ */
+#endif /* _BUR_1755401061_2_ */
 

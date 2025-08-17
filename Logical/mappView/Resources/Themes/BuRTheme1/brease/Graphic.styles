@@ -200,6 +200,12 @@
 		lineColor="#000000" 
 		borderStyle="solid" 
 	opacity="1" />
+	<Style id="READY" xsi:type="widgets.brease.Ellipse" 
+		borderWidth="2px" 
+		backColor="#00FFFF" 
+		lineColor="#000000" 
+		borderStyle="solid" 
+	opacity="1" />
 	<Style id="RUN" xsi:type="widgets.brease.Ellipse" 
 		borderWidth="2px" 
 		backColor="#80FF00" 

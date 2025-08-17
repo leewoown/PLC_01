@@ -64,13 +64,13 @@ PROGRAM _INIT
 	
 	//	 Seq Relay Error Signal //
 	HMI_AlarmName[22] := 'PMS PAR Relay Error';
-	HMI_AlarmName[23]:= 'PMS PAR SEQ Error';
-	HMI_AlarmName[24]:= 'BPU PARRelay Error';
-	HMI_AlarmName[25]:= 'BRA PARRelay Error';
+	HMI_AlarmName[23] := 'PMS PAR SEQ Error';
+	HMI_AlarmName[24] := 'BPU PAR Relay Error';
+	HMI_AlarmName[25] := 'BRA PAR Relay Error';
 	
 	//	BSA DI //
-	HMI_AlarmName[26]:= 'EMGSwitch Error';
-	HMI_AlarmName[27]:= 'BRA Cooling System Error';
+	HMI_AlarmName[26] := 'EMGSwitch Error';
+	HMI_AlarmName[27] := 'BRA Cooling System Error';
 	
 	
 	

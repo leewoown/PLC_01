@@ -3,7 +3,7 @@ PROGRAM _INIT
 	
 	ActArCanReceiver;
 	ArCanReceiver.enable				:= TRUE;
-	ArCanReceiver.receiverDeviceName 	:= 'IF6.ST5.IF1';       (* for X20CS1070 *)
+	ArCanReceiver.receiverDeviceName 	:= 'IF6.ST6.IF1';       (* for X20CS1070 *)
 	ArCanReceiver.id					:= 0; 
 	ArCanReceiver.idMask				:= arCAN_RECEIVE_ALL;  // or configure IDMask
 	ArCanReceiver.format				:= arCAN_11BIT;  // or arCAN_29BIT

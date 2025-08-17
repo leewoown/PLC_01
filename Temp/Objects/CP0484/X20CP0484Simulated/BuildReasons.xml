@@ -1,36 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BuildReasons>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\iat_media.job._markerfile">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\iat_media.job" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\arconfig.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\physical\cp0484\x20cp0484\iomap.iom" differs.
-</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\0_visulist.json">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\0_visulist.json" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\type_sass._markerfile">
-    <BuildReason>Target "type_sass._markerfile" does not exist</BuildReason>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\iat_media.job._markerfile">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\iat_media.job" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\content_sass._markerfile">
+    <BuildReason>Target "content_sass._markerfile" does not exist</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\dialog_sass._markerfile">
     <BuildReason>Target "dialog_sass._markerfile" does not exist</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\content_sass._markerfile">
-    <BuildReason>Target "content_sass._markerfile" does not exist</BuildReason>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\arcanreceive.st.c">
+    <BuildReason>Target "arcanreceive.st.c" does not exist</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\brvisu\css\themes\grunt.themescsso._markerfile">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\brvisu\release\burtheme1.min.css" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\grunt.breasecsso._markerfile">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\brvisu\css\themes\grunt.themescsso._markerfile" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\type_sass._markerfile">
+    <BuildReason>Target "type_sass._markerfile" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\arcanreceive.st.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\arcanreceive.st.c" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\iomap.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\physical\cp0484\x20cp0484\iomap.iom" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\_bur_pvdef.st.c">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\arcanreceive.st.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\_bur_pvdef.st.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\_bur_pvdef.st.c" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\arcanreceive.st.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\canrxsubbm.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\a.out" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm\canrxsubbm.ox" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\grunt.breasecsso._markerfile">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\.mappview\data\wwwroot\brvisu\css\themes\grunt.themescsso._markerfile" differs.
 </BuildReason>
   </Rule>
   <Rule ID=".mappView_Build">
@@ -43,7 +62,7 @@
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\binaries\cp0484\x20cp0484\transfer.lst">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\iomap.br" differs.
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\cp0484\x20cp0484\canrxsubbm.br" differs.
 </BuildReason>
   </Rule>
 </BuildReasons>

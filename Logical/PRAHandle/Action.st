@@ -1,36 +1,52 @@
+ACTION ATSystemReady:
+	
+	PRARackEnableCount := 0;
+	
+	FOR i := 0 TO 3 DO
+		IF SubBMS_Calculator.BSA[i].Rack_State.Field.BSA_Divice_Status <> 0 THEN
+			PRARackEnableCount := PRARackEnableCount + 1 ;
+		END_IF;
+	END_FOR;
+	
+	IF PRARackEnableCount = HMI.DeviceLoading.SetRackNum THEN
+		PRARackReadyDone := TRUE;
+	ELSE
+		PRARackReadyDone := FALSE;
+	END_IF;
+END_ACTION
 
 ACTION ATReset: 
 	IF Sys.ResetSig THEN
 		
-		IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
-		END_IF;
-		IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
-		END_IF;
-		IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
-		END_IF;
-		IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 0 THEN
-			SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
-		END_IF;
-			
+		SubBMS_Calculator.BMA[0].Field.BSA_Reset := TRUE;
+		SubBMS_Calculator.BMA[1].Field.BSA_Reset := TRUE;
+		SubBMS_Calculator.BMA[2].Field.BSA_Reset := TRUE;
+		SubBMS_Calculator.BMA[3].Field.BSA_Reset := TRUE;
+		
 		PRARackResetCount := 0;
 			
 		FOR i := 0 TO 3 DO
-			IF SubBMS_Calculator.BSA[i].Rack_State.Field.BSA_Divice_Status = 1 THEN
-				SubBMS_Calculator.BMA[i].Field.BSA_Reset := FALSE;
+			IF SubBMS_Calculator.BSA[i].Rack_AlarmState.Value[1] = 0 AND SubBMS_Calculator.BSA[i].Rack_State.Field.BSA_Divice_Status <> 0 THEN
 				PRARackResetCount := PRARackResetCount + 1 ;
 			END_IF;
 		END_FOR;
-	
 		
 		IF PRARackResetCount = HMI.DeviceLoading.SetRackNum THEN
 			PRARackResetDone := TRUE;
+			PRATimerReset.IN := FALSE;
+			
+			
+			SubBMS_Calculator.BMA[0].Field.BSA_Reset := FALSE;
+			SubBMS_Calculator.BMA[1].Field.BSA_Reset := FALSE;
+			SubBMS_Calculator.BMA[2].Field.BSA_Reset := FALSE;
+			SubBMS_Calculator.BMA[3].Field.BSA_Reset := FALSE;
+			
 		ELSE
 			PRARackResetDone := FALSE;
 		END_IF;
+		
 	END_IF;
+		
 END_ACTION
 
 ACTION ATWakeUpSeq: 
@@ -47,50 +63,46 @@ ACTION ATWakeUpSeq:
 			
 		vkWAKEUP_RACK1: // RACK1 WakeUp
 			
-			IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 3 THEN
-				SubBMS_Calculator.BMA[0].Field.BSA_WakeUP := TRUE;
-			ELSE
-				SubBMS_Calculator.BMA[0].Field.BSA_WakeUP := FALSE;
-			END_IF;
+			SubBMS_Calculator.BMA[0].Field.BSA_WakeUP := TRUE;
 			
-			IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 4 OR NOT(SubBMS_Calculator.BMA[0].Field.BSA_WakeUP) THEN
+			IF SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 4 THEN
 				WakeUpStep := vkWAKEUP_RACK2;
+			ELSIF	SubBMS_Calculator.BSA[0].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				WakeUpStep := vkWAKEUP_RACK2;
+				SubBMS_Calculator.BMA[0].Field.BSA_WakeUP := FALSE;
 			END_IF;
 			
 		vkWAKEUP_RACK2: // RACK2 WakeUp
 			
-			IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 3 THEN
-				SubBMS_Calculator.BMA[1].Field.BSA_WakeUP := TRUE;
-			ELSE
-				SubBMS_Calculator.BMA[1].Field.BSA_WakeUP := FALSE;
-			END_IF;
+			SubBMS_Calculator.BMA[1].Field.BSA_WakeUP := TRUE;
 			
-			IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 4 OR NOT(SubBMS_Calculator.BMA[1].Field.BSA_WakeUP) THEN
+			IF SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 4 THEN
 				WakeUpStep := vkWAKEUP_RACK3;
+			ELSIF	SubBMS_Calculator.BSA[1].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				WakeUpStep := vkWAKEUP_RACK3;
+				SubBMS_Calculator.BMA[1].Field.BSA_WakeUP := FALSE;
 			END_IF;
 			
 		vkWAKEUP_RACK3: // RACK3 WakeUp
 			
-			IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 3 THEN
 				SubBMS_Calculator.BMA[2].Field.BSA_WakeUP := TRUE;
-			ELSE
-				SubBMS_Calculator.BMA[2].Field.BSA_WakeUP := FALSE;
-			END_IF;
 			
-			IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 4 OR NOT(SubBMS_Calculator.BMA[2].Field.BSA_WakeUP) THEN
+			IF SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 4  THEN
 				WakeUpStep := vkWAKEUP_RACK4;
+			ELSIF	SubBMS_Calculator.BSA[2].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				WakeUpStep := vkWAKEUP_RACK4;
+				SubBMS_Calculator.BMA[2].Field.BSA_WakeUP := FALSE;
 			END_IF;
 			
 		vkWAKEUP_RACK4: // RACK4 WakeUp
 			
-			IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 3 THEN
 				SubBMS_Calculator.BMA[3].Field.BSA_WakeUP := TRUE;
-			ELSE
-				SubBMS_Calculator.BMA[3].Field.BSA_WakeUP := FALSE;
-			END_IF;
 			
-			IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 4 OR NOT(SubBMS_Calculator.BMA[3].Field.BSA_WakeUP) THEN
+			IF SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 4 THEN
 				WakeUpStep := vkWAKEUP_NRLY;
+			ELSIF	SubBMS_Calculator.BSA[3].Rack_State.Field.BSA_Divice_Status = 0 THEN
+				WakeUpStep := vkWAKEUP_NRLY;
+				SubBMS_Calculator.BMA[3].Field.BSA_WakeUP := FALSE;
 			END_IF;
 			
 		vkWAKEUP_NRLY: // SYSTEM NEG RLY ON
@@ -156,13 +168,14 @@ ACTION ATWakeUpSeq:
 			
 			Sys.WakeUpSig 	:= FALSE;
 			PRAWakeUpDone 	:= TRUE;
-			WakeUpStep 		:= vkWAKEUP_INITIAL;
 		
 
 	END_CASE;
 	
 END_ACTION
 ACTION ATStopSeq: 
+	
+	PRAStopDone 	:= FALSE;
 	
 	CASE StopStep OF
 		vkSTOP_INITIAL:
@@ -255,7 +268,6 @@ ACTION ATStopSeq:
 			PRATimerSeqErr.IN		:= FALSE;
 			
 			PRAStopDone 	:= TRUE;
-			StopStep 		:= vkSTOP_TIMERESET;
 		
 		
 

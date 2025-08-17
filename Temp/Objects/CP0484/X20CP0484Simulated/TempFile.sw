@@ -13,14 +13,14 @@
     <Task Name="MbTcpS" Source="MbTCP.MbTcpS.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#4">
+    <Task Name="PMSRxParaH" Source="Source.PMS_CAN.PMSRxHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="CANRxParaH" Source="Source.PMS_CAN.PMS_Calculator.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PRAHandle" Source="PRAHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="DIOHandle" Source="DIOHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="CANTxSubBM" Source="Source.SubBMS_CAN.CANTxSubBMS.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="HMI_DataPa" Source="Source.HMI.HMI_DataParsing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="CANRxParaH" Source="Source.PMS_CAN.PMS_Calculator.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="DIOHandle" Source="DIOHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="SubBMS_Mod" Source="Source.SubBMS_CAN.SubBMS_ModeChange.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
     <Task Name="ModbusPMS" Source="Source.PMS_MODBUS.ModbusPMS.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="PMSRxParaH" Source="Source.PMS_CAN.PMSRxHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="PRAHandle" Source="PRAHandle.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="SubBMS_Mod" Source="Source.SubBMS_CAN.SubBMS_ModeChange.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

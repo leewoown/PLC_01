@@ -84,3 +84,7 @@ _BUR_LOCAL ArCanReceive_typ ArCanReceiver;
 _BUR_LOCAL unsigned char countTime;
 _BUR_LOCAL unsigned long countCANSuccessOld;
 _BUR_LOCAL plcbit CmdSim;
+_BUR_LOCAL unsigned short ModuleIndex;
+_BUR_LOCAL plcbyte ByteTest[6];
+_BUR_LOCAL plcdword DWORDTEST[2];
+_BUR_LOCAL float RealTest;

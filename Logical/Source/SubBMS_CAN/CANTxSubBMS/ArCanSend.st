@@ -47,16 +47,16 @@ PROGRAM _CYCLIC
 	END_IF
 	
 	CASE step OF
-		0:
+		0: // RACK 1
 			ArCanSender.ID := 16#700;
 			memcpy(ADR(ArCanSender.ArCanSend_0.Frame.Data), ADR(SubBMS.Rack1.BMA.Value), SIZEOF(SubBMS.Rack1.BMA.Value));
-		1:
+		1: // RACK 2
 			ArCanSender.ID := 16#701;
 			memcpy(ADR(ArCanSender.ArCanSend_0.Frame.Data), ADR(SubBMS.Rack2.BMA.Value), SIZEOF(SubBMS.Rack2.BMA.Value));
-		2:
+		2: // RACK 3
 			ArCanSender.ID := 16#702;
 			memcpy(ADR(ArCanSender.ArCanSend_0.Frame.Data), ADR(SubBMS.Rack3.BMA.Value), SIZEOF(SubBMS.Rack3.BMA.Value));
-		3:
+		3: // RACK 4
 			ArCanSender.ID := 16#703;
 			memcpy(ADR(ArCanSender.ArCanSend_0.Frame.Data), ADR(SubBMS.Rack4.BMA.Value), SIZEOF(SubBMS.Rack4.BMA.Value));
 		

@@ -392,37 +392,95 @@ typedef struct Rack_Cell_Pcalc_typ
 } Rack_Cell_Pcalc_typ;
 #endif
 
-#ifndef __AS__TYPE_ModulN_Info_Field_typ
-#define __AS__TYPE_ModulN_Info_Field_typ
-typedef struct ModulN_Info_Field_typ
-{	float Volt_Total;
-	float Agv_Volt;
-	float Agv_Temp;
-	plcbit OPS_INITOK;
-	plcbit OPS_Fault;
-	plcbit OPS_Balan_On_OFF;
-	plcbit OPS_Waterleak_Err;
-	plcbit OPS_CellVolt_Err;
-	plcbit OPS_CellTemps_Err;
-	plcbit BATIC_Err;
-	plcbit CTCOM_Err;
-	plcbit OPS_MBCOM_Err;
-	plcbit Not_Used1;
-	plcbit Not_Used2;
-	plcbit Not_Used3;
-	plcbit Not_Used4;
-	plcbit Not_Used5;
-	plcbit Not_Used6;
-	plcbit Not_Used7;
-} ModulN_Info_Field_typ;
+#ifndef __AS__TYPE_ModulN_Info1_Field_typ
+#define __AS__TYPE_ModulN_Info1_Field_typ
+typedef struct ModulN_Info1_Field_typ
+{	unsigned short M_Number;
+	float M_Total_Volt;
+	plcbit M_INITOK;
+	plcbit M_Fault;
+	plcbit M_BalanEN;
+	plcbit M_Waterleak_Err;
+	plcbit M_CellVolt_Err;
+	plcbit M_CellTemp_Err;
+	plcbit M_BATIC_Err;
+	plcbit M_CTCOM_Err;
+	plcbit M_MBCOM_Err;
+	plcbit M_HMIErrFault;
+	plcbit M_BalanceEnabel;
+} ModulN_Info1_Field_typ;
 #endif
 
-#ifndef __AS__TYPE_ModulN_Info_typ
-#define __AS__TYPE_ModulN_Info_typ
-typedef struct ModulN_Info_typ
+#ifndef __AS__TYPE_ModulN_Info1_typ
+#define __AS__TYPE_ModulN_Info1_typ
+typedef struct ModulN_Info1_typ
 {	plcdword Value[2];
-	ModulN_Info_Field_typ Field;
-} ModulN_Info_typ;
+	ModulN_Info1_Field_typ Field;
+} ModulN_Info1_typ;
+#endif
+
+#ifndef __AS__TYPE_ModulN_Info2_Field_typ
+#define __AS__TYPE_ModulN_Info2_Field_typ
+typedef struct ModulN_Info2_Field_typ
+{	unsigned short M_Number;
+	float M_CellMaxVolt;
+	float M_CellMinVolt;
+	float M_CellAvgVolt;
+} ModulN_Info2_Field_typ;
+#endif
+
+#ifndef __AS__TYPE_ModulN_Info2_typ
+#define __AS__TYPE_ModulN_Info2_typ
+typedef struct ModulN_Info2_typ
+{	plcdword Value[2];
+	ModulN_Info2_Field_typ Field;
+} ModulN_Info2_typ;
+#endif
+
+#ifndef __AS__TYPE_ModulN_Info3_Field_typ
+#define __AS__TYPE_ModulN_Info3_Field_typ
+typedef struct ModulN_Info3_Field_typ
+{	unsigned short M_Number;
+	float M_CellMaxTemp;
+	float M_CellMinTemp;
+	float M_CellAvgTemp;
+} ModulN_Info3_Field_typ;
+#endif
+
+#ifndef __AS__TYPE_ModulN_Info3_typ
+#define __AS__TYPE_ModulN_Info3_typ
+typedef struct ModulN_Info3_typ
+{	plcdword Value[2];
+	ModulN_Info3_Field_typ Field;
+} ModulN_Info3_typ;
+#endif
+
+#ifndef __AS__TYPE_ModulN_Info4_Field_typ
+#define __AS__TYPE_ModulN_Info4_Field_typ
+typedef struct ModulN_Info4_Field_typ
+{	unsigned short M_Number;
+	unsigned short M_CellDivVolt;
+	float M_CellDivTemp;
+	unsigned short M_MDInResis;
+} ModulN_Info4_Field_typ;
+#endif
+
+#ifndef __AS__TYPE_ModulN_Info4_typ
+#define __AS__TYPE_ModulN_Info4_typ
+typedef struct ModulN_Info4_typ
+{	plcdword Value[2];
+	ModulN_Info4_Field_typ Field;
+} ModulN_Info4_typ;
+#endif
+
+#ifndef __AS__TYPE_ModuleN_Info_Type
+#define __AS__TYPE_ModuleN_Info_Type
+typedef struct ModuleN_Info_Type
+{	ModulN_Info1_typ INFO_1;
+	ModulN_Info2_typ INFO_2;
+	ModulN_Info3_typ INFO_3;
+	ModulN_Info4_typ INFO_4;
+} ModuleN_Info_Type;
 #endif
 
 #ifndef __AS__TYPE_BSA_typ
@@ -436,13 +494,13 @@ typedef struct BSA_typ
 	Rack_Cell_Vcalc_typ Rack_Cell_Vcalc;
 	Rack_Cell_Tcalc_typ Rack_Cell_Tcalc;
 	Rack_Cell_Pcalc_typ Rack_Cell_Pcalc;
-	ModulN_Info_typ Modul1_Info;
-	ModulN_Info_typ Modul2_Info;
-	ModulN_Info_typ Modul3_Info;
-	ModulN_Info_typ Modul4_Info;
-	ModulN_Info_typ Modul5_Info;
-	ModulN_Info_typ Modul6_Info;
-	ModulN_Info_typ Modul7_Info;
+	ModuleN_Info_Type Modul1_Info;
+	ModuleN_Info_Type Modul2_Info;
+	ModuleN_Info_Type Modul3_Info;
+	ModuleN_Info_Type Modul4_Info;
+	ModuleN_Info_Type Modul5_Info;
+	ModuleN_Info_Type Modul6_Info;
+	ModuleN_Info_Type Modul7_Info;
 } BSA_typ;
 #endif
 
@@ -1222,6 +1280,7 @@ _BUR_LOCAL struct TON PRATimerProRlyOff;
 _BUR_LOCAL struct TON PRATimerWakeUpOff;
 _BUR_LOCAL struct TON PRATimerPrtErr;
 _BUR_LOCAL struct TON PRATimerSeqErr;
+_BUR_LOCAL struct TON PRATimerReset;
 _BUR_LOCAL plcbit PRAProtectCheckDone;
 _BUR_LOCAL plcbit PRARackResetDone;
 _BUR_LOCAL unsigned char PRARackResetCount;
@@ -1229,6 +1288,8 @@ _BUR_LOCAL plcbit PRAWakeUpDone;
 _BUR_LOCAL plcbit PRAStopDone;
 _BUR_LOCAL WakeUpStepMa_Enum WakeUpStep;
 _BUR_LOCAL StopStepMa_Enum StopStep;
+_BUR_LOCAL plcbit PRARackReadyDone;
+_BUR_LOCAL signed short PRARackEnableCount;
 _GLOBAL SysBMS_Typ Sys;
 _GLOBAL StateMa_Enum StateMa;
 _GLOBAL unsigned char RACK_MAXNUM;
@@ -1236,6 +1297,7 @@ _GLOBAL unsigned char RACK_MAXNUM_MINUS_1;
 _GLOBAL SubBMS_Calculator_type SubBMS_Calculator;
 _GLOBAL HMI_typ HMI;
 _GLOBAL PMS_typ PMS;
+static void __AS__Action__ATSystemReady(void);
 static void __AS__Action__ATReset(void);
 static void __AS__Action__ATWakeUpSeq(void);
 static void __AS__Action__ATStopSeq(void);

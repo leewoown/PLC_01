@@ -717,7 +717,7 @@
 }
 #vkDataPanel_SystemMaxVoltage {	@include elemTop(0);
 }
-#vkDataPanel_SystemMaxVoltage {	@include elemLeft(229);
+#vkDataPanel_SystemMaxVoltage {	@include elemLeft(263);
 }
 #vkDataPanel_SystemMaxVoltage {	@include elemAutoWidth(134);
 }
@@ -735,7 +735,7 @@
 }
 #vkDataPanel_SystemMinVoltage {	@include elemTop(32);
 }
-#vkDataPanel_SystemMinVoltage {	@include elemLeft(229);
+#vkDataPanel_SystemMinVoltage {	@include elemLeft(263);
 }
 #vkDataPanel_SystemMinVoltage {	@include elemAutoWidth(134);
 }
@@ -753,7 +753,7 @@
 }
 #vkDataPanel_SystemAvgVoltage {	@include elemTop(63);
 }
-#vkDataPanel_SystemAvgVoltage {	@include elemLeft(229);
+#vkDataPanel_SystemAvgVoltage {	@include elemLeft(263);
 }
 #vkDataPanel_SystemAvgVoltage {	@include elemAutoWidth(134);
 }
@@ -771,7 +771,7 @@
 }
 #vkDataPanel_SystemDivVoltage {	@include elemTop(95);
 }
-#vkDataPanel_SystemDivVoltage {	@include elemLeft(229);
+#vkDataPanel_SystemDivVoltage {	@include elemLeft(263);
 }
 #vkDataPanel_SystemDivVoltage {	@include elemAutoWidth(134);
 }
@@ -789,7 +789,7 @@
 }
 #vkDataPanel_SystemMaxTemp {	@include elemTop(126);
 }
-#vkDataPanel_SystemMaxTemp {	@include elemLeft(229);
+#vkDataPanel_SystemMaxTemp {	@include elemLeft(263);
 }
 #vkDataPanel_SystemMaxTemp {	@include elemAutoWidth(134);
 }
@@ -807,7 +807,7 @@
 }
 #vkDataPanel_SystemMinTemp {	@include elemTop(158);
 }
-#vkDataPanel_SystemMinTemp {	@include elemLeft(229);
+#vkDataPanel_SystemMinTemp {	@include elemLeft(263);
 }
 #vkDataPanel_SystemMinTemp {	@include elemAutoWidth(134);
 }
@@ -825,7 +825,7 @@
 }
 #vkDataPanel_SystemAvgxTemp {	@include elemTop(189);
 }
-#vkDataPanel_SystemAvgxTemp {	@include elemLeft(229);
+#vkDataPanel_SystemAvgxTemp {	@include elemLeft(263);
 }
 #vkDataPanel_SystemAvgxTemp {	@include elemAutoWidth(134);
 }
@@ -843,7 +843,7 @@
 }
 #vkDataPanel_SystemDivTemp {	@include elemTop(221);
 }
-#vkDataPanel_SystemDivTemp {	@include elemLeft(229);
+#vkDataPanel_SystemDivTemp {	@include elemLeft(263);
 }
 #vkDataPanel_SystemDivTemp {	@include elemAutoWidth(134);
 }
@@ -861,9 +861,9 @@
 }
 #vkDataPanel_TextOutput1 {	@include elemTop(252);
 }
-#vkDataPanel_TextOutput1 {	@include elemLeft(240);
+#vkDataPanel_TextOutput1 {	@include elemLeft(237);
 }
-#vkDataPanel_TextOutput1 {	@include elemAutoWidth(114);
+#vkDataPanel_TextOutput1 {	@include elemAutoWidth(151);
 }
 #vkDataPanel_TextOutput1 {	z-index: 44;
 }
@@ -873,13 +873,17 @@
 }
 #vkDataPanel_TextOutput1 {	@include text-alignment-all('right');
 }
+#vkDataPanel_TextOutput1 {	span {
+		padding: 0px 0px 0px 15px;
+	}
+}
 #vkDataPanel_TextOutput2 {	@include elemAutoHeight(30);
 }
 #vkDataPanel_TextOutput2 {	@include elemTop(284);
 }
-#vkDataPanel_TextOutput2 {	@include elemLeft(240);
+#vkDataPanel_TextOutput2 {	@include elemLeft(237);
 }
-#vkDataPanel_TextOutput2 {	@include elemAutoWidth(114);
+#vkDataPanel_TextOutput2 {	@include elemAutoWidth(151);
 }
 #vkDataPanel_TextOutput2 {	z-index: 45;
 }
@@ -889,13 +893,17 @@
 }
 #vkDataPanel_TextOutput2 {	@include text-alignment-all('right');
 }
+#vkDataPanel_TextOutput2 {	span {
+		padding: 0px 0px 0px 15px;
+	}
+}
 #vkDataPanel_TextOutput3 {	@include elemAutoHeight(30);
 }
 #vkDataPanel_TextOutput3 {	@include elemTop(316);
 }
-#vkDataPanel_TextOutput3 {	@include elemLeft(240);
+#vkDataPanel_TextOutput3 {	@include elemLeft(237);
 }
-#vkDataPanel_TextOutput3 {	@include elemAutoWidth(114);
+#vkDataPanel_TextOutput3 {	@include elemAutoWidth(151);
 }
 #vkDataPanel_TextOutput3 {	z-index: 46;
 }
@@ -905,13 +913,17 @@
 }
 #vkDataPanel_TextOutput3 {	@include text-alignment-all('right');
 }
+#vkDataPanel_TextOutput3 {	span {
+		padding: 0px 0px 0px 15px;
+	}
+}
 #vkDataPanel_TextOutput4 {	@include elemAutoHeight(30);
 }
 #vkDataPanel_TextOutput4 {	@include elemTop(348);
 }
-#vkDataPanel_TextOutput4 {	@include elemLeft(240);
+#vkDataPanel_TextOutput4 {	@include elemLeft(237);
 }
-#vkDataPanel_TextOutput4 {	@include elemAutoWidth(114);
+#vkDataPanel_TextOutput4 {	@include elemAutoWidth(151);
 }
 #vkDataPanel_TextOutput4 {	z-index: 47;
 }
@@ -920,6 +932,10 @@
 	}
 }
 #vkDataPanel_TextOutput4 {	@include text-alignment-all('right');
+}
+#vkDataPanel_TextOutput4 {	span {
+		padding: 0px 0px 0px 15px;
+	}
 }
 #vkDataPanel_Line1 {	z-index: 1;
 }

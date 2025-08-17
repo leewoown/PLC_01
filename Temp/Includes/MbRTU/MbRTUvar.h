@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1754623143_4_
-#define _BUR_1754623143_4_
+#ifndef _BUR_1755400020_4_
+#define _BUR_1755400020_4_
 
 #include <bur/plctypes.h>
 
@@ -29,5 +29,5 @@ __asm__(".ascii \"iecfile \\\"Logical/MbRTU/MbRTU.var\\\" scope \\\"global\\\"\\
 __asm__(".previous");
 
 
-#endif /* _BUR_1754623143_4_ */
+#endif /* _BUR_1755400020_4_ */
 

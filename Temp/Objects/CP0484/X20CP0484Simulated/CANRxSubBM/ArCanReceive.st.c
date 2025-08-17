@@ -31,8 +31,8 @@ __AS__Local3_00000=(plcstring*)ArCanReceiver.receiverDeviceName; __AS__Local4_00
 
 
 (CmdSim=1);
-
 (SubBMS_Sim.Rack1.BSA.Rack_State.Field.BSA_Divice_Status=3);
+
 
 }}
 #line 34 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
@@ -41,7 +41,9 @@ void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 if(CmdSim){
 
 
-__AS__MEMCPY(((unsigned long)(&SubBMS)),((unsigned long)(&SubBMS_Sim)),1984);
+
+__AS__MEMCPY(((unsigned long)(&SubBMS)),((unsigned long)(&SubBMS_Sim)),3664);
+
 
 }else{
 __AS__Action__ActArCanReceiver();
@@ -96,42 +98,109 @@ __AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value)),((unsign
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1544))){
+(ModuleIndex=0);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul1_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1545))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul2_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1546))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul3_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1547))){
+(ModuleIndex=0);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul4_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
 
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1548))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul5_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1549))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul6_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1550))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack1.BSA.Modul7_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;}
 
 }
 
 }else if(((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID>=(unsigned long)1552))&(((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID<=(unsigned long)1566)))){
+
 
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1552))){
 
@@ -174,42 +243,109 @@ __AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value)),((unsign
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1560))){
+(ModuleIndex=0);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul1_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1561))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul2_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1562))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul3_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1563))){
+(ModuleIndex=0);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul4_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
 
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1564))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul5_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1565))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul6_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1566))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack2.BSA.Modul7_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;}
 
 }
 
 }else if(((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID>=(unsigned long)1568))&(((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID<=(unsigned long)1582)))){
+
 
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1568))){
 
@@ -252,41 +388,109 @@ __AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value)),((unsign
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1576))){
+(ModuleIndex=0);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul1_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1577))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul2_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1578))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul3_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1579))){
+(ModuleIndex=0);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul4_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1580))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul5_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1581))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul6_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1582))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack3.BSA.Modul7_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
 }else if(((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID>=(unsigned long)1584))&(((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID<=(unsigned long)1598)))){
+
 
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1584))){
 
@@ -329,38 +533,104 @@ __AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value)),((unsign
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1592))){
+(ModuleIndex=0);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul1_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1593))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul2_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1594))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul3_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+(ModuleIndex=0);
+
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
+
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+
+
+}break;}
 
 }
 if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1595))){
+(ModuleIndex=0);
+__AS__MEMCPY(((unsigned long)(&ModuleIndex)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),2);
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul4_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+switch(ModuleIndex){
+case 1:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 2:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 3:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 4:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 5:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 6:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;case 7:{
+__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
 
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1596))){
 
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul5_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1597))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul6_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
-
-}
-if((((unsigned long)ArCanReceiver.ArCanReceiver_0.ReceivedFrame.ID==(unsigned long)1598))){
-
-__AS__MEMCPY(((unsigned long)(&SubBMS.Rack4.BSA.Modul7_Info.Value)),((unsigned long)(&ArCanReceiver.ArCanReceiver_0.ReceivedFrame.Data)),8);
+}break;}
 
 }
 
@@ -404,9 +674,9 @@ if((((unsigned long)(unsigned char)countTime>(unsigned long)(unsigned char)50)))
 
 }
 
-}imp11_end63_0:imp11_end0_0:;}
-#line 403 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
-#line 409 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.st"
+}imp8_end67_0:imp8_end0_0:;}
+#line 673 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 679 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
@@ -414,7 +684,7 @@ void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 ArCanReceive(&ArCanReceiver.ArCanReceiver_0);
 
 }}
-#line 415 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 685 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
 #line 2 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/CanReceiver.st"
 static void __AS__Action__ActArCanReceiver(void){int __AS__Local0_00000;plcstring* __AS__Local3_00000;plcstring* __AS__Local4_00000;
 {
@@ -505,7 +775,7 @@ ArCanReceive(&ArCanReceiver.ArCanReceiver_0);
 
 
 }}
-#line 416 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 686 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
 #line 1 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
 static void __AS__Action__ActRACK1DATARxParshing(void){
 {
@@ -634,169 +904,268 @@ static void __AS__Action__ActRACK1DATARxParshing(void){
 (SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value[1]>>0))&255)));
 (SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Rack_Cell_Pcalc.Value[1]>>16))&255)));
 
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul1_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul1_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul1_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul1_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul2_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul2_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul2_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul3_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul3_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul3_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
 
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul4_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul4_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul4_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul1_Info.INFO_4.Value[1]>>16))&255)));
 
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul5_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul5_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul5_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul2_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul6_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul6_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul6_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.Value[0]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total=(SubBMS.Rack1.BSA.Modul7_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.Value[0]>>16))&255)));
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Volt=(SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.Value[1]>>0))&255)));
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Temp=(SubBMS.Rack1.BSA.Modul7_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit16);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit17);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit18);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit19);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit20);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit21);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit22);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit23);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit24);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit25);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit26);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit27);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit28);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit29);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit30);
-(SubBMS.Rack1.BSA.Modul7_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.Value[1]))->bit31);
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul2_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul3_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul3_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul4_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul4_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul5_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul5_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul6_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul6_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack1.BSA.Modul7_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack1.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack1.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack1.BSA.Modul7_Info.INFO_4.Value[1]>>16))&255)));
+
 }}
-#line 416 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
-#line 289 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
+#line 686 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 388 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
 static void __AS__Action__ActRACK2DATARxParshing(void){
 {
 
@@ -910,7 +1279,6 @@ static void __AS__Action__ActRACK2DATARxParshing(void){
 (SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV=(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV*(1.00000004749745130539E-03)));
 (SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Vcalc.Value[1]>>16))&255)));
 
-
 (SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0]>>0))&255)));
 (SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT=(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT*(1.00000001490116119385E-01)));
 (SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0]>>24))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Tcalc.Value[0]>>16))&255)));
@@ -925,169 +1293,268 @@ static void __AS__Action__ActRACK2DATARxParshing(void){
 (SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[1]>>0))&255)));
 (SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Rack_Cell_Pcalc.Value[1]>>16))&255)));
 
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul1_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul1_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul1_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul1_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul2_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul2_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul2_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul3_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul3_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul3_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
 
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul4_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul4_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul4_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul1_Info.INFO_4.Value[1]>>16))&255)));
 
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul5_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul5_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul5_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul2_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul6_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul6_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul6_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.Value[0]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Volt_Total=(SubBMS.Rack2.BSA.Modul7_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.Value[0]>>16))&255)));
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Volt=(SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.Value[1]>>0))&255)));
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp=(SubBMS.Rack2.BSA.Modul7_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit16);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit17);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit18);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit19);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit20);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit21);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit22);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit23);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit24);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit25);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit26);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit27);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit28);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit29);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit30);
-(SubBMS.Rack2.BSA.Modul7_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.Value[1]))->bit31);
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul2_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul3_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul3_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul4_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul4_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul5_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul5_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul6_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul6_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack2.BSA.Modul7_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack2.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack2.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack2.BSA.Modul7_Info.INFO_4.Value[1]>>16))&255)));
+
 }}
-#line 416 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
-#line 578 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
+#line 686 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 775 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
 static void __AS__Action__ActRACK3DATARxParshing(void){
 {
 
@@ -1201,7 +1668,6 @@ static void __AS__Action__ActRACK3DATARxParshing(void){
 (SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV=(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV*(1.00000004749745130539E-03)));
 (SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Vcalc.Value[1]>>16))&255)));
 
-
 (SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0]>>0))&255)));
 (SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT=(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT*(1.00000001490116119385E-01)));
 (SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0]>>24))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Tcalc.Value[0]>>16))&255)));
@@ -1216,169 +1682,268 @@ static void __AS__Action__ActRACK3DATARxParshing(void){
 (SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[1]>>0))&255)));
 (SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Rack_Cell_Pcalc.Value[1]>>16))&255)));
 
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul1_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul1_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul1_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul1_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul2_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul2_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul2_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul3_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul3_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul3_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
 
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul4_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul4_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul4_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul1_Info.INFO_4.Value[1]>>16))&255)));
 
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul5_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul5_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul5_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul2_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul6_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul6_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul6_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.Value[0]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Volt_Total=(SubBMS.Rack3.BSA.Modul7_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.Value[0]>>16))&255)));
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Volt=(SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.Value[1]>>0))&255)));
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp=(SubBMS.Rack3.BSA.Modul7_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit16);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit17);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit18);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit19);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit20);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit21);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit22);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit23);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit24);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit25);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit26);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit27);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit28);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit29);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit30);
-(SubBMS.Rack3.BSA.Modul7_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.Value[1]))->bit31);
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul2_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul3_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul3_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul4_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul4_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul5_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul5_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul6_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul6_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack3.BSA.Modul7_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack3.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack3.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack3.BSA.Modul7_Info.INFO_4.Value[1]>>16))&255)));
+
 }}
-#line 416 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
-#line 867 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
+#line 686 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 1162 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/RackDataRxParsing.st"
 static void __AS__Action__ActRACK4DATARxParshing(void){
 {
 
@@ -1492,7 +2057,6 @@ static void __AS__Action__ActRACK4DATARxParshing(void){
 (SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV=(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_AVGV*(1.00000004749745130539E-03)));
 (SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Field.BSA_Cell_DeviV=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Vcalc.Value[1]>>16))&255)));
 
-
 (SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0]>>0))&255)));
 (SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT=(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MaxT*(1.00000001490116119385E-01)));
 (SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Field.BSA_Cell_MinT=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0]>>24))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Tcalc.Value[0]>>16))&255)));
@@ -1507,168 +2071,267 @@ static void __AS__Action__ActRACK4DATARxParshing(void){
 (SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MaxT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[1]>>0))&255)));
 (SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Rack_Cell_Pcalc.Value[1]>>16))&255)));
 
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul1_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul1_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul1_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul1_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul2_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul2_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul2_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul1_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul3_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul3_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul3_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul1_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
 
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul4_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul4_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul4_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul1_Info.INFO_4.Value[1]>>16))&255)));
 
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul5_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul5_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul5_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul2_Info.INFO_1.Value[1]))->bit10);
 
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul6_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul6_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul6_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul2_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
 
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Volt_Total=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.Value[0]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Volt_Total=(SubBMS.Rack4.BSA.Modul7_Info.Field.Volt_Total*(9.99999977648258209229E-03)));
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.Value[0]>>16))&255)));
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Volt=(SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Volt*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp=(((signed short)((signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.Value[1]>>8))&255)<<8))|(signed short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.Value[1]>>0))&255)));
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp=(SubBMS.Rack4.BSA.Modul7_Info.Field.Agv_Temp*(1.00000001490116119385E-01)));
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit16);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit17);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_Balan_On_OFF=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit18);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit19);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit20);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_CellTemps_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit21);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit22);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit23);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.OPS_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit24);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used1=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit25);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used2=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit26);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used3=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit27);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used4=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit28);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used5=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit29);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used6=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit30);
-(SubBMS.Rack4.BSA.Modul7_Info.Field.Not_Used7=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.Value[1]))->bit31);
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul2_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul2_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul3_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul3_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul3_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul3_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul4_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul4_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul4_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul4_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul5_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul5_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul5_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul5_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul6_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul6_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul6_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul6_Info.INFO_4.Value[1]>>16))&255)));
+
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt=(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_Total_Volt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_INITOK=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit0);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_Fault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit1);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_BalanEN=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit2);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_Waterleak_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit3);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_CellVolt_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit4);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_CellTemp_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit5);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_BATIC_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit6);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_CTCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit7);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_MBCOM_Err=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit8);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_HMIErrFault=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit9);
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Field.M_BalanceEnabel=((_4byte_bit_field_*)(&SubBMS.Rack4.BSA.Modul7_Info.INFO_1.Value[1]))->bit10);
+
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt=(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellMaxVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt=(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellMinVolt*(1.00000004749745130539E-03)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt=(SubBMS.Rack4.BSA.Modul7_Info.INFO_2.Field.M_CellAvgVolt*(1.00000004749745130539E-03)));
+
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp=(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellMaxTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp=(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellMinTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Value[1]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp=(SubBMS.Rack4.BSA.Modul7_Info.INFO_3.Field.M_CellAvgTemp*(1.00000001490116119385E-01)));
+
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Field.M_Number=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[0]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[0]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Field.M_CellDivVolt=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[0]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[0]>>16))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[1]>>8))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[1]>>0))&255)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp=(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Field.M_CellDivTemp*(1.00000001490116119385E-01)));
+(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Field.M_MDInResis=(((unsigned short)((unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[1]>>24))&255)<<8))|(unsigned short)(((plcdword)(SubBMS.Rack4.BSA.Modul7_Info.INFO_4.Value[1]>>16))&255)));
+
 }}
-#line 416 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
+#line 686 "E:/Project/HIS/ShipBatterySystm/Logical/Source/SubBMS_CAN/CANRxSubBMS/ArCanReceive.nodebug"
 
 void __AS__ImplInitArCanReceive_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -1748,6 +2411,7 @@ __asm__(".previous");
 
 __asm__(".section \".plciec\"");
 __asm__(".ascii \"plcdata_const 'ArCanReceiver'\\n\"");
+__asm__(".ascii \"plcdata_const 'ModuleIndex'\\n\"");
 __asm__(".ascii \"plcdata_const 'SubBMS'\\n\"");
 __asm__(".ascii \"plcdata_const 'arCAN_11BIT'\\n\"");
 __asm__(".previous");

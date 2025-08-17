@@ -243,41 +243,6 @@
     <Channel ID="ModuleID" Description="Module ID" FromVersion="A3.08" Ext="/INFO" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" />
     <Channel ID="HardwareVariant" Description="Hardware variant" FromVersion="A3.08" Ext="/INFO" Address="12" Direction="IN" Type="UINT" Sig_St_Uint="1" />
     <Channel ID="FirmwareVersion" Description="Firmware version" FromVersion="A3.08" Ext="/INFO" Address="14" Direction="IN" Type="UINT" Sig_St_Uint="1" />
-    <Channel ID="RXCount" Description="Number of received objects" Address="515" Direction="IN" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="RXCountLatch" Description="Latch number of received objects" Address="547" Direction="IN" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="TXCountReadBack" Description="Number of transmitted objects" Address="513" Direction="IN" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="TXCountLatchReadBack" Description="Latch number of transmitted objects" Address="545" Direction="IN" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="RXDataSize0" Description="Data length object 0" Address="517" Direction="IN" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="RXIdent0" Description="CAN ident object 0" Address="524" Direction="IN" Type="UDINT" Sig_St_Dword="1" />
-    <Channel ID="RXData0Byte0" Description="CAN data object 0 Byte0" Address="529" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte1" Description="CAN data object 0 Byte1" Address="531" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte2" Description="CAN data object 0 Byte2" Address="533" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte3" Description="CAN data object 0 Byte3" Address="535" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte4" Description="CAN data object 0 Byte4" Address="537" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte5" Description="CAN data object 0 Byte5" Address="539" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte6" Description="CAN data object 0 Byte6" Address="541" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData0Byte7" Description="CAN data object 0 Byte7" Address="543" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXDataSize1" Description="Data length object 1" Address="549" Direction="IN" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="RXIdent1" Description="CAN ident object 1" Address="556" Direction="IN" Type="UDINT" Sig_St_Dword="1" />
-    <Channel ID="RXData1Byte0" Description="CAN data object 1 Byte0" Address="561" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte1" Description="CAN data object 1 Byte1" Address="563" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte2" Description="CAN data object 1 Byte2" Address="565" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte3" Description="CAN data object 1 Byte3" Address="567" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte4" Description="CAN data object 1 Byte4" Address="569" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte5" Description="CAN data object 1 Byte5" Address="571" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte6" Description="CAN data object 1 Byte6" Address="573" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="RXData1Byte7" Description="CAN data object 1 Byte7" Address="575" Direction="IN" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXCount" Description="Number of transmitted objects" Address="641" Direction="OUT" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="TXDataSize" Description="Data length TX object" Address="645" Direction="OUT" Type="USINT" Sig_St_Usint="1" />
-    <Channel ID="TXIdent" Description="CAN ident TX object" Address="652" Direction="OUT" Type="UDINT" Sig_St_Dword="1" />
-    <Channel ID="TXDataByte0" Description="CAN data TX object Byte0" Address="657" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte1" Description="CAN data TX object Byte1" Address="659" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte2" Description="CAN data TX object Byte2" Address="661" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte3" Description="CAN data TX object Byte3" Address="663" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte4" Description="CAN data TX object Byte4" Address="665" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte5" Description="CAN data TX object Byte5" Address="667" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte6" Description="CAN data TX object Byte6" Address="669" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
-    <Channel ID="TXDataByte7" Description="CAN data TX object Byte7" Address="671" Direction="OUT" Type="USINT" Sig_St_Byte="1" />
     <Channel ID="BusModuleId" Description="Module ID of bus module" FromVersion="A4.81" Ext="/INFO" Address="0x80000180" Direction="IN" Type="UINT" Sig_St_Uint="1" Diagnose="/DIAG" />
     <Channel ID="ModeOfOperation" Description="Status of module" FromVersion="A4.81" Ext="/INFO" Address="0x80000181" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
     <Channel ID="ModeOfOperationChangeTime" Description="Time of last change of channel ModeOfOperation" FromVersion="A4.81" Ext="/INFO" Address="0xC0000181" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />

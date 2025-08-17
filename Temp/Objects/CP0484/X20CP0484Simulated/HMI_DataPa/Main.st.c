@@ -69,8 +69,8 @@ __AS__Local3_00000=(plcstring*)HMI_AlarmName[21]; __AS__Local4_00000=(plcstring*
 
 __AS__Local3_00000=(plcstring*)HMI_AlarmName[22]; __AS__Local4_00000=(plcstring*)"PMS PAR Relay Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<19l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI_AlarmName[23]; __AS__Local4_00000=(plcstring*)"PMS PAR SEQ Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<17l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
-__AS__Local3_00000=(plcstring*)HMI_AlarmName[24]; __AS__Local4_00000=(plcstring*)"BPU PARRelay Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<18l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
-__AS__Local3_00000=(plcstring*)HMI_AlarmName[25]; __AS__Local4_00000=(plcstring*)"BRA PARRelay Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<18l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI_AlarmName[24]; __AS__Local4_00000=(plcstring*)"BPU PAR Relay Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<19l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI_AlarmName[25]; __AS__Local4_00000=(plcstring*)"BRA PAR Relay Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<19l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 
 __AS__Local3_00000=(plcstring*)HMI_AlarmName[26]; __AS__Local4_00000=(plcstring*)"EMGSwitch Error"; for(__AS__Local0_00000=0; __AS__Local0_00000<15l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
@@ -132,7 +132,7 @@ __AS__Action__ActSystem_Protect();
 
 }break;case 3:{
 __AS__Action__ActRackEnable();
-__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack1.BSA)),480);
+__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack1.BSA)),900);
 (HMI.RackIndex=0);
 __AS__Action__AtRackUI();
 
@@ -142,7 +142,7 @@ __AS__Action__ActSystem_Protect();
 
 }break;case 4:{
 __AS__Action__ActRackEnable();
-__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack2.BSA)),480);
+__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack2.BSA)),900);
 (HMI.RackIndex=1);
 __AS__Action__AtRackUI();
 
@@ -152,7 +152,7 @@ __AS__Action__ActSystem_Protect();
 
 }break;case 5:{
 __AS__Action__ActRackEnable();
-__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack3.BSA)),480);
+__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack3.BSA)),900);
 (HMI.RackIndex=2);
 __AS__Action__AtRackUI();
 
@@ -162,7 +162,7 @@ __AS__Action__ActSystem_Protect();
 
 }break;case 6:{
 __AS__Action__ActRackEnable();
-__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack4.BSA)),480);
+__AS__MEMCPY(((unsigned long)(&Rack_HMI)),((unsigned long)(&SubBMS.Rack4.BSA)),900);
 (HMI.RackIndex=3);
 __AS__Action__AtRackUI();
 
@@ -239,157 +239,165 @@ __AS__Local3_00000=(plcstring*)HMI.Gauge.BRA_SOH_B; __AS__Local4_00000=(plcstrin
 
 uint2str(Rack_HMI.Rack_Cell_Pcalc.Field.BSA_Cell_MaxV_Location,HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,21);
 
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,"(C)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,"(Cell)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 uint2str(Rack_HMI.Rack_Cell_Pcalc.Field.BSA_Cell_MinV_Location,HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,21);
 
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,"(C)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,"(Cell)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 uint2str(Rack_HMI.Rack_Cell_Pcalc.Field.BSA_Cell_MaxT_Location,HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,21);
 
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,"(C)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,"(Cell)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 uint2str(Rack_HMI.Rack_Cell_Pcalc.Field.BSA_Cell_MinT_Location,HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,21);
 
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,"(C)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,"(Cell)"); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
-(HMI.Module1Info.Volt_Total=Rack_HMI.Modul1_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul1_Info.Field.OPS_Fault){
+(HMI.Module1Info.Volt_Total=Rack_HMI.Modul1_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul1_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module1Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module1Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul1_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul1_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module1Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module1Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul1_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul1_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module1Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module1Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-(HMI.Module2Info.Volt_Total=Rack_HMI.Modul2_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul2_Info.Field.OPS_Fault){
+(HMI.Module2Info.Volt_Total=Rack_HMI.Modul2_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul2_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module2Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module2Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul2_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul2_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module2Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module2Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul2_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul2_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module2Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module2Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-(HMI.Module3Info.Volt_Total=Rack_HMI.Modul3_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul3_Info.Field.OPS_Fault){
+(HMI.Module3Info.Volt_Total=Rack_HMI.Modul3_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul3_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module3Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module3Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul3_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul3_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module3Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module3Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul3_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul3_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module3Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module3Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-(HMI.Module4Info.Volt_Total=Rack_HMI.Modul4_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul4_Info.Field.OPS_Fault){
+(HMI.Module4Info.Volt_Total=Rack_HMI.Modul4_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul4_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module4Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module4Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul4_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul4_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module4Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module4Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul4_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul4_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module4Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module4Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-(HMI.Module5Info.Volt_Total=Rack_HMI.Modul5_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul5_Info.Field.OPS_Fault){
+(HMI.Module5Info.Volt_Total=Rack_HMI.Modul5_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul5_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module5Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module5Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul5_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul5_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module5Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module5Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul5_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul5_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module5Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module5Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-(HMI.Module6Info.Volt_Total=Rack_HMI.Modul6_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul6_Info.Field.OPS_Fault){
+(HMI.Module6Info.Volt_Total=Rack_HMI.Modul6_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul6_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module6Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module6Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul6_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul6_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module6Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module6Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul6_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul6_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module6Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module6Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-(HMI.Module7Info.Volt_Total=Rack_HMI.Modul7_Info.Field.Volt_Total);
 
-if(Rack_HMI.Modul7_Info.Field.OPS_Fault){
+(HMI.Module7Info.Volt_Total=Rack_HMI.Modul7_Info.INFO_1.Field.M_Total_Volt);
+
+if(Rack_HMI.Modul7_Info.INFO_1.Field.M_Fault){
 __AS__Local3_00000=(plcstring*)HMI.Module7Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module7Info.OPS_Fault; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul7_Info.Field.OPS_MBCOM_Err){
+if(Rack_HMI.Modul7_Info.INFO_1.Field.M_MBCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module7Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module7Info.OPS_MBCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
-if(Rack_HMI.Modul7_Info.Field.CTCOM_Err){
+if(Rack_HMI.Modul7_Info.INFO_1.Field.M_CTCOM_Err){
 __AS__Local3_00000=(plcstring*)HMI.Module7Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }else{
 __AS__Local3_00000=(plcstring*)HMI.Module7Info.CTCOM_Err; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
+
 
 
 if(Rack_HMI.Rack_AlarmState.Field.protect.BSA_Prtct_Chager_OC){
@@ -612,19 +620,19 @@ __AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_MSD_AUX; __AS__Local4_00000=(pl
 __AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_MSD_AUX; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 if(Rack_HMI.Rack_State.Field.BSA_Neg_Rly){
-__AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_Neg_Rly; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
-}else{
 __AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_Neg_Rly; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+}else{
+__AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_Neg_Rly; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 if(Rack_HMI.Rack_State.Field.BSA_Pos_Rly){
-__AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_Pos_Rly; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
-}else{
 __AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_Pos_Rly; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+}else{
+__AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_Pos_Rly; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 if(Rack_HMI.Rack_State.Field.BSA_PreChar_Rly){
-__AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_PreChar_Rly; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
-}else{
 __AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_PreChar_Rly; __AS__Local4_00000=(plcstring*)"Solid_Green"; for(__AS__Local0_00000=0; __AS__Local0_00000<11l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+}else{
+__AS__Local3_00000=(plcstring*)HMI.DIOStatus.BSA_PreChar_Rly; __AS__Local4_00000=(plcstring*)"Solid_Red"; for(__AS__Local0_00000=0; __AS__Local0_00000<9l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 }
 
 }imp16395_end51_0:;}
@@ -672,19 +680,19 @@ __AS__Local3_00000=(plcstring*)HMI.Gauge.BRA_SOH_B; __AS__Local4_00000=(plcstrin
 
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Rack_MaxV_Location,HMI.BatteryInfo.BSA_Cell_MaxV_Rack_Location,21);
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Cell_MaxV_Location,HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,21);
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Rack_Location,CONCAT("(R), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,"(C)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Rack_Location,CONCAT("(Rack), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MaxV_Cell_Location,"(Cell)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Rack_MinV_Location,HMI.BatteryInfo.BSA_Cell_MinV_Rack_Location,21);
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Cell_MinV_Location,HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,21);
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Rack_Location,CONCAT("(R), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,"(C)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinV_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Rack_Location,CONCAT("(Rack), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MinV_Cell_Location,"(Cell)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Rack_MaxT_Location,HMI.BatteryInfo.BSA_Cell_MaxT_Rack_Location,21);
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Cell_MaxT_Location,HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,21);
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Rack_Location,CONCAT("(R), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,"(C)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MaxT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Rack_Location,CONCAT("(Rack), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MaxT_Cell_Location,"(Cell)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Rack_MinT_Location,HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location,21);
 usint2str(System_HMI.SysCellV_TPos.Field.BSA_Cell_MinT_Location,HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,21);
-__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location,CONCAT("(R), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,"(C)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
+__AS__Local3_00000=(plcstring*)HMI.BatteryInfo.BSA_Cell_MinT_Location; __AS__Local4_00000=(plcstring*)CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Rack_Location,CONCAT("(Rack), ",CONCAT(HMI.BatteryInfo.BSA_Cell_MinT_Cell_Location,"(Cell)"))); for(__AS__Local0_00000=0; __AS__Local0_00000<20l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 
 
 
@@ -1217,6 +1225,8 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[0].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[0].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[0].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
+
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV&~Edge1639100001&1?((Edge1639100001=PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV&1),1):((Edge1639100001=PMS.SysBatProtect.Field.BSA_Prtct_SOC_OV&1),0))){
@@ -1232,6 +1242,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[1].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[1].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[1].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN&~Edge1639100002&1?((Edge1639100002=PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN&1),1):((Edge1639100002=PMS.SysBatProtect.Field.BSA_Prtct_SOC_UN&1),0))){
@@ -1247,6 +1258,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[2].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[2].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[2].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_OV&~Edge1639100003&1?((Edge1639100003=PMS.SysBatProtect.Field.BSA_Prtct_OV&1),1):((Edge1639100003=PMS.SysBatProtect.Field.BSA_Prtct_OV&1),0))){
@@ -1262,6 +1274,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[3].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[3].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[3].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_UV&~Edge1639100004&1?((Edge1639100004=PMS.SysBatProtect.Field.BSA_Prtct_UV&1),1):((Edge1639100004=PMS.SysBatProtect.Field.BSA_Prtct_UV&1),0))){
@@ -1277,6 +1290,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[4].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[4].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[4].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV&~Edge1639100005&1?((Edge1639100005=PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV&1),1):((Edge1639100005=PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV&1),0))){
@@ -1292,6 +1306,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[5].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[5].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[5].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV&~Edge1639100006&1?((Edge1639100006=PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV&1),1):((Edge1639100006=PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV&1),0))){
@@ -1307,6 +1322,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[6].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[6].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[6].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV&~Edge1639100007&1?((Edge1639100007=PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV&1),1):((Edge1639100007=PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV&1),0))){
@@ -1322,6 +1338,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[7].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[7].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[7].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT&~Edge1639100008&1?((Edge1639100008=PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT&1),1):((Edge1639100008=PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT&1),0))){
@@ -1337,6 +1354,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[8].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[8].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[8].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT&~Edge1639100009&1?((Edge1639100009=PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT&1),1):((Edge1639100009=PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT&1),0))){
@@ -1352,6 +1370,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[9].RecentTime; __AS__Local4_000
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[9].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[9].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT&~Edge1639100010&1?((Edge1639100010=PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT&1),1):((Edge1639100010=PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT&1),0))){
@@ -1367,6 +1386,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[10].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[10].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[10].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT&~Edge1639100011&1?((Edge1639100011=PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT&1),1):((Edge1639100011=PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT&1),0))){
@@ -1382,6 +1402,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[11].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[11].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[11].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaT&~Edge1639100012&1?((Edge1639100012=PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaT&1),1):((Edge1639100012=PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaT&1),0))){
@@ -1397,6 +1418,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[12].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[12].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[12].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Continuously_OP&~Edge1639100013&1?((Edge1639100013=PMS.SysBatProtect.Field.BSA_Prtct_Continuously_OP&1),1):((Edge1639100013=PMS.SysBatProtect.Field.BSA_Prtct_Continuously_OP&1),0))){
@@ -1412,6 +1434,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[13].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[13].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[13].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Peak_OP&~Edge1639100014&1?((Edge1639100014=PMS.SysBatProtect.Field.BSA_Prtct_Peak_OP&1),1):((Edge1639100014=PMS.SysBatProtect.Field.BSA_Prtct_Peak_OP&1),0))){
@@ -1427,6 +1450,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[14].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[14].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[14].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM&~Edge1639100015&1?((Edge1639100015=PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM&1),1):((Edge1639100015=PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM&1),0))){
@@ -1442,6 +1466,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[15].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[15].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[15].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM&~Edge1639100016&1?((Edge1639100016=PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM&1),1):((Edge1639100016=PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM&1),0))){
@@ -1457,6 +1482,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[16].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[16].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[16].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding&~Edge1639100017&1?((Edge1639100017=PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding&1),1):((Edge1639100017=PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding&1),0))){
@@ -1472,6 +1498,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[17].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[17].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[17].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak&~Edge1639100018&1?((Edge1639100018=PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak&1),1):((Edge1639100018=PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak&1),0))){
@@ -1487,6 +1514,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[18].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[18].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[18].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_InsulationReg&~Edge1639100019&1?((Edge1639100019=PMS.SysBatProtect.Field.BSA_Prtct_InsulationReg&1),1):((Edge1639100019=PMS.SysBatProtect.Field.BSA_Prtct_InsulationReg&1),0))){
@@ -1502,6 +1530,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[19].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[19].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[19].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse&~Edge1639100020&1?((Edge1639100020=PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse&1),1):((Edge1639100020=PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse&1),0))){
@@ -1517,6 +1546,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[20].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[20].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[20].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System&~Edge1639100021&1?((Edge1639100021=PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System&1),1):((Edge1639100021=PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System&1),0))){
@@ -1532,6 +1562,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[21].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[21].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[21].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.PMS_PAR_RelayErr&~Edge1639100022&1?((Edge1639100022=PMS.SysBatProtect.Field.PMS_PAR_RelayErr&1),1):((Edge1639100022=PMS.SysBatProtect.Field.PMS_PAR_RelayErr&1),0))){
@@ -1547,6 +1578,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[22].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[22].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[22].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.PMS_PAR_SEQErr&~Edge1639100023&1?((Edge1639100023=PMS.SysBatProtect.Field.PMS_PAR_SEQErr&1),1):((Edge1639100023=PMS.SysBatProtect.Field.PMS_PAR_SEQErr&1),0))){
@@ -1562,6 +1594,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[23].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[23].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[23].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BPU_PAR_RelayErr&~Edge1639100024&1?((Edge1639100024=PMS.SysBatProtect.Field.BPU_PAR_RelayErr&1),1):((Edge1639100024=PMS.SysBatProtect.Field.BPU_PAR_RelayErr&1),0))){
@@ -1577,6 +1610,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[24].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[24].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[24].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatProtect.Field.BRA_PAR_RelayErr&~Edge1639100025&1?((Edge1639100025=PMS.SysBatProtect.Field.BRA_PAR_RelayErr&1),1):((Edge1639100025=PMS.SysBatProtect.Field.BRA_PAR_RelayErr&1),0))){
@@ -1592,6 +1626,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[25].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[25].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[25].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status&~Edge1639100026&1?((Edge1639100026=PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status&1),1):((Edge1639100026=PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status&1),0))){
@@ -1607,6 +1642,7 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[26].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[26].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[26].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 if((PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status&~Edge1639100027&1?((Edge1639100027=PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status&1),1):((Edge1639100027=PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status&1),0))){
@@ -1622,12 +1658,13 @@ __AS__Local3_00000=(plcstring*)HMI_Alarm.Protect[27].RecentTime; __AS__Local4_00
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectName; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[27].Name; for(__AS__Local0_00000=0; __AS__Local0_00000<30l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 __AS__Local3_00000=(plcstring*)HMI.DialogBox.ProtectNum; __AS__Local4_00000=(plcstring*)HMI_Alarm.Protect[27].Location; for(__AS__Local0_00000=0; __AS__Local0_00000<10l && __AS__Local4_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local3_00000[__AS__Local0_00000] = __AS__Local4_00000[__AS__Local0_00000]; __AS__Local3_00000[__AS__Local0_00000] = 0;
 (HMI.DialogBox.Protect_Trigger=1);
+(HMI.DialogBox.BuzzerOFF_Trigger=0);
 (Sys.Buzzer=1);
 }
 
 }imp16391_else54_0:imp16391_end54_0:;}
 #line 194 "E:/Project/HIS/ShipBatterySystm/Logical/Source/HMI/HMI_DataParsing/Main.nodebug"
-#line 679 "E:/Project/HIS/ShipBatterySystm/Logical/Source/HMI/HMI_DataParsing/HMI_Alarm.st"
+#line 708 "E:/Project/HIS/ShipBatterySystm/Logical/Source/HMI/HMI_DataParsing/HMI_Alarm.st"
 static void __AS__Action__ActSystem_AlarmTab(void){
 {switch(HMI.AlarmTableIndex){
 case 0:{
@@ -1671,36 +1708,7 @@ static void __AS__Action__ActDeviceReset(void){
 {if(HMI.AdminDeviceReset){
 
 (StateMa=8);
-(Sys.ProtectSig=0);
-(Sys.AlarmSig=0);
-(Sys.FaultSig=0);
-(Sys.Buzzer=0);
 
-
-(PMS.SysBatProtect.Field.BSA_Prtct_Cell_OV=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UV=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaV=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_OT=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_OT=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Discharger_Cell_UT=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Charger_Cell_UT=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Cell_UnBalaT=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Continuously_OP=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Peak_OP=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_InternalCOM=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_ExternalCOM=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_RelayWelding=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_WaterLeak=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_InsulationReg=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_MDSFuse=0);
-(PMS.SysBatProtect.Field.BSA_Prtct_Cooling_System=0);
-(PMS.SysBatProtect.Field.PMS_PAR_RelayErr=0);
-(PMS.SysBatProtect.Field.PMS_PAR_SEQErr=0);
-(PMS.SysBatProtect.Field.BPU_PAR_RelayErr=0);
-(PMS.SysBatProtect.Field.BRA_PAR_RelayErr=0);
-
-(PMS.SysBatDIO.Field.BSA_EMGSwitch_DI_Status=0);
-(PMS.SysBatDIO.Field.BSA_CoolingSystem_DI_Status=0);
 
 (HMI.AdminDeviceReset=0);
 
